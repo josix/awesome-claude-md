@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(find:*)",
+      "mcp__personal-github__search_code",
+      "Bash(mkdir:*)",
+      "mcp__personal-github__get_file_contents",
+      "mcp__personal-github__search_repositories",
+      "Bash(curl:*)",
+      "WebFetch(domain:github.com)"
+    ],
+    "deny": []
+  }
+}
