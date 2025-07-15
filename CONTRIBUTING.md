@@ -4,9 +4,9 @@ Thank you for your interest in contributing to this curated collection of high-q
 
 ## 🚀 Quick Start
 
-1. **Found a great `claude.md` file?** [Submit a suggestion using our issue template](#suggesting-new-examples)
-2. **Want to improve an existing analysis?** [Use our improvement template](#improving-existing-analyses)
-3. **Found a bug or issue?** [Report it using our bug template](#reporting-issues)
+1. **Found a great `claude.md` file?** [Submit a suggestion using our issue template](#-suggesting-new-examples)
+2. **Want to improve an existing analysis?** [Use our improvement template](#-improving-existing-analyses)
+3. **Found a bug or issue?** [Report it using our bug template](#-reporting-issues)
 
 ## 📋 Types of Contributions
 
@@ -46,7 +46,7 @@ Found broken links, typos, or incorrect information? Please report it!
 
 **Find Examples:**
 - Search GitHub using patterns above
-- Look for projects in our [target organizations](#target-organizations)
+- Look for projects in our [target organizations](#-target-organizations)
 - Check recent repositories from industry leaders
 
 **Evaluate Quality:**
