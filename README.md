@@ -23,7 +23,7 @@ A curated collection of high-quality `claude.md` files from leading open-source 
 |---------|---------------|------------|
 | **[Basic Memory](scenarios/complex-projects/basicmachines-co_basic-memory/analysis.md)** | Cutting-edge MCP integration & AI collaboration | Python, FastAPI, SQLAlchemy |
 | **[CYRUP AI Kargo](scenarios/developer-tooling/cyrup-ai_kargo/analysis.md)** | State machine workflows & research methodology | Rust, MCP Tools |
-| **[Dan Abramov's Blog](scenarios/complex-projects/gaearon_overreacted.io/analysis.md)** | Technical depth with personality | Next.js, React, MDX |
+| **[Overreacted.io](scenarios/complex-projects/gaearon_overreacted.io/analysis.md)** | Technical depth with personality | Next.js, React, MDX |
 
 ### 🥈 **Advanced Patterns**
 | Example | Why It's Great | Tech Stack |
@@ -36,7 +36,7 @@ A curated collection of high-quality `claude.md` files from leading open-source 
 <details>
 <summary><strong>🟦 TypeScript/JavaScript</strong></summary>
 
-- **[Dan Abramov's Blog](scenarios/complex-projects/gaearon_overreacted.io/analysis.md)** - Next.js with MDX
+- **[Overreacted.io](scenarios/complex-projects/gaearon_overreacted.io/analysis.md)** - Next.js with MDX
 - **[Cloudflare Workers SDK](scenarios/developer-tooling/cloudflare_workers-sdk/analysis.md)** - Monorepo patterns
 - **[Claude Crew](scenarios/developer-tooling/d-kimuson_claude-crew/analysis.md)** - Strict TypeScript standards
 - **[Anthropic Quickstarts](scenarios/getting-started/anthropics_anthropic-quickstarts/analysis.md)** - Multi-project setup
