@@ -1,12 +1,11 @@
-# Lerna - Developer Tooling Example
+# Analysis: Lerna Monorepo Management Tool CLAUDE.md
 
-## Repository Information
-**Repository:** https://github.com/lerna/lerna  
-**CLAUDE.md File:** https://github.com/lerna/lerna/blob/main/CLAUDE.md  
-**Description:** Lerna is a fast, modern build system for managing and publishing multiple JavaScript/TypeScript packages from the same repository  
-**Stars:** 35,000+ ⭐  
+**Category**: Developer Tooling  
+**Source**: [lerna/lerna](https://github.com/lerna/lerna)  
+**CLAUDE.md**: [View Original](https://github.com/lerna/lerna/blob/main/CLAUDE.md)  
+**License**: MIT License  
 
-## Category: Developer Tooling
+This CLAUDE.md file from Lerna demonstrates comprehensive documentation for a monorepo management tool with multi-package workflows and release management capabilities.
 
 ## Why This Example Was Selected
 

@@ -2,6 +2,8 @@
 
 This file provides guidance to GitHub Copilot when working with code in this repository.
 
+**Important**: This file should stay synchronized with `CLAUDE.md` to ensure consistent AI assistant behavior across different tools. Any changes to project structure, guidelines, or standards should be reflected in both files.
+
 ## Project Overview
 
 **awesome-claude-md** is a curated collection of high-quality `claude.md` files from public GitHub repositories. The goal is to showcase best practices for using `claude.md` files to onboard AI assistants to codebases.
@@ -18,8 +20,7 @@ awesome-claude-md/
 └── scenarios/                   # Categorized examples
     ├── [category]/
     │   └── [owner]_[repo]/
-    │       ├── claude.md        # Original file (unmodified)
-    │       └── analysis.md      # Analysis of why it's exemplary
+    │       └── analysis.md      # Analysis with links to original files
 ```
 
 ## Core Categories
@@ -92,16 +93,18 @@ filename:CLAUDE.md language:TypeScript
 
 ## Quality Standards
 
-### Original Files
-- Preserve `claude.md` files exactly as they appear in source repositories
-- Never modify original content
-- If file has different name (e.g., `CLAUDE.md`), rename to `claude.md` for consistency
+### Ethical Guidelines
+- **Never copy** `claude.md` files directly into this repository
+- **Always link** to the original source repository  
+- **Include attribution** with source links, licensing information, and proper credit
+- **Respect copyright** and only reference publicly available files under permissive licenses
 
 ### Analysis Files
-- Focus on concrete, learnable patterns
-- Highlight specific techniques (Mermaid diagrams, command lists, etc.)
-- Emphasize unique approaches over generic advice
-- Include 3-5 key takeaways with specific examples
+Each `analysis.md` file should include:
+- **Header**: Category, source repository link, original CLAUDE.md link, license
+- **Why it's exemplary**: Specific features that make it outstanding
+- **Key techniques**: Unique approaches and patterns
+- **Takeaways**: 2-3 concrete lessons for developers
 
 ### Repository Selection Criteria
 - **Industry Recognition**: From organizations with proven track records
@@ -162,18 +165,20 @@ When working with this repository:
 
 ### For file operations
 - Always use absolute paths within the repository
-- Preserve original file content when copying
 - Follow directory naming conventions strictly
 - Update README.md table of contents after adding examples
+- **Keep copilot-instructions.md and CLAUDE.md synchronized** when making structural changes
 
 ## Organizations to Prioritize
 
 When suggesting new examples, prioritize these organizations:
+- **Anthropic**: Official AI development best practices
+- **Basic Machines**: Knowledge management and AI collaboration
 - **Cloudflare**: Infrastructure runtime and developer tooling
+- **CYRUP AI**: Advanced AI development methodologies
 - **Microsoft**: AI systems and enterprise tooling  
 - **PyTorch**: Machine learning infrastructure
 - **LangChain**: AI application frameworks
 - **Sentry**: Error tracking and monitoring
 - **Ethereum Foundation**: Blockchain infrastructure
-- **Vercel**: Frontend deployment platform
-- **Supabase**: Backend-as-a-Service platform
+- **Mattermost**: Enterprise collaboration
