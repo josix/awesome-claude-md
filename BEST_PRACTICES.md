@@ -328,10 +328,24 @@ Use this checklist to ensure your CLAUDE.md covers essential patterns:
 
 This summary is maintained alongside the collection. When adding new examples:
 
+### **Regular Maintenance Process**
 1. **Analyze new patterns** - Look for unique approaches not covered here
-2. **Update frequency counts** - Adjust percentages as collection grows  
+2. **Update frequency counts** - Recalculate percentages as collection grows  
 3. **Add new sections** - Document emerging patterns worth highlighting
 4. **Refine examples** - Replace weaker examples with stronger ones
+5. **Update metadata** - Adjust counts and dates in the overview section
+
+### **Monthly Review Checklist**
+- [ ] Review new analysis.md files for emerging patterns
+- [ ] Update frequency percentages based on current collection size
+- [ ] Check if any anti-patterns need new examples
+- [ ] Verify all links still work to analysis files
+- [ ] Update "Examples Analyzed" count in overview
+
+### **Quality Thresholds for Updates**
+- Add new pattern when found in 3+ examples (>10% frequency)
+- Update percentages when collection grows by 5+ examples
+- Replace examples when better ones demonstrate the same pattern
 
 **Last Updated:** December 2024 | **Examples Analyzed:** 26 | **Categories Covered:** 6
 
