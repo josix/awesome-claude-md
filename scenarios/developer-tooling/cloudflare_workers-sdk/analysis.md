@@ -2,6 +2,8 @@
 
 **Category**: Developer Tooling  
 **Repository**: https://github.com/cloudflare/workers-sdk  
+**CLAUDE.md**: [View Original](https://github.com/cloudflare/workers-sdk/blob/main/CLAUDE.md)  
+**License**: Apache License 2.0  
 **Why it's exemplary**: Demonstrates masterful monorepo documentation with strict conventions, comprehensive tooling workflow, and clear architectural boundaries.
 
 ## Key Features That Make This Exemplary

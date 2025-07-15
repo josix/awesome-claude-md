@@ -1,0 +1,9 @@
+{
+  "complex-projects/basicmachines-co_basic-memory/analysis.md": "MIT License",
+  "getting-started/anthropics_anthropic-quickstarts/analysis.md": "MIT License",
+  "complex-projects/getsentry_sentry/analysis.md": "BSL-1.1 License",
+  "complex-projects/gaearon_overreacted.io/analysis.md": "MIT License",
+  "complex-projects/platformatic_platformatic/analysis.md": "Apache License 2.0",
+  "developer-tooling/cloudflare_workers-sdk/analysis.md": "Apache License 2.0",
+  "libraries-frameworks/langchain-ai_langchain-redis/analysis.md": "MIT License"
+}

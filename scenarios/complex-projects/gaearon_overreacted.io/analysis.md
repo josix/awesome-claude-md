@@ -1,6 +1,9 @@
 # Analysis: Dan Abramov's Next.js Blog CLAUDE.md
 
-**Category: Complex Projects**
+**Category**: Complex Projects  
+**Repository**: https://github.com/gaearon/overreacted.io  
+**CLAUDE.md**: [View Original](https://github.com/gaearon/overreacted.io/blob/main/CLAUDE.md)  
+**License**: MIT License  
 
 This CLAUDE.md file from Dan Abramov's personal blog demonstrates comprehensive technical documentation combined with clear personality and style guidance.
 

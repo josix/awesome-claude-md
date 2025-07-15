@@ -39,9 +39,16 @@ When adding examples, use these primary categories:
 3. **Write Analysis**: Create `analysis.md` with:
    - Category assignment and rationale
    - Source repository link and original CLAUDE.md link
-   - License information and proper attribution
+   - License information (automatically detected via GitHub API)
    - Specific features that make it exemplary
    - 2-3 key takeaways for developers
+
+### License Detection Automation
+The repository includes automated license detection using the GitHub API:
+- License information is automatically detected and added to analysis files
+- Weekly GitHub Actions workflow keeps license information current
+- Manual script available for immediate updates: `python detect_licenses.py --update`
+- See [LICENSE_DETECTION.md](LICENSE_DETECTION.md) for complete documentation
 
 ### Ethical Guidelines
 - **Never copy** `claude.md` files directly into this repository

@@ -101,10 +101,24 @@ filename:CLAUDE.md language:TypeScript
 
 ### Analysis Files
 Each `analysis.md` file should include:
-- **Header**: Category, source repository link, original CLAUDE.md link, license
+- **Header**: Category, source repository link, original CLAUDE.md link, license (automatically detected)
 - **Why it's exemplary**: Specific features that make it outstanding
 - **Key techniques**: Unique approaches and patterns
 - **Takeaways**: 2-3 concrete lessons for developers
+
+### Standard Header Format
+```markdown
+**Category**: Category Name  
+**Repository**: https://github.com/owner/repo  
+**CLAUDE.md**: [View Original](https://github.com/owner/repo/blob/main/CLAUDE.md)  
+**License**: License Name (automatically detected)
+```
+
+### License Detection
+The repository includes automated license detection:
+- Use `python detect_licenses.py --update` to update analysis files with license information
+- GitHub Actions workflow runs weekly to keep license information current
+- License information is fetched from GitHub API and inserted automatically
 
 ### Repository Selection Criteria
 - **Industry Recognition**: From organizations with proven track records
@@ -150,7 +164,9 @@ Structure architecture sections like:
 When working with this repository:
 
 ### For Python code
-- No specific Python code in this repository (documentation only)
+- License detection script: `detect_licenses.py` for automated license detection
+- Uses GitHub API for license information retrieval
+- Includes caching and rate limiting considerations
 
 ### For Markdown files
 - Use consistent heading levels (## for main sections, ### for subsections)

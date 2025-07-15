@@ -240,12 +240,14 @@ All examples in this collection meet these criteria:
 
 ## Contributing
 
-When adding new examples:
-
+### Adding New Examples
 1. **Focus on Quality**: Prioritize examples from established projects (1,000+ stars preferred)
 2. **Preserve Originality**: Keep `claude.md` files exactly as they appear in source repositories
 3. **Provide Analysis**: Create detailed `analysis.md` files explaining what makes each example exemplary
 4. **Follow Structure**: Use the established directory structure and naming conventions
+5. **Include License Information**: License details are automatically detected and added via our automated system
+
+See [LICENSE_DETECTION.md](LICENSE_DETECTION.md) for details on the automated license detection process.
 
 ## Organizations Represented
 
