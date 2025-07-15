@@ -1,6 +1,9 @@
 # Analysis: CYRUP AI's Comprehensive Development CLAUDE.md
 
-**Category: Developer Tooling**
+**Category: Developer Tooling**  
+**Source**: [cyrup-ai/kargo](https://github.com/cyrup-ai/kargo)  
+**CLAUDE.md**: [View Original](https://github.com/cyrup-ai/kargo/blob/main/CLAUDE.md)  
+**License**: MIT License  
 
 This CLAUDE.md file from CYRUP AI represents one of the most comprehensive AI assistant configuration files, implementing a complete state machine workflow for Rust development.
 
