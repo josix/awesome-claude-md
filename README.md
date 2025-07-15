@@ -246,6 +246,21 @@ When adding new examples:
 2. **Preserve Originality**: Keep `claude.md` files exactly as they appear in source repositories
 3. **Provide Analysis**: Create detailed `analysis.md` files explaining what makes each example exemplary
 4. **Follow Structure**: Use the established directory structure and naming conventions
+5. **Use Analysis Template**: Follow the standardized template in `ANALYSIS_TEMPLATE.md` for consistent analysis structure
+
+### Analysis Template
+
+All analysis files should follow the standardized template in [`ANALYSIS_TEMPLATE.md`](ANALYSIS_TEMPLATE.md) which includes:
+
+- **Project Context**: Brief description of project purpose and significance
+- **Onboarding Guidance**: How the CLAUDE.md helps new contributors get started
+- **AI Instructions**: Specific techniques for guiding AI assistants
+- **Strengths**: 3-5 exemplary features with structured explanations
+- **Weaknesses**: Areas for improvement (optional but recommended)
+- **Notable Patterns**: Specific techniques others can copy
+- **Key Takeaways**: Actionable insights for other developers
+
+This standardized structure makes it easier to compare and learn from different examples across projects.
 
 ## Organizations Represented
 

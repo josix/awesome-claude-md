@@ -36,12 +36,15 @@ When adding examples, use these primary categories:
 ### Adding New Examples
 1. **Search for Quality Files**: Use GitHub search (`filename:claude.md` or `filename:CLAUDE.md`) to find examples
 2. **Create Directory Structure**: `scenarios/[category]/[owner]_[repo]/`
-3. **Write Analysis**: Create `analysis.md` with:
-   - Category assignment and rationale
-   - Source repository link and original CLAUDE.md link
-   - License information and proper attribution
-   - Specific features that make it exemplary
-   - 2-3 key takeaways for developers
+3. **Write Analysis**: Create `analysis.md` following the standardized template in `ANALYSIS_TEMPLATE.md`:
+   - Project Context: Brief description of project purpose and significance
+   - Onboarding Guidance: How the CLAUDE.md helps new contributors get started
+   - AI Instructions: Specific techniques for guiding AI assistants
+   - Strengths: 3-5 exemplary features with structured explanations
+   - Weaknesses: Areas for improvement (optional but recommended)  
+   - Notable Patterns: Specific techniques others can copy
+   - Key Takeaways: Actionable insights for other developers
+4. **Include Attribution**: Add category assignment, source repository link, original CLAUDE.md link, and license information
 
 ### Ethical Guidelines
 - **Never copy** `claude.md` files directly into this repository
