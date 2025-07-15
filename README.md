@@ -10,8 +10,9 @@ A curated collection of high-quality `claude.md` files from leading open-source 
 - [🔍 Browse by Technology](#-browse-by-technology) - Find examples by tech stack
 - [🎨 Browse by Use Case](#-browse-by-use-case) - Find examples by purpose
 - [📂 All Categories](#-all-categories) - Complete categorized list
-- [🏆 Quality Standards](#quality-standards) - Our selection criteria
-- [🤝 Contributing](#contributing) - How to add examples
+- [🏆 Quality Standards](#quality-standards) - Our selection criteria  
+- [📊 Detailed Criteria](CRITERIA.md) - Complete evaluation rubric
+- [🤝 Contributing](CONTRIBUTING.md) - How to add examples
 - [🔎 Search GitHub](#search-github) - Find more examples
 
 ## 🎯 Top Picks
@@ -238,14 +239,22 @@ All examples in this collection meet these criteria:
 - **Best Practices**: Demonstrate advanced patterns and techniques
 - **AI-Friendly**: Structured to maximize AI assistant effectiveness
 
+For detailed evaluation criteria and scoring rubric, see our **[Complete Curation Criteria](CRITERIA.md)**.
+
 ## Contributing
 
-When adding new examples:
+We welcome high-quality submissions that meet our standards! Please:
 
-1. **Focus on Quality**: Prioritize examples from established projects (1,000+ stars preferred)
-2. **Preserve Originality**: Keep `claude.md` files exactly as they appear in source repositories
-3. **Provide Analysis**: Create detailed `analysis.md` files explaining what makes each example exemplary
-4. **Follow Structure**: Use the established directory structure and naming conventions
+1. **Review our [Curation Criteria](CRITERIA.md)** to understand evaluation standards
+2. **Check our [Contributing Guide](CONTRIBUTING.md)** for the submission process
+3. **Use our [issue templates](.github/ISSUE_TEMPLATE/)** to propose new examples
+4. **Follow our quality standards** for analysis and documentation
+
+**Quick guidelines:**
+- Focus on examples from established projects (100+ stars preferred)
+- Ensure examples demonstrate unique or advanced techniques
+- Preserve originality - link to original files, don't copy them
+- Provide detailed analysis explaining educational value
 
 ## Organizations Represented
 
