@@ -1,8 +1,14 @@
 # Awesome Claude.md
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
+[![Examples: 25+](https://img.shields.io/badge/Examples-25%2B-blue.svg)](#-all-categories)
+[![Auto Discovery](https://img.shields.io/badge/Auto-Discovery-enabled-green.svg)](.github/workflows/discover-claude-files.yml)
+
 A curated collection of high-quality `claude.md` files from leading open-source projects. These examples demonstrate industry best practices for onboarding AI assistants to complex codebases.
 
-> **🚀 Quick Start**: New here? Jump to [Top Picks](#-top-picks) or browse by [Technology](#-browse-by-technology) | [Use Case](#-browse-by-use-case)
+> **🚀 Quick Start**: New here? Jump to [Top Picks](#-top-picks) or browse by [Technology](#-browse-by-technology) | [Use Case](#-browse-by-use-case)  
+> **📖 Learn More**: [Curation Criteria](CRITERIA.md) | [Best Practices](BEST_PRACTICES.md) | [Contributing Guide](CONTRIBUTING.md)
 
 ## 📋 Table of Contents
 
@@ -10,9 +16,10 @@ A curated collection of high-quality `claude.md` files from leading open-source 
 - [🔍 Browse by Technology](#-browse-by-technology) - Find examples by tech stack
 - [🎨 Browse by Use Case](#-browse-by-use-case) - Find examples by purpose
 - [📂 All Categories](#-all-categories) - Complete categorized list
-- [🏆 Quality Standards](#quality-standards) - Our selection criteria
-- [🤝 Contributing](#contributing) - How to add examples
-- [🔎 Search GitHub](#search-github) - Find more examples
+- [🏆 Quality Standards](#-quality-standards) - Our selection criteria
+- [📚 Resources](#-resources) - Documentation and guides
+- [🤝 Contributing](#-contributing) - How to add examples
+- [🔎 Search GitHub](#-search-github) - Find more examples
 
 ## 🎯 Top Picks
 
@@ -228,24 +235,66 @@ Documentation focused on project state, blocking issues, and transition planning
   - Blocking issues documentation
   - Transition planning
 
-## Quality Standards
+## 🏆 Quality Standards
 
-All examples in this collection meet these criteria:
+All examples in this collection meet rigorous criteria designed to ensure educational value and industry relevance.
 
-- **Industry Recognition**: From organizations with proven track records
-- **Production Usage**: Actively maintained and used in production environments
+### Essential Requirements
+- **Industry Recognition**: 100+ GitHub stars OR established organization backing
+- **Production Usage**: Actively maintained and used in production environments  
 - **Comprehensive Documentation**: Detailed architecture, setup, and workflow information
 - **Best Practices**: Demonstrate advanced patterns and techniques
 - **AI-Friendly**: Structured to maximize AI assistant effectiveness
 
-## Contributing
+### Excellence Scoring (25-point scale)
+Our [detailed rubric](CRITERIA.md) evaluates examples across 5 dimensions:
+- **Onboarding Clarity** (1-5): Setup guides, workflows, troubleshooting
+- **Architecture Communication** (1-5): Component relationships, data flow
+- **Development Workflow** (1-5): Commands, testing, debugging  
+- **AI Context & Instructions** (1-5): Specific AI guidance and constraints
+- **Technical Depth** (1-5): Advanced patterns, edge cases, performance
 
-When adding new examples:
+**Acceptance Threshold**: 15+ points | **Top Picks**: 20+ points
 
-1. **Focus on Quality**: Prioritize examples from established projects (1,000+ stars preferred)
-2. **Preserve Originality**: Keep `claude.md` files exactly as they appear in source repositories
-3. **Provide Analysis**: Create detailed `analysis.md` files explaining what makes each example exemplary
-4. **Follow Structure**: Use the established directory structure and naming conventions
+📊 **[View Full Criteria](CRITERIA.md)** | 📈 **[See Scoring Examples](CRITERIA.md#examples-by-score-range)**
+
+## 📚 Resources
+
+### For Contributors
+- **[📋 Contributing Guide](CONTRIBUTING.md)** - Step-by-step process for adding examples
+- **[📝 Analysis Template](ANALYSIS_TEMPLATE.md)** - Standardized template for consistent analysis
+- **[🔍 Curation Criteria](CRITERIA.md)** - Detailed evaluation rubric and quality standards
+
+### For Learning
+- **[📖 Best Practices Summary](BEST_PRACTICES.md)** - Top patterns and techniques across all examples
+- **[🎯 Top Picks Analysis](#-top-picks)** - Deep dive into our highest-rated examples
+- **[🚀 Implementation Roadmap](BEST_PRACTICES.md#-implementation-roadmap)** - How to improve your own claude.md files
+
+### Community Tools
+- **[🤖 Automated Discovery](.github/workflows/discover-claude-files.yml)** - Weekly search for new quality examples
+- **[📝 Issue Templates](.github/ISSUE_TEMPLATE/)** - Streamlined contribution and feedback process
+
+## 🤝 Contributing
+
+We welcome high-quality contributions that help the community learn effective `claude.md` patterns!
+
+### Quick Start
+1. **[📝 Suggest New Example](https://github.com/josix/awesome-claude-md/issues/new?template=suggest-new-example.yml)** - Found a great claude.md file?
+2. **[✨ Improve Analysis](https://github.com/josix/awesome-claude-md/issues/new?template=improve-analysis.yml)** - Help enhance existing analyses
+3. **[🐛 Report Problem](https://github.com/josix/awesome-claude-md/issues/new?template=report-problem.yml)** - Broken links or incorrect information?
+
+### Detailed Process
+📋 **[Complete Contributing Guide](CONTRIBUTING.md)** includes:
+- Search strategies for finding quality examples
+- Step-by-step evaluation process using our rubric
+- Template for creating analysis files
+- Requirements and review process
+
+### Quality Standards
+- Minimum 15/25 points on our [evaluation rubric](CRITERIA.md)
+- Focus on examples with 100+ stars or established organizations
+- Comprehensive analysis following our [template](ANALYSIS_TEMPLATE.md)
+- Proper attribution and licensing compliance
 
 ## Organizations Represented
 

@@ -35,13 +35,22 @@ When adding examples, use these primary categories:
 
 ### Adding New Examples
 1. **Search for Quality Files**: Use GitHub search (`filename:claude.md` or `filename:CLAUDE.md`) to find examples
-2. **Create Directory Structure**: `scenarios/[category]/[owner]_[repo]/`
-3. **Write Analysis**: Create `analysis.md` with:
+2. **Evaluate Against Criteria**: Use our [evaluation rubric](CRITERIA.md) to score candidates  
+3. **Create Directory Structure**: `scenarios/[category]/[owner]_[repo]/`
+4. **Write Analysis**: Create `analysis.md` using our [standardized template](ANALYSIS_TEMPLATE.md) with:
    - Category assignment and rationale
    - Source repository link and original CLAUDE.md link
    - License information and proper attribution
    - Specific features that make it exemplary
+   - Quality metrics scoring
    - 2-3 key takeaways for developers
+
+### Automated Discovery
+Our [automated discovery workflow](.github/workflows/discover-claude-files.yml) runs weekly to:
+- Search GitHub for new claude.md files meeting our criteria
+- Score candidates using our quality rubric
+- Create issues with pre-analyzed suggestions for community review
+- Generate reports with detailed candidate information
 
 ### Ethical Guidelines
 - **Never copy** `claude.md` files directly into this repository
@@ -50,10 +59,18 @@ When adding examples, use these primary categories:
 - **Respect copyright** and only reference publicly available files under permissive licenses
 
 ### Quality Standards
-- Focus analysis on concrete, learnable patterns
-- Highlight specific techniques (Mermaid diagrams, command lists, etc.)
+- Focus analysis on concrete, learnable patterns following our [evaluation criteria](CRITERIA.md)
+- Highlight specific techniques (Mermaid diagrams, command lists, etc.) as documented in [best practices](BEST_PRACTICES.md)
 - Emphasize unique approaches over generic advice
 - Ensure educational value while respecting original authors
+- Use our [analysis template](ANALYSIS_TEMPLATE.md) for consistency
+
+### Community Contributions
+Contributors can use our [issue templates](.github/ISSUE_TEMPLATE/) to:
+- Suggest new examples with pre-evaluation
+- Propose improvements to existing analyses
+- Report problems or broken links
+- The community can participate in reviewing automated discovery reports
 
 ### README Maintenance
 After adding examples, update main `README.md` with table of contents linking to each `analysis.md`, organized by category.
