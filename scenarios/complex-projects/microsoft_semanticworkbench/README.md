@@ -1,8 +1,9 @@
 # Analysis: Microsoft Semantic Workbench
 
-**Category**: Complex Projects  
-**Repository**: https://github.com/microsoft/semanticworkbench  
-**Why it's exemplary**: Demonstrates advanced AI-first documentation with automated context generation, comprehensive service orchestration, and multi-language architecture guidance.
+**Category: Complex Projects**  
+**Source**: [microsoft/semanticworkbench](https://github.com/microsoft/semanticworkbench)  
+**CLAUDE.md**: [View Original](https://github.com/microsoft/semanticworkbench/blob/main/CLAUDE.md)  
+**License**: MIT License
 
 ## Key Features That Make This Exemplary
 

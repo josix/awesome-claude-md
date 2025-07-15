@@ -1,8 +1,9 @@
 # Analysis: Cloudflare workerd
 
-**Category**: Infrastructure Projects  
-**Repository**: https://github.com/cloudflare/workerd  
-**Why it's exemplary**: Showcases enterprise-grade infrastructure documentation with comprehensive build systems, testing strategies, and deployment guidance.
+**Category: Infrastructure Projects**  
+**Source**: [cloudflare/workerd](https://github.com/cloudflare/workerd)  
+**CLAUDE.md**: [View Original](https://github.com/cloudflare/workerd/blob/main/CLAUDE.md)  
+**License**: Apache-2.0 License
 
 ## Key Features That Make This Exemplary
 

@@ -1,8 +1,9 @@
 # Analysis: Cloudflare Workers SDK
 
-**Category**: Developer Tooling  
-**Repository**: https://github.com/cloudflare/workers-sdk  
-**Why it's exemplary**: Demonstrates masterful monorepo documentation with strict conventions, comprehensive tooling workflow, and clear architectural boundaries.
+**Category: Developer Tooling**  
+**Source**: [cloudflare/workers-sdk](https://github.com/cloudflare/workers-sdk)  
+**CLAUDE.md**: [View Original](https://github.com/cloudflare/workers-sdk/blob/main/CLAUDE.md)  
+**License**: Apache-2.0 License
 
 ## Key Features That Make This Exemplary
 
