@@ -1,0 +1,159 @@
+name: 📝 Improve Analysis
+description: Suggest improvements to an existing analysis file
+title: "[ANALYSIS IMPROVEMENT] "
+labels: ["enhancement", "analysis-improvement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Help us improve the quality of our analysis files! 
+        
+        This template is for suggesting enhancements to existing analysis.md files, not for reporting errors or broken links.
+
+  - type: dropdown
+    id: analysis_file
+    attributes:
+      label: Which analysis needs improvement?
+      description: Select the analysis file you'd like to improve
+      options:
+        - scenarios/complex-projects/basicmachines-co_basic-memory/analysis.md
+        - scenarios/complex-projects/gaearon_overreacted.io/analysis.md
+        - scenarios/complex-projects/microsoft_semanticworkbench/analysis.md
+        - scenarios/complex-projects/getsentry_sentry/analysis.md
+        - scenarios/complex-projects/platformatic_platformatic/analysis.md
+        - scenarios/complex-projects/TimeWarpEngineering_timewarp-architecture/analysis.md
+        - scenarios/complex-projects/newscred_webhook-broker/analysis.md
+        - scenarios/developer-tooling/cloudflare_workers-sdk/analysis.md
+        - scenarios/developer-tooling/pytorch_tlparse/analysis.md
+        - scenarios/developer-tooling/lerna_lerna/analysis.md
+        - scenarios/developer-tooling/kubb-labs_kubb/analysis.md
+        - scenarios/developer-tooling/youtype_mypy-boto3-builder/analysis.md
+        - scenarios/developer-tooling/mcollina_hwp/analysis.md
+        - scenarios/developer-tooling/cyrup-ai_kargo/analysis.md
+        - scenarios/developer-tooling/d-kimuson_claude-crew/analysis.md
+        - scenarios/developer-tooling/jeremymailen_kotlinter-gradle/analysis.md
+        - scenarios/libraries-frameworks/langchain-ai_langchain-redis/analysis.md
+        - scenarios/libraries-frameworks/ComposioHQ_composio/analysis.md
+        - scenarios/libraries-frameworks/transitive-bullshit_agentic/analysis.md
+        - scenarios/libraries-frameworks/DataFog_datafog-python/analysis.md
+        - scenarios/libraries-frameworks/gensx-inc_gensx/analysis.md
+        - scenarios/infrastructure-projects/cloudflare_workerd/analysis.md
+        - scenarios/getting-started/ethereum_ethereum-org-website/analysis.md
+        - scenarios/getting-started/anthropics_anthropic-quickstarts/analysis.md
+        - scenarios/project-handoffs/KentBeck_BPlusTree3/analysis.md
+        - scenarios/project-handoffs/mattermost_mattermost-test-management/analysis.md
+        - Other (specify in description)
+    validations:
+      required: true
+
+  - type: input
+    id: other_analysis
+    attributes:
+      label: Other Analysis File (if not listed above)
+      description: If you selected "Other", provide the path to the analysis file
+      placeholder: scenarios/category/owner_repo/analysis.md
+
+  - type: dropdown
+    id: improvement_type
+    attributes:
+      label: Type of Improvement
+      description: What kind of improvement are you suggesting?
+      options:
+        - Add missing key features or techniques
+        - Improve quality scoring and justification
+        - Enhance takeaways with more actionable insights
+        - Add missing related examples or cross-references
+        - Update outdated information
+        - Improve technical accuracy
+        - Better structure and formatting
+        - Add missing patterns or innovations
+        - Multiple types (explain in description)
+    validations:
+      required: true
+
+  - type: textarea
+    id: current_issues
+    attributes:
+      label: Current Issues or Gaps
+      description: What specific issues do you see with the current analysis?
+      placeholder: |
+        Current analysis examples:
+        - Missing coverage of the advanced MCP integration patterns
+        - Quality scores seem inflated without proper justification
+        - Takeaways are too generic and not actionable
+        - No mention of the innovative state machine patterns
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposed_improvements
+    attributes:
+      label: Proposed Improvements
+      description: What specific improvements would you suggest?
+      placeholder: |
+        Suggested improvements:
+        1. Add section on MCP tool integration with code examples
+        2. Revise quality scores based on actual feature coverage
+        3. Replace generic takeaways with specific implementation guidance
+        4. Include comparison with similar state machine implementations
+    validations:
+      required: true
+
+  - type: textarea
+    id: supporting_evidence
+    attributes:
+      label: Supporting Evidence
+      description: Provide links, examples, or references that support your suggested improvements
+      placeholder: |
+        Supporting evidence:
+        - Link to specific sections in the original claude.md file
+        - Examples from other repositories demonstrating similar patterns
+        - Documentation or blog posts explaining the techniques
+
+  - type: textarea
+    id: template_compliance
+    attributes:
+      label: Template Compliance
+      description: Does the analysis follow our template structure? What template improvements are needed?
+      placeholder: |
+        Template issues:
+        - Missing "Notable Patterns and Innovations" section
+        - Quality metrics table incomplete
+        - Related examples section needs updating
+
+  - type: checkboxes
+    id: improvement_scope
+    attributes:
+      label: Improvement Scope
+      description: What level of changes are you suggesting?
+      options:
+        - label: Minor updates (fixing errors, updating links)
+        - label: Moderate enhancements (adding missing sections, improving examples)
+        - label: Major restructuring (significant rewrite needed)
+
+  - type: textarea
+    id: volunteer_help
+    attributes:
+      label: Volunteer to Help
+      description: Are you willing to help implement these improvements?
+      placeholder: |
+        I am willing to:
+        - [ ] Research the additional information needed
+        - [ ] Draft the improved sections
+        - [ ] Submit a pull request with changes
+        - [ ] Review and validate the improvements
+
+  - type: checkboxes
+    id: verification
+    attributes:
+      label: Verification
+      description: Confirm your improvement suggestion
+      options:
+        - label: I have reviewed the current analysis file thoroughly
+          required: true
+        - label: I have checked the original claude.md file for accuracy
+          required: true
+        - label: My suggestions follow our analysis template structure
+          required: true
+        - label: This improvement will add educational value for readers
+          required: true

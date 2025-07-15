@@ -1,0 +1,124 @@
+name: 🐛 Report Problem
+description: Report broken links, errors, or other issues with the repository
+title: "[BUG] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping us maintain quality! Please provide details about the issue you've encountered.
+
+  - type: dropdown
+    id: problem_type
+    attributes:
+      label: Type of Problem
+      description: What kind of issue are you reporting?
+      options:
+        - Broken link (404, wrong URL)
+        - Incorrect information in analysis
+        - Missing or outdated content
+        - Template or formatting issue
+        - Repository structure problem
+        - Search or navigation issue
+        - License or attribution problem
+        - Other (explain in description)
+    validations:
+      required: true
+
+  - type: input
+    id: affected_file
+    attributes:
+      label: Affected File or Section
+      description: Which file or section of the repository has the problem?
+      placeholder: scenarios/complex-projects/microsoft_semanticworkbench/analysis.md
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem_description
+    attributes:
+      label: Problem Description
+      description: Describe the issue you've encountered
+      placeholder: |
+        Detailed description of the problem:
+        - What you expected to find
+        - What you actually found
+        - Steps to reproduce the issue
+    validations:
+      required: true
+
+  - type: textarea
+    id: broken_links
+    attributes:
+      label: Broken Links (if applicable)
+      description: List any broken or incorrect links
+      placeholder: |
+        Broken links found:
+        - https://github.com/example/repo/blob/main/claude.md (returns 404)
+        - https://example.com/docs (page not found)
+
+  - type: textarea
+    id: expected_behavior
+    attributes:
+      label: Expected Behavior
+      description: What should happen instead?
+      placeholder: Links should direct to the correct files and all information should be accurate and up-to-date
+
+  - type: textarea
+    id: additional_context
+    attributes:
+      label: Additional Context
+      description: Any other relevant information about the problem
+      placeholder: |
+        Additional context:
+        - Browser used (if relevant)
+        - When you first noticed the issue
+        - Impact on your use of the repository
+
+  - type: dropdown
+    id: urgency
+    attributes:
+      label: Urgency Level
+      description: How urgent is this issue?
+      options:
+        - Low - Minor issue, not blocking usage
+        - Medium - Affects functionality but workarounds exist
+        - High - Blocks important functionality
+        - Critical - Major issue affecting many users
+    validations:
+      required: true
+
+  - type: textarea
+    id: suggested_fix
+    attributes:
+      label: Suggested Fix (Optional)
+      description: Do you have suggestions for how to fix this issue?
+      placeholder: |
+        Suggested resolution:
+        1. Update the link to point to the correct URL
+        2. Verify all links in the analysis file
+        3. Add a process to check links regularly
+
+  - type: checkboxes
+    id: verification
+    attributes:
+      label: Verification
+      description: Please confirm the following
+      options:
+        - label: I have searched existing issues to avoid duplicates
+          required: true
+        - label: I have provided specific details about the problem
+          required: true
+        - label: I have checked that this is not a temporary issue (e.g., tried multiple times)
+          required: true
+
+  - type: checkboxes
+    id: volunteer_fix
+    attributes:
+      label: Volunteer to Help Fix
+      description: Are you able to help resolve this issue?
+      options:
+        - label: I can research the correct information
+        - label: I can submit a pull request with the fix
+        - label: I can help test the fix once implemented
+        - label: I prefer to just report the issue for others to fix

@@ -1,0 +1,142 @@
+name: 🌟 Suggest New Example
+description: Suggest a high-quality claude.md file for inclusion in the collection
+title: "[NEW EXAMPLE] "
+labels: ["enhancement", "new-example"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for suggesting a new example! Help us evaluate it by providing the information below.
+        
+        Before submitting, please review our [Curation Criteria](../CRITERIA.md) to ensure the example meets our standards.
+
+  - type: input
+    id: repository
+    attributes:
+      label: Repository URL
+      description: Link to the GitHub repository containing the claude.md file
+      placeholder: https://github.com/owner/repo
+    validations:
+      required: true
+
+  - type: input
+    id: claude_md_url
+    attributes:
+      label: Direct Link to claude.md File
+      description: Direct link to the claude.md file in the repository
+      placeholder: https://github.com/owner/repo/blob/main/claude.md
+    validations:
+      required: true
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: Proposed Category
+      description: Which category best fits this example?
+      options:
+        - complex-projects
+        - libraries-frameworks
+        - developer-tooling
+        - infrastructure-projects
+        - getting-started
+        - project-handoffs
+    validations:
+      required: true
+
+  - type: input
+    id: stars
+    attributes:
+      label: GitHub Stars
+      description: Current star count (helps verify industry recognition)
+      placeholder: "1500"
+    validations:
+      required: true
+
+  - type: input
+    id: license
+    attributes:
+      label: Repository License
+      description: License type (must be permissive like MIT, Apache 2.0, BSD)
+      placeholder: MIT
+    validations:
+      required: true
+
+  - type: textarea
+    id: why_exemplary
+    attributes:
+      label: Why is this example exemplary?
+      description: Explain what makes this claude.md file outstanding (2-3 sentences)
+      placeholder: This example demonstrates exceptional MCP integration patterns with detailed workflow automation and comprehensive AI collaboration guidance...
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: essential_criteria
+    attributes:
+      label: Essential Criteria Checklist
+      description: Verify the example meets all essential requirements
+      options:
+        - label: Repository is publicly accessible with permissive license
+          required: true
+        - label: Project has 100+ GitHub stars OR is from established organization
+          required: true
+        - label: Repository is actively maintained (commits within 6 months)
+          required: true
+        - label: Project is used in production environments (not just demos)
+          required: true
+        - label: claude.md file has clear structure and actionable content
+          required: true
+
+  - type: textarea
+    id: quality_assessment
+    attributes:
+      label: Quality Assessment (Optional)
+      description: |
+        Rate the example on our 5-point scale (1-5) for each criterion:
+        - Onboarding Clarity: /5
+        - Architecture Communication: /5  
+        - Development Workflow: /5
+        - AI Context & Instructions: /5
+        - Technical Depth: /5
+        
+        Target: 15+ total points for inclusion, 20+ for top picks
+      placeholder: |
+        Onboarding Clarity: 4/5 - Clear setup guide with troubleshooting
+        Architecture Communication: 5/5 - Excellent diagrams and component relationships
+        Development Workflow: 4/5 - Comprehensive command documentation
+        AI Context & Instructions: 3/5 - Some AI-specific guidance provided
+        Technical Depth: 4/5 - Good technical detail with examples
+        
+        Total: 20/25 - Strong candidate for top picks
+
+  - type: textarea
+    id: key_features
+    attributes:
+      label: Key Features
+      description: List 3-5 specific features that make this example worth learning from
+      placeholder: |
+        1. Innovative MCP tool integration patterns
+        2. Comprehensive testing workflow documentation
+        3. Clear service orchestration guidance
+        4. Excellent troubleshooting coverage
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional_context
+    attributes:
+      label: Additional Context
+      description: Any other relevant information about the project or why it should be included
+
+  - type: checkboxes
+    id: contributor_agreement
+    attributes:
+      label: Contributor Agreement
+      description: Confirm your understanding of our contribution standards
+      options:
+        - label: I understand this suggestion will be evaluated against our quality criteria
+          required: true
+        - label: I confirm this repository uses a permissive license allowing analysis and reference
+          required: true
+        - label: I am not affiliated with this project or have disclosed any relationship
+          required: false

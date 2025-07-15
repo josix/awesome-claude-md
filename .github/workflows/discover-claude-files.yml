@@ -1,0 +1,380 @@
+name: Discover New CLAUDE.md Files
+
+on:
+  schedule:
+    # Run weekly on Mondays at 9 AM UTC
+    - cron: '0 9 * * 1'
+  workflow_dispatch:
+    # Allow manual triggering
+    inputs:
+      search_query:
+        description: 'Custom search query (optional)'
+        required: false
+        default: 'filename:claude.md stars:>100'
+
+jobs:
+  discover-claude-files:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Install dependencies
+        run: |
+          npm install -g @octokit/rest
+
+      - name: Create discovery script
+        run: |
+          cat > discover-claude-files.js << 'EOF'
+          const { Octokit } = require('@octokit/rest');
+          const fs = require('fs');
+
+          const octokit = new Octokit({
+            auth: process.env.GITHUB_TOKEN,
+          });
+
+          // Search queries to find new claude.md files
+          const searchQueries = [
+            'filename:claude.md stars:>100',
+            'filename:CLAUDE.md stars:>100', 
+            'filename:claude.md stars:>500',
+            'filename:claude.md language:TypeScript stars:>50',
+            'filename:claude.md language:Python stars:>50',
+            'filename:claude.md language:Rust stars:>50',
+            '"## Architecture" filename:claude.md stars:>50',
+            '"## Development Commands" filename:claude.md stars:>50'
+          ];
+
+          // Organizations to prioritize
+          const priorityOrgs = [
+            'microsoft', 'cloudflare', 'anthropic', 'pytorch', 
+            'langchain-ai', 'getsentry', 'ethereum', 'mattermost'
+          ];
+
+          async function searchGitHub(query) {
+            try {
+              const response = await octokit.rest.search.code({
+                q: query,
+                sort: 'indexed',
+                order: 'desc',
+                per_page: 30
+              });
+              return response.data.items;
+            } catch (error) {
+              console.error(`Error searching for "${query}":`, error.message);
+              return [];
+            }
+          }
+
+          async function getRepoDetails(owner, repo) {
+            try {
+              const response = await octokit.rest.repos.get({
+                owner,
+                repo
+              });
+              return response.data;
+            } catch (error) {
+              console.error(`Error getting repo details for ${owner}/${repo}:`, error.message);
+              return null;
+            }
+          }
+
+          async function checkLicense(owner, repo) {
+            try {
+              const response = await octokit.rest.repos.get({
+                owner,
+                repo
+              });
+              const license = response.data.license;
+              const permissiveLicenses = ['mit', 'apache-2.0', 'bsd-2-clause', 'bsd-3-clause', 'isc'];
+              return license && permissiveLicenses.includes(license.key);
+            } catch (error) {
+              return false;
+            }
+          }
+
+          async function getFileContent(owner, repo, path) {
+            try {
+              const response = await octokit.rest.repos.getContent({
+                owner,
+                repo,
+                path
+              });
+              
+              if (response.data.content) {
+                return Buffer.from(response.data.content, 'base64').toString();
+              }
+              return null;
+            } catch (error) {
+              return null;
+            }
+          }
+
+          function scoreClaudeFile(content) {
+            let score = 0;
+            const patterns = [
+              { pattern: /## Architecture|## Project Structure/i, points: 2, name: 'Architecture' },
+              { pattern: /## Development|## Setup|## Getting Started/i, points: 2, name: 'Development Setup' },
+              { pattern: /## Commands|## Scripts/i, points: 2, name: 'Commands' },
+              { pattern: /```\w+/g, points: 1, name: 'Code Blocks' },
+              { pattern: /##.*[Tt]est/i, points: 1, name: 'Testing' },
+              { pattern: /##.*[Dd]eploy/i, points: 1, name: 'Deployment' },
+              { pattern: /##.*[Dd]ebug|[Tt]roubleshoot/i, points: 1, name: 'Troubleshooting' },
+              { pattern: /mermaid|flowchart|diagram/i, points: 2, name: 'Diagrams' }
+            ];
+
+            const features = [];
+            patterns.forEach(({ pattern, points, name }) => {
+              const matches = content.match(pattern);
+              if (matches) {
+                score += points * (matches.length || 1);
+                features.push(name);
+              }
+            });
+
+            return { score, features };
+          }
+
+          async function main() {
+            console.log('🔍 Starting discovery of new CLAUDE.md files...');
+            
+            const existingRepos = new Set();
+            
+            // Read existing examples to avoid duplicates
+            try {
+              const existingFiles = fs.readdirSync('./scenarios', { recursive: true })
+                .filter(file => file.includes('/'))
+                .map(file => {
+                  const parts = file.split('/');
+                  if (parts.length >= 2) {
+                    const repoDir = parts[1];
+                    if (repoDir.includes('_')) {
+                      return repoDir.replace('_', '/');
+                    }
+                  }
+                  return null;
+                })
+                .filter(Boolean);
+              
+              existingFiles.forEach(repo => existingRepos.add(repo));
+              console.log(`📁 Found ${existingRepos.size} existing examples`);
+            } catch (error) {
+              console.log('⚠️  Could not read existing examples directory');
+            }
+
+            const candidates = [];
+            const customQuery = process.env.SEARCH_QUERY;
+            const queries = customQuery ? [customQuery] : searchQueries;
+
+            for (const query of queries) {
+              console.log(`🔎 Searching: "${query}"`);
+              const results = await searchGitHub(query);
+              
+              for (const item of results) {
+                const repoFullName = item.repository.full_name;
+                const [owner, repo] = repoFullName.split('/');
+                
+                // Skip if already in our collection
+                if (existingRepos.has(repoFullName)) {
+                  continue;
+                }
+
+                // Get repo details
+                const repoDetails = await getRepoDetails(owner, repo);
+                if (!repoDetails) continue;
+
+                // Check basic criteria
+                if (repoDetails.stargazers_count < 50) continue;
+                if (repoDetails.archived) continue;
+                
+                // Check license
+                const hasPermissiveLicense = await checkLicense(owner, repo);
+                if (!hasPermissiveLicense) continue;
+
+                // Get claude.md content and score it
+                const content = await getFileContent(owner, repo, item.path);
+                if (!content || content.length < 500) continue;
+
+                const { score, features } = scoreClaudeFile(content);
+                if (score < 5) continue; // Minimum quality threshold
+
+                // Check recency
+                const lastUpdate = new Date(repoDetails.updated_at);
+                const sixMonthsAgo = new Date();
+                sixMonthsAgo.setMonth(sixMonthsAgo.getMonth() - 6);
+                const isRecent = lastUpdate > sixMonthsAgo;
+
+                // Calculate priority score
+                let priority = 0;
+                if (priorityOrgs.includes(owner.toLowerCase())) priority += 10;
+                if (repoDetails.stargazers_count > 1000) priority += 5;
+                if (repoDetails.stargazers_count > 5000) priority += 5;
+                if (isRecent) priority += 3;
+                priority += Math.min(score, 10);
+
+                candidates.push({
+                  owner,
+                  repo,
+                  repoFullName,
+                  stars: repoDetails.stargazers_count,
+                  license: repoDetails.license?.name || 'Unknown',
+                  claudePath: item.path,
+                  claudeUrl: item.html_url,
+                  repoUrl: repoDetails.html_url,
+                  description: repoDetails.description || '',
+                  language: repoDetails.language || 'Unknown',
+                  lastUpdate: repoDetails.updated_at,
+                  isRecent,
+                  score,
+                  features,
+                  priority
+                });
+              }
+            }
+
+            // Sort by priority and remove duplicates
+            const uniqueCandidates = candidates
+              .filter((candidate, index, self) => 
+                index === self.findIndex(c => c.repoFullName === candidate.repoFullName)
+              )
+              .sort((a, b) => b.priority - a.priority)
+              .slice(0, 20); // Limit to top 20
+
+            console.log(`\n📊 Discovery Summary:`);
+            console.log(`- Total candidates found: ${uniqueCandidates.length}`);
+            console.log(`- Existing examples: ${existingRepos.size}`);
+
+            if (uniqueCandidates.length === 0) {
+              console.log('✅ No new high-quality candidates found');
+              return;
+            }
+
+            // Generate report
+            const report = {
+              discoveryDate: new Date().toISOString(),
+              totalCandidates: uniqueCandidates.length,
+              searchQueries: queries,
+              candidates: uniqueCandidates.map(c => ({
+                repository: c.repoFullName,
+                stars: c.stars,
+                priority: c.priority,
+                score: c.score,
+                features: c.features,
+                license: c.license,
+                language: c.language,
+                isRecent: c.isRecent,
+                claudeUrl: c.claudeUrl,
+                repoUrl: c.repoUrl,
+                description: c.description.substring(0, 200)
+              }))
+            };
+
+            // Save detailed report
+            fs.writeFileSync('discovery-report.json', JSON.stringify(report, null, 2));
+
+            // Generate markdown summary for issue
+            let issueBody = `# 🤖 Automated Discovery Report
+
+**Discovery Date**: ${new Date().toISOString().split('T')[0]}
+**Total Candidates**: ${uniqueCandidates.length}
+**Search Queries**: ${queries.length}
+
+## Top Candidates
+
+| Repository | Stars | Score | Features | License |
+|------------|-------|-------|----------|---------|
+`;
+
+            uniqueCandidates.slice(0, 10).forEach(candidate => {
+              issueBody += `| [${candidate.repoFullName}](${candidate.repoUrl}) | ${candidate.stars} ⭐ | ${candidate.score}/20 | ${candidate.features.slice(0, 3).join(', ')} | ${candidate.license} |\n`;
+            });
+
+            issueBody += `\n## Evaluation Needed
+
+Please review these candidates against our [curation criteria](CRITERIA.md):
+
+`;
+
+            uniqueCandidates.slice(0, 5).forEach((candidate, index) => {
+              issueBody += `### ${index + 1}. [${candidate.repoFullName}](${candidate.repoUrl})
+
+**Claude.md**: [View File](${candidate.claudeUrl})
+**Stars**: ${candidate.stars} ⭐ | **Language**: ${candidate.language} | **License**: ${candidate.license}
+**Description**: ${candidate.description}
+**Features Found**: ${candidate.features.join(', ')}
+**Quality Score**: ${candidate.score}/20 | **Priority**: ${candidate.priority}
+
+---
+
+`;
+            });
+
+            issueBody += `\n## Review Process
+
+For each candidate:
+1. Review the claude.md file quality
+2. Check against our essential criteria
+3. Score using our 5-dimension rubric  
+4. Determine appropriate category
+5. Create analysis if approved
+
+**Full Report**: See \`discovery-report.json\` in the workflow artifacts.
+`;
+
+            fs.writeFileSync('issue-body.md', issueBody);
+            console.log('\n✅ Discovery complete! Check workflow artifacts for full report.');
+          }
+
+          main().catch(console.error);
+          EOF
+
+      - name: Run discovery
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SEARCH_QUERY: ${{ github.event.inputs.search_query }}
+        run: node discover-claude-files.js
+
+      - name: Create issue if candidates found
+        if: always()
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          if [ -f "issue-body.md" ]; then
+            echo "📝 Creating issue with discovery results..."
+            
+            gh issue create \
+              --title "🤖 New CLAUDE.md Candidates - $(date +%Y-%m-%d)" \
+              --body-file issue-body.md \
+              --label "enhancement,automated-discovery" \
+              --assignee "@me"
+          else
+            echo "ℹ️ No candidates found, skipping issue creation"
+          fi
+
+      - name: Upload discovery report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: discovery-report-${{ github.run_number }}
+          path: |
+            discovery-report.json
+            issue-body.md
+          retention-days: 30
+
+      - name: Summary
+        if: always()
+        run: |
+          if [ -f "discovery-report.json" ]; then
+            echo "📊 Discovery completed successfully"
+            echo "📁 Artifacts uploaded with detailed report"
+            if [ -f "issue-body.md" ]; then
+              echo "📝 Issue created with candidates for review"
+            fi
+          else
+            echo "ℹ️ Discovery completed - no new candidates found"
+          fi
