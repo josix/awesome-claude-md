@@ -115,6 +115,13 @@ Each `analysis.md` file should include:
 
 ## Development Workflow Patterns
 
+### Automated Discovery
+The repository includes an automated system for discovering new CLAUDE.md files:
+- **GitHub Action**: Weekly scheduled workflow to search GitHub
+- **Quality Evaluation**: Automatic scoring based on repository metrics and content
+- **Community Review**: Issues created with candidate repositories for manual assessment
+- **See**: `AUTOMATED_DISCOVERY.md` for complete documentation
+
 ### Command Organization
 Suggest commands grouped by purpose:
 ```markdown

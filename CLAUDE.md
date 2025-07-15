@@ -33,10 +33,18 @@ When adding examples, use these primary categories:
 
 ## Repository Maintenance Tasks
 
+### Automated Discovery System
+The repository includes an automated discovery system for finding new CLAUDE.md files:
+- **GitHub Action**: `.github/workflows/discover-claude-files.yml` runs weekly
+- **Discovery Script**: `scripts/discover_claude_files.py` searches and evaluates candidates
+- **Community Review**: Creates issues with ranked candidates for manual review
+- **Documentation**: See `AUTOMATED_DISCOVERY.md` for complete details
+
 ### Adding New Examples
-1. **Search for Quality Files**: Use GitHub search (`filename:claude.md` or `filename:CLAUDE.md`) to find examples
-2. **Create Directory Structure**: `scenarios/[category]/[owner]_[repo]/`
-3. **Write Analysis**: Create `analysis.md` with:
+1. **Automated Path**: Review discovery issues created by the automation system
+2. **Manual Search**: Use GitHub search (`filename:claude.md` or `filename:CLAUDE.md`) to find examples
+3. **Create Directory Structure**: `scenarios/[category]/[owner]_[repo]/`
+4. **Write Analysis**: Create `analysis.md` with:
    - Category assignment and rationale
    - Source repository link and original CLAUDE.md link
    - License information and proper attribution
