@@ -2,11 +2,108 @@
 
 A curated collection of high-quality `claude.md` files from leading open-source projects. These examples demonstrate industry best practices for onboarding AI assistants to complex codebases.
 
-## What is claude.md?
+> **🚀 Quick Start**: New here? Jump to [Top Picks](#-top-picks) or browse by [Technology](#-browse-by-technology) | [Use Case](#-browse-by-use-case)
 
-The `claude.md` file is a project documentation format designed to help AI assistants understand codebases quickly and effectively. It provides context about architecture, development workflows, testing strategies, and project-specific conventions.
+## 📋 Table of Contents
 
-## Categories
+- [🎯 Top Picks](#-top-picks) - Start here for the best examples
+- [🔍 Browse by Technology](#-browse-by-technology) - Find examples by tech stack
+- [🎨 Browse by Use Case](#-browse-by-use-case) - Find examples by purpose
+- [📂 All Categories](#-all-categories) - Complete categorized list
+- [💡 What is claude.md?](#-what-is-claudemd) - Understanding the format
+- [🏆 Quality Standards](#-quality-standards) - Our selection criteria
+- [🤝 Contributing](#-contributing) - How to add examples
+- [🔎 Search GitHub](#-search-github) - Find more examples
+
+## 🎯 Top Picks
+
+**Start with these exceptional examples** - hand-picked for learning effective `claude.md` patterns:
+
+### 🥇 **Essential (Must Read)**
+| Example | Why It's Great | Tech Stack |
+|---------|---------------|------------|
+| **[Basic Memory](scenarios/complex-projects/basicmachines-co_basic-memory/analysis.md)** | Cutting-edge MCP integration & AI collaboration | Python, FastAPI, SQLAlchemy |
+| **[CYRUP AI Kargo](scenarios/developer-tooling/cyrup-ai_kargo/analysis.md)** | State machine workflows & research methodology | Rust, MCP Tools |
+| **[Dan Abramov's Blog](scenarios/complex-projects/gaearon_overreacted.io/analysis.md)** | Technical depth with personality | Next.js, React, MDX |
+
+### 🥈 **Advanced Patterns**
+| Example | Why It's Great | Tech Stack |
+|---------|---------------|------------|
+| **[Cloudflare Workers SDK](scenarios/developer-tooling/cloudflare_workers-sdk/analysis.md)** | Monorepo & testing excellence | TypeScript, Monorepo |
+| **[Anthropic Quickstarts](scenarios/getting-started/anthropics_anthropic-quickstarts/analysis.md)** | Multi-project organization | Python, TypeScript, React |
+
+## 🔍 Browse by Technology
+
+<details>
+<summary><strong>🟦 TypeScript/JavaScript</strong></summary>
+
+- **[Dan Abramov's Blog](scenarios/complex-projects/gaearon_overreacted.io/analysis.md)** - Next.js with MDX
+- **[Cloudflare Workers SDK](scenarios/developer-tooling/cloudflare_workers-sdk/analysis.md)** - Monorepo patterns
+- **[Claude Crew](scenarios/developer-tooling/d-kimuson_claude-crew/analysis.md)** - Strict TypeScript standards
+- **[Anthropic Quickstarts](scenarios/getting-started/anthropics_anthropic-quickstarts/analysis.md)** - Multi-project setup
+
+</details>
+
+<details>
+<summary><strong>🟧 Python</strong></summary>
+
+- **[Basic Memory](scenarios/complex-projects/basicmachines-co_basic-memory/analysis.md)** - MCP integration
+- **[PyTorch tlparse](scenarios/developer-tooling/pytorch_tlparse/analysis.md)** - Dual-language (Rust/Python)
+- **[Anthropic Quickstarts](scenarios/getting-started/anthropics_anthropic-quickstarts/analysis.md)** - Computer-use demo
+
+</details>
+
+<details>
+<summary><strong>🟫 Rust</strong></summary>
+
+- **[CYRUP AI Kargo](scenarios/developer-tooling/cyrup-ai_kargo/analysis.md)** - State machine workflows
+- **[PyTorch tlparse](scenarios/developer-tooling/pytorch_tlparse/analysis.md)** - Performance optimization
+
+</details>
+
+<details>
+<summary><strong>🟪 Other Languages</strong></summary>
+
+- **[Kent Beck's BPlusTree3](scenarios/project-handoffs/KentBeck_BPlusTree3/analysis.md)** - TDD methodology
+- **[Cloudflare workerd](scenarios/infrastructure-projects/cloudflare_workerd/analysis.md)** - C++/WebAssembly runtime
+
+</details>
+
+## 🎨 Browse by Use Case
+
+<details>
+<summary><strong>🏗️ Monorepo & Build Systems</strong></summary>
+
+- **[Cloudflare Workers SDK](scenarios/developer-tooling/cloudflare_workers-sdk/analysis.md)** - Advanced monorepo patterns
+- **[Lerna](scenarios/developer-tooling/lerna_lerna/analysis.md)** - Multi-package management
+
+</details>
+
+<details>
+<summary><strong>🤖 AI & Machine Learning</strong></summary>
+
+- **[Basic Memory](scenarios/complex-projects/basicmachines-co_basic-memory/analysis.md)** - AI collaboration workflows
+- **[Microsoft Semantic Workbench](scenarios/complex-projects/microsoft_semanticworkbench/analysis.md)** - AI assistant platform
+
+</details>
+
+<details>
+<summary><strong>🧪 Testing & Quality</strong></summary>
+
+- **[Kent Beck's BPlusTree3](scenarios/project-handoffs/KentBeck_BPlusTree3/analysis.md)** - TDD methodology
+- **[Claude Crew](scenarios/developer-tooling/d-kimuson_claude-crew/analysis.md)** - Strict TypeScript standards
+
+</details>
+
+<details>
+<summary><strong>🚀 Getting Started</strong></summary>
+
+- **[Anthropic Quickstarts](scenarios/getting-started/anthropics_anthropic-quickstarts/analysis.md)** - Multi-project documentation
+- **[Ethereum.org Website](scenarios/getting-started/ethereum_ethereum-org-website/analysis.md)** - Community-driven development
+
+</details>
+
+## 📂 All Categories
 
 ### 🏗️ Infrastructure Projects
 
@@ -26,22 +123,22 @@ Multi-service applications with sophisticated architectures and enterprise-scale
   - Service orchestration patterns
   - Multi-language architecture
 
-- **[Sentry](scenarios/complex-projects/getsentry_sentry/README.md)** - Error tracking and performance monitoring (40,000+ stars)
+- **[Sentry](scenarios/complex-projects/getsentry_sentry/analysis.md)** - Error tracking and performance monitoring (40,000+ stars)
   - Microservices architecture
   - Real-time data processing
   - Enterprise deployment patterns
 
-- **[TimeWarp Architecture](scenarios/complex-projects/TimeWarpEngineering_timewarp-architecture/README.md)** - .NET distributed application framework (100+ stars)
+- **[TimeWarp Architecture](scenarios/complex-projects/TimeWarpEngineering_timewarp-architecture/analysis.md)** - .NET distributed application framework (100+ stars)
   - Event sourcing and CQRS patterns
   - Distributed system design
   - Modern .NET practices
 
-- **[Platformatic](scenarios/complex-projects/platformatic_platformatic/README.md)** - Node.js application platform (1,000+ stars)
+- **[Platformatic](scenarios/complex-projects/platformatic_platformatic/analysis.md)** - Node.js application platform (1,000+ stars)
   - Multi-service coordination
   - API gateway patterns
   - Development environment setup
 
-- **[Webhook Broker](scenarios/complex-projects/newscred_webhook-broker/README.md)** - High-throughput webhook delivery system (200+ stars)
+- **[Webhook Broker](scenarios/complex-projects/newscred_webhook-broker/analysis.md)** - High-throughput webhook delivery system (200+ stars)
   - Event-driven architecture
   - Message queuing patterns
   - Scalability considerations
@@ -60,27 +157,27 @@ CLI tools, build systems, and developer productivity solutions.
   - Extensible parser framework
   - Performance optimization techniques
 
-- **[Lerna](scenarios/developer-tooling/lerna_lerna/README.md)** - Monorepo management tool (35,000+ stars)
+- **[Lerna](scenarios/developer-tooling/lerna_lerna/analysis.md)** - Monorepo management tool (35,000+ stars)
   - Multi-package workflows
   - Release management
   - CI/CD integration
 
-- **[Kubb](scenarios/developer-tooling/kubb-labs_kubb/README.md)** - API toolkit for code generation (2,000+ stars)
+- **[Kubb](scenarios/developer-tooling/kubb-labs_kubb/analysis.md)** - API toolkit for code generation (2,000+ stars)
   - Plugin architecture
   - OpenAPI code generation
   - TypeScript integration
 
-- **[mypy-boto3-builder](scenarios/developer-tooling/youtype_mypy-boto3-builder/README.md)** - Type generation for AWS SDK (2,000+ stars)
+- **[mypy-boto3-builder](scenarios/developer-tooling/youtype_mypy-boto3-builder/analysis.md)** - Type generation for AWS SDK (2,000+ stars)
   - Sophisticated type generation
   - Multi-package publishing
   - Documentation automation
 
-- **[HWP](scenarios/developer-tooling/mcollina_hwp/README.md)** - High-performance web platform (by Node.js TSC member)
+- **[HWP](scenarios/developer-tooling/mcollina_hwp/analysis.md)** - High-performance web platform (by Node.js TSC member)
   - Expert-level Node.js patterns
   - Performance optimization
   - Production deployment
 
-- **[Kotlinter Gradle](scenarios/developer-tooling/jeremymailen_kotlinter-gradle/README.md)** - Kotlin code formatting plugin (500+ stars)
+- **[Kotlinter Gradle](scenarios/developer-tooling/jeremymailen_kotlinter-gradle/analysis.md)** - Kotlin code formatting plugin (500+ stars)
   - Gradle plugin development
   - Code quality automation
   - CI/CD integration
@@ -94,22 +191,22 @@ Reusable components, SDKs, and framework implementations.
   - Sophisticated configuration system
   - Production-ready workflows
 
-- **[Composio](scenarios/libraries-frameworks/ComposioHQ_composio/README.md)** - AI agent integration platform (10,000+ stars)
+- **[Composio](scenarios/libraries-frameworks/ComposioHQ_composio/analysis.md)** - AI agent integration platform (10,000+ stars)
   - Multi-platform SDK architecture
   - Comprehensive API coverage
   - Integration patterns
 
-- **[Agentic](scenarios/libraries-frameworks/transitive-bullshit_agentic/README.md)** - LLM tool integration framework (2,000+ stars)
+- **[Agentic](scenarios/libraries-frameworks/transitive-bullshit_agentic/analysis.md)** - LLM tool integration framework (2,000+ stars)
   - Innovative tool abstractions
   - Multi-model support
   - Type-safe implementations
 
-- **[DataFog Python](scenarios/libraries-frameworks/DataFog_datafog-python/README.md)** - Data privacy and masking library (500+ stars)
+- **[DataFog Python](scenarios/libraries-frameworks/DataFog_datafog-python/analysis.md)** - Data privacy and masking library (500+ stars)
   - Privacy-focused patterns
   - Data transformation pipelines
   - Compliance considerations
 
-- **[GenSX](scenarios/libraries-frameworks/gensx-inc_gensx/README.md)** - Code generation framework (200+ stars)
+- **[GenSX](scenarios/libraries-frameworks/gensx-inc_gensx/analysis.md)** - Code generation framework (200+ stars)
   - Template-based generation
   - Multi-language support
   - Extensible architecture
@@ -118,7 +215,7 @@ Reusable components, SDKs, and framework implementations.
 
 Projects focused on developer onboarding and initial setup experiences.
 
-- **[Ethereum.org Website](scenarios/getting-started/ethereum_ethereum-org-website/README.md)** - Official Ethereum community website (5,000+ stars)
+- **[Ethereum.org Website](scenarios/getting-started/ethereum_ethereum-org-website/analysis.md)** - Official Ethereum community website (5,000+ stars)
   - Community-driven development
   - Multi-language support
   - Documentation workflows
@@ -127,7 +224,7 @@ Projects focused on developer onboarding and initial setup experiences.
 
 Documentation focused on project state, blocking issues, and transition planning.
 
-- **[Mattermost Test Management](scenarios/project-handoffs/mattermost_mattermost-test-management/README.md)** - Enterprise test management system
+- **[Mattermost Test Management](scenarios/project-handoffs/mattermost_mattermost-test-management/analysis.md)** - Enterprise test management system
   - Current project state
   - Blocking issues documentation
   - Transition planning
