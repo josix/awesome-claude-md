@@ -4,6 +4,16 @@ License Detection Script for awesome-claude-md
 
 This script automatically detects license information for all repositories
 referenced in analysis files using the GitHub API.
+
+Usage:
+    python detect_licenses.py --help
+    python detect_licenses.py --output results.json
+    python detect_licenses.py --update
+
+Environment Variables:
+    GITHUB_TOKEN - GitHub personal access token for higher API rate limits
+
+For complete documentation, see LICENSE_DETECTION.md
 """
 
 import os
