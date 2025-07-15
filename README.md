@@ -2,18 +2,17 @@
 
 A curated collection of high-quality `claude.md` files from leading open-source projects. These examples demonstrate industry best practices for onboarding AI assistants to complex codebases.
 
-> **🚀 Quick Start**: New here? Jump to [Top Picks](#-top-picks) or browse by [Technology](#-browse-by-technology) | [Use Case](#-browse-by-use-case)
+> **🚀 Quick Start**: New here? Jump to [Top Picks](#top-picks) or browse by [Technology](#browse-by-technology) | [Use Case](#browse-by-use-case)
 
 ## 📋 Table of Contents
 
-- [🎯 Top Picks](#-top-picks) - Start here for the best examples
-- [🔍 Browse by Technology](#-browse-by-technology) - Find examples by tech stack
-- [🎨 Browse by Use Case](#-browse-by-use-case) - Find examples by purpose
-- [📂 All Categories](#-all-categories) - Complete categorized list
-- [💡 What is claude.md?](#-what-is-claudemd) - Understanding the format
-- [🏆 Quality Standards](#-quality-standards) - Our selection criteria
-- [🤝 Contributing](#-contributing) - How to add examples
-- [🔎 Search GitHub](#-search-github) - Find more examples
+- [🎯 Top Picks](#top-picks) - Start here for the best examples
+- [🔍 Browse by Technology](#browse-by-technology) - Find examples by tech stack
+- [🎨 Browse by Use Case](#browse-by-use-case) - Find examples by purpose
+- [📂 All Categories](#all-categories) - Complete categorized list
+- [🏆 Quality Standards](#quality-standards) - Our selection criteria
+- [🤝 Contributing](#contributing) - How to add examples
+- [🔎 Search GitHub](#search-github) - Find more examples
 
 ## 🎯 Top Picks
 
