@@ -1,12 +1,9 @@
 # Composio - Libraries & Frameworks Example
 
-## Repository Information
-**Repository:** https://github.com/ComposioHQ/composio  
-**CLAUDE.md File:** https://github.com/ComposioHQ/composio/blob/main/fern/CLAUDE.md  
-**Description:** Composio equips your AI agents & LLMs with 100+ high-quality integrations via function calling  
-**Stars:** 10,000+ ⭐  
-
-## Category: Libraries & Frameworks
+**Category: Libraries & Frameworks**  
+**Source**: [ComposioHQ/composio](https://github.com/ComposioHQ/composio)  
+**CLAUDE.md**: [View Original](https://github.com/ComposioHQ/composio/blob/main/fern/CLAUDE.md)  
+**License**: Apache-2.0 License
 
 ## Why This Example Was Selected
 

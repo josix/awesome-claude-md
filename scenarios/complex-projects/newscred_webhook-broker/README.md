@@ -1,12 +1,9 @@
 # Webhook Broker - Complex Projects & Microservices Example
 
-## Repository Information
-**Repository:** https://github.com/newscred/webhook-broker  
-**CLAUDE.md File:** https://github.com/newscred/webhook-broker/blob/main/CLAUDE.md  
-**Description:** This is a fully HTTP based Pub/Sub Broker with a goal to simplify system architecture in SOA or Microservice architecture. It aims to solve the inter service communication problem.  
-**Stars:** 200+ ⭐  
-
-## Category: Complex Projects & Microservices
+**Category: Complex Projects**  
+**Source**: [newscred/webhook-broker](https://github.com/newscred/webhook-broker)  
+**CLAUDE.md**: [View Original](https://github.com/newscred/webhook-broker/blob/main/CLAUDE.md)  
+**License**: MIT License
 
 ## Why This Example Was Selected
 

@@ -1,12 +1,9 @@
 # kotlinter-gradle - Developer Tooling Example
 
-## Repository Information
-**Repository:** https://github.com/jeremymailen/kotlinter-gradle  
-**CLAUDE.md File:** https://github.com/jeremymailen/kotlinter-gradle/blob/main/CLAUDE.md  
-**Description:** Painless, fast ktlint plugin for Gradle  
-**Stars:** 500+ ⭐  
-
-## Category: Developer Tooling
+**Category: Developer Tooling**  
+**Source**: [jeremymailen/kotlinter-gradle](https://github.com/jeremymailen/kotlinter-gradle)  
+**CLAUDE.md**: [View Original](https://github.com/jeremymailen/kotlinter-gradle/blob/main/CLAUDE.md)  
+**License**: MIT License
 
 ## Why This Example Was Selected
 

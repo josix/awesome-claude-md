@@ -1,12 +1,9 @@
 # mypy-boto3-builder - Developer Tooling Example
 
-## Repository Information
-**Repository:** https://github.com/youtype/mypy_boto3_builder  
-**CLAUDE.md File:** https://github.com/youtype/mypy_boto3_builder/blob/main/CLAUDE.md  
-**Description:** Type annotations builder for boto3 compatible with VSCode, PyCharm, Emacs, Sublime Text, pyright and mypy  
-**Stars:** 2000+ ⭐  
-
-## Category: Developer Tooling
+**Category: Developer Tooling**  
+**Source**: [youtype/mypy_boto3_builder](https://github.com/youtype/mypy_boto3_builder)  
+**CLAUDE.md**: [View Original](https://github.com/youtype/mypy_boto3_builder/blob/main/CLAUDE.md)  
+**License**: MIT License
 
 ## Why This Example Was Selected
 

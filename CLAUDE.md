@@ -18,7 +18,7 @@ awesome-claude-md/
 └── scenarios/                   # Categorized examples
     ├── [category]/
     │   └── [owner]_[repo]/
-    │       └── analysis.md      # Analysis with links to original files
+    │       └── README.md        # Analysis with links to original files
 ```
 
 ## Core Categories
@@ -36,7 +36,7 @@ When adding examples, use these primary categories:
 ### Adding New Examples
 1. **Search for Quality Files**: Use GitHub search (`filename:claude.md` or `filename:CLAUDE.md`) to find examples
 2. **Create Directory Structure**: `scenarios/[category]/[owner]_[repo]/`
-3. **Write Analysis**: Create `analysis.md` with:
+3. **Write Analysis**: Create `README.md` with:
    - Category assignment and rationale
    - Source repository link and original CLAUDE.md link
    - License information and proper attribution
@@ -56,7 +56,7 @@ When adding examples, use these primary categories:
 - Ensure educational value while respecting original authors
 
 ### README Maintenance
-After adding examples, update main `README.md` with table of contents linking to each `analysis.md`, organized by category.
+After adding examples, update main `README.md` with table of contents linking to each `README.md`, organized by category.
 
 ## GitHub Copilot Integration
 

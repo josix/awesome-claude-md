@@ -1,12 +1,9 @@
 # mattermost-test-management - Project Handoffs & Status Reports Example
 
-## Repository Information
-**Repository:** https://github.com/mattermost/mattermost-test-management  
-**CLAUDE.md File:** https://github.com/mattermost/mattermost-test-management/blob/main/CLAUDE.md  
-**Description:** Mattermost Test Management, an open testing initiative  
-**Stars:** 20+ ⭐  
-
-## Category: Project Handoffs & Status Reports
+**Category: Project Handoffs**  
+**Source**: [mattermost/mattermost-test-management](https://github.com/mattermost/mattermost-test-management)  
+**CLAUDE.md**: [View Original](https://github.com/mattermost/mattermost-test-management/blob/main/CLAUDE.md)  
+**License**: MIT License
 
 ## Why This Example Was Selected
 

@@ -1,12 +1,9 @@
 # Kubb - Developer Tooling Example
 
-## Repository Information
-**Repository:** https://github.com/kubb-labs/kubb  
-**CLAUDE.md File:** https://github.com/kubb-labs/kubb/blob/main/docs/knowledge-base/claude.md  
-**Description:** The ultimate toolkit for working with APIs  
-**Stars:** 2,000+ ⭐  
-
-## Category: Developer Tooling
+**Category: Developer Tooling**  
+**Source**: [kubb-labs/kubb](https://github.com/kubb-labs/kubb)  
+**CLAUDE.md**: [View Original](https://github.com/kubb-labs/kubb/blob/main/docs/knowledge-base/claude.md)  
+**License**: MIT License
 
 ## Why This Example Was Selected
 

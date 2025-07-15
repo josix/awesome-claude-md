@@ -8,7 +8,12 @@
       "mcp__personal-github__search_repositories",
       "Bash(curl:*)",
       "WebFetch(domain:github.com)",
-      "WebFetch(domain:raw.githubusercontent.com)"
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "mcp__personal-github__get_pull_request_reviews",
+      "mcp__personal-github__get_pull_request_comments",
+      "Bash(git add:*)",
+      "Bash(git checkout:*)",
+      "Bash(grep:*)"
     ],
     "deny": []
   }

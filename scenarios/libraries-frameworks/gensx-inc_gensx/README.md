@@ -1,12 +1,9 @@
 # GenSX - Libraries & Frameworks Example
 
-## Repository Information
-**Repository:** https://github.com/gensx-inc/gensx  
-**CLAUDE.md File:** https://github.com/gensx-inc/gensx/blob/main/CLAUDE.md  
-**Description:** The TypeScript framework for agents & workflows with react-like components. Lightning fast dev loop. Easy to learn. Easy to extend.  
-**Stars:** 200+ ⭐  
-
-## Category: Libraries & Frameworks
+**Category: Libraries & Frameworks**  
+**Source**: [gensx-inc/gensx](https://github.com/gensx-inc/gensx)  
+**CLAUDE.md**: [View Original](https://github.com/gensx-inc/gensx/blob/main/CLAUDE.md)  
+**License**: MIT License
 
 ## Why This Example Was Selected
 

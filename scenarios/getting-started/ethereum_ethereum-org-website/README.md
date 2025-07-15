@@ -1,12 +1,9 @@
 # Ethereum.org Website - Getting Started Example
 
-## Repository Information
-**Repository:** https://github.com/ethereum/ethereum-org-website  
-**CLAUDE.md File:** https://github.com/ethereum/ethereum-org-website/blob/main/CLAUDE.md  
-**Description:** Ethereum.org is a primary online resource for the Ethereum community  
-**Stars:** 5,000+ ⭐  
-
-## Category: Getting Started Guides
+**Category: Getting Started**  
+**Source**: [ethereum/ethereum-org-website](https://github.com/ethereum/ethereum-org-website)  
+**CLAUDE.md**: [View Original](https://github.com/ethereum/ethereum-org-website/blob/main/CLAUDE.md)  
+**License**: MIT License
 
 ## Why This Example Was Selected
 
