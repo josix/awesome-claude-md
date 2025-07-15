@@ -3,7 +3,8 @@
 **Category: Developer Tooling**  
 **Source**: [pytorch/tlparse](https://github.com/pytorch/tlparse)  
 **CLAUDE.md**: [View Original](https://github.com/pytorch/tlparse/blob/main/CLAUDE.md)  
-**License**: BSD-3-Clause License
+**License**: BSD-3-Clause License  
+**Why it's exemplary**: Demonstrates excellent dual-language tooling documentation with clear architecture patterns, comprehensive testing strategy, and cross-platform deployment guidance.
 
 ## Key Features That Make This Exemplary
 

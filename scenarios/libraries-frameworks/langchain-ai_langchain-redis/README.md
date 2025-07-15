@@ -3,7 +3,8 @@
 **Category: Libraries & Frameworks**  
 **Source**: [langchain-ai/langchain-redis](https://github.com/langchain-ai/langchain-redis)  
 **CLAUDE.md**: [View Original](https://github.com/langchain-ai/langchain-redis/blob/main/CLAUDE.md)  
-**License**: MIT License
+**License**: MIT License  
+**Why it's exemplary**: Demonstrates exceptional library documentation with comprehensive testing strategy, clear architecture patterns, and detailed configuration management.
 
 ## Key Features That Make This Exemplary
 
