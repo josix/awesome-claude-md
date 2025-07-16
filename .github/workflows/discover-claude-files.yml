@@ -12,9 +12,9 @@ permissions:
   issues: write
 
 jobs:
-  discover:
+  test:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 10
     
     steps:
     - name: Checkout repository
@@ -32,10 +32,37 @@ jobs:
         
     - name: Install dependencies
       run: |
-        uv pip install --system requests==2.31.0 PyGithub==1.59.1 pytest==7.4.3
+        uv sync --dev
+        
+    - name: Run tests
+      run: |
+        uv run pytest tests/ -v
+  
+  discover:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    needs: test
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+        
+    - name: Install uv
+      uses: astral-sh/setup-uv@v3
+      with:
+        version: "latest"
+        
+    - name: Install dependencies
+      run: |
+        uv sync
         
     - name: Run discovery script
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
-        python scripts/discover_claude_files.py
+        uv run python scripts/discover_claude_files.py

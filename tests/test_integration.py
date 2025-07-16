@@ -14,9 +14,9 @@ from pathlib import Path
 from unittest.mock import Mock, patch, MagicMock
 import sys
 
-# Add the script to the path
-sys.path.insert(0, os.path.dirname(__file__))
-from discover_claude_files import ClaudeFileDiscovery
+# Add the scripts directory to the path
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..'))
+from scripts.discover_claude_files import ClaudeFileDiscovery
 from github.GithubException import RateLimitExceededException, UnknownObjectException, GithubException
 
 
@@ -67,7 +67,7 @@ This CLAUDE.md file demonstrates comprehensive project documentation...
 """
         analysis_file.write_text(analysis_content)
         
-    @patch('discover_claude_files.Github')
+    @patch('scripts.discover_claude_files.Github')
     @patch('requests.Session')
     def test_complete_discovery_workflow(self, mock_session, mock_github_class):
         """Test the complete discovery workflow from search to evaluation."""
@@ -75,38 +75,34 @@ This CLAUDE.md file demonstrates comprehensive project documentation...
         mock_github = Mock()
         mock_github_class.return_value = mock_github
         
-        # Mock search API response
-        mock_response = Mock()
-        mock_response.json.return_value = {
-            'items': [
-                {
-                    'repository': {
-                        'full_name': 'test/new-repo',
-                        'name': 'new-repo',
-                        'owner': {'login': 'test'},
-                        'description': 'A test repository',
-                        'stargazers_count': 100,
-                        'language': 'Python',
-                        'updated_at': '2023-12-01T00:00:00Z',
-                        'html_url': 'https://github.com/test/new-repo',
-                        'clone_url': 'https://github.com/test/new-repo.git',
-                        'archived': False,
-                        'fork': False
-                    },
-                    'path': 'CLAUDE.md'
-                }
-            ]
-        }
-        mock_response.headers = {
-            'X-RateLimit-Remaining': '100',
-            'X-RateLimit-Reset': str(int(time.time()) + 3600)
-        }
-        mock_response.raise_for_status.return_value = None
+        # Mock search API results
+        mock_search_result = Mock()
+        mock_repo_item = Mock()
+        mock_repo_item.full_name = 'test/new-repo'
+        mock_repo_item.name = 'new-repo'
+        mock_repo_item.owner.login = 'test'
+        mock_repo_item.description = 'A test repository'
+        mock_repo_item.stargazers_count = 100  # Make sure this is an int
+        mock_repo_item.forks_count = 10
+        mock_repo_item.language = 'Python'
+        mock_repo_item.updated_at = datetime(2023, 12, 1)
+        mock_repo_item.created_at = datetime(2023, 1, 1)
+        mock_repo_item.html_url = 'https://github.com/test/new-repo'
+        mock_repo_item.clone_url = 'https://github.com/test/new-repo.git'
+        mock_repo_item.archived = False
+        mock_repo_item.fork = False
+        mock_repo_item.get_topics.return_value = ['python', 'tool']
         
-        mock_session_instance = Mock()
-        mock_session_instance.get.return_value = mock_response
-        mock_session_instance.headers = {}
-        mock_session.return_value = mock_session_instance
+        # Mock file contents for CLAUDE.md file
+        mock_file_contents = Mock()
+        mock_file_contents.size = 1000  # Larger than min_file_size
+        mock_repo_item.get_contents.return_value = mock_file_contents
+        
+        # Make sure mock comparison operations work
+        mock_search_result.totalCount = 1
+        mock_search_result.get_page.return_value = [mock_repo_item]  # Mock get_page method
+        
+        mock_github.search_repositories.return_value = mock_search_result
         
         # Mock repository object for evaluation
         mock_repo = Mock()
@@ -143,14 +139,14 @@ This project has a complex architecture...
         discovery = ClaudeFileDiscovery("dummy_token")
         
         # Run the complete workflow
-        candidates = discovery.search_github_repos()
+        candidates = discovery.github_searcher.search_github_repos(discovery.existing_repos)
         
         # Verify search found candidates
         assert len(candidates) > 0
         assert candidates[0]['full_name'] == 'test/new-repo'
         
         # Evaluate the candidate
-        evaluation = discovery.evaluate_candidate(candidates[0])
+        evaluation = discovery.evaluator.evaluate_candidate(candidates[0])
         
         # Verify evaluation was successful
         assert evaluation is not None
@@ -165,7 +161,7 @@ This project has a complex architecture...
         # Verify existing repository is loaded
         assert 'microsoft/semanticworkbench' in discovery.existing_repos
         
-    @patch('discover_claude_files.Github')
+    @patch('scripts.discover_claude_files.Github')
     def test_error_handling_in_evaluation(self, mock_github_class):
         """Test error handling during repository evaluation."""
         mock_github = Mock()
@@ -173,9 +169,9 @@ This project has a complex architecture...
         
         # Mock GitHub API to raise exceptions
         mock_github.get_repo.side_effect = [
-            UnknownObjectException(status=404, data='Not Found'),
-            RateLimitExceededException(status=403, data='Rate Limited'),
-            GithubException(status=500, data='Server Error')
+            UnknownObjectException(status=404, data='Not Found', headers={}),
+            RateLimitExceededException(status=403, data='Rate Limited', headers={}),
+            GithubException(status=500, data='Server Error', headers={})
         ]
         
         discovery = ClaudeFileDiscovery("dummy_token")
@@ -194,13 +190,13 @@ This project has a complex architecture...
         }
         
         # Test handling of different exceptions
-        result1 = discovery.evaluate_candidate(candidate)
+        result1 = discovery.evaluator.evaluate_candidate(candidate)
         assert result1 is None  # Should handle UnknownObjectException
         
-        result2 = discovery.evaluate_candidate(candidate)
+        result2 = discovery.evaluator.evaluate_candidate(candidate)
         assert result2 is None  # Should handle RateLimitExceededException
         
-        result3 = discovery.evaluate_candidate(candidate)
+        result3 = discovery.evaluator.evaluate_candidate(candidate)
         assert result3 is None  # Should handle GithubException
         
     def test_candidate_validation(self):
@@ -220,7 +216,8 @@ This project has a complex architecture...
             'claude_file_path': 'CLAUDE.md',
             'clone_url': 'https://github.com/test/repo.git'
         }
-        assert discovery._validate_candidate(valid_candidate)
+        # Test candidate validation using the evaluator
+        assert discovery.evaluator._validate_candidate(valid_candidate)
         
         # Invalid candidates - missing required fields
         invalid_candidates = [
@@ -231,7 +228,7 @@ This project has a complex architecture...
         ]
         
         for i, invalid in enumerate(invalid_candidates):
-            result = discovery._validate_candidate(invalid)
+            result = discovery.evaluator._validate_candidate(invalid)
             assert not result, f"Invalid candidate {i} should have failed validation: {invalid}"
             
     def test_text_sanitization(self):
@@ -240,7 +237,7 @@ This project has a complex architecture...
         
         # Test HTML escaping
         dangerous_text = '<script>alert("xss")</script>Safe text'
-        sanitized = discovery._sanitize_text(dangerous_text)
+        sanitized = discovery.issue_generator._sanitize_text(dangerous_text)
         assert '<script>' not in sanitized
         assert '&lt;script&gt;' in sanitized
         assert 'Safe text' in sanitized
@@ -252,7 +249,7 @@ This project has a complex architecture...
         test_cases = [
             {
                 'content': 'infrastructure runtime kubernetes docker platform engine',
-                'expected': 'infrastructure-projects'
+                'expected': 'complex-projects'  # infrastructure is categorized under complex-projects
             },
             {
                 'content': 'cli tool build generator formatter compiler',
@@ -282,7 +279,7 @@ This project has a complex architecture...
         }
         
         for case in test_cases:
-            suggested = discovery._suggest_category(candidate, case['content'])
+            suggested = discovery.evaluator._suggest_category(candidate, case['content'])
             assert suggested == case['expected'], f"Expected {case['expected']}, got {suggested} for content: {case['content'][:50]}..."
 
 

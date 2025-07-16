@@ -8,9 +8,9 @@ from unittest.mock import Mock, patch
 import sys
 import os
 
-# Add the script to the path
-sys.path.insert(0, os.path.dirname(__file__))
-from discover_claude_files import ClaudeFileDiscovery, RepositoryLoader, GitHubSearcher, RepositoryEvaluator, IssueGenerator
+# Add the scripts directory to the path
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..'))
+from scripts.discover_claude_files import ClaudeFileDiscovery, RepositoryLoader, GitHubSearcher, RepositoryEvaluator, IssueGenerator
 
 
 @pytest.fixture
