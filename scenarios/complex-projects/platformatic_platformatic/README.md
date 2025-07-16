@@ -1,12 +1,9 @@
 # Platformatic - Complex Projects & Microservices Example
 
-## Repository Information
-**Repository:** https://github.com/platformatic/platformatic  
-**CLAUDE.md File:** https://github.com/platformatic/platformatic/blob/main/CLAUDE.md  
-**Description:** Platformatic Open Source monorepo!  
-**Stars:** 1000+ ⭐  
-
-## Category: Complex Projects & Microservices
+**Category: Complex Projects**  
+**Source**: [platformatic/platformatic](https://github.com/platformatic/platformatic)  
+**CLAUDE.md**: [View Original](https://github.com/platformatic/platformatic/blob/main/CLAUDE.md)  
+**License**: Apache-2.0 License
 
 ## Why This Example Was Selected
 

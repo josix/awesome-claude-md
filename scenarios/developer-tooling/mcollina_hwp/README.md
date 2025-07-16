@@ -1,13 +1,9 @@
 # HWP by Matteo Collina - Developer Tooling Example
 
-## Repository Information
-**Repository:** https://github.com/mcollina/hwp  
-**CLAUDE.md File:** https://github.com/mcollina/hwp/blob/main/CLAUDE.md  
-**Description:** High-performance Node.js web framework by renowned Node.js core contributor  
-**Stars:** 100+ ⭐  
-**Author:** Matteo Collina (Node.js TSC member, Fastify lead)  
-
-## Category: Developer Tooling
+**Category: Developer Tooling**  
+**Source**: [mcollina/hwp](https://github.com/mcollina/hwp)  
+**CLAUDE.md**: [View Original](https://github.com/mcollina/hwp/blob/main/CLAUDE.md)  
+**License**: MIT License
 
 ## Why This Example Was Selected
 

@@ -1,12 +1,9 @@
 # TimeWarp Architecture - Complex Projects & Microservices Example
 
-## Repository Information
-**Repository:** https://github.com/TimeWarpEngineering/timewarp-architecture  
-**CLAUDE.md File:** https://github.com/TimeWarpEngineering/timewarp-architecture/blob/main/TimeWarp.Architecture/Claude.md  
-**Description:** A distributed application template for dotnet. Utilizing Blazor, Web API, gRPC, Tye, YARP etc.  
-**Stars:** 100+ ⭐  
-
-## Category: Complex Projects & Microservices
+**Category: Complex Projects**  
+**Source**: [TimeWarpEngineering/timewarp-architecture](https://github.com/TimeWarpEngineering/timewarp-architecture)  
+**CLAUDE.md**: [View Original](https://github.com/TimeWarpEngineering/timewarp-architecture/blob/main/TimeWarp.Architecture/Claude.md)  
+**License**: MIT License
 
 ## Why This Example Was Selected
 

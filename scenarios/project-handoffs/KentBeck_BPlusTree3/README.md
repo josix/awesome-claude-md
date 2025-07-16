@@ -1,6 +1,10 @@
 # Analysis: Kent Beck's TDD-Focused CLAUDE.md
 
-**Category: Project Handoffs**
+**Category: Project Handoffs**  
+**Source**: [KentBeck/BPlusTree3](https://github.com/KentBeck/BPlusTree3)  
+**CLAUDE.md**: [View Original](https://github.com/KentBeck/BPlusTree3/blob/main/rust/docs/CLAUDE.md)  
+**Additional**: [System Prompt Additions](https://github.com/KentBeck/BPlusTree3/blob/main/.claude/system_prompt_additions.md)  
+**License**: MIT License  
 
 This CLAUDE.md file from Kent Beck's BPlusTree3 project exemplifies how to onboard an AI assistant to specific development methodologies and project-specific workflows.
 

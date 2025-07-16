@@ -18,7 +18,7 @@ awesome-claude-md/
 └── scenarios/                   # Categorized examples
     ├── [category]/
     │   └── [owner]_[repo]/
-    │       └── analysis.md      # Analysis with links to original files
+    │       └── README.md        # Analysis with links to original files
 ```
 
 ## Core Categories
@@ -64,7 +64,7 @@ The repository includes an automated discovery system for finding new CLAUDE.md 
 - Ensure educational value while respecting original authors
 
 ### README Maintenance
-After adding examples, update main `README.md` with table of contents linking to each `analysis.md`, organized by category.
+After adding examples, update main `README.md` with table of contents linking to each `README.md`, organized by category.
 
 ## GitHub Copilot Integration
 

@@ -1,12 +1,9 @@
 # Agentic - Libraries & Frameworks Example
 
-## Repository Information
-**Repository:** https://github.com/transitive-bullshit/agentic  
-**CLAUDE.md File:** https://github.com/transitive-bullshit/agentic/blob/main/CLAUDE.md  
-**Description:** Agentic is RapidAPI for LLM Tools. Your API ⇒ Paid MCP. Instantly.  
-**Stars:** 2,000+ ⭐  
-
-## Category: Libraries & Frameworks
+**Category: Libraries & Frameworks**  
+**Source**: [transitive-bullshit/agentic](https://github.com/transitive-bullshit/agentic)  
+**CLAUDE.md**: [View Original](https://github.com/transitive-bullshit/agentic/blob/main/CLAUDE.md)  
+**License**: MIT License
 
 ## Why This Example Was Selected
 

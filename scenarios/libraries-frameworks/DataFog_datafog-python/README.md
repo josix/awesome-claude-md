@@ -1,12 +1,9 @@
 # datafog-python - Libraries & Frameworks Example
 
-## Repository Information
-**Repository:** https://github.com/DataFog/datafog-python  
-**CLAUDE.md File:** https://github.com/DataFog/datafog-python/blob/main/Claude.md  
-**Description:** Lightning-fast PII detection and anonymization library with 190x performance advantage - detect emails, SSNs, names, and more in <2MB package  
-**Stars:** 500+ ⭐  
-
-## Category: Libraries & Frameworks
+**Category: Libraries & Frameworks**  
+**Source**: [DataFog/datafog-python](https://github.com/DataFog/datafog-python)  
+**CLAUDE.md**: [View Original](https://github.com/DataFog/datafog-python/blob/main/Claude.md)  
+**License**: MIT License
 
 ## Why This Example Was Selected
 

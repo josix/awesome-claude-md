@@ -20,7 +20,7 @@ awesome-claude-md/
 └── scenarios/                   # Categorized examples
     ├── [category]/
     │   └── [owner]_[repo]/
-    │       └── analysis.md      # Analysis with links to original files
+    │       └── README.md        # Analysis with links to original files
 ```
 
 ## Core Categories
@@ -41,13 +41,13 @@ When adding new examples, use these primary categories:
 
 ### File Names
 - Original files: `claude.md` (preserve exactly as found)
-- Analysis files: `analysis.md` (our evaluation)
-- Some projects use: `README.md` for analysis (legacy pattern)
+- Analysis files: `README.md` (our evaluation)
+- This displays automatically when browsing GitHub directories
 
 ## Common Development Patterns
 
 ### Documentation Structure
-When creating analysis.md files, follow this pattern:
+When creating README.md files, follow this pattern:
 ```markdown
 # Analysis: [Project Name]
 
@@ -80,7 +80,7 @@ When adding new examples, update the main README.md:
 - Add entry in appropriate category section
 - Include project name, repository link, and star count
 - List 2-3 key features in bullet points
-- Link to the analysis.md file
+- Link to the README.md file
 
 ### Search Commands
 For finding new examples, suggest these GitHub search patterns:
@@ -100,7 +100,7 @@ filename:CLAUDE.md language:TypeScript
 - **Respect copyright** and only reference publicly available files under permissive licenses
 
 ### Analysis Files
-Each `analysis.md` file should include:
+Each `README.md` file should include:
 - **Header**: Category, source repository link, original CLAUDE.md link, license
 - **Why it's exemplary**: Specific features that make it outstanding
 - **Key techniques**: Unique approaches and patterns
