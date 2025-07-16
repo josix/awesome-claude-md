@@ -12,6 +12,7 @@ import re
 import json
 import time
 import html
+import logging
 from datetime import datetime, timedelta
 from typing import List, Dict, Set, Optional
 from pathlib import Path
@@ -19,6 +20,17 @@ from pathlib import Path
 import requests
 from github import Github
 from github.GithubException import RateLimitExceededException, UnknownObjectException, GithubException
+
+
+# Configure logging
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(levelname)s - %(message)s',
+    handlers=[
+        logging.StreamHandler(),
+    ]
+)
+logger = logging.getLogger(__name__)
 
 
 class ClaudeFileDiscovery:
@@ -62,18 +74,46 @@ class ClaudeFileDiscovery:
                                             # Look for repository URL in the analysis file
                                             repo_match = re.search(r'\*\*Repository\*\*:\s*(?:\[.*?\]\()?https://github\.com/([^/\)\s]+/[^/\)\s]+)', content)
                                             if repo_match:
-                                                existing.add(repo_match.group(1))
-                                                continue
+                                                repo_name = repo_match.group(1)
+                                                # Validate extracted repository name format
+                                                if self._validate_repo_name(repo_name):
+                                                    existing.add(repo_name)
+                                                    continue
+                                                else:
+                                                    logger.warning(f"Invalid repository name format extracted: {repo_name}")
                                     except (IOError, UnicodeDecodeError) as e:
-                                        print(f"Warning: Could not read {analysis_file}: {e}")
+                                        logger.warning(f"Could not read {analysis_file}: {e}")
+                                    except Exception as e:
+                                        logger.error(f"Unexpected error parsing {analysis_file}: {e}")
                                 
-                                # Fallback: Use simple first_last split for owner_repo format
+                                # Fallback: Use simple first underscore split for owner_repo format
                                 # This assumes the first underscore separates owner from repo
                                 parts = dir_name.split('_', 1)
                                 if len(parts) == 2:
                                     owner, repo = parts
                                     existing.add(f"{owner}/{repo}")
+        
+        return existing
                                         
+    def _validate_repo_name(self, repo_name: str) -> bool:
+        """Validate repository name format (owner/repo)."""
+        if not isinstance(repo_name, str) or '/' not in repo_name:
+            return False
+        
+        parts = repo_name.split('/')
+        if len(parts) != 2:
+            return False
+            
+        owner, repo = parts
+        # Basic validation for GitHub username/org and repo name rules
+        # GitHub usernames: 1-39 chars, alphanumeric or hyphens, can't start/end with hyphen
+        # Repo names: similar rules but can contain dots, underscores
+        if not (1 <= len(owner) <= 39 and re.match(r'^[a-zA-Z0-9]([a-zA-Z0-9-]*[a-zA-Z0-9])?$', owner)):
+            return False
+        if not (1 <= len(repo) <= 100 and re.match(r'^[a-zA-Z0-9._-]+$', repo)):
+            return False
+            
+        return True
     def _validate_candidate(self, candidate: Dict) -> bool:
         """Validate that a candidate dictionary has the required structure."""
         required_fields = ['full_name', 'name', 'owner', 'stars', 'html_url', 'claude_file_path']
@@ -83,18 +123,18 @@ class ClaudeFileDiscovery:
             
         for field in required_fields:
             if field not in candidate:
-                print(f"Warning: Candidate missing required field '{field}'")
+                logger.warning(f"Candidate missing required field '{field}'")
                 return False
                 
         # Validate data types
         if not isinstance(candidate['stars'], int) or candidate['stars'] < 0:
-            print(f"Warning: Invalid stars value for {candidate.get('full_name', 'unknown')}")
+            logger.warning(f"Invalid stars value for {candidate.get('full_name', 'unknown')}")
             return False
             
         # Validate URLs
         if not (candidate['html_url'].startswith('https://github.com/') or 
                 candidate['html_url'].startswith('http://github.com/')):
-            print(f"Warning: Invalid GitHub URL for {candidate.get('full_name', 'unknown')}")
+            logger.warning(f"Invalid GitHub URL for {candidate.get('full_name', 'unknown')}")
             return False
             
         return True
@@ -122,14 +162,27 @@ class ClaudeFileDiscovery:
         
         if remaining and int(remaining) < 10:
             if reset_time:
-                reset_timestamp = int(reset_time)
-                current_time = int(time.time())
-                sleep_time = min(reset_timestamp - current_time + 1, 300)  # Max 5 minutes
-                if sleep_time > 0:
-                    print(f"Rate limit low, sleeping for {sleep_time} seconds")
-                    time.sleep(sleep_time)
+                try:
+                    reset_timestamp = int(reset_time)
+                    current_time = int(time.time())
+                    sleep_time = reset_timestamp - current_time + 1
+                    
+                    # Validate sleep time is reasonable
+                    if sleep_time > 0:
+                        # Cap at 60 seconds to avoid workflow timeout
+                        sleep_time = min(sleep_time, 60)
+                        logger.info(f"Rate limit low, sleeping for {sleep_time} seconds")
+                        time.sleep(sleep_time)
+                    else:
+                        # If negative or zero, use minimal delay
+                        logger.info("Rate limit headers indicate no wait needed")
+                        time.sleep(1)
+                except (ValueError, TypeError) as e:
+                    logger.warning(f"Invalid rate limit headers: {e}")
+                    time.sleep(10)
             else:
                 # Default sleep if no reset time available
+                logger.info("Rate limit low but no reset time available, using default delay")
                 time.sleep(10)
         else:
             # Normal rate limiting
@@ -147,7 +200,7 @@ class ClaudeFileDiscovery:
         ]
         
         for query in search_queries:
-            print(f"Searching with query: {query}")
+            logger.info(f"Searching with query: {query}")
             
             try:
                 # Use GitHub Search API with pagination
@@ -192,20 +245,20 @@ class ClaudeFileDiscovery:
                 
             except requests.exceptions.HTTPError as e:
                 if e.response.status_code == 403:
-                    print(f"Rate limited or forbidden for query '{query}': {e}")
+                    logger.warning(f"Rate limited or forbidden for query '{query}': {e}")
                     # Try to wait and continue
                     time.sleep(60)
                 else:
-                    print(f"HTTP error searching with query '{query}': {e}")
+                    logger.error(f"HTTP error searching with query '{query}': {e}")
                 continue
             except requests.exceptions.RequestException as e:
-                print(f"Network error searching with query '{query}': {e}")
+                logger.error(f"Network error searching with query '{query}': {e}")
                 continue
             except ValueError as e:
-                print(f"JSON parsing error for query '{query}': {e}")
+                logger.error(f"JSON parsing error for query '{query}': {e}")
                 continue
             except Exception as e:
-                print(f"Unexpected error searching with query '{query}': {e}")
+                logger.error(f"Unexpected error searching with query '{query}': {e}")
                 continue
                 
         # Remove duplicates based on full_name
@@ -216,7 +269,7 @@ class ClaudeFileDiscovery:
                 seen.add(candidate['full_name'])
                 unique_candidates.append(candidate)
                 
-        print(f"Found {len(unique_candidates)} unique candidate repositories")
+        logger.info(f"Found {len(unique_candidates)} unique candidate repositories")
         return unique_candidates
         
     def evaluate_candidate(self, candidate: Dict) -> Dict:
@@ -231,16 +284,16 @@ class ClaudeFileDiscovery:
             repo = self.github.get_repo(full_name)
             
         except UnknownObjectException:
-            print(f"Repository {full_name} not found or not accessible")
+            logger.warning(f"Repository {full_name} not found or not accessible")
             return None
         except RateLimitExceededException:
-            print(f"Rate limit exceeded while accessing {full_name}")
+            logger.warning(f"Rate limit exceeded while accessing {full_name}")
             return None
         except GithubException as e:
-            print(f"GitHub API error for {full_name}: {e}")
+            logger.error(f"GitHub API error for {full_name}: {e}")
             return None
         except Exception as e:
-            print(f"Unexpected error accessing repository {full_name}: {e}")
+            logger.error(f"Unexpected error accessing repository {full_name}: {e}")
             return None
             
         try:
@@ -253,13 +306,13 @@ class ClaudeFileDiscovery:
                 claude_file_content = claude_file.decoded_content.decode('utf-8')
                 claude_file_size = claude_file.size
             except UnknownObjectException:
-                print(f"CLAUDE.md file not found in {full_name} at path {candidate['claude_file_path']}")
+                logger.warning(f"CLAUDE.md file not found in {full_name} at path {candidate['claude_file_path']}")
                 return None
             except UnicodeDecodeError:
-                print(f"Could not decode CLAUDE.md from {full_name} (invalid UTF-8)")
+                logger.warning(f"Could not decode CLAUDE.md from {full_name} (invalid UTF-8)")
                 return None
             except GithubException as e:
-                print(f"GitHub API error fetching CLAUDE.md from {full_name}: {e}")
+                logger.error(f"GitHub API error fetching CLAUDE.md from {full_name}: {e}")
                 return None
                 
             # Quality evaluation criteria
@@ -320,7 +373,7 @@ class ClaudeFileDiscovery:
                     score += 1
                     reasons.append("Recently updated (within 90 days)")
             except (ValueError, TypeError) as e:
-                print(f"Warning: Could not parse update date for {full_name}: {e}")
+                logger.warning(f"Could not parse update date for {full_name}: {e}")
                 days_since_update = 999  # Default to old
                 
             # Organization recognition
@@ -350,7 +403,7 @@ class ClaudeFileDiscovery:
             }
             
         except Exception as e:
-            print(f"Unexpected error evaluating {full_name}: {e}")
+            logger.error(f"Unexpected error evaluating {full_name}: {e}")
             return None
             
     def _suggest_category(self, candidate: Dict, claude_content: str) -> str:
@@ -398,7 +451,7 @@ class ClaudeFileDiscovery:
     def create_discovery_issue(self, evaluations: List[Dict]) -> None:
         """Create a GitHub issue with discovered candidate repositories."""
         if not evaluations:
-            print("No candidates to create issue for")
+            logger.warning("No candidates to create issue for")
             return
             
         # Sort by score (highest first)
@@ -497,14 +550,14 @@ class ClaudeFileDiscovery:
                 labels=['automation', 'discovery', 'review-needed']
             )
             
-            print(f"Created issue #{issue.number}: {title}")
+            logger.info(f"Created issue #{issue.number}: {title}")
             
         except GithubException as e:
-            print(f"GitHub API error creating issue: {e}")
+            logger.error(f"GitHub API error creating issue: {e}")
             # Fallback: save to file for manual review
             self._save_discovery_report(title, body)
         except Exception as e:
-            print(f"Unexpected error creating issue: {e}")
+            logger.error(f"Unexpected error creating issue: {e}")
             # Fallback: save to file for manual review
             self._save_discovery_report(title, body)
             
@@ -514,19 +567,19 @@ class ClaudeFileDiscovery:
             filename = f"discovery-report-{datetime.now().strftime('%Y%m%d')}.md"
             with open(filename, 'w', encoding='utf-8') as f:
                 f.write(f"# {title}\n\n{body}")
-            print(f"Saved discovery report to {filename}")
+            logger.info(f"Saved discovery report to {filename}")
         except IOError as e:
-            print(f"Error saving discovery report to file: {e}")
+            logger.error(f"Error saving discovery report to file: {e}")
 
 
 def main():
     """Main execution function."""
     github_token = os.environ.get('GITHUB_TOKEN')
     if not github_token:
-        print("Error: GITHUB_TOKEN environment variable is required")
+        logger.error("Error: GITHUB_TOKEN environment variable is required")
         return 1
         
-    print("🔍 Starting automated CLAUDE.md discovery...")
+    logger.info("🔍 Starting automated CLAUDE.md discovery...")
     
     discovery = ClaudeFileDiscovery(github_token)
     
@@ -534,10 +587,10 @@ def main():
     candidates = discovery.search_github_repos()
     
     if not candidates:
-        print("No new candidates found")
+        logger.info("No new candidates found")
         return 0
         
-    print(f"Evaluating {len(candidates)} candidates...")
+    logger.info(f"Evaluating {len(candidates)} candidates...")
     
     # Evaluate each candidate
     evaluations = []
@@ -546,13 +599,13 @@ def main():
         if eval_result and eval_result['score'] >= 3:  # Minimum threshold
             evaluations.append(eval_result)
             
-    print(f"Found {len(evaluations)} candidates that meet quality thresholds")
+    logger.info(f"Found {len(evaluations)} candidates that meet quality thresholds")
     
     if evaluations:
         # Create issue with findings
         discovery.create_discovery_issue(evaluations)
     else:
-        print("No candidates met the quality threshold for review")
+        logger.info("No candidates met the quality threshold for review")
         
     return 0
 
