@@ -11,12 +11,14 @@ import os
 import re
 import json
 import time
+import html
 from datetime import datetime, timedelta
 from typing import List, Dict, Set, Optional
 from pathlib import Path
 
 import requests
 from github import Github
+from github.GithubException import RateLimitExceededException, UnknownObjectException, GithubException
 
 
 class ClaudeFileDiscovery:
@@ -51,18 +53,88 @@ class ClaudeFileDiscovery:
                             # Extract owner/repo from directory name format: owner_repo
                             dir_name = repo_dir.name
                             if '_' in dir_name:
-                                # Handle cases where repo name might contain underscores
-                                parts = dir_name.split('_')
-                                if len(parts) >= 2:
-                                    # Try to find the split point by checking if owner exists
-                                    for i in range(1, len(parts)):
-                                        potential_owner = '_'.join(parts[:i])
-                                        potential_repo = '_'.join(parts[i:])
-                                        existing.add(f"{potential_owner}/{potential_repo}")
+                                # Parse analysis.md file to get the actual repository URL
+                                analysis_file = repo_dir / 'analysis.md'
+                                if analysis_file.exists():
+                                    try:
+                                        with open(analysis_file, 'r', encoding='utf-8') as f:
+                                            content = f.read()
+                                            # Look for repository URL in the analysis file
+                                            repo_match = re.search(r'\*\*Repository\*\*:\s*(?:\[.*?\]\()?https://github\.com/([^/\)\s]+/[^/\)\s]+)', content)
+                                            if repo_match:
+                                                existing.add(repo_match.group(1))
+                                                continue
+                                    except (IOError, UnicodeDecodeError) as e:
+                                        print(f"Warning: Could not read {analysis_file}: {e}")
+                                
+                                # Fallback: Use simple first_last split for owner_repo format
+                                # This assumes the first underscore separates owner from repo
+                                parts = dir_name.split('_', 1)
+                                if len(parts) == 2:
+                                    owner, repo = parts
+                                    existing.add(f"{owner}/{repo}")
                                         
-        print(f"Found {len(existing)} existing repositories in collection")
-        return existing
+    def _validate_candidate(self, candidate: Dict) -> bool:
+        """Validate that a candidate dictionary has the required structure."""
+        required_fields = ['full_name', 'name', 'owner', 'stars', 'html_url', 'claude_file_path']
         
+        if not isinstance(candidate, dict):
+            return False
+            
+        for field in required_fields:
+            if field not in candidate:
+                print(f"Warning: Candidate missing required field '{field}'")
+                return False
+                
+        # Validate data types
+        if not isinstance(candidate['stars'], int) or candidate['stars'] < 0:
+            print(f"Warning: Invalid stars value for {candidate.get('full_name', 'unknown')}")
+            return False
+            
+        # Validate URLs
+        if not (candidate['html_url'].startswith('https://github.com/') or 
+                candidate['html_url'].startswith('http://github.com/')):
+            print(f"Warning: Invalid GitHub URL for {candidate.get('full_name', 'unknown')}")
+            return False
+            
+        return True
+
+    def _sanitize_text(self, text: str) -> str:
+        """Sanitize text content for safe inclusion in markdown/issues."""
+        if not isinstance(text, str):
+            return ""
+            
+        # HTML escape to prevent injection
+        sanitized = html.escape(text)
+        
+        # Limit length to prevent excessively long content
+        max_length = 500
+        if len(sanitized) > max_length:
+            sanitized = sanitized[:max_length] + "..."
+            
+        return sanitized
+        
+    def _handle_rate_limiting(self, response: requests.Response) -> None:
+        """Handle GitHub API rate limiting adaptively."""
+        # Check rate limit headers
+        remaining = response.headers.get('X-RateLimit-Remaining')
+        reset_time = response.headers.get('X-RateLimit-Reset')
+        
+        if remaining and int(remaining) < 10:
+            if reset_time:
+                reset_timestamp = int(reset_time)
+                current_time = int(time.time())
+                sleep_time = min(reset_timestamp - current_time + 1, 300)  # Max 5 minutes
+                if sleep_time > 0:
+                    print(f"Rate limit low, sleeping for {sleep_time} seconds")
+                    time.sleep(sleep_time)
+            else:
+                # Default sleep if no reset time available
+                time.sleep(10)
+        else:
+            # Normal rate limiting
+            time.sleep(2)
+
     def search_github_repos(self) -> List[Dict]:
         """Search GitHub for repositories containing CLAUDE.md files."""
         candidates = []
@@ -98,7 +170,7 @@ class ClaudeFileDiscovery:
                         not repo_info.get('archived', False) and
                         not repo_info.get('fork', False)):
                         
-                        candidates.append({
+                        candidate = {
                             'full_name': full_name,
                             'name': repo_info['name'],
                             'owner': repo_info['owner']['login'],
@@ -109,13 +181,31 @@ class ClaudeFileDiscovery:
                             'html_url': repo_info['html_url'],
                             'claude_file_path': item['path'],
                             'clone_url': repo_info['clone_url']
-                        })
+                        }
                         
-                # Rate limiting
-                time.sleep(2)
+                        # Validate candidate structure
+                        if self._validate_candidate(candidate):
+                            candidates.append(candidate)
+                        
+                # Adaptive rate limiting
+                self._handle_rate_limiting(response)
                 
+            except requests.exceptions.HTTPError as e:
+                if e.response.status_code == 403:
+                    print(f"Rate limited or forbidden for query '{query}': {e}")
+                    # Try to wait and continue
+                    time.sleep(60)
+                else:
+                    print(f"HTTP error searching with query '{query}': {e}")
+                continue
+            except requests.exceptions.RequestException as e:
+                print(f"Network error searching with query '{query}': {e}")
+                continue
+            except ValueError as e:
+                print(f"JSON parsing error for query '{query}': {e}")
+                continue
             except Exception as e:
-                print(f"Error searching with query '{query}': {e}")
+                print(f"Unexpected error searching with query '{query}': {e}")
                 continue
                 
         # Remove duplicates based on full_name
@@ -131,12 +221,29 @@ class ClaudeFileDiscovery:
         
     def evaluate_candidate(self, candidate: Dict) -> Dict:
         """Evaluate a candidate repository against quality standards."""
+        if not self._validate_candidate(candidate):
+            return None
+            
         full_name = candidate['full_name']
         
         try:
             # Get repository details
             repo = self.github.get_repo(full_name)
             
+        except UnknownObjectException:
+            print(f"Repository {full_name} not found or not accessible")
+            return None
+        except RateLimitExceededException:
+            print(f"Rate limit exceeded while accessing {full_name}")
+            return None
+        except GithubException as e:
+            print(f"GitHub API error for {full_name}: {e}")
+            return None
+        except Exception as e:
+            print(f"Unexpected error accessing repository {full_name}: {e}")
+            return None
+            
+        try:
             # Get CLAUDE.md file content
             claude_file_content = None
             claude_file_size = 0
@@ -145,8 +252,14 @@ class ClaudeFileDiscovery:
                 claude_file = repo.get_contents(candidate['claude_file_path'])
                 claude_file_content = claude_file.decoded_content.decode('utf-8')
                 claude_file_size = claude_file.size
-            except Exception as e:
-                print(f"Could not fetch CLAUDE.md from {full_name}: {e}")
+            except UnknownObjectException:
+                print(f"CLAUDE.md file not found in {full_name} at path {candidate['claude_file_path']}")
+                return None
+            except UnicodeDecodeError:
+                print(f"Could not decode CLAUDE.md from {full_name} (invalid UTF-8)")
+                return None
+            except GithubException as e:
+                print(f"GitHub API error fetching CLAUDE.md from {full_name}: {e}")
                 return None
                 
             # Quality evaluation criteria
@@ -196,15 +309,19 @@ class ClaudeFileDiscovery:
                 reasons.append(f"Good content ({len(found_indicators)} key sections)")
                 
             # Recent activity
-            updated_at = datetime.fromisoformat(candidate['updated_at'].replace('Z', '+00:00'))
-            days_since_update = (datetime.now().astimezone() - updated_at).days
-            
-            if days_since_update <= 30:
-                score += 2
-                reasons.append("Recently updated (within 30 days)")
-            elif days_since_update <= 90:
-                score += 1
-                reasons.append("Recently updated (within 90 days)")
+            try:
+                updated_at = datetime.fromisoformat(candidate['updated_at'].replace('Z', '+00:00'))
+                days_since_update = (datetime.now().astimezone() - updated_at).days
+                
+                if days_since_update <= 30:
+                    score += 2
+                    reasons.append("Recently updated (within 30 days)")
+                elif days_since_update <= 90:
+                    score += 1
+                    reasons.append("Recently updated (within 90 days)")
+            except (ValueError, TypeError) as e:
+                print(f"Warning: Could not parse update date for {full_name}: {e}")
+                days_since_update = 999  # Default to old
                 
             # Organization recognition
             notable_orgs = [
@@ -233,7 +350,7 @@ class ClaudeFileDiscovery:
             }
             
         except Exception as e:
-            print(f"Error evaluating {full_name}: {e}")
+            print(f"Unexpected error evaluating {full_name}: {e}")
             return None
             
     def _suggest_category(self, candidate: Dict, claude_content: str) -> str:
@@ -309,27 +426,36 @@ class ClaudeFileDiscovery:
         for i, eval_result in enumerate(evaluations[:10], 1):  # Top 10
             candidate = eval_result['candidate']
             
+            # Sanitize user-generated content
+            safe_description = self._sanitize_text(candidate.get('description', 'No description available'))
+            safe_owner = self._sanitize_text(candidate['owner'])
+            safe_name = self._sanitize_text(candidate['name'])
+            safe_language = self._sanitize_text(candidate.get('language', 'Unknown'))
+            
             body_parts.extend([
-                f"### {i}. [{candidate['owner']}/{candidate['name']}]({candidate['html_url']}) ⭐ {candidate['stars']:,}",
+                f"### {i}. [{safe_owner}/{safe_name}]({candidate['html_url']}) ⭐ {candidate['stars']:,}",
                 "",
                 f"**Score**: {eval_result['score']}/10 | **Suggested Category**: `{eval_result['suggested_category']}`",
                 "",
-                f"**Description**: {candidate.get('description', 'No description available')}",
+                f"**Description**: {safe_description}",
                 "",
-                f"**Language**: {candidate.get('language', 'Unknown')} | **Last Updated**: {candidate['updated_at'][:10]}",
+                f"**Language**: {safe_language} | **Last Updated**: {candidate['updated_at'][:10]}",
                 "",
                 "**Quality Indicators**:",
                 ""
             ])
             
             for reason in eval_result['reasons']:
-                body_parts.append(f"- {reason}")
+                # Sanitize reason text (though it should be safe since it's generated by us)
+                safe_reason = self._sanitize_text(reason)
+                body_parts.append(f"- {safe_reason}")
                 
             if eval_result['content_indicators']:
                 body_parts.append("")
                 body_parts.append("**Content Features**:")
                 for indicator in eval_result['content_indicators']:
-                    body_parts.append(f"- {indicator}")
+                    safe_indicator = self._sanitize_text(indicator)
+                    body_parts.append(f"- {safe_indicator}")
                     
             body_parts.extend([
                 "",
@@ -373,13 +499,24 @@ class ClaudeFileDiscovery:
             
             print(f"Created issue #{issue.number}: {title}")
             
-        except Exception as e:
-            print(f"Error creating issue: {e}")
+        except GithubException as e:
+            print(f"GitHub API error creating issue: {e}")
             # Fallback: save to file for manual review
+            self._save_discovery_report(title, body)
+        except Exception as e:
+            print(f"Unexpected error creating issue: {e}")
+            # Fallback: save to file for manual review
+            self._save_discovery_report(title, body)
+            
+    def _save_discovery_report(self, title: str, body: str) -> None:
+        """Save discovery report to file as fallback."""
+        try:
             filename = f"discovery-report-{datetime.now().strftime('%Y%m%d')}.md"
-            with open(filename, 'w') as f:
+            with open(filename, 'w', encoding='utf-8') as f:
                 f.write(f"# {title}\n\n{body}")
             print(f"Saved discovery report to {filename}")
+        except IOError as e:
+            print(f"Error saving discovery report to file: {e}")
 
 
 def main():
