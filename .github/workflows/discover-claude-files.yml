@@ -32,7 +32,7 @@ jobs:
         
     - name: Install dependencies
       run: |
-        uv pip install --system requests PyGithub pytest
+        uv pip install --system requests==2.31.0 PyGithub==1.59.1 pytest==7.4.3
         
     - name: Run discovery script
       env:

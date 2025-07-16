@@ -13,6 +13,7 @@ import json
 import time
 import html
 import logging
+import functools
 from datetime import datetime, timedelta
 from typing import List, Dict, Set, Optional
 from pathlib import Path
@@ -20,6 +21,38 @@ from pathlib import Path
 import requests
 from github import Github
 from github.GithubException import RateLimitExceededException, UnknownObjectException, GithubException
+
+
+def retry_with_backoff(max_retries=3, backoff_factor=2, exceptions=(Exception,)):
+    """
+    Decorator to retry a function with exponential backoff.
+    
+    Args:
+        max_retries: Maximum number of retry attempts
+        backoff_factor: Factor to multiply delay between retries
+        exceptions: Tuple of exceptions to catch and retry on
+    """
+    def decorator(func):
+        @functools.wraps(func)
+        def wrapper(*args, **kwargs):
+            delay = 1  # Start with 1 second delay
+            
+            for attempt in range(max_retries + 1):
+                try:
+                    return func(*args, **kwargs)
+                except exceptions as e:
+                    if attempt == max_retries:
+                        # Last attempt, re-raise the exception
+                        raise e
+                    
+                    # Log the retry attempt
+                    logger.warning(f"Attempt {attempt + 1} failed for {func.__name__}: {e}. Retrying in {delay} seconds...")
+                    time.sleep(delay)
+                    delay *= backoff_factor
+                    
+            return None  # Should never reach here
+        return wrapper
+    return decorator
 
 
 # Configure logging
@@ -83,8 +116,10 @@ class ClaudeFileDiscovery:
                                                     logger.warning(f"Invalid repository name format extracted: {repo_name}")
                                     except (IOError, UnicodeDecodeError) as e:
                                         logger.warning(f"Could not read {analysis_file}: {e}")
-                                    except Exception as e:
-                                        logger.error(f"Unexpected error parsing {analysis_file}: {e}")
+                                    except (re.error, AttributeError) as e:
+                                        logger.warning(f"Regex parsing error for {analysis_file}: {e}")
+                                    except (OSError, PermissionError) as e:
+                                        logger.error(f"File system error accessing {analysis_file}: {e}")
                                 
                                 # Fallback: Use simple first underscore split for owner_repo format
                                 # This assumes the first underscore separates owner from repo
@@ -188,6 +223,11 @@ class ClaudeFileDiscovery:
             # Normal rate limiting
             time.sleep(2)
 
+    @retry_with_backoff(
+        max_retries=3, 
+        backoff_factor=2, 
+        exceptions=(requests.exceptions.RequestException, RateLimitExceededException, GithubException)
+    )
     def search_github_repos(self) -> List[Dict]:
         """Search GitHub for repositories containing CLAUDE.md files."""
         candidates = []
@@ -201,65 +241,78 @@ class ClaudeFileDiscovery:
         
         for query in search_queries:
             logger.info(f"Searching with query: {query}")
+            page = 1
+            max_pages = 3  # Limit to avoid hitting API rate limits (300 results max per query)
             
-            try:
-                # Use GitHub Search API with pagination
-                url = f"https://api.github.com/search/code?q={query}&sort=indexed&order=desc&per_page=100"
-                response = self.session.get(url)
-                response.raise_for_status()
-                
-                data = response.json()
-                
-                for item in data.get('items', []):
-                    repo_info = item['repository']
-                    full_name = repo_info['full_name']
+            while page <= max_pages:
+                try:
+                    # Use GitHub Search API with pagination
+                    url = f"https://api.github.com/search/code?q={query}&sort=indexed&order=desc&per_page=100&page={page}"
+                    response = self.session.get(url)
+                    response.raise_for_status()
                     
-                    # Skip if already in collection
-                    if full_name in self.existing_repos:
-                        continue
+                    data = response.json()
+                    items = data.get('items', [])
+                    
+                    # If no items found, break pagination
+                    if not items:
+                        logger.info(f"No more results for query '{query}' on page {page}")
+                        break
+                    
+                    logger.info(f"Processing page {page} with {len(items)} results for query '{query}'")
+                    
+                    for item in items:
+                        repo_info = item['repository']
+                        full_name = repo_info['full_name']
                         
-                    # Basic quality filters
-                    if (repo_info['stargazers_count'] >= self.min_stars and
-                        not repo_info.get('archived', False) and
-                        not repo_info.get('fork', False)):
-                        
-                        candidate = {
-                            'full_name': full_name,
-                            'name': repo_info['name'],
-                            'owner': repo_info['owner']['login'],
-                            'description': repo_info.get('description', ''),
-                            'stars': repo_info['stargazers_count'],
-                            'language': repo_info.get('language'),
-                            'updated_at': repo_info['updated_at'],
-                            'html_url': repo_info['html_url'],
-                            'claude_file_path': item['path'],
-                            'clone_url': repo_info['clone_url']
-                        }
-                        
-                        # Validate candidate structure
-                        if self._validate_candidate(candidate):
-                            candidates.append(candidate)
-                        
-                # Adaptive rate limiting
-                self._handle_rate_limiting(response)
+                        # Skip if already in collection
+                        if full_name in self.existing_repos:
+                            continue
+                            
+                        # Basic quality filters
+                        if (repo_info['stargazers_count'] >= self.min_stars and
+                            not repo_info.get('archived', False) and
+                            not repo_info.get('fork', False)):
+                            
+                            candidate = {
+                                'full_name': full_name,
+                                'name': repo_info['name'],
+                                'owner': repo_info['owner']['login'],
+                                'description': repo_info.get('description', ''),
+                                'stars': repo_info['stargazers_count'],
+                                'language': repo_info.get('language'),
+                                'updated_at': repo_info['updated_at'],
+                                'html_url': repo_info['html_url'],
+                                'claude_file_path': item['path'],
+                                'clone_url': repo_info['clone_url']
+                            }
+                            
+                            # Validate candidate structure
+                            if self._validate_candidate(candidate):
+                                candidates.append(candidate)
+                    
+                    # Adaptive rate limiting
+                    self._handle_rate_limiting(response)
+                    page += 1
                 
-            except requests.exceptions.HTTPError as e:
-                if e.response.status_code == 403:
-                    logger.warning(f"Rate limited or forbidden for query '{query}': {e}")
-                    # Try to wait and continue
-                    time.sleep(60)
-                else:
-                    logger.error(f"HTTP error searching with query '{query}': {e}")
-                continue
-            except requests.exceptions.RequestException as e:
-                logger.error(f"Network error searching with query '{query}': {e}")
-                continue
-            except ValueError as e:
-                logger.error(f"JSON parsing error for query '{query}': {e}")
-                continue
-            except Exception as e:
-                logger.error(f"Unexpected error searching with query '{query}': {e}")
-                continue
+                except requests.exceptions.HTTPError as e:
+                    if e.response.status_code == 403:
+                        logger.warning(f"Rate limited or forbidden for query '{query}' page {page}: {e}")
+                        # Try to wait and continue to next query
+                        time.sleep(60)
+                        break  # Break pagination for this query
+                    else:
+                        logger.error(f"HTTP error searching with query '{query}' page {page}: {e}")
+                        break  # Break pagination for this query
+                except requests.exceptions.RequestException as e:
+                    logger.error(f"Network error searching with query '{query}' page {page}: {e}")
+                    break  # Break pagination for this query  
+                except ValueError as e:
+                    logger.error(f"JSON parsing error for query '{query}' page {page}: {e}")
+                    break  # Break pagination for this query
+                except Exception as e:
+                    logger.error(f"Unexpected error searching with query '{query}' page {page}: {e}")
+                    break  # Break pagination for this query
                 
         # Remove duplicates based on full_name
         seen = set()
@@ -272,6 +325,11 @@ class ClaudeFileDiscovery:
         logger.info(f"Found {len(unique_candidates)} unique candidate repositories")
         return unique_candidates
         
+    @retry_with_backoff(
+        max_retries=3, 
+        backoff_factor=2, 
+        exceptions=(UnknownObjectException, RateLimitExceededException, GithubException)
+    )
     def evaluate_candidate(self, candidate: Dict) -> Dict:
         """Evaluate a candidate repository against quality standards."""
         if not self._validate_candidate(candidate):
