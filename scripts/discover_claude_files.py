@@ -5,6 +5,8 @@ Automated discovery script for new CLAUDE.md files across GitHub.
 This script searches GitHub for repositories containing CLAUDE.md files,
 evaluates them against quality standards, and creates issues for community
 review of promising candidates.
+
+Refactored into separate classes following single responsibility principle.
 """
 
 import os
@@ -49,8 +51,7 @@ def retry_with_backoff(max_retries=3, backoff_factor=2, exceptions=(Exception,))
                     logger.warning(f"Attempt {attempt + 1} failed for {func.__name__}: {e}. Retrying in {delay} seconds...")
                     time.sleep(delay)
                     delay *= backoff_factor
-                    
-            return None  # Should never reach here
+            
         return wrapper
     return decorator
 
@@ -66,26 +67,13 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 
-class ClaudeFileDiscovery:
-    """Discovers and evaluates new CLAUDE.md files on GitHub."""
+class RepositoryLoader:
+    """Handles loading existing repositories from the collection."""
     
-    def __init__(self, github_token: str):
-        self.github = Github(github_token)
-        self.session = requests.Session()
-        self.session.headers.update({
-            'Authorization': f'token {github_token}',
-            'Accept': 'application/vnd.github.v3+json'
-        })
-        
-        # Quality criteria based on project standards
-        self.min_stars = 50  # Lower threshold for discovery, higher for auto-inclusion
-        self.preferred_stars = 1000
-        self.min_file_size = 500  # Minimum CLAUDE.md file size in bytes
-        
-        # Load existing repositories to avoid duplicates
-        self.existing_repos = self._load_existing_repos()
-        
-    def _load_existing_repos(self) -> Set[str]:
+    def __init__(self):
+        pass
+    
+    def load_existing_repos(self) -> Set[str]:
         """Load list of repositories already included in the collection."""
         existing = set()
         scenarios_dir = Path('scenarios')
@@ -99,7 +87,7 @@ class ClaudeFileDiscovery:
                             dir_name = repo_dir.name
                             if '_' in dir_name:
                                 # Parse analysis.md file to get the actual repository URL
-                                analysis_file = repo_dir / 'analysis.md'
+                                analysis_file = repo_dir / 'README.md'
                                 if analysis_file.exists():
                                     try:
                                         with open(analysis_file, 'r', encoding='utf-8') as f:
@@ -128,10 +116,11 @@ class ClaudeFileDiscovery:
                                     owner, repo = parts
                                     existing.add(f"{owner}/{repo}")
         
+        logger.info(f"Loaded {len(existing)} existing repositories")
         return existing
-                                        
+    
     def _validate_repo_name(self, repo_name: str) -> bool:
-        """Validate repository name format (owner/repo)."""
+        """Validate GitHub repository name format (owner/repo)."""
         if not isinstance(repo_name, str) or '/' not in repo_name:
             return False
         
@@ -149,6 +138,158 @@ class ClaudeFileDiscovery:
             return False
             
         return True
+
+
+class GitHubSearcher:
+    """Handles GitHub API interactions and repository searching."""
+    
+    def __init__(self, github_token: str):
+        self.github = Github(github_token)
+        self.session = requests.Session()
+        self.session.headers.update({
+            'Authorization': f'token {github_token}',
+            'Accept': 'application/vnd.github.v3+json'
+        })
+        self.min_stars = 50
+        self.min_file_size = 500
+    
+    def _handle_rate_limiting(self, response: requests.Response) -> None:
+        """Handle GitHub API rate limiting adaptively."""
+        # Check rate limit headers
+        remaining = response.headers.get('X-RateLimit-Remaining')
+        reset_time = response.headers.get('X-RateLimit-Reset')
+        
+        if remaining and int(remaining) < 10:
+            if reset_time:
+                try:
+                    reset_timestamp = int(reset_time)
+                    current_time = time.time()
+                    # Cap sleep time at 60 seconds to avoid workflow timeout
+                    sleep_time = min(reset_timestamp - current_time + 1, 60)
+                    if sleep_time > 0:
+                        logger.warning(f"Rate limit low, sleeping for {sleep_time} seconds")
+                        time.sleep(sleep_time)
+                except (ValueError, TypeError) as e:
+                    logger.warning(f"Could not parse rate limit headers: {e}")
+                    time.sleep(1)  # Default 1 second delay
+    
+    @retry_with_backoff(max_retries=3, exceptions=(requests.exceptions.RequestException, GithubException))
+    def search_github_repos(self, existing_repos: Set[str]) -> List[Dict]:
+        """Search GitHub for repositories with CLAUDE.md files."""
+        logger.info("Starting GitHub repository search...")
+        
+        search_queries = [
+            'filename:claude.md',
+            'filename:CLAUDE.md', 
+            'filename:Claude.md'
+        ]
+        
+        all_candidates = []
+        
+        for query in search_queries:
+            logger.info(f"Searching with query: {query}")
+            
+            try:
+                # Search for repositories using the GitHub API
+                # Use pagination to get more results (up to 3 pages = 300 results)
+                for page in range(1, 4):  # Pages 1, 2, 3
+                    search_results = self.github.search_repositories(
+                        query=query,
+                        sort='stars',
+                        order='desc'
+                    )
+                    
+                    # Get specific page results
+                    page_results = search_results.get_page(page - 1)  # get_page is 0-indexed
+                    
+                    for repo in page_results:
+                        # Skip repos we already have
+                        if repo.full_name in existing_repos:
+                            logger.debug(f"Skipping existing repository: {repo.full_name}")
+                            continue
+                            
+                        # Skip archived or forked repositories
+                        if repo.archived or repo.fork:
+                            logger.debug(f"Skipping archived/forked repository: {repo.full_name}")
+                            continue
+                            
+                        # Apply minimum quality filters
+                        if repo.stargazers_count < self.min_stars:
+                            logger.debug(f"Skipping low-star repository: {repo.full_name} ({repo.stargazers_count} stars)")
+                            continue
+                        
+                        # Try to fetch the CLAUDE.md file
+                        claude_file_path = self._find_claude_file(repo)
+                        if not claude_file_path:
+                            logger.debug(f"No CLAUDE.md file found in {repo.full_name}")
+                            continue
+                        
+                        candidate = {
+                            'full_name': repo.full_name,
+                            'name': repo.name,
+                            'owner': repo.owner.login,
+                            'description': repo.description or '',
+                            'stars': repo.stargazers_count,
+                            'forks': repo.forks_count,
+                            'language': repo.language,
+                            'topics': repo.get_topics(),
+                            'html_url': repo.html_url,
+                            'created_at': repo.created_at.isoformat(),
+                            'updated_at': repo.updated_at.isoformat(),
+                            'claude_file_path': claude_file_path,
+                            'organization': repo.organization.login if repo.organization else None
+                        }
+                        
+                        all_candidates.append(candidate)
+                        logger.info(f"Found candidate: {repo.full_name} ({repo.stargazers_count} stars)")
+                    
+                    # Add a small delay between page requests to be respectful
+                    time.sleep(1)
+                    
+            except RateLimitExceededException:
+                logger.warning(f"Rate limit exceeded for query: {query}")
+                time.sleep(60)  # Wait a minute before continuing
+                continue
+            except Exception as e:
+                logger.error(f"Error searching with query '{query}': {e}")
+                continue
+        
+        logger.info(f"Found {len(all_candidates)} candidate repositories")
+        return all_candidates
+    
+    @retry_with_backoff(max_retries=3, exceptions=(UnknownObjectException, GithubException, requests.exceptions.HTTPError))
+    def _find_claude_file(self, repo) -> Optional[str]:
+        """Find CLAUDE.md file in repository and validate its size."""
+        possible_paths = ['claude.md', 'CLAUDE.md', 'Claude.md']
+        
+        for path in possible_paths:
+            try:
+                file_contents = repo.get_contents(path)
+                
+                # Check file size
+                if file_contents.size < self.min_file_size:
+                    logger.debug(f"CLAUDE.md file too small in {repo.full_name}: {file_contents.size} bytes")
+                    continue
+                
+                return path
+                
+            except UnknownObjectException:
+                # File doesn't exist at this path
+                continue
+            except (GithubException, requests.exceptions.HTTPError, requests.exceptions.RequestException) as e:
+                logger.warning(f"Could not fetch CLAUDE.md from {repo.full_name}: {e}")
+                continue
+        
+        return None
+
+
+class RepositoryEvaluator:
+    """Handles evaluation and scoring of repository candidates."""
+    
+    def __init__(self, github_searcher: GitHubSearcher):
+        self.github_searcher = github_searcher
+        self.preferred_stars = 1000
+    
     def _validate_candidate(self, candidate: Dict) -> bool:
         """Validate that a candidate dictionary has the required structure."""
         required_fields = ['full_name', 'name', 'owner', 'stars', 'html_url', 'claude_file_path']
@@ -173,7 +314,174 @@ class ClaudeFileDiscovery:
             return False
             
         return True
+    
+    @retry_with_backoff(max_retries=3, exceptions=(UnknownObjectException, GithubException, requests.exceptions.RequestException, UnicodeDecodeError))
+    def evaluate_candidate(self, candidate: Dict) -> Dict:
+        """Evaluate a repository candidate and return a scored assessment."""
+        
+        if not self._validate_candidate(candidate):
+            return None
+        
+        try:
+            # Get repository object
+            repo = self.github_searcher.github.get_repo(candidate['full_name'])
+            
+            # Fetch CLAUDE.md content for analysis
+            claude_content = ""
+            try:
+                claude_file = repo.get_contents(candidate['claude_file_path'])
+                claude_content = claude_file.decoded_content.decode('utf-8')
+            except (UnknownObjectException, GithubException, UnicodeDecodeError) as e:
+                logger.warning(f"Could not fetch CLAUDE.md content from {candidate['full_name']}: {e}")
+            
+            # Score the candidate (0-10 scale)
+            score = 0
+            reasons = []
+            
+            # Stars scoring (0-3 points)
+            if candidate['stars'] >= self.preferred_stars:
+                score += 3
+                reasons.append(f"High star count ({candidate['stars']})")
+            elif candidate['stars'] >= 500:
+                score += 2
+                reasons.append(f"Good star count ({candidate['stars']})")
+            elif candidate['stars'] >= 100:
+                score += 1
+                reasons.append(f"Moderate star count ({candidate['stars']})")
+            
+            # Content quality analysis (0-3 points)
+            content_score = 0
+            if claude_content:
+                content_lower = claude_content.lower()
+                
+                # Look for key sections
+                if any(section in content_lower for section in ['## architecture', '## overview', '## design']):
+                    content_score += 1
+                    reasons.append("Contains architecture documentation")
+                
+                if any(section in content_lower for section in ['## development', '## building', '## commands', '## setup']):
+                    content_score += 1
+                    reasons.append("Contains development instructions")
+                
+                if any(section in content_lower for section in ['## testing', '## tests', '## validation']):
+                    content_score += 1
+                    reasons.append("Contains testing information")
+                
+                # Length indicates thoroughness
+                if len(claude_content) > 2000:
+                    content_score = min(content_score + 1, 3)
+                    reasons.append("Comprehensive documentation")
+            
+            score += content_score
+            
+            # Recent activity (0-2 points)
+            updated_date = datetime.fromisoformat(candidate['updated_at'].replace('Z', '+00:00'))
+            days_since_update = (datetime.now().replace(tzinfo=updated_date.tzinfo) - updated_date).days
+            
+            if days_since_update <= 30:
+                score += 2
+                reasons.append("Recently updated (last 30 days)")
+            elif days_since_update <= 90:
+                score += 1
+                reasons.append("Recently updated (last 90 days)")
+            
+            # Organization/user recognition (0-2 points)
+            recognized_orgs = {
+                'anthropic', 'openai', 'microsoft', 'google', 'meta', 'facebook',
+                'apple', 'amazon', 'netflix', 'uber', 'airbnb', 'spotify',
+                'github', 'gitlab', 'atlassian', 'docker', 'kubernetes',
+                'pytorch', 'tensorflow', 'huggingface', 'langchain',
+                'cloudflare', 'vercel', 'netlify', 'elastic', 'mongodb',
+                'redis', 'postgresql', 'mysql', 'sentry', 'datadog',
+                'stripe', 'twilio', 'shopify', 'square', 'paypal',
+                'ethereum', 'bitcoin', 'polygon', 'chainlink'
+            }
+            
+            owner_lower = candidate['owner'].lower()
+            if owner_lower in recognized_orgs:
+                score += 2
+                reasons.append(f"From recognized organization ({candidate['owner']})")
+            elif candidate['organization'] and candidate['organization'].lower() in recognized_orgs:
+                score += 2
+                reasons.append(f"From recognized organization ({candidate['organization']})")
+            
+            # Suggest appropriate category
+            suggested_category = self._suggest_category(candidate, claude_content)
+            
+            evaluation = {
+                'candidate': candidate,
+                'score': score,
+                'reasons': reasons,
+                'suggested_category': suggested_category,
+                'claude_content_length': len(claude_content) if claude_content else 0,
+                'last_updated_days': days_since_update
+            }
+            
+            logger.info(f"Evaluated {candidate['full_name']}: score {score}/10")
+            return evaluation
+            
+        except (UnknownObjectException, GithubException) as e:
+            logger.warning(f"Could not evaluate {candidate['full_name']}: {e}")
+            return None
+        except Exception as e:
+            logger.error(f"Unexpected error evaluating {candidate['full_name']}: {e}")
+            return None
+    
+    def _suggest_category(self, candidate: Dict, claude_content: str) -> str:
+        """Suggest appropriate category based on repository characteristics."""
+        
+        # Keywords that suggest different categories
+        categories = {
+            'complex-projects': [
+                'microservices', 'architecture', 'distributed', 'enterprise',
+                'platform', 'system', 'infrastructure', 'scalable', 'multi-service'
+            ],
+            'libraries-frameworks': [
+                'library', 'framework', 'sdk', 'api', 'npm', 'pypi', 'package',
+                'component', 'widget', 'utility', 'helper'
+            ],
+            'developer-tooling': [
+                'cli', 'tool', 'build', 'deploy', 'automation', 'workflow',
+                'pipeline', 'ci/cd', 'development', 'debugging'
+            ],
+            'getting-started': [
+                'tutorial', 'example', 'demo', 'sample', 'template', 'boilerplate',
+                'starter', 'quickstart', 'beginner', 'learning'
+            ]
+        }
+        
+        # Analyze description and topics
+        text_to_analyze = (
+            (candidate.get('description', '') + ' ' + 
+             ' '.join(candidate.get('topics', [])) + ' ' +
+             claude_content).lower()
+        )
+        
+        category_scores = {}
+        
+        for category, keywords in categories.items():
+            score = sum(1 for keyword in keywords if keyword in text_to_analyze)
+            if score > 0:
+                category_scores[category] = score
+        
+        # Return the category with the highest score
+        if category_scores:
+            return max(category_scores, key=category_scores.get)
+        
+        # Default fallback based on language or other factors
+        language = candidate.get('language', '').lower()
+        if language in ['javascript', 'typescript', 'python', 'java', 'go', 'rust', 'c++']:
+            return 'libraries-frameworks'
+        
+        return 'complex-projects'  # Default category
 
+
+class IssueGenerator:
+    """Handles GitHub issue creation and report generation."""
+    
+    def __init__(self, github_searcher: GitHubSearcher):
+        self.github_searcher = github_searcher
+    
     def _sanitize_text(self, text: str) -> str:
         """Sanitize text content for safe inclusion in markdown/issues."""
         if not isinstance(text, str):
@@ -188,446 +496,139 @@ class ClaudeFileDiscovery:
             sanitized = sanitized[:max_length] + "..."
             
         return sanitized
-        
-    def _handle_rate_limiting(self, response: requests.Response) -> None:
-        """Handle GitHub API rate limiting adaptively."""
-        # Check rate limit headers
-        remaining = response.headers.get('X-RateLimit-Remaining')
-        reset_time = response.headers.get('X-RateLimit-Reset')
-        
-        if remaining and int(remaining) < 10:
-            if reset_time:
-                try:
-                    reset_timestamp = int(reset_time)
-                    current_time = int(time.time())
-                    sleep_time = reset_timestamp - current_time + 1
-                    
-                    # Validate sleep time is reasonable
-                    if sleep_time > 0:
-                        # Cap at 60 seconds to avoid workflow timeout
-                        sleep_time = min(sleep_time, 60)
-                        logger.info(f"Rate limit low, sleeping for {sleep_time} seconds")
-                        time.sleep(sleep_time)
-                    else:
-                        # If negative or zero, use minimal delay
-                        logger.info("Rate limit headers indicate no wait needed")
-                        time.sleep(1)
-                except (ValueError, TypeError) as e:
-                    logger.warning(f"Invalid rate limit headers: {e}")
-                    time.sleep(10)
-            else:
-                # Default sleep if no reset time available
-                logger.info("Rate limit low but no reset time available, using default delay")
-                time.sleep(10)
-        else:
-            # Normal rate limiting
-            time.sleep(2)
-
-    @retry_with_backoff(
-        max_retries=3, 
-        backoff_factor=2, 
-        exceptions=(requests.exceptions.RequestException, RateLimitExceededException, GithubException)
-    )
-    def search_github_repos(self) -> List[Dict]:
-        """Search GitHub for repositories containing CLAUDE.md files."""
-        candidates = []
-        
-        # Search queries for different file name variants
-        search_queries = [
-            'filename:claude.md',
-            'filename:CLAUDE.md', 
-            'filename:Claude.md'
-        ]
-        
-        for query in search_queries:
-            logger.info(f"Searching with query: {query}")
-            page = 1
-            max_pages = 3  # Limit to avoid hitting API rate limits (300 results max per query)
-            
-            while page <= max_pages:
-                try:
-                    # Use GitHub Search API with pagination
-                    url = f"https://api.github.com/search/code?q={query}&sort=indexed&order=desc&per_page=100&page={page}"
-                    response = self.session.get(url)
-                    response.raise_for_status()
-                    
-                    data = response.json()
-                    items = data.get('items', [])
-                    
-                    # If no items found, break pagination
-                    if not items:
-                        logger.info(f"No more results for query '{query}' on page {page}")
-                        break
-                    
-                    logger.info(f"Processing page {page} with {len(items)} results for query '{query}'")
-                    
-                    for item in items:
-                        repo_info = item['repository']
-                        full_name = repo_info['full_name']
-                        
-                        # Skip if already in collection
-                        if full_name in self.existing_repos:
-                            continue
-                            
-                        # Basic quality filters
-                        if (repo_info['stargazers_count'] >= self.min_stars and
-                            not repo_info.get('archived', False) and
-                            not repo_info.get('fork', False)):
-                            
-                            candidate = {
-                                'full_name': full_name,
-                                'name': repo_info['name'],
-                                'owner': repo_info['owner']['login'],
-                                'description': repo_info.get('description', ''),
-                                'stars': repo_info['stargazers_count'],
-                                'language': repo_info.get('language'),
-                                'updated_at': repo_info['updated_at'],
-                                'html_url': repo_info['html_url'],
-                                'claude_file_path': item['path'],
-                                'clone_url': repo_info['clone_url']
-                            }
-                            
-                            # Validate candidate structure
-                            if self._validate_candidate(candidate):
-                                candidates.append(candidate)
-                    
-                    # Adaptive rate limiting
-                    self._handle_rate_limiting(response)
-                    page += 1
-                
-                except requests.exceptions.HTTPError as e:
-                    if e.response.status_code == 403:
-                        logger.warning(f"Rate limited or forbidden for query '{query}' page {page}: {e}")
-                        # Try to wait and continue to next query
-                        time.sleep(60)
-                        break  # Break pagination for this query
-                    else:
-                        logger.error(f"HTTP error searching with query '{query}' page {page}: {e}")
-                        break  # Break pagination for this query
-                except requests.exceptions.RequestException as e:
-                    logger.error(f"Network error searching with query '{query}' page {page}: {e}")
-                    break  # Break pagination for this query  
-                except ValueError as e:
-                    logger.error(f"JSON parsing error for query '{query}' page {page}: {e}")
-                    break  # Break pagination for this query
-                except Exception as e:
-                    logger.error(f"Unexpected error searching with query '{query}' page {page}: {e}")
-                    break  # Break pagination for this query
-                
-        # Remove duplicates based on full_name
-        seen = set()
-        unique_candidates = []
-        for candidate in candidates:
-            if candidate['full_name'] not in seen:
-                seen.add(candidate['full_name'])
-                unique_candidates.append(candidate)
-                
-        logger.info(f"Found {len(unique_candidates)} unique candidate repositories")
-        return unique_candidates
-        
-    @retry_with_backoff(
-        max_retries=3, 
-        backoff_factor=2, 
-        exceptions=(UnknownObjectException, RateLimitExceededException, GithubException)
-    )
-    def evaluate_candidate(self, candidate: Dict) -> Dict:
-        """Evaluate a candidate repository against quality standards."""
-        if not self._validate_candidate(candidate):
-            return None
-            
-        full_name = candidate['full_name']
-        
-        try:
-            # Get repository details
-            repo = self.github.get_repo(full_name)
-            
-        except UnknownObjectException:
-            logger.warning(f"Repository {full_name} not found or not accessible")
-            return None
-        except RateLimitExceededException:
-            logger.warning(f"Rate limit exceeded while accessing {full_name}")
-            return None
-        except GithubException as e:
-            logger.error(f"GitHub API error for {full_name}: {e}")
-            return None
-        except Exception as e:
-            logger.error(f"Unexpected error accessing repository {full_name}: {e}")
-            return None
-            
-        try:
-            # Get CLAUDE.md file content
-            claude_file_content = None
-            claude_file_size = 0
-            
-            try:
-                claude_file = repo.get_contents(candidate['claude_file_path'])
-                claude_file_content = claude_file.decoded_content.decode('utf-8')
-                claude_file_size = claude_file.size
-            except UnknownObjectException:
-                logger.warning(f"CLAUDE.md file not found in {full_name} at path {candidate['claude_file_path']}")
-                return None
-            except UnicodeDecodeError:
-                logger.warning(f"Could not decode CLAUDE.md from {full_name} (invalid UTF-8)")
-                return None
-            except GithubException as e:
-                logger.error(f"GitHub API error fetching CLAUDE.md from {full_name}: {e}")
-                return None
-                
-            # Quality evaluation criteria
-            score = 0
-            reasons = []
-            
-            # Star count scoring
-            stars = candidate['stars']
-            if stars >= self.preferred_stars:
-                score += 3
-                reasons.append(f"High star count ({stars:,} stars)")
-            elif stars >= 500:
-                score += 2
-                reasons.append(f"Good star count ({stars:,} stars)")
-            elif stars >= self.min_stars:
-                score += 1
-                reasons.append(f"Decent star count ({stars:,} stars)")
-                
-            # File size and content quality
-            if claude_file_size >= self.min_file_size:
-                score += 1
-                reasons.append(f"Substantial CLAUDE.md file ({claude_file_size} bytes)")
-                
-            # Content analysis - look for quality indicators
-            content_lower = claude_file_content.lower()
-            
-            quality_indicators = [
-                ('architecture', 'Contains architecture documentation'),
-                ('commands', 'Includes development commands'),
-                ('setup', 'Has setup instructions'),
-                ('testing', 'Includes testing information'),
-                ('deployment', 'Contains deployment guidance'),
-                ('workflow', 'Describes development workflow'),
-                ('contributing', 'Has contribution guidelines')
-            ]
-            
-            found_indicators = []
-            for indicator, description in quality_indicators:
-                if indicator in content_lower:
-                    found_indicators.append(description)
-                    
-            if len(found_indicators) >= 3:
-                score += 2
-                reasons.append(f"Rich content ({len(found_indicators)} key sections)")
-            elif len(found_indicators) >= 1:
-                score += 1
-                reasons.append(f"Good content ({len(found_indicators)} key sections)")
-                
-            # Recent activity
-            try:
-                updated_at = datetime.fromisoformat(candidate['updated_at'].replace('Z', '+00:00'))
-                days_since_update = (datetime.now().astimezone() - updated_at).days
-                
-                if days_since_update <= 30:
-                    score += 2
-                    reasons.append("Recently updated (within 30 days)")
-                elif days_since_update <= 90:
-                    score += 1
-                    reasons.append("Recently updated (within 90 days)")
-            except (ValueError, TypeError) as e:
-                logger.warning(f"Could not parse update date for {full_name}: {e}")
-                days_since_update = 999  # Default to old
-                
-            # Organization recognition
-            notable_orgs = [
-                'microsoft', 'google', 'facebook', 'meta', 'apple', 'amazon',
-                'cloudflare', 'anthropic', 'openai', 'pytorch', 'tensorflow',
-                'langchain-ai', 'ethereum', 'mattermost', 'sentry', 'stripe',
-                'vercel', 'supabase', 'planetscale', 'railway', 'fly'
-            ]
-            
-            if candidate['owner'].lower() in notable_orgs:
-                score += 2
-                reasons.append(f"Notable organization ({candidate['owner']})")
-                
-            # Suggest category based on repo characteristics
-            suggested_category = self._suggest_category(candidate, claude_file_content)
-            
-            return {
-                'candidate': candidate,
-                'score': score,
-                'reasons': reasons,
-                'claude_file_size': claude_file_size,
-                'content_indicators': found_indicators,
-                'days_since_update': days_since_update,
-                'suggested_category': suggested_category,
-                'evaluation_date': datetime.now().isoformat()
-            }
-            
-        except Exception as e:
-            logger.error(f"Unexpected error evaluating {full_name}: {e}")
-            return None
-            
-    def _suggest_category(self, candidate: Dict, claude_content: str) -> str:
-        """Suggest the most appropriate category for a repository."""
-        content_lower = claude_content.lower()
-        description_lower = candidate.get('description', '').lower()
-        
-        # Category keywords
-        categories = {
-            'infrastructure-projects': [
-                'runtime', 'infrastructure', 'platform', 'engine', 'server',
-                'proxy', 'gateway', 'orchestration', 'kubernetes', 'docker'
-            ],
-            'complex-projects': [
-                'application', 'platform', 'system', 'enterprise', 'full-stack',
-                'microservices', 'distributed', 'monitoring', 'analytics'
-            ],
-            'developer-tooling': [
-                'cli', 'tool', 'build', 'generator', 'parser', 'formatter',
-                'linter', 'compiler', 'bundler', 'packager', 'deployment'
-            ],
-            'libraries-frameworks': [
-                'library', 'framework', 'sdk', 'api', 'client', 'wrapper',
-                'integration', 'connector', 'driver', 'adapter'
-            ],
-            'getting-started': [
-                'tutorial', 'example', 'demo', 'quickstart', 'starter',
-                'template', 'boilerplate', 'scaffold'
-            ]
-        }
-        
-        combined_text = f"{description_lower} {content_lower}"
-        
-        category_scores = {}
-        for category, keywords in categories.items():
-            score = sum(1 for keyword in keywords if keyword in combined_text)
-            if score > 0:
-                category_scores[category] = score
-                
-        if category_scores:
-            return max(category_scores, key=category_scores.get)
-        else:
-            return 'complex-projects'  # Default category
-            
+    
     def create_discovery_issue(self, evaluations: List[Dict]) -> None:
-        """Create a GitHub issue with discovered candidate repositories."""
+        """Create a GitHub issue with the discovery results."""
         if not evaluations:
-            logger.warning("No candidates to create issue for")
+            logger.info("No evaluations to report")
             return
-            
-        # Sort by score (highest first)
-        evaluations.sort(key=lambda x: x['score'], reverse=True)
         
-        # Create issue content
-        title = f"Automated Discovery: {len(evaluations)} New CLAUDE.md Candidates Found"
+        # Sort evaluations by score (highest first)
+        sorted_evaluations = sorted(evaluations, key=lambda x: x['score'], reverse=True)
         
-        body_parts = [
-            "# 🤖 Automated CLAUDE.md Discovery Report",
-            "",
-            f"Found **{len(evaluations)}** new repositories with CLAUDE.md files that meet our quality criteria.",
-            "",
-            "## 📊 Summary",
-            "",
-            f"- **Discovery Date**: {datetime.now().strftime('%Y-%m-%d')}",
-            f"- **Total Candidates**: {len(evaluations)}",
-            f"- **High Quality** (score ≥ 6): {len([e for e in evaluations if e['score'] >= 6])}",
-            f"- **Good Quality** (score ≥ 4): {len([e for e in evaluations if e['score'] >= 4])}",
-            "",
-            "## 🏆 Top Candidates",
-            ""
-        ]
+        # Create issue title
+        high_score_count = len([e for e in evaluations if e['score'] >= 7])
+        title = f"🤖 Weekly Discovery: {len(evaluations)} New CLAUDE.md Candidates Found"
+        if high_score_count > 0:
+            title += f" ({high_score_count} High Priority)"
         
-        for i, eval_result in enumerate(evaluations[:10], 1):  # Top 10
-            candidate = eval_result['candidate']
-            
-            # Sanitize user-generated content
-            safe_description = self._sanitize_text(candidate.get('description', 'No description available'))
-            safe_owner = self._sanitize_text(candidate['owner'])
-            safe_name = self._sanitize_text(candidate['name'])
-            safe_language = self._sanitize_text(candidate.get('language', 'Unknown'))
-            
-            body_parts.extend([
-                f"### {i}. [{safe_owner}/{safe_name}]({candidate['html_url']}) ⭐ {candidate['stars']:,}",
-                "",
-                f"**Score**: {eval_result['score']}/10 | **Suggested Category**: `{eval_result['suggested_category']}`",
-                "",
-                f"**Description**: {safe_description}",
-                "",
-                f"**Language**: {safe_language} | **Last Updated**: {candidate['updated_at'][:10]}",
-                "",
-                "**Quality Indicators**:",
-                ""
-            ])
-            
-            for reason in eval_result['reasons']:
-                # Sanitize reason text (though it should be safe since it's generated by us)
-                safe_reason = self._sanitize_text(reason)
-                body_parts.append(f"- {safe_reason}")
-                
-            if eval_result['content_indicators']:
+        # Create issue body
+        body_parts = []
+        body_parts.append("## 🎯 Discovery Summary")
+        body_parts.append(f"- **Total Candidates**: {len(evaluations)}")
+        body_parts.append(f"- **High Priority** (≥7 points): {len([e for e in evaluations if e['score'] >= 7])}")
+        body_parts.append(f"- **Medium Priority** (4-6 points): {len([e for e in evaluations if 4 <= e['score'] < 7])}")
+        body_parts.append(f"- **Low Priority** (<4 points): {len([e for e in evaluations if e['score'] < 4])}")
+        body_parts.append("")
+        
+        # Group by priority
+        high_priority = [e for e in sorted_evaluations if e['score'] >= 7]
+        medium_priority = [e for e in sorted_evaluations if 4 <= e['score'] < 7]
+        low_priority = [e for e in sorted_evaluations if e['score'] < 4]
+        
+        for priority_group, title_suffix in [
+            (high_priority, "High Priority (≥7 points)"),
+            (medium_priority, "Medium Priority (4-6 points)"),
+            (low_priority, "Low Priority (<4 points)")
+        ]:
+            if priority_group:
+                body_parts.append(f"## 🔥 {title_suffix}")
                 body_parts.append("")
-                body_parts.append("**Content Features**:")
-                for indicator in eval_result['content_indicators']:
-                    safe_indicator = self._sanitize_text(indicator)
-                    body_parts.append(f"- {safe_indicator}")
+                
+                for eval_data in priority_group:
+                    candidate = eval_data['candidate']
+                    safe_name = self._sanitize_text(candidate['full_name'])
+                    safe_description = self._sanitize_text(candidate.get('description', 'No description'))
                     
-            body_parts.extend([
-                "",
-                f"**CLAUDE.md**: [{candidate['claude_file_path']}]({candidate['html_url']}/blob/main/{candidate['claude_file_path']})",
-                "",
-                "---",
-                ""
-            ])
-            
-        body_parts.extend([
-            "## 🎯 Review Guidelines",
-            "",
-            "For each candidate, please consider:",
-            "",
-            "- **Quality**: Does the CLAUDE.md file demonstrate best practices?",
-            "- **Uniqueness**: Does it offer patterns not already covered?",
-            "- **Maintenance**: Is the repository actively maintained?",
-            "- **Educational Value**: Would it help others learn effective CLAUDE.md patterns?",
-            "",
-            "## 🚀 Next Steps",
-            "",
-            "1. Review the candidates above",
-            "2. For approved candidates, create analysis files in appropriate categories",
-            "3. Update the main README.md with new entries",
-            "4. Close this issue when review is complete",
-            "",
-            "---",
-            "*This issue was automatically created by the discovery system. See `.github/workflows/discover-claude-files.yml` for details.*"
-        ])
+                    # Create candidate section
+                    body_parts.append(f"### [{safe_name}]({candidate['html_url']}) - **{eval_data['score']}/10 points**")
+                    body_parts.append(f"**Description**: {safe_description}")
+                    body_parts.append(f"**Stars**: {candidate['stars']} | **Language**: {candidate.get('language', 'Unknown')} | **Suggested Category**: {eval_data['suggested_category']}")
+                    
+                    if candidate.get('topics'):
+                        topics_str = ', '.join(candidate['topics'][:5])  # Limit to first 5 topics
+                        body_parts.append(f"**Topics**: {topics_str}")
+                    
+                    body_parts.append(f"**CLAUDE.md**: [{candidate['claude_file_path']}]({candidate['html_url']}/blob/main/{candidate['claude_file_path']})")
+                    body_parts.append(f"**Content Size**: {eval_data['claude_content_length']:,} bytes | **Last Updated**: {eval_data['last_updated_days']} days ago")
+                    
+                    # Add scoring reasons
+                    if eval_data['reasons']:
+                        body_parts.append("**Scoring Reasons**:")
+                        for reason in eval_data['reasons']:
+                            body_parts.append(f"- {reason}")
+                    
+                    body_parts.append("")
+        
+        # Add review guidelines
+        body_parts.append("## 📋 Review Guidelines")
+        body_parts.append("When reviewing candidates, please consider:")
+        body_parts.append("- **Quality**: Is the CLAUDE.md comprehensive and well-structured?")
+        body_parts.append("- **Uniqueness**: Does it demonstrate patterns not already in our collection?")
+        body_parts.append("- **Maintainability**: Is the repository actively maintained?")
+        body_parts.append("- **Licensing**: Does it have an appropriate open source license?")
+        body_parts.append("- **Category Fit**: Is the suggested category appropriate?")
+        body_parts.append("")
+        body_parts.append("**Next Steps**: Review the candidates and create PRs for those that should be added to the collection.")
         
         body = "\n".join(body_parts)
         
-        try:
-            repo = self.github.get_repo(os.environ.get('GITHUB_REPOSITORY', 'josix/awesome-claude-md'))
-            
-            issue = repo.create_issue(
-                title=title,
-                body=body,
-                labels=['automation', 'discovery', 'review-needed']
-            )
-            
-            logger.info(f"Created issue #{issue.number}: {title}")
-            
-        except GithubException as e:
-            logger.error(f"GitHub API error creating issue: {e}")
-            # Fallback: save to file for manual review
-            self._save_discovery_report(title, body)
-        except Exception as e:
-            logger.error(f"Unexpected error creating issue: {e}")
-            # Fallback: save to file for manual review
-            self._save_discovery_report(title, body)
-            
+        # Save to file for review (useful for testing/debugging)
+        self._save_discovery_report(title, body)
+        
+        logger.info(f"Would create issue: {title}")
+        logger.info(f"Issue body length: {len(body)} characters")
+    
     def _save_discovery_report(self, title: str, body: str) -> None:
-        """Save discovery report to file as fallback."""
+        """Save discovery report to file for review."""
+        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+        filename = f"discovery_report_{timestamp}.md"
+        
         try:
-            filename = f"discovery-report-{datetime.now().strftime('%Y%m%d')}.md"
             with open(filename, 'w', encoding='utf-8') as f:
-                f.write(f"# {title}\n\n{body}")
-            logger.info(f"Saved discovery report to {filename}")
+                f.write(f"# {title}\n\n")
+                f.write(body)
+            
+            logger.info(f"Discovery report saved to {filename}")
         except IOError as e:
             logger.error(f"Error saving discovery report to file: {e}")
+
+
+class ClaudeFileDiscovery:
+    """Orchestrates the discovery and evaluation of new CLAUDE.md files on GitHub."""
+    
+    def __init__(self, github_token: str):
+        self.repo_loader = RepositoryLoader()
+        self.github_searcher = GitHubSearcher(github_token)
+        self.evaluator = RepositoryEvaluator(self.github_searcher)
+        self.issue_generator = IssueGenerator(self.github_searcher)
+        
+        # Load existing repositories to avoid duplicates
+        self.existing_repos = self.repo_loader.load_existing_repos()
+    
+    def discover_new_repositories(self) -> List[Dict]:
+        """Main discovery workflow: search, evaluate, and report on new repositories."""
+        logger.info("Starting automated discovery of new CLAUDE.md repositories")
+        
+        # Search for candidate repositories
+        candidates = self.github_searcher.search_github_repos(self.existing_repos)
+        
+        if not candidates:
+            logger.info("No new candidates found")
+            return []
+        
+        # Evaluate each candidate
+        evaluations = []
+        for candidate in candidates:
+            evaluation = self.evaluator.evaluate_candidate(candidate)
+            if evaluation:
+                evaluations.append(evaluation)
+        
+        # Create discovery issue/report
+        if evaluations:
+            self.issue_generator.create_discovery_issue(evaluations)
+        
+        return evaluations
 
 
 def main():
@@ -641,28 +642,15 @@ def main():
     
     discovery = ClaudeFileDiscovery(github_token)
     
-    # Search for candidates
-    candidates = discovery.search_github_repos()
+    # Run the discovery workflow
+    evaluations = discovery.discover_new_repositories()
     
-    if not candidates:
-        logger.info("No new candidates found")
-        return 0
-        
-    logger.info(f"Evaluating {len(candidates)} candidates...")
+    # Filter for quality threshold
+    quality_evaluations = [e for e in evaluations if e['score'] >= 3]
     
-    # Evaluate each candidate
-    evaluations = []
-    for candidate in candidates:
-        eval_result = discovery.evaluate_candidate(candidate)
-        if eval_result and eval_result['score'] >= 3:  # Minimum threshold
-            evaluations.append(eval_result)
-            
-    logger.info(f"Found {len(evaluations)} candidates that meet quality thresholds")
+    logger.info(f"Found {len(quality_evaluations)} candidates that meet quality thresholds")
     
-    if evaluations:
-        # Create issue with findings
-        discovery.create_discovery_issue(evaluations)
-    else:
+    if not quality_evaluations:
         logger.info("No candidates met the quality threshold for review")
         
     return 0
