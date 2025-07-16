@@ -25,10 +25,14 @@ jobs:
       with:
         python-version: '3.11'
         
+    - name: Install uv
+      uses: astral-sh/setup-uv@v3
+      with:
+        version: "latest"
+        
     - name: Install dependencies
       run: |
-        python -m pip install --upgrade pip
-        pip install requests PyGithub
+        uv pip install --system requests PyGithub pytest
         
     - name: Run discovery script
       env:
