@@ -7,7 +7,7 @@ name = "awesome-claude-md"
 version = "1.0.0"
 description = "A curated collection of high-quality claude.md files from public GitHub repositories"
 readme = "README.md"
-license = {file = "LICENSE"}
+license = {text = "MIT"}
 authors = [
     {name = "josix", email = "josix@users.noreply.github.com"},
 ]
@@ -38,6 +38,9 @@ Issues = "https://github.com/josix/awesome-claude-md/issues"
 
 [project.scripts]
 discover-claude-files = "scripts.discover_claude_files:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["scripts"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
