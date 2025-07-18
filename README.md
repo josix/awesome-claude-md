@@ -240,6 +240,8 @@ All examples in this collection meet these criteria:
 
 ## Contributing
 
+We welcome contributions! Please see our **[Contributing Guide](CONTRIBUTING.md)** for detailed instructions.
+
 ### 🤖 Automated Discovery
 We use an automated system to discover new CLAUDE.md files across GitHub:
 - **Weekly Discovery**: Runs every Monday to find new candidates
@@ -250,10 +252,18 @@ We use an automated system to discover new CLAUDE.md files across GitHub:
 ### Manual Contributions
 When adding new examples:
 
+### 🚀 Quick Start:
+- **Found a great example?** [Create a suggestion issue](https://github.com/josix/awesome-claude-md/issues/new?template=new-example.md)
+- **Want to improve analysis?** [Create an improvement issue](https://github.com/josix/awesome-claude-md/issues/new?template=improvement.md)  
+- **Found a bug?** [Report it here](https://github.com/josix/awesome-claude-md/issues/new?template=bug-report.md)
+
+### 📋 Key Guidelines:
 1. **Focus on Quality**: Prioritize examples from established projects (1,000+ stars preferred)
 2. **Preserve Originality**: Keep `claude.md` files exactly as they appear in source repositories
 3. **Provide Analysis**: Create detailed `README.md` files explaining what makes each example exemplary
 4. **Follow Structure**: Use the established directory structure and naming conventions
+
+Read the full [Contributing Guide](CONTRIBUTING.md) for step-by-step instructions.
 
 ## Organizations Represented
 
