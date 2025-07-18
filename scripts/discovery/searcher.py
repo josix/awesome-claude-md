@@ -79,9 +79,9 @@ class GitHubSearcher:
             # Search for repositories using the GitHub API
             # Use pagination to get more results (up to 3 pages = 300 results)
             for page in range(1, 4):  # Pages 1, 2, 3
-                search_results = self.github.search_repositories(
+                search_results = self.github.search_code(
                     query=query,
-                    sort='stars',
+                    sort='indexed',
                     order='desc'
                 )
 
@@ -105,7 +105,9 @@ class GitHubSearcher:
         """Process search results and return valid candidates."""
         candidates = []
 
-        for repo in page_results:
+        for code_result in page_results:
+            # Code search results have a .repository property
+            repo = code_result.repository
             candidate = self._process_single_repository(repo, existing_repos)
             if candidate:
                 candidates.append(candidate)
