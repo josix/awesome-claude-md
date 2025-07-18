@@ -31,8 +31,8 @@ def main():
     # Run the discovery workflow
     evaluations = discovery.discover_new_repositories()
 
-    # Filter for quality threshold
-    quality_evaluations = [e for e in evaluations if e['score'] >= 3]
+    # Filter for quality threshold (70/100 points per CRITERIA.md)
+    quality_evaluations = [e for e in evaluations if e['score'] >= 70]
 
     logger.info(f"Found {len(quality_evaluations)} candidates that meet quality thresholds")
 

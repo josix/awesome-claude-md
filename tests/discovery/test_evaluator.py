@@ -1,6 +1,6 @@
 """Tests for the RepositoryEvaluator module."""
 
-from datetime import UTC
+from datetime import UTC, datetime, timedelta
 from unittest.mock import Mock
 
 import pytest
@@ -65,79 +65,126 @@ class TestRepositoryEvaluator:
 
         assert not evaluator._validate_candidate(invalid_candidate)
 
-    def test_calculate_stars_score(self, evaluator):
-        """Test stars score calculation."""
-        high_stars = {'stars': 2000}
-        score, reasons = evaluator._calculate_stars_score(high_stars)
-        assert score == 3
+    def test_calculate_star_count_score(self, evaluator):
+        """Test star count score calculation (new 10-point system)."""
+        # Exceptional star count (10k+)
+        exceptional_stars = {'stars': 15000, 'owner': 'individual'}
+        score, reasons = evaluator._calculate_star_count_score(exceptional_stars)
+        assert score == 10
+        assert "Exceptional star count" in reasons[0]
+
+        # High star count (5k-9999)
+        high_stars = {'stars': 7000, 'owner': 'individual'}
+        score, reasons = evaluator._calculate_star_count_score(high_stars)
+        assert score == 8
         assert "High star count" in reasons[0]
 
-        medium_stars = {'stars': 600}
-        score, reasons = evaluator._calculate_stars_score(medium_stars)
+        # Good star count (1k-4999)
+        good_stars = {'stars': 2000, 'owner': 'individual'}
+        score, reasons = evaluator._calculate_star_count_score(good_stars)
+        assert score == 6
+        assert "Good star count" in reasons[0]
+
+        # Moderate star count (500-999)
+        medium_stars = {'stars': 600, 'owner': 'individual'}
+        score, reasons = evaluator._calculate_star_count_score(medium_stars)
+        assert score == 4
+        assert "Moderate star count" in reasons[0]
+
+        # Minimum threshold (100-499)
+        low_stars = {'stars': 150, 'owner': 'individual'}
+        score, reasons = evaluator._calculate_star_count_score(low_stars)
         assert score == 2
+        assert "Minimum star threshold met" in reasons[0]
 
-        low_stars = {'stars': 150}
-        score, reasons = evaluator._calculate_stars_score(low_stars)
-        assert score == 1
-
-        very_low_stars = {'stars': 50}
-        score, reasons = evaluator._calculate_stars_score(very_low_stars)
+        # Below threshold (<100)
+        very_low_stars = {'stars': 50, 'owner': 'individual'}
+        score, reasons = evaluator._calculate_star_count_score(very_low_stars)
         assert score == 0
+        assert "Below minimum star threshold" in reasons[0]
 
-    def test_calculate_content_score(self, evaluator):
-        """Test content score calculation."""
+    def test_calculate_documentation_excellence_score(self, evaluator):
+        """Test documentation excellence score calculation (new 30-point system)."""
         comprehensive_content = """
-        ## Architecture
-        This shows the system design.
+        # Project Overview
+        This is a comprehensive project with detailed documentation.
 
-        ## Development
-        Here are the development commands.
+        ## Architecture
+        This shows the system design with components and relationships.
+
+        ## Development Commands
+        Here are the development commands and setup instructions.
 
         ## Testing
-        Testing procedures are documented.
+        Testing procedures are documented with examples.
+
+        ```bash
+        npm test
+        npm run build
+        ```
+
+        ## Usage Examples
+        Multiple code examples showing different use cases.
+
+        ```javascript
+        const example = require('./example');
+        example.run();
+        ```
+
+        ## Configuration
+        Detailed configuration options and setup.
         """
 
-        score, reasons = evaluator._calculate_content_score(comprehensive_content)
-        assert score >= 3
-        assert any("architecture" in reason.lower() for reason in reasons)
-        assert any("development" in reason.lower() for reason in reasons)
-        assert any("testing" in reason.lower() for reason in reasons)
+        score, reasons = evaluator._calculate_documentation_excellence_score(comprehensive_content)
+        assert score >= 15  # Should score well across all categories
+        assert len(reasons) >= 3  # Should have reasons from multiple categories
 
-    def test_calculate_content_score_empty(self, evaluator):
-        """Test content score calculation with empty content."""
-        score, reasons = evaluator._calculate_content_score("")
+    def test_calculate_documentation_excellence_score_empty(self, evaluator):
+        """Test documentation excellence score calculation with empty content."""
+        score, reasons = evaluator._calculate_documentation_excellence_score("")
         assert score == 0
-        assert len(reasons) == 0
+        assert "No CLAUDE.md content found" in reasons[0]
 
-    def test_calculate_activity_score(self, evaluator):
-        """Test activity score calculation."""
+    def test_calculate_maintenance_score(self, evaluator):
+        """Test maintenance score calculation (new 8-point system)."""
         from datetime import datetime
 
-        # Recent update (within 30 days)
-        recent_date = datetime.now(UTC).isoformat()
-        recent_candidate = {'updated_at': recent_date}
-        score, reasons = evaluator._calculate_activity_score(recent_candidate)
-        assert score == 2
-        assert "Recently updated (last 30 days)" in reasons[0]
+        # Very recent update (within 7 days)
+        very_recent_date = datetime.now(UTC).isoformat()
+        very_recent_candidate = {'updated_at': very_recent_date}
+        score, reasons = evaluator._calculate_maintenance_score(very_recent_candidate)
+        assert score == 8
+        assert "Daily/weekly commits" in reasons[0]
 
-    def test_calculate_organization_score(self, evaluator):
-        """Test organization score calculation."""
+        # Recent update (within 30 days)
+        recent_date = (datetime.now(UTC) - timedelta(days=15)).isoformat()
+        recent_candidate = {'updated_at': recent_date}
+        score, reasons = evaluator._calculate_maintenance_score(recent_candidate)
+        assert score == 6
+        assert "Monthly commits" in reasons[0]
+
+    def test_is_recognized_organization(self, evaluator):
+        """Test recognized organization detection."""
         # Recognized organization
         recognized_candidate = {
             'owner': 'microsoft',
             'organization': None
         }
-        score, reasons = evaluator._calculate_organization_score(recognized_candidate)
-        assert score == 2
-        assert "microsoft" in reasons[0]
+        assert evaluator._is_recognized_organization(recognized_candidate) == True
+
+        # Another recognized organization
+        anthropic_candidate = {
+            'owner': 'anthropic',
+            'organization': None
+        }
+        assert evaluator._is_recognized_organization(anthropic_candidate) == True
 
         # Unknown organization
         unknown_candidate = {
             'owner': 'unknown-org',
             'organization': None
         }
-        score, reasons = evaluator._calculate_organization_score(unknown_candidate)
-        assert score == 0
+        assert evaluator._is_recognized_organization(unknown_candidate) == False
 
     def test_suggest_category_complex_project(self, evaluator):
         """Test category suggestion for complex projects."""
