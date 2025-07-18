@@ -142,32 +142,32 @@ A curated collection of high-quality `claude.md` files from leading open-source 
 <details>
 <summary><strong>🏗️ Monorepo & Build Systems</strong></summary>
 
-- **[Cloudflare Workers SDK](scenarios/developer-tooling/cloudflare_workers-sdk/README.md)** - Advanced monorepo patterns
-- **[Lerna](scenarios/developer-tooling/lerna_lerna/README.md)** - Multi-package management
+- **[Cloudflare Workers SDK](scenarios/developer-tooling/cloudflare_workers-sdk/README.md)** ![Stars](https://img.shields.io/github/stars/cloudflare/workers-sdk?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/cloudflare/workers-sdk?style=flat-square) - Advanced monorepo patterns
+- **[Lerna](scenarios/developer-tooling/lerna_lerna/README.md)** ![Stars](https://img.shields.io/github/stars/lerna/lerna?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/lerna/lerna?style=flat-square) - Multi-package management
 
 </details>
 
 <details>
 <summary><strong>🤖 AI & Machine Learning</strong></summary>
 
-- **[Basic Memory](scenarios/complex-projects/basicmachines-co_basic-memory/README.md)** - AI collaboration workflows
-- **[Microsoft Semantic Workbench](scenarios/complex-projects/microsoft_semanticworkbench/README.md)** - AI assistant platform
+- **[Basic Memory](scenarios/complex-projects/basicmachines-co_basic-memory/README.md)** ![Stars](https://img.shields.io/github/stars/basicmachines-co/basic-memory?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/basicmachines-co/basic-memory?style=flat-square) - AI collaboration workflows
+- **[Microsoft Semantic Workbench](scenarios/complex-projects/microsoft_semanticworkbench/README.md)** ![Stars](https://img.shields.io/github/stars/microsoft/semanticworkbench?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/microsoft/semanticworkbench?style=flat-square) - AI assistant platform
 
 </details>
 
 <details>
 <summary><strong>🧪 Testing & Quality</strong></summary>
 
-- **[Kent Beck's BPlusTree3](scenarios/project-handoffs/KentBeck_BPlusTree3/README.md)** - TDD methodology
-- **[Claude Crew](scenarios/developer-tooling/d-kimuson_claude-crew/README.md)** - Strict TypeScript standards
+- **[Kent Beck's BPlusTree3](scenarios/project-handoffs/KentBeck_BPlusTree3/README.md)** ![Stars](https://img.shields.io/github/stars/KentBeck/BPlusTree3?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/KentBeck/BPlusTree3?style=flat-square) - TDD methodology
+- **[Claude Crew](scenarios/developer-tooling/d-kimuson_claude-crew/README.md)** ![Stars](https://img.shields.io/github/stars/d-kimuson/claude-crew?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/d-kimuson/claude-crew?style=flat-square) - Strict TypeScript standards
 
 </details>
 
 <details>
 <summary><strong>🚀 Getting Started</strong></summary>
 
-- **[Anthropic Quickstarts](scenarios/getting-started/anthropics_anthropic-quickstarts/README.md)** - Multi-project documentation
-- **[Ethereum.org Website](scenarios/getting-started/ethereum_ethereum-org-website/README.md)** - Community-driven development
+- **[Anthropic Quickstarts](scenarios/getting-started/anthropics_anthropic-quickstarts/README.md)** ![Stars](https://img.shields.io/github/stars/anthropics/anthropic-quickstarts?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/anthropics/anthropic-quickstarts?style=flat-square) - Multi-project documentation
+- **[Ethereum.org Website](scenarios/getting-started/ethereum_ethereum-org-website/README.md)** ![Stars](https://img.shields.io/github/stars/ethereum/ethereum-org-website?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/ethereum/ethereum-org-website?style=flat-square) - Community-driven development
 
 </details>
 
@@ -185,6 +185,11 @@ Large-scale systems and runtime environments that power modern applications.
 ### 🏢 Complex Projects
 
 Multi-service applications with sophisticated architectures and enterprise-scale concerns.
+
+- **[Basic Memory](scenarios/complex-projects/basicmachines-co_basic-memory/README.md)** ![Stars](https://img.shields.io/github/stars/basicmachines-co/basic-memory?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/basicmachines-co/basic-memory?style=flat-square) ![Activity](https://img.shields.io/github/last-commit/basicmachines-co/basic-memory?style=flat-square) - Cutting-edge MCP integration & AI collaboration
+  - MCP-first architecture patterns
+  - AI-human collaborative development
+  - Production-ready release automation
 
 - **[Microsoft Semantic Workbench](scenarios/complex-projects/microsoft_semanticworkbench/README.md)** ![Stars](https://img.shields.io/github/stars/microsoft/semanticworkbench?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/microsoft/semanticworkbench?style=flat-square) ![Activity](https://img.shields.io/github/last-commit/microsoft/semanticworkbench?style=flat-square) - AI assistant prototyping platform (325 stars)
   - AI context generation system
