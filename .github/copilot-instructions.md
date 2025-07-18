@@ -27,7 +27,7 @@ awesome-claude-md/
 
 When adding new examples, use these primary categories:
 - `complex-projects/` - Multi-service projects with detailed architecture
-- `libraries-frameworks/` - Core concepts, APIs, and usage patterns  
+- `libraries-frameworks/` - Core concepts, APIs, and usage patterns
 - `developer-tooling/` - CLI tools with commands and configuration
 - `project-handoffs/` - Current state with blocking issues and next steps
 - `getting-started/` - Development environment setup focused
@@ -95,7 +95,7 @@ filename:CLAUDE.md language:TypeScript
 
 ### Ethical Guidelines
 - **Never copy** `claude.md` files directly into this repository
-- **Always link** to the original source repository  
+- **Always link** to the original source repository
 - **Include attribution** with source links, licensing information, and proper credit
 - **Respect copyright** and only reference publicly available files under permissive licenses
 
@@ -115,6 +115,21 @@ Each `README.md` file should include:
 
 ## Development Workflow Patterns
 
+### Automated Discovery
+The repository includes an automated system for discovering new CLAUDE.md files:
+- **GitHub Action**: Weekly scheduled workflow to search GitHub
+- **Discovery Script**: `scripts/discover_claude_files.py` orchestrates the discovery workflow
+- **Modular Architecture**: Discovery system is split into focused modules:
+  - `scripts/discovery/loader.py`: Loads existing repositories to avoid duplicates
+  - `scripts/discovery/searcher.py`: Searches GitHub for CLAUDE.md files
+  - `scripts/discovery/evaluator.py`: Evaluates and scores repository candidates
+  - `scripts/discovery/reporter.py`: Creates issues and reports
+  - `scripts/discovery/reporters/`: Specialized reporter components for formatting
+  - `scripts/discovery/utils.py`: Shared utilities (retry logic, logging)
+- **Quality Evaluation**: Automatic scoring based on repository metrics and content
+- **Community Review**: Issues created with candidate repositories for manual assessment
+- **See**: `AUTOMATED_DISCOVERY.md` for complete documentation
+
 ### Command Organization
 Suggest commands grouped by purpose:
 ```markdown
@@ -122,7 +137,7 @@ Suggest commands grouped by purpose:
 - `[build command]` - Build description
 - `[release build]` - Release build description
 
-### Testing  
+### Testing
 - `[test command]` - Test description
 - `[integration tests]` - Integration test description
 
@@ -169,6 +184,45 @@ When working with this repository:
 - Update README.md table of contents after adding examples
 - **Keep copilot-instructions.md and CLAUDE.md synchronized** when making structural changes
 
+## Development Commands
+
+### Code Quality Tools
+- `ty check`: Run type checking
+- `ruff check .`: Lint entire project
+- `ruff format .`: Format code using Ruff
+- `complexipy scripts/`: Analyze code complexity
+- `ty check && ruff check . && ruff format .`: Combined type checking, linting, and formatting
+- `pre-commit run --all-files`: Run all pre-commit hooks on all files
+- `pre-commit run`: Run pre-commit hooks on staged files only
+- **Remember to fix type errors and linting errors after running ty and ruff**
+
+### Development Workflow
+- `uv sync`: Install dependencies
+- `pre-commit install`: Install pre-commit hooks (run once after cloning)
+- `uv run discover-claude-files`: Run the discovery script
+- `pytest`: Run tests
+- `pytest --cov`: Run tests with coverage
+
+### Code Analysis
+- `complexipy scripts/discover_claude_files.py`: Check complexity of main discovery script
+- `complexipy scripts/discovery/`: Analyze complexity of discovery modules
+- `complexipy scripts/ --max-complexity 10`: Set custom complexity threshold
+- `complexipy scripts/ --output json`: Export complexity analysis as JSON
+
+### Discovery System Architecture
+The discovery system follows a modular design with single responsibility principle:
+- **Main Script** (`discover_claude_files.py`): 45 lines - lightweight orchestrator
+- **Individual Modules**: Each module handles one specific concern (loading, searching, evaluating, reporting)
+- **Reduced Complexity**: Complex functions split into smaller, focused components
+- **Better Testability**: Each module can be tested independently with 70+ comprehensive tests
+- **Maintainability**: Changes to one component don't affect others
+- **Clean Test Structure**: Test files mirror module structure in `tests/discovery/`
+
+### Repository Maintenance
+- Review discovery issues created by the automation system
+- Update main README.md with table of contents after adding examples
+- Keep copilot-instructions.md and CLAUDE.md synchronized
+
 ## Organizations to Prioritize
 
 When suggesting new examples, prioritize these organizations:
@@ -176,7 +230,7 @@ When suggesting new examples, prioritize these organizations:
 - **Basic Machines**: Knowledge management and AI collaboration
 - **Cloudflare**: Infrastructure runtime and developer tooling
 - **CYRUP AI**: Advanced AI development methodologies
-- **Microsoft**: AI systems and enterprise tooling  
+- **Microsoft**: AI systems and enterprise tooling
 - **PyTorch**: Machine learning infrastructure
 - **LangChain**: AI application frameworks
 - **Sentry**: Error tracking and monitoring

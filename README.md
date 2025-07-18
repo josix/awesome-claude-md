@@ -240,6 +240,14 @@ All examples in this collection meet these criteria:
 
 ## Contributing
 
+### 🤖 Automated Discovery
+We use an automated system to discover new CLAUDE.md files across GitHub:
+- **Weekly Discovery**: Runs every Monday to find new candidates
+- **Quality Evaluation**: Automatically scores repositories against our standards
+- **Community Review**: Creates issues with discovered candidates for manual review
+- **Documentation**: See [AUTOMATED_DISCOVERY.md](AUTOMATED_DISCOVERY.md) for full details
+
+### Manual Contributions
 When adding new examples:
 
 1. **Focus on Quality**: Prioritize examples from established projects (1,000+ stars preferred)
