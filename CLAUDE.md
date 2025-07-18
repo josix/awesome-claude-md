@@ -25,7 +25,7 @@ awesome-claude-md/
 
 When adding examples, use these primary categories:
 - **complex-projects**: Multi-service projects with detailed architecture
-- **libraries-frameworks**: Core concepts, APIs, and usage patterns  
+- **libraries-frameworks**: Core concepts, APIs, and usage patterns
 - **developer-tooling**: CLI tools with commands and configuration
 - **project-handoffs**: Current state with blocking issues and next steps
 - **getting-started**: Development environment setup focused
@@ -93,13 +93,19 @@ Use these GitHub search queries to find quality examples:
 - `ruff format .`: Format code using Ruff
 - `complexipy scripts/`: Analyze code complexity
 - `ty check && ruff check . && ruff format .`: Combined type checking, linting, and formatting
+- `pre-commit run --all-files`: Run all pre-commit hooks on all files
+- `pre-commit run`: Run pre-commit hooks on staged files only
 - **Remember to fix type errors and linting errors after running ty and ruff**
 
 ### Development Workflow
 - `uv sync`: Install dependencies
+- `pre-commit install`: Install pre-commit hooks (run once after cloning)
 - `uv run discover-claude-files`: Run the discovery script
 - `pytest`: Run tests
 - `pytest --cov`: Run tests with coverage
+
+### File Synchronization
+- **Sync CLAUDE.md with copilot-instructions.md**: Keep both AI assistant instruction files synchronized when making changes to project structure, guidelines, or development commands
 
 ### Code Analysis
 - `complexipy scripts/discover_claude_files.py`: Check complexity of main discovery script

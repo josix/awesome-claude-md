@@ -27,7 +27,7 @@ awesome-claude-md/
 
 When adding new examples, use these primary categories:
 - `complex-projects/` - Multi-service projects with detailed architecture
-- `libraries-frameworks/` - Core concepts, APIs, and usage patterns  
+- `libraries-frameworks/` - Core concepts, APIs, and usage patterns
 - `developer-tooling/` - CLI tools with commands and configuration
 - `project-handoffs/` - Current state with blocking issues and next steps
 - `getting-started/` - Development environment setup focused
@@ -95,7 +95,7 @@ filename:CLAUDE.md language:TypeScript
 
 ### Ethical Guidelines
 - **Never copy** `claude.md` files directly into this repository
-- **Always link** to the original source repository  
+- **Always link** to the original source repository
 - **Include attribution** with source links, licensing information, and proper credit
 - **Respect copyright** and only reference publicly available files under permissive licenses
 
@@ -137,7 +137,7 @@ Suggest commands grouped by purpose:
 - `[build command]` - Build description
 - `[release build]` - Release build description
 
-### Testing  
+### Testing
 - `[test command]` - Test description
 - `[integration tests]` - Integration test description
 
@@ -186,16 +186,19 @@ When working with this repository:
 
 ## Development Commands
 
-### Code Quality and Type Checking
+### Code Quality Tools
 - `ty check`: Run type checking
 - `ruff check .`: Lint entire project
 - `ruff format .`: Format code using Ruff
 - `complexipy scripts/`: Analyze code complexity
 - `ty check && ruff check . && ruff format .`: Combined type checking, linting, and formatting
+- `pre-commit run --all-files`: Run all pre-commit hooks on all files
+- `pre-commit run`: Run pre-commit hooks on staged files only
 - **Remember to fix type errors and linting errors after running ty and ruff**
 
 ### Development Workflow
 - `uv sync`: Install dependencies
+- `pre-commit install`: Install pre-commit hooks (run once after cloning)
 - `uv run discover-claude-files`: Run the discovery script
 - `pytest`: Run tests
 - `pytest --cov`: Run tests with coverage
@@ -227,7 +230,7 @@ When suggesting new examples, prioritize these organizations:
 - **Basic Machines**: Knowledge management and AI collaboration
 - **Cloudflare**: Infrastructure runtime and developer tooling
 - **CYRUP AI**: Advanced AI development methodologies
-- **Microsoft**: AI systems and enterprise tooling  
+- **Microsoft**: AI systems and enterprise tooling
 - **PyTorch**: Machine learning infrastructure
 - **LangChain**: AI application frameworks
 - **Sentry**: Error tracking and monitoring
