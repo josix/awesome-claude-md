@@ -15,10 +15,13 @@ Thank you for your interest in contributing to this curated collection of high-q
 The most valuable contributions are high-quality `claude.md` files from established projects. Before suggesting:
 
 **Quality Criteria:**
-- From repositories with **1,000+ stars** (preferred) or recognized organizations
-- Actively maintained and used in production
-- Demonstrates advanced patterns or techniques
-- Well-structured to maximize AI assistant effectiveness
+See our comprehensive **[Curation Criteria](CRITERIA.md)** for detailed evaluation standards including:
+- Repository quality metrics (100+ stars minimum, 1,000+ preferred)  
+- Documentation excellence and technical accuracy
+- AI-friendly structure and context provision
+- Uniqueness and learning value assessment
+
+**Quick Reference:** All examples must score ≥70/100 points using our objective scoring rubric.
 
 **Search for Examples:**
 ```bash
@@ -50,8 +53,9 @@ Found broken links, typos, or incorrect information? Please report it!
 - Check recent repositories from industry leaders
 
 **Evaluate Quality:**
-- ✅ Does it demonstrate best practices?
-- ✅ Is the documentation comprehensive?
+- ✅ Does it meet our [minimum requirements](CRITERIA.md#quick-reference)?
+- ✅ Would it score ≥70 points using our [evaluation rubric](CRITERIA.md#evaluation-scoring-0-100-points)?
+- ✅ Does it demonstrate best practices or unique techniques?
 - ✅ Would it help developers learn effective patterns?
 - ✅ Is it from a reputable source?
 
@@ -155,13 +159,26 @@ Add your example to the appropriate sections:
 
 ### 6. **Quality Checklist**
 
-Before submitting, verify:
+Before submitting, verify your example meets our [Curation Criteria](CRITERIA.md):
+
+**Minimum Requirements:**
+- [ ] Repository has ≥100 stars OR from recognized organization
+- [ ] Active maintenance (commits within 6 months)
+- [ ] Open source with clear licensing
+- [ ] CLAUDE.md demonstrates clear value for AI assistance
 
 **Content Quality:**
 - [ ] Analysis explains what makes the example exemplary
 - [ ] Key takeaways are actionable for developers
 - [ ] All links work correctly
 - [ ] Proper attribution and licensing information included
+
+**Evaluation Score:** Using our [scoring rubric](CRITERIA.md#evaluation-scoring-0-100-points):
+- [ ] Repository Quality: ___/25 points
+- [ ] Documentation Excellence: ___/30 points  
+- [ ] AI-Friendly Structure: ___/25 points
+- [ ] Uniqueness & Learning Value: ___/20 points
+- [ ] **Total Score: ___/100** (≥70 required)
 
 **Ethical Guidelines:**
 - [ ] **NO copying** of original `claude.md` files into this repository

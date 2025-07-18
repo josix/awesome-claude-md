@@ -46,12 +46,23 @@ Please explain what makes this `claude.md` file special:
 
 ## 📋 Quality Checklist
 
-- [ ] Repository has 100+ stars (or is from a recognized organization)
+Review our **[Curation Criteria](../../CRITERIA.md)** for detailed evaluation standards.
+
+**Minimum Requirements:**
+- [ ] Repository has ≥100 stars OR from recognized organization
 - [ ] Project is actively maintained (commits within last 6 months)
-- [ ] `claude.md` demonstrates clear best practices
+- [ ] `claude.md` demonstrates clear best practices and substantial content
 - [ ] Documentation is comprehensive and AI-friendly
 - [ ] Repository has proper licensing for public reference
 - [ ] No existing similar examples in our collection
+
+**Evaluation Preview** (maintainers will score using our rubric):
+- **Repository Quality** (25 pts): Star count, maintenance, production usage, licensing
+- **Documentation Excellence** (30 pts): Clarity, completeness, technical accuracy  
+- **AI-Friendly Structure** (25 pts): Context provision, examples, architecture description
+- **Uniqueness & Learning Value** (20 pts): Novel patterns, educational value, collection gaps
+
+**Target Score:** ≥70/100 points for acceptance
 
 ## 💡 Additional Context
 
@@ -63,4 +74,4 @@ Are there any existing examples in our collection that this relates to or comple
 
 ---
 
-**Note:** Please make sure you've read our [Contributing Guide](../CONTRIBUTING.md) before submitting. We prioritize quality over quantity!
+**Note:** Please review our [Curation Criteria](../../CRITERIA.md) before submitting. We use an objective 100-point scoring system to ensure consistent quality across all examples.

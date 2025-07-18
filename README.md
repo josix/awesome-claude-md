@@ -10,7 +10,7 @@ A curated collection of high-quality `claude.md` files from leading open-source 
 - [🔍 Browse by Technology](#-browse-by-technology) - Find examples by tech stack
 - [🎨 Browse by Use Case](#-browse-by-use-case) - Find examples by purpose
 - [📂 All Categories](#-all-categories) - Complete categorized list
-- [🏆 Quality Standards](#quality-standards) - Our selection criteria
+- [🏆 Quality Standards](#quality-standards) - Our objective evaluation criteria
 - [🤝 Contributing](#contributing) - How to add examples
 - [🔎 Search GitHub](#search-github) - Find more examples
 
@@ -230,13 +230,25 @@ Documentation focused on project state, blocking issues, and transition planning
 
 ## Quality Standards
 
-All examples in this collection meet these criteria:
+All examples in this collection meet our comprehensive [Curation Criteria](CRITERIA.md), which includes:
 
-- **Industry Recognition**: From organizations with proven track records
-- **Production Usage**: Actively maintained and used in production environments
-- **Comprehensive Documentation**: Detailed architecture, setup, and workflow information
-- **Best Practices**: Demonstrate advanced patterns and techniques
-- **AI-Friendly**: Structured to maximize AI assistant effectiveness
+### Evaluation Framework (100-Point Scoring System)
+- **Repository Quality (25%)**: Star count, maintenance, production usage, licensing
+- **Documentation Excellence (30%)**: Clarity, completeness, technical accuracy
+- **AI-Friendly Structure (25%)**: Context provision, examples, architecture description  
+- **Uniqueness & Learning Value (20%)**: Novel patterns, educational value, collection gaps
+
+### Minimum Requirements
+- ✅ **Repository Recognition**: ≥100 stars OR from established organization
+- ✅ **Active Maintenance**: Commits within last 6 months  
+- ✅ **Production Usage**: Actively maintained and used in production environments
+- ✅ **Comprehensive Documentation**: Detailed architecture, setup, and workflow information
+- ✅ **Best Practices**: Demonstrate advanced patterns and techniques
+- ✅ **AI-Friendly**: Structured to maximize AI assistant effectiveness
+
+**Acceptance Threshold:** ≥70/100 points using our objective scoring rubric.
+
+See **[CRITERIA.md](CRITERIA.md)** for complete evaluation guidelines and scoring details.
 
 ## Contributing
 
@@ -258,7 +270,7 @@ When adding new examples:
 - **Found a bug?** [Report it here](https://github.com/josix/awesome-claude-md/issues/new?template=bug-report.md)
 
 ### 📋 Key Guidelines:
-1. **Focus on Quality**: Prioritize examples from established projects (1,000+ stars preferred)
+1. **Focus on Quality**: Follow our [Curation Criteria](CRITERIA.md) (≥70/100 points required)
 2. **Preserve Originality**: Keep `claude.md` files exactly as they appear in source repositories
 3. **Provide Analysis**: Create detailed `README.md` files explaining what makes each example exemplary
 4. **Follow Structure**: Use the established directory structure and naming conventions
