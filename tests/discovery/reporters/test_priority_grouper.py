@@ -20,7 +20,7 @@ class TestPriorityGrouper:
     def test_group_evaluations_empty(self, priority_grouper):
         """Test grouping empty evaluations."""
         groups = priority_grouper.group_evaluations([])
-        
+
         assert len(groups['high']) == 0
         assert len(groups['medium']) == 0
         assert len(groups['low']) == 0
@@ -29,7 +29,7 @@ class TestPriorityGrouper:
         """Test grouping single high-priority evaluation."""
         evaluations = [{'score': 8}]
         groups = priority_grouper.group_evaluations(evaluations)
-        
+
         assert len(groups['high']) == 1
         assert len(groups['medium']) == 0
         assert len(groups['low']) == 0
@@ -38,7 +38,7 @@ class TestPriorityGrouper:
         """Test grouping single medium-priority evaluation."""
         evaluations = [{'score': 5}]
         groups = priority_grouper.group_evaluations(evaluations)
-        
+
         assert len(groups['high']) == 0
         assert len(groups['medium']) == 1
         assert len(groups['low']) == 0
@@ -47,7 +47,7 @@ class TestPriorityGrouper:
         """Test grouping single low-priority evaluation."""
         evaluations = [{'score': 2}]
         groups = priority_grouper.group_evaluations(evaluations)
-        
+
         assert len(groups['high']) == 0
         assert len(groups['medium']) == 0
         assert len(groups['low']) == 1
@@ -64,7 +64,7 @@ class TestPriorityGrouper:
         ]
 
         groups = priority_grouper.group_evaluations(evaluations)
-        
+
         assert len(groups['high']) == 2
         assert len(groups['medium']) == 2
         assert len(groups['low']) == 2
@@ -79,14 +79,14 @@ class TestPriorityGrouper:
         ]
 
         groups = priority_grouper.group_evaluations(evaluations)
-        
+
         # Check that high priority items are sorted (9, 8)
         assert groups['high'][0]['score'] == 9
         assert groups['high'][1]['score'] == 8
-        
+
         # Check that medium priority item is there
         assert groups['medium'][0]['score'] == 5
-        
+
         # Check that low priority item is there
         assert groups['low'][0]['score'] == 2
 
@@ -100,21 +100,21 @@ class TestPriorityGrouper:
         ]
 
         groups = priority_grouper.group_evaluations(evaluations)
-        
+
         assert len(groups['high']) == 1
         assert groups['high'][0]['score'] == 7
-        
+
         assert len(groups['medium']) == 2
         assert groups['medium'][0]['score'] == 6
         assert groups['medium'][1]['score'] == 4
-        
+
         assert len(groups['low']) == 1
         assert groups['low'][0]['score'] == 3
 
     def test_get_priority_counts_empty(self, priority_grouper):
         """Test getting priority counts for empty evaluations."""
         counts = priority_grouper.get_priority_counts([])
-        
+
         assert counts['total'] == 0
         assert counts['high'] == 0
         assert counts['medium'] == 0
@@ -131,7 +131,7 @@ class TestPriorityGrouper:
         ]
 
         counts = priority_grouper.get_priority_counts(evaluations)
-        
+
         assert counts['total'] == 5
         assert counts['high'] == 2
         assert counts['medium'] == 1

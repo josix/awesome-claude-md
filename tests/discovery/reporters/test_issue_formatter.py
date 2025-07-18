@@ -20,7 +20,7 @@ class TestIssueFormatter:
     def test_create_issue_title_empty(self, issue_formatter):
         """Test creating issue title with empty evaluations."""
         title = issue_formatter.create_issue_title([])
-        
+
         assert "0 New CLAUDE.md Candidates Found" in title
         assert "High Priority" not in title
 
@@ -30,9 +30,9 @@ class TestIssueFormatter:
             {'score': 5},
             {'score': 3},
         ]
-        
+
         title = issue_formatter.create_issue_title(evaluations)
-        
+
         assert "2 New CLAUDE.md Candidates Found" in title
         assert "High Priority" not in title
 
@@ -43,16 +43,16 @@ class TestIssueFormatter:
             {'score': 5},
             {'score': 9},
         ]
-        
+
         title = issue_formatter.create_issue_title(evaluations)
-        
+
         assert "3 New CLAUDE.md Candidates Found" in title
         assert "(2 High Priority)" in title
 
     def test_create_issue_body_empty(self, issue_formatter):
         """Test creating issue body with empty evaluations."""
         body = issue_formatter.create_issue_body([])
-        
+
         assert body == "No new candidates found in this discovery run."
 
     def test_create_issue_body_with_evaluations(self, issue_formatter):
@@ -93,24 +93,24 @@ class TestIssueFormatter:
         ]
 
         body = issue_formatter.create_issue_body(evaluations)
-        
+
         # Check summary section
         assert "Discovery Summary" in body
         assert "Total Candidates**: 2" in body
         assert "High Priority** (≥7 points): 1" in body
         assert "Medium Priority** (4-6 points): 1" in body
         assert "Low Priority** (<4 points): 0" in body
-        
+
         # Check high priority section
         assert "High Priority (≥7 points)" in body
         assert "test/repo" in body
         assert "8/10 points" in body
-        
+
         # Check medium priority section
         assert "Medium Priority (4-6 points)" in body
         assert "test/repo2" in body
         assert "5/10 points" in body
-        
+
         # Check guidelines section
         assert "Review Guidelines" in body
         assert "Quality" in body
@@ -138,16 +138,16 @@ class TestIssueFormatter:
         ]
 
         body = issue_formatter.create_issue_body(evaluations)
-        
+
         # Check summary
         assert "Total Candidates**: 1" in body
         assert "Low Priority** (<4 points): 1" in body
-        
+
         # Check low priority section
         assert "Low Priority (<4 points)" in body
         assert "test/low-repo" in body
         assert "2/10 points" in body
-        
+
         # Should not have high or medium priority sections
         assert "High Priority (≥7 points)" not in body
         assert "Medium Priority (4-6 points)" not in body
@@ -161,7 +161,7 @@ class TestIssueFormatter:
             {'score': 8},  # high
             {'score': 1},  # low
         ]
-        
+
         # Add minimal candidate data
         for eval_data in evaluations:
             eval_data['candidate'] = {
@@ -179,13 +179,13 @@ class TestIssueFormatter:
             eval_data['reasons'] = ['Test reason']
 
         body = issue_formatter.create_issue_body(evaluations)
-        
+
         # Check summary
         assert "Total Candidates**: 5" in body
         assert "High Priority** (≥7 points): 2" in body
         assert "Medium Priority** (4-6 points): 1" in body
         assert "Low Priority** (<4 points): 2" in body
-        
+
         # Check all sections exist
         assert "High Priority (≥7 points)" in body
         assert "Medium Priority (4-6 points)" in body

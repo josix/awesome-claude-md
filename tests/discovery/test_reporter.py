@@ -50,13 +50,13 @@ class TestIssueGenerator:
         """Test saving discovery report successfully."""
         title = "Test Discovery Report"
         body = "Test body content"
-        
+
         with patch('builtins.open', create=True) as mock_open:
             with patch('scripts.discovery.reporter.datetime') as mock_datetime:
                 mock_datetime.now.return_value.strftime.return_value = "20231201_120000"
-                
+
                 issue_generator._save_discovery_report(title, body)
-                
+
                 mock_open.assert_called_once()
                 # Check that file was opened for writing
                 mock_open.assert_called_with('discovery_report_20231201_120000.md', 'w', encoding='utf-8')
@@ -65,10 +65,10 @@ class TestIssueGenerator:
         """Test saving discovery report with error."""
         title = "Test Discovery Report"
         body = "Test body content"
-        
+
         with patch('builtins.open', side_effect=OSError("Permission denied")):
             with patch('scripts.discovery.reporter.logger') as mock_logger:
                 issue_generator._save_discovery_report(title, body)
-                
+
                 mock_logger.error.assert_called_once()
                 assert "Error saving discovery report" in mock_logger.error.call_args[0][0]

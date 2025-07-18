@@ -3,8 +3,8 @@
 import logging
 from datetime import datetime
 
-from github.GithubException import GithubException, UnknownObjectException
 import requests.exceptions
+from github.GithubException import GithubException, UnknownObjectException
 
 from .utils import retry_with_backoff
 

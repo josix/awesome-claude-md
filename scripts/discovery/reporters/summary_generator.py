@@ -1,7 +1,7 @@
 """Summary generator for discovery reports."""
 
 import html
-from typing import List, Dict, Any
+from typing import Any
 
 
 class SummaryGenerator:
@@ -25,7 +25,7 @@ class SummaryGenerator:
 
         return sanitized
 
-    def generate_summary_section(self, counts: Dict[str, int]) -> str:
+    def generate_summary_section(self, counts: dict[str, int]) -> str:
         """Generate the summary section of the report."""
         summary_lines = [
             "## 🎯 Discovery Summary",
@@ -37,7 +37,7 @@ class SummaryGenerator:
         ]
         return "\n".join(summary_lines)
 
-    def generate_candidate_section(self, eval_data: Dict[str, Any]) -> str:
+    def generate_candidate_section(self, eval_data: dict[str, Any]) -> str:
         """Generate a section for a single candidate."""
         candidate = eval_data['candidate']
         safe_name = self._sanitize_text(candidate['full_name'])

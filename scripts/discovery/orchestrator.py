@@ -1,12 +1,12 @@
 """Main orchestrator for the discovery workflow."""
 
 import logging
-from typing import List, Dict, Any
+from typing import Any
 
-from .loader import RepositoryLoader
-from .searcher import GitHubSearcher
 from .evaluator import RepositoryEvaluator
+from .loader import RepositoryLoader
 from .reporter import IssueGenerator
+from .searcher import GitHubSearcher
 
 logger = logging.getLogger(__name__)
 
@@ -23,7 +23,7 @@ class ClaudeFileDiscovery:
         # Load existing repositories to avoid duplicates
         self.existing_repos = self.repo_loader.load_existing_repos()
 
-    def discover_new_repositories(self) -> List[Dict[str, Any]]:
+    def discover_new_repositories(self) -> list[dict[str, Any]]:
         """Main discovery workflow: search, evaluate, and report on new repositories."""
         logger.info("Starting automated discovery of new CLAUDE.md repositories")
 

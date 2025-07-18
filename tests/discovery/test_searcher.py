@@ -56,7 +56,7 @@ class TestGitHubSearcher:
         mock_repo.organization = None
 
         result = github_searcher._create_candidate_dict(mock_repo, "claude.md")
-        
+
         assert result['full_name'] == "owner/repo"
         assert result['stars'] == 100
         assert result['claude_file_path'] == "claude.md"
@@ -66,9 +66,9 @@ class TestGitHubSearcher:
         """Test processing a repository that already exists."""
         mock_repo = Mock()
         mock_repo.full_name = "owner/repo"
-        
+
         existing_repos = {"owner/repo"}
-        
+
         result = github_searcher._process_single_repository(mock_repo, existing_repos)
         assert result is None
 
@@ -78,9 +78,9 @@ class TestGitHubSearcher:
         mock_repo.full_name = "owner/repo"
         mock_repo.archived = True
         mock_repo.fork = False
-        
+
         existing_repos = set()
-        
+
         result = github_searcher._process_single_repository(mock_repo, existing_repos)
         assert result is None
 
@@ -91,9 +91,9 @@ class TestGitHubSearcher:
         mock_repo.archived = False
         mock_repo.fork = False
         mock_repo.stargazers_count = 10  # Below minimum
-        
+
         existing_repos = set()
-        
+
         result = github_searcher._process_single_repository(mock_repo, existing_repos)
         assert result is None
 
@@ -102,9 +102,9 @@ class TestGitHubSearcher:
         mock_repo = Mock()
         mock_file_contents = Mock()
         mock_file_contents.size = 1000  # Above minimum
-        
+
         mock_repo.get_contents.return_value = mock_file_contents
-        
+
         result = github_searcher._find_claude_file(mock_repo)
         assert result == "claude.md"
 
@@ -113,18 +113,18 @@ class TestGitHubSearcher:
         mock_repo = Mock()
         mock_file_contents = Mock()
         mock_file_contents.size = 100  # Below minimum
-        
+
         mock_repo.get_contents.return_value = mock_file_contents
-        
+
         result = github_searcher._find_claude_file(mock_repo)
         assert result is None
 
     def test_find_claude_file_not_found(self, github_searcher):
         """Test when CLAUDE.md file is not found."""
         from github.GithubException import UnknownObjectException
-        
+
         mock_repo = Mock()
         mock_repo.get_contents.side_effect = UnknownObjectException(404, "Not Found", headers={})
-        
+
         result = github_searcher._find_claude_file(mock_repo)
         assert result is None

@@ -49,9 +49,9 @@ class TestSummaryGenerator:
     def test_generate_summary_section(self, summary_generator):
         """Test generating summary section."""
         counts = {'total': 10, 'high': 3, 'medium': 4, 'low': 3}
-        
+
         summary = summary_generator.generate_summary_section(counts)
-        
+
         assert "Discovery Summary" in summary
         assert "Total Candidates**: 10" in summary
         assert "High Priority** (≥7 points): 3" in summary
@@ -78,7 +78,7 @@ class TestSummaryGenerator:
         }
 
         section = summary_generator.generate_candidate_section(eval_data)
-        
+
         assert "test/repo" in section
         assert "8/10 points" in section
         assert "Test repository" in section
@@ -112,7 +112,7 @@ class TestSummaryGenerator:
         }
 
         section = summary_generator.generate_candidate_section(eval_data)
-        
+
         assert "test/repo" in section
         assert "5/10 points" in section
         assert "Topics:" not in section  # Should not include topics section
@@ -137,7 +137,7 @@ class TestSummaryGenerator:
         }
 
         section = summary_generator.generate_candidate_section(eval_data)
-        
+
         # Should only include first 5 topics
         assert "topic1, topic2, topic3, topic4, topic5" in section
         assert "topic6" not in section
@@ -163,13 +163,13 @@ class TestSummaryGenerator:
         }
 
         section = summary_generator.generate_candidate_section(eval_data)
-        
+
         assert "Description**: " in section
 
     def test_generate_guidelines_section(self, summary_generator):
         """Test generating guidelines section."""
         guidelines = summary_generator.generate_guidelines_section()
-        
+
         assert "Review Guidelines" in guidelines
         assert "Quality" in guidelines
         assert "Uniqueness" in guidelines

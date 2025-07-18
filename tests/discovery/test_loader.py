@@ -1,7 +1,7 @@
 """Tests for the RepositoryLoader module."""
 
-from unittest.mock import patch, mock_open
 from pathlib import Path
+from unittest.mock import mock_open, patch
 
 import pytest
 
@@ -66,9 +66,9 @@ class TestRepositoryLoader:
         **Repository**: [test-repo](https://github.com/owner/repo)
         **CLAUDE.md**: [claude.md](https://github.com/owner/repo/blob/main/claude.md)
         """
-        
+
         mock_repo_dir = Path("scenarios/test-category/owner_repo")
-        
+
         with patch("builtins.open", mock_open(read_data=mock_content)):
             with patch.object(Path, 'exists', return_value=True):
                 result = repo_loader._extract_repo_name_from_analysis_file(mock_repo_dir)
@@ -77,7 +77,7 @@ class TestRepositoryLoader:
     def test_extract_repo_name_from_analysis_file_no_file(self, repo_loader):
         """Test extracting repo name when analysis file doesn't exist."""
         mock_repo_dir = Path("scenarios/test-category/owner_repo")
-        
+
         with patch.object(Path, 'exists', return_value=False):
             result = repo_loader._extract_repo_name_from_analysis_file(mock_repo_dir)
             assert result is None

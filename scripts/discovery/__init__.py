@@ -1,14 +1,14 @@
 """Discovery package for automated CLAUDE.md file discovery on GitHub."""
 
-from .loader import RepositoryLoader
-from .searcher import GitHubSearcher
 from .evaluator import RepositoryEvaluator
-from .reporter import IssueGenerator
+from .loader import RepositoryLoader
 from .orchestrator import ClaudeFileDiscovery
+from .reporter import IssueGenerator
+from .searcher import GitHubSearcher
 
 __all__ = [
     'RepositoryLoader',
-    'GitHubSearcher', 
+    'GitHubSearcher',
     'RepositoryEvaluator',
     'IssueGenerator',
     'ClaudeFileDiscovery'

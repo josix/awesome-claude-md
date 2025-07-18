@@ -2,7 +2,7 @@
 
 import logging
 from datetime import datetime
-from typing import List, Dict, Any
+from typing import Any
 
 from .reporters.issue_formatter import IssueFormatter
 
@@ -16,7 +16,7 @@ class IssueGenerator:
         self.github_searcher = github_searcher
         self.issue_formatter = IssueFormatter()
 
-    def create_discovery_issue(self, evaluations: List[Dict[str, Any]]) -> None:
+    def create_discovery_issue(self, evaluations: list[dict[str, Any]]) -> None:
         """Create a GitHub issue with the discovery results."""
         if not evaluations:
             logger.info("No evaluations to report")

@@ -1,5 +1,6 @@
 """Tests for the RepositoryEvaluator module."""
 
+from datetime import UTC
 from unittest.mock import Mock
 
 import pytest
@@ -88,10 +89,10 @@ class TestRepositoryEvaluator:
         comprehensive_content = """
         ## Architecture
         This shows the system design.
-        
+
         ## Development
         Here are the development commands.
-        
+
         ## Testing
         Testing procedures are documented.
         """
@@ -110,10 +111,10 @@ class TestRepositoryEvaluator:
 
     def test_calculate_activity_score(self, evaluator):
         """Test activity score calculation."""
-        from datetime import datetime, timezone
-        
+        from datetime import datetime
+
         # Recent update (within 30 days)
-        recent_date = datetime.now(timezone.utc).isoformat()
+        recent_date = datetime.now(UTC).isoformat()
         recent_candidate = {'updated_at': recent_date}
         score, reasons = evaluator._calculate_activity_score(recent_candidate)
         assert score == 2
@@ -141,7 +142,7 @@ class TestRepositoryEvaluator:
     def test_suggest_category_complex_project(self, evaluator):
         """Test category suggestion for complex projects."""
         complex_content = "This is a microservices architecture with distributed systems."
-        
+
         candidate = {
             'description': 'Enterprise platform with microservices',
             'topics': ['microservices', 'architecture'],
@@ -154,7 +155,7 @@ class TestRepositoryEvaluator:
     def test_suggest_category_library_framework(self, evaluator):
         """Test category suggestion for libraries/frameworks."""
         library_content = "This is a utility library for developers."
-        
+
         candidate = {
             'description': 'React component library',
             'topics': ['library', 'react'],
@@ -167,7 +168,7 @@ class TestRepositoryEvaluator:
     def test_suggest_category_developer_tooling(self, evaluator):
         """Test category suggestion for developer tooling."""
         tooling_content = "This is a CLI tool for automation."
-        
+
         candidate = {
             'description': 'Build automation tool',
             'topics': ['cli', 'automation'],
@@ -180,7 +181,7 @@ class TestRepositoryEvaluator:
     def test_suggest_category_getting_started(self, evaluator):
         """Test category suggestion for getting started projects."""
         tutorial_content = "This is a starter template for beginners."
-        
+
         candidate = {
             'description': 'Beginner tutorial and examples',
             'topics': ['tutorial', 'example'],

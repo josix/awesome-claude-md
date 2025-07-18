@@ -1,6 +1,6 @@
 """Issue formatter for creating GitHub issues from discovery results."""
 
-from typing import List, Dict, Any
+from typing import Any
 
 from .priority_grouper import PriorityGrouper
 from .summary_generator import SummaryGenerator
@@ -13,17 +13,17 @@ class IssueFormatter:
         self.priority_grouper = PriorityGrouper()
         self.summary_generator = SummaryGenerator()
 
-    def create_issue_title(self, evaluations: List[Dict[str, Any]]) -> str:
+    def create_issue_title(self, evaluations: list[dict[str, Any]]) -> str:
         """Create issue title based on evaluation results."""
         counts = self.priority_grouper.get_priority_counts(evaluations)
-        
+
         title = f"🤖 Weekly Discovery: {counts['total']} New CLAUDE.md Candidates Found"
         if counts['high'] > 0:
             title += f" ({counts['high']} High Priority)"
-        
+
         return title
 
-    def create_issue_body(self, evaluations: List[Dict[str, Any]]) -> str:
+    def create_issue_body(self, evaluations: list[dict[str, Any]]) -> str:
         """Create complete issue body from evaluations."""
         if not evaluations:
             return "No new candidates found in this discovery run."
@@ -34,7 +34,7 @@ class IssueFormatter:
 
         # Build the issue body
         body_parts = []
-        
+
         # Add summary section
         body_parts.append(self.summary_generator.generate_summary_section(counts))
 

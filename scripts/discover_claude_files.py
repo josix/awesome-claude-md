@@ -11,8 +11,8 @@ Refactored into modular components following single responsibility principle.
 
 import os
 
-from scripts.discovery.utils import setup_logging
 from scripts.discovery.orchestrator import ClaudeFileDiscovery
+from scripts.discovery.utils import setup_logging
 
 logger = setup_logging()
 
