@@ -59,6 +59,7 @@ dev-dependencies = [
     "pytest-cov>=4.1.0",
     "ruff>=0.8.0",
     "ty>=0.0.1a15",
+    "complexipy>=0.1.0",
 ]
 
 [tool.ruff]

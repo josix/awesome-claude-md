@@ -118,6 +118,14 @@ Each `README.md` file should include:
 ### Automated Discovery
 The repository includes an automated system for discovering new CLAUDE.md files:
 - **GitHub Action**: Weekly scheduled workflow to search GitHub
+- **Discovery Script**: `scripts/discover_claude_files.py` orchestrates the discovery workflow
+- **Modular Architecture**: Discovery system is split into focused modules:
+  - `scripts/discovery/loader.py`: Loads existing repositories to avoid duplicates
+  - `scripts/discovery/searcher.py`: Searches GitHub for CLAUDE.md files
+  - `scripts/discovery/evaluator.py`: Evaluates and scores repository candidates
+  - `scripts/discovery/reporter.py`: Creates issues and reports
+  - `scripts/discovery/reporters/`: Specialized reporter components for formatting
+  - `scripts/discovery/utils.py`: Shared utilities (retry logic, logging)
 - **Quality Evaluation**: Automatic scoring based on repository metrics and content
 - **Community Review**: Issues created with candidate repositories for manual assessment
 - **See**: `AUTOMATED_DISCOVERY.md` for complete documentation
@@ -175,6 +183,42 @@ When working with this repository:
 - Follow directory naming conventions strictly
 - Update README.md table of contents after adding examples
 - **Keep copilot-instructions.md and CLAUDE.md synchronized** when making structural changes
+
+## Development Commands
+
+### Code Quality and Type Checking
+- `ty check`: Run type checking
+- `ruff check .`: Lint entire project
+- `ruff format .`: Format code using Ruff
+- `complexipy scripts/`: Analyze code complexity
+- `ty check && ruff check . && ruff format .`: Combined type checking, linting, and formatting
+- **Remember to fix type errors and linting errors after running ty and ruff**
+
+### Development Workflow
+- `uv sync`: Install dependencies
+- `uv run discover-claude-files`: Run the discovery script
+- `pytest`: Run tests
+- `pytest --cov`: Run tests with coverage
+
+### Code Analysis
+- `complexipy scripts/discover_claude_files.py`: Check complexity of main discovery script
+- `complexipy scripts/discovery/`: Analyze complexity of discovery modules
+- `complexipy scripts/ --max-complexity 10`: Set custom complexity threshold
+- `complexipy scripts/ --output json`: Export complexity analysis as JSON
+
+### Discovery System Architecture
+The discovery system follows a modular design with single responsibility principle:
+- **Main Script** (`discover_claude_files.py`): 45 lines - lightweight orchestrator
+- **Individual Modules**: Each module handles one specific concern (loading, searching, evaluating, reporting)
+- **Reduced Complexity**: Complex functions split into smaller, focused components
+- **Better Testability**: Each module can be tested independently with 70+ comprehensive tests
+- **Maintainability**: Changes to one component don't affect others
+- **Clean Test Structure**: Test files mirror module structure in `tests/discovery/`
+
+### Repository Maintenance
+- Review discovery issues created by the automation system
+- Update main README.md with table of contents after adding examples
+- Keep copilot-instructions.md and CLAUDE.md synchronized
 
 ## Organizations to Prioritize
 
