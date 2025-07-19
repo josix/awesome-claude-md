@@ -155,7 +155,7 @@ Multi-service applications with sophisticated architectures and enterprise-scale
   - Real-time data processing
   - Enterprise deployment patterns
 
-- **[TimeWarp Architecture](scenarios/complex-projects/TimeWarpEngineering_timewarp-architecture/README.md)** ![Stars](https://img.shields.io/github/stars/TimeWarpEngineering/timewarp-architecture?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/TimeWarpEngineering/timewarp-architecture?style=flat-square) ![Activity](https://img.shields.io/github/last-commit/TimeWarpEngineering/timewarp-architecture?style=flat-square) - .NET distributed application framework (100+ stars)
+- **[TimeWarp Architecture](scenarios/complex-projects/TimeWarpEngineering_timewarp-architecture/README.md)** ![Stars](https://img.shields.io/github/stars/TimeWarpEngineering/timewarp-architecture?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/TimeWarpEngineering/timewarp-architecture?style=flat-square) ![Activity](https://img.shields.io/github/last-commit/TimeWarpEngineering/timewarp-architecture?style=flat-square) - .NET distributed application framework
   - Event sourcing and CQRS patterns
   - Distributed system design
   - Modern .NET practices
@@ -165,7 +165,7 @@ Multi-service applications with sophisticated architectures and enterprise-scale
   - API gateway patterns
   - Development environment setup
 
-- **[Webhook Broker](scenarios/complex-projects/newscred_webhook-broker/README.md)** ![Stars](https://img.shields.io/github/stars/newscred/webhook-broker?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/newscred/webhook-broker?style=flat-square) ![Activity](https://img.shields.io/github/last-commit/newscred/webhook-broker?style=flat-square) - High-throughput webhook delivery system (200+ stars)
+- **[Webhook Broker](scenarios/complex-projects/newscred_webhook-broker/README.md)** ![Stars](https://img.shields.io/github/stars/newscred/webhook-broker?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/newscred/webhook-broker?style=flat-square) ![Activity](https://img.shields.io/github/last-commit/newscred/webhook-broker?style=flat-square) - High-throughput webhook delivery system
   - Event-driven architecture
   - Message queuing patterns
   - Scalability considerations
@@ -194,12 +194,12 @@ CLI tools, build systems, and developer productivity solutions.
   - Release management
   - CI/CD integration
 
-- **[Kubb](scenarios/developer-tooling/kubb-labs_kubb/README.md)** ![Stars](https://img.shields.io/github/stars/kubb-labs/kubb?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/kubb-labs/kubb?style=flat-square) ![Activity](https://img.shields.io/github/last-commit/kubb-labs/kubb?style=flat-square) - API toolkit for code generation (2,000+ stars)
+- **[Kubb](scenarios/developer-tooling/kubb-labs_kubb/README.md)** ![Stars](https://img.shields.io/github/stars/kubb-labs/kubb?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/kubb-labs/kubb?style=flat-square) ![Activity](https://img.shields.io/github/last-commit/kubb-labs/kubb?style=flat-square) - API toolkit for code generation
   - Plugin architecture
   - OpenAPI code generation
   - TypeScript integration
 
-- **[mypy-boto3-builder](scenarios/developer-tooling/youtype_mypy-boto3-builder/README.md)** ![Stars](https://img.shields.io/github/stars/youtype/mypy-boto3-builder?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/youtype/mypy-boto3-builder?style=flat-square) ![Activity](https://img.shields.io/github/last-commit/youtype/mypy-boto3-builder?style=flat-square) - Type generation for AWS SDK (2,000+ stars)
+- **[mypy-boto3-builder](scenarios/developer-tooling/youtype_mypy-boto3-builder/README.md)** ![Stars](https://img.shields.io/github/stars/youtype/mypy_boto3_builder?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/youtype/mypy_boto3_builder?style=flat-square) ![Activity](https://img.shields.io/github/last-commit/youtype/mypy_boto3_builder?style=flat-square) - Type generation for AWS SDK
   - Sophisticated type generation
   - Multi-package publishing
   - Documentation automation
@@ -243,7 +243,7 @@ Reusable components, SDKs, and framework implementations.
   - Multi-model support
   - Type-safe implementations
 
-- **[DataFog Python](scenarios/libraries-frameworks/DataFog_datafog-python/README.md)** ![Stars](https://img.shields.io/github/stars/DataFog/datafog-python?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/DataFog/datafog-python?style=flat-square) ![Activity](https://img.shields.io/github/last-commit/DataFog/datafog-python?style=flat-square) - Data privacy and masking library (500+ stars)
+- **[DataFog Python](scenarios/libraries-frameworks/DataFog_datafog-python/README.md)** ![Stars](https://img.shields.io/github/stars/DataFog/datafog-python?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/DataFog/datafog-python?style=flat-square) ![Activity](https://img.shields.io/github/last-commit/DataFog/datafog-python?style=flat-square) - Data privacy and masking library
   - Privacy-focused patterns
   - Data transformation pipelines
   - Compliance considerations

@@ -44,3 +44,4 @@ Thumbs.db
 # Temporary files
 /tmp/
 discovery-report-*.md
+.aider*
