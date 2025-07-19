@@ -29,8 +29,20 @@ class IssueGenerator:
         # Save to file for review (useful for testing/debugging)
         self._save_discovery_report(title, body)
 
-        logger.info(f"Would create issue: {title}")
-        logger.info(f"Issue body length: {len(body)} characters")
+        # Create the GitHub issue
+        try:
+            repo = self.github_searcher.github.get_repo("josix/awesome-claude-md")
+            issue = repo.create_issue(
+                title=title,
+                body=body,
+                labels=["automation", "discovery", "review-needed"],
+            )
+            logger.info(f"Created GitHub issue #{issue.number}: {title}")
+            logger.info(f"Issue URL: {issue.html_url}")
+        except Exception as e:
+            logger.error(f"Failed to create GitHub issue: {e}")
+            logger.info(f"Issue title: {title}")
+            logger.info(f"Issue body length: {len(body)} characters")
 
     def _save_discovery_report(self, title: str, body: str) -> None:
         """Save discovery report to file for review."""
@@ -38,7 +50,7 @@ class IssueGenerator:
         filename = f"discovery_report_{timestamp}.md"
 
         try:
-            with open(filename, 'w', encoding='utf-8') as f:
+            with open(filename, "w", encoding="utf-8") as f:
                 f.write(f"# {title}\n\n")
                 f.write(body)
 
