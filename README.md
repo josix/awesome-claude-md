@@ -170,6 +170,11 @@ Multi-service applications with sophisticated architectures and enterprise-scale
   - Message queuing patterns
   - Scalability considerations
 
+- **[Overreacted.io](scenarios/complex-projects/gaearon_overreacted.io/README.md)** ![Stars](https://img.shields.io/github/stars/gaearon/overreacted.io?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/gaearon/overreacted.io?style=flat-square) ![Activity](https://img.shields.io/github/last-commit/gaearon/overreacted.io?style=flat-square) - Dan Abramov's technical blog with exceptional documentation
+  - Technical depth with personality
+  - Complete development workflow
+  - Advanced MDX features and static site generation
+
 ### 🛠️ Developer Tooling
 
 CLI tools, build systems, and developer productivity solutions.
@@ -209,6 +214,16 @@ CLI tools, build systems, and developer productivity solutions.
   - Code quality automation
   - CI/CD integration
 
+- **[CYRUP AI Kargo](scenarios/developer-tooling/cyrup-ai_kargo/README.md)** ![Stars](https://img.shields.io/github/stars/cyrup-ai/kargo?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/cyrup-ai/kargo?style=flat-square) ![Activity](https://img.shields.io/github/last-commit/cyrup-ai/kargo?style=flat-square) - Comprehensive AI development methodology
+  - State machine architecture for workflows
+  - Research-first approach (80/20 methodology)
+  - Complete tool integration documentation
+
+- **[Claude Crew](scenarios/developer-tooling/d-kimuson_claude-crew/README.md)** ![Stars](https://img.shields.io/github/stars/d-kimuson/claude-crew?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/d-kimuson/claude-crew?style=flat-square) ![Activity](https://img.shields.io/github/last-commit/d-kimuson/claude-crew?style=flat-square) - TypeScript development with strict standards
+  - Comprehensive TypeScript tooling integration
+  - Strict coding standards and automation
+  - Professional error handling patterns
+
 ### 📚 Libraries & Frameworks
 
 Reusable components, SDKs, and framework implementations.
@@ -242,6 +257,11 @@ Reusable components, SDKs, and framework implementations.
 
 Projects focused on developer onboarding and initial setup experiences.
 
+- **[Anthropic Quickstarts](scenarios/getting-started/anthropics_anthropic-quickstarts/README.md)** ![Stars](https://img.shields.io/github/stars/anthropics/anthropic-quickstarts?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/anthropics/anthropic-quickstarts?style=flat-square) ![Activity](https://img.shields.io/github/last-commit/anthropics/anthropic-quickstarts?style=flat-square) - Official Anthropic quickstart examples
+  - Multi-project organization (Python, TypeScript, React)
+  - Docker integration for complex environments
+  - Clear technology separation across projects
+
 - **[Ethereum.org Website](scenarios/getting-started/ethereum_ethereum-org-website/README.md)** ![Stars](https://img.shields.io/github/stars/ethereum/ethereum-org-website?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/ethereum/ethereum-org-website?style=flat-square) ![Activity](https://img.shields.io/github/last-commit/ethereum/ethereum-org-website?style=flat-square) - Official Ethereum community website (5,000+ stars)
   - Community-driven development
   - Multi-language support
@@ -250,6 +270,11 @@ Projects focused on developer onboarding and initial setup experiences.
 ### 🔄 Project Handoffs
 
 Documentation focused on project state, blocking issues, and transition planning.
+
+- **[Kent Beck's BPlusTree3](scenarios/project-handoffs/KentBeck_BPlusTree3/README.md)** ![Stars](https://img.shields.io/github/stars/KentBeck/BPlusTree3?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/KentBeck/BPlusTree3?style=flat-square) ![Activity](https://img.shields.io/github/last-commit/KentBeck/BPlusTree3?style=flat-square) - TDD methodology and development discipline
+  - Methodology-first approach
+  - External reference integration
+  - Behavioral constraints for AI assistance
 
 - **[Mattermost Test Management](scenarios/project-handoffs/mattermost_mattermost-test-management/README.md)** ![Stars](https://img.shields.io/github/stars/mattermost/mattermost-test-management?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/mattermost/mattermost-test-management?style=flat-square) ![Activity](https://img.shields.io/github/last-commit/mattermost/mattermost-test-management?style=flat-square) - Enterprise test management system
   - Current project state
@@ -304,6 +329,7 @@ Read the full [Contributing Guide](CONTRIBUTING.md) for step-by-step instruction
 
 ## Organizations Represented
 
+- **Anthropic**: Official AI quickstarts and best practices
 - **Cloudflare**: Infrastructure runtime and developer tooling
 - **Microsoft**: AI systems and enterprise tooling
 - **PyTorch**: Machine learning infrastructure
@@ -311,6 +337,8 @@ Read the full [Contributing Guide](CONTRIBUTING.md) for step-by-step instruction
 - **Sentry**: Error tracking and monitoring
 - **Ethereum Foundation**: Blockchain infrastructure
 - **Mattermost**: Enterprise collaboration
+- **CYRUP AI**: Advanced AI development methodologies
+- **Individual Contributors**: Kent Beck (TDD methodology), Dan Abramov (React/Next.js)
 
 ## Search GitHub
 
