@@ -63,9 +63,8 @@ class GitHubSearcher:
         logger.info("Starting GitHub repository search...")
 
         search_queries = [
-            "filename:claude.md stars:>100 size:>1000",
-            "filename:CLAUDE.md stars:>100 size:>1000",
-            "filename:Claude.md stars:>100 size:>1000",
+            "filename:CLAUDE.md stars:>100",
+            "filename:CLAUDE.md size:>1000",
         ]
 
         all_candidates = []
@@ -84,10 +83,9 @@ class GitHubSearcher:
 
         try:
             # Search for repositories using the GitHub API
-            # Use pagination to get more results (up to 10 pages = 1000 results max)
-            for page in range(1, 11):  # GitHub allows max 1000 results (10 pages of 100)
+            for page in range(1, 6):  # Limit to 5 pages
                 search_results = self.github.search_code(
-                    query=query, sort="indexed", order="desc", per_page=100
+                    query=query, sort="indexed", order="desc"
                 )
 
                 # Get specific page results
@@ -100,7 +98,7 @@ class GitHubSearcher:
                 candidates.extend(page_candidates)
 
                 # Add a small delay between page requests to be respectful
-                time.sleep(1)
+                time.sleep(10)
 
         except RateLimitExceededException:
             logger.warning(f"Rate limit exceeded for query: {query}")
