@@ -48,39 +48,46 @@ class TestSummaryGenerator:
 
     def test_generate_summary_section(self, summary_generator):
         """Test generating summary section."""
-        counts = {'total': 10, 'high': 3, 'medium': 4, 'low': 3}
+        counts = {
+            "total": 10,
+            "exceptional": 2,
+            "high": 3,
+            "good": 4,
+            "below_threshold": 1,
+        }
 
         summary = summary_generator.generate_summary_section(counts)
 
         assert "Discovery Summary" in summary
         assert "Total Candidates**: 10" in summary
-        assert "High Priority** (≥7 points): 3" in summary
-        assert "Medium Priority** (4-6 points): 4" in summary
-        assert "Low Priority** (<4 points): 3" in summary
+        assert "Exceptional** (≥85 points): 2" in summary
+        assert "High** (70-84 points): 3" in summary
+        assert "Good** (60-69 points): 4" in summary
+        assert "Below Threshold** (<60 points): 1" in summary
 
     def test_generate_candidate_section(self, summary_generator):
         """Test generating candidate section."""
         eval_data = {
-            'score': 8,
-            'candidate': {
-                'full_name': 'test/repo',
-                'html_url': 'https://github.com/test/repo',
-                'description': 'Test repository',
-                'stars': 100,
-                'language': 'Python',
-                'topics': ['test', 'python', 'automation'],
-                'claude_file_path': 'claude.md'
+            "score": 85,  # Using new scoring scale
+            "candidate": {
+                "full_name": "test/repo",
+                "html_url": "https://github.com/test/repo",
+                "description": "Test repository",
+                "stars": 100,
+                "language": "Python",
+                "topics": ["test", "python", "automation"],
+                "claude_file_path": "claude.md",
             },
-            'suggested_category': 'test-category',
-            'claude_content_length': 1000,
-            'last_updated_days': 5,
-            'reasons': ['High quality', 'Good documentation']
+            "suggested_category": "test-category",
+            "claude_content_length": 1000,
+            "last_updated_days": 5,
+            "reasons": ["High quality", "Good documentation"],
         }
 
         section = summary_generator.generate_candidate_section(eval_data)
 
         assert "test/repo" in section
-        assert "8/10 points" in section
+        assert "85/100 points" in section
         assert "Test repository" in section
         assert "Stars**: 100" in section
         assert "Language**: Python" in section
@@ -95,45 +102,53 @@ class TestSummaryGenerator:
     def test_generate_candidate_section_no_topics(self, summary_generator):
         """Test generating candidate section without topics."""
         eval_data = {
-            'score': 5,
-            'candidate': {
-                'full_name': 'test/repo',
-                'html_url': 'https://github.com/test/repo',
-                'description': 'Test repository',
-                'stars': 50,
-                'language': 'JavaScript',
-                'topics': [],
-                'claude_file_path': 'CLAUDE.md'
+            "score": 65,  # Using new scoring scale
+            "candidate": {
+                "full_name": "test/repo",
+                "html_url": "https://github.com/test/repo",
+                "description": "Test repository",
+                "stars": 50,
+                "language": "JavaScript",
+                "topics": [],
+                "claude_file_path": "CLAUDE.md",
             },
-            'suggested_category': 'test-category',
-            'claude_content_length': 500,
-            'last_updated_days': 10,
-            'reasons': []
+            "suggested_category": "test-category",
+            "claude_content_length": 500,
+            "last_updated_days": 10,
+            "reasons": [],
         }
 
         section = summary_generator.generate_candidate_section(eval_data)
 
         assert "test/repo" in section
-        assert "5/10 points" in section
+        assert "65/100 points" in section
         assert "Topics:" not in section  # Should not include topics section
 
     def test_generate_candidate_section_many_topics(self, summary_generator):
         """Test generating candidate section with many topics."""
         eval_data = {
-            'score': 7,
-            'candidate': {
-                'full_name': 'test/repo',
-                'html_url': 'https://github.com/test/repo',
-                'description': 'Test repository',
-                'stars': 200,
-                'language': 'TypeScript',
-                'topics': ['topic1', 'topic2', 'topic3', 'topic4', 'topic5', 'topic6', 'topic7'],
-                'claude_file_path': 'claude.md'
+            "score": 7,
+            "candidate": {
+                "full_name": "test/repo",
+                "html_url": "https://github.com/test/repo",
+                "description": "Test repository",
+                "stars": 200,
+                "language": "TypeScript",
+                "topics": [
+                    "topic1",
+                    "topic2",
+                    "topic3",
+                    "topic4",
+                    "topic5",
+                    "topic6",
+                    "topic7",
+                ],
+                "claude_file_path": "claude.md",
             },
-            'suggested_category': 'test-category',
-            'claude_content_length': 2000,
-            'last_updated_days': 3,
-            'reasons': ['Good score']
+            "suggested_category": "test-category",
+            "claude_content_length": 2000,
+            "last_updated_days": 3,
+            "reasons": ["Good score"],
         }
 
         section = summary_generator.generate_candidate_section(eval_data)
@@ -146,20 +161,20 @@ class TestSummaryGenerator:
     def test_generate_candidate_section_no_description(self, summary_generator):
         """Test generating candidate section without description."""
         eval_data = {
-            'score': 6,
-            'candidate': {
-                'full_name': 'test/repo',
-                'html_url': 'https://github.com/test/repo',
-                'description': '',
-                'stars': 75,
-                'language': 'Go',
-                'topics': ['go'],
-                'claude_file_path': 'claude.md'
+            "score": 6,
+            "candidate": {
+                "full_name": "test/repo",
+                "html_url": "https://github.com/test/repo",
+                "description": "",
+                "stars": 75,
+                "language": "Go",
+                "topics": ["go"],
+                "claude_file_path": "claude.md",
             },
-            'suggested_category': 'test-category',
-            'claude_content_length': 800,
-            'last_updated_days': 7,
-            'reasons': ['Decent score']
+            "suggested_category": "test-category",
+            "claude_content_length": 800,
+            "last_updated_days": 7,
+            "reasons": ["Decent score"],
         }
 
         section = summary_generator.generate_candidate_section(eval_data)

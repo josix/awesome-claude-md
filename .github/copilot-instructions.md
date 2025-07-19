@@ -107,11 +107,23 @@ Each `README.md` file should include:
 - **Takeaways**: 2-3 concrete lessons for developers
 
 ### Repository Selection Criteria
-- **Industry Recognition**: From organizations with proven track records
-- **Production Usage**: Actively maintained and used in production
-- **Comprehensive Documentation**: Detailed architecture, setup, and workflow information
-- **Best Practices**: Demonstrate advanced patterns and techniques
-- **AI-Friendly**: Structured to maximize AI assistant effectiveness
+
+Our selection prioritizes **content quality and educational value over popularity metrics**:
+
+#### Primary Criteria (70% weight)
+1. **Content Depth** - Comprehensive architecture, workflows, and context
+2. **Educational Value** - Demonstrates unique patterns and best practices
+3. **AI Effectiveness** - Well-structured for AI assistant consumption
+
+#### Secondary Criteria (30% weight)
+4. **Project Maturity** - Active maintenance and production usage
+5. **Community Recognition** - Industry validation and engagement
+
+#### Scoring Framework
+- **100-point scale** emphasizing content quality
+- **60+ points required** for inclusion
+- **Stars contribute only 10%** of total score
+- **No hard star minimums** - quality content from any repository size
 
 ## Development Workflow Patterns
 
@@ -175,8 +187,8 @@ When working with this repository:
 
 ### For GitHub search
 - Use specific filename searches: `filename:claude.md`
-- Combine with filters: `stars:>100`, `language:TypeScript`
-- Include quoted strings for specific content: `"## Architecture"`
+- Focus on content quality: `"## Architecture"`, `"## Development Commands"`
+- Include quoted strings for specific sections: `"## Testing"`, `"## Deployment"`
 
 ### For file operations
 - Always use absolute paths within the repository

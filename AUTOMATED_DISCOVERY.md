@@ -13,37 +13,50 @@ This repository includes an automated system for discovering new CLAUDE.md files
 
 The discovery system searches GitHub for repositories containing:
 - `claude.md` (lowercase)
-- `CLAUDE.md` (uppercase) 
+- `CLAUDE.md` (uppercase)
 - `Claude.md` (title case)
 
 ### 📊 Quality Evaluation
 
-Each candidate repository is scored against multiple criteria:
+Each candidate repository is scored using a **content-first approach** that prioritizes educational value over popularity metrics:
 
-#### ⭐ Repository Metrics
-- **Star Count**: Higher stars indicate community recognition
-  - 1000+ stars: 3 points (preferred threshold)
-  - 500+ stars: 2 points
-  - 50+ stars: 1 point (minimum threshold)
-- **Recent Activity**: Active maintenance is crucial
-  - Updated within 30 days: 2 points
-  - Updated within 90 days: 1 point
+#### 📄 Primary Quality Indicators (70% weight)
 
-#### 📄 Content Quality
-- **File Size**: Substantial CLAUDE.md files (500+ bytes): 1 point
-- **Content Richness**: Presence of key sections: 1-2 points
-  - Architecture documentation
-  - Development commands
-  - Setup instructions
-  - Testing information
-  - Deployment guidance
-  - Workflow descriptions
-  - Contributing guidelines
+**Content Depth & Structure (30 points)**
+- Comprehensive architecture documentation
+- Clear development workflows and commands
+- Testing and deployment guidance
+- Troubleshooting and debugging information
+- Well-organized file structure and context
 
-#### 🏢 Organization Recognition
-- **Notable Organizations**: Extra weight for established entities: 2 points
-  - Microsoft, Google, Cloudflare, Anthropic, etc.
-  - PyTorch, LangChain, Ethereum Foundation, etc.
+**Educational Value (25 points)**
+- Demonstrates unique or advanced patterns
+- Shows concrete best practices in action
+- Provides actionable, specific guidance
+- Includes real code examples and snippets
+- Teaches transferable techniques
+
+**AI Assistant Effectiveness (15 points)**
+- Well-structured for AI consumption
+- Clear section headers and organization
+- Specific commands and workflows documented
+- Context about project goals and constraints
+- Actionable information vs. generic advice
+
+#### 🔧 Secondary Quality Indicators (30% weight)
+
+**Project Maturity (20 points)**
+- Active maintenance (recent commits, issues, PRs)
+- Evidence of production usage
+- Community engagement and responsiveness
+- Complete documentation ecosystem
+- Established development practices
+
+**Community Recognition (10 points)**
+- Industry validation (stars, forks, citations)
+- Notable maintainers or organizations
+- Referenced in other projects or documentation
+- Community adoption and contributions
 
 ### 🎯 Automatic Categorization
 
@@ -104,16 +117,26 @@ python scripts/discover_claude_files.py
 
 ## 📈 Quality Thresholds
 
+### Scoring Framework
+- **Total Score**: 0-100 points (content-quality focused)
+- **Acceptance Threshold**: 60+ points (ensures high educational value)
+- **Priority Tiers**:
+  - **Exceptional (85-100)**: Must-have examples with unique patterns
+  - **High Quality (70-84)**: Strong candidates with solid documentation
+  - **Good Quality (60-69)**: Solid examples worth including
+  - **Below Threshold (<60)**: Needs improvement or inappropriate
+
 ### Minimum Requirements
-- **Stars**: 50+ (ensures basic community validation)
-- **File Size**: 500+ bytes (substantial content)
-- **Score**: 3+ points (combined quality indicators)
-- **Status**: Not archived, not a fork
+- **Content Quality**: Substantial CLAUDE.md with meaningful documentation
+- **File Size**: 1000+ characters (ensures comprehensive content)
+- **Repository Status**: Not archived, not a fork
+- **Documentation Completeness**: Must have multiple key sections
 
 ### Discovery Limits
 - **Search Results**: 100 repositories per query (GitHub API limit)
 - **Rate Limiting**: 2-second delays between API calls
 - **Issue Size**: Top 10 candidates featured prominently
+- **No Star Minimums**: Quality content accepted from any repository size
 
 ## 🔧 Maintenance
 

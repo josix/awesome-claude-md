@@ -19,11 +19,11 @@ class TestGitHubSearcher:
         """Test rate limiting handling when remaining is low."""
         mock_response = Mock()
         mock_response.headers = {
-            'X-RateLimit-Remaining': '5',
-            'X-RateLimit-Reset': str(int(time.time()) + 60)
+            "X-RateLimit-Remaining": "5",
+            "X-RateLimit-Reset": str(int(time.time()) + 60),
         }
 
-        with patch('time.sleep') as mock_sleep:
+        with patch("time.sleep") as mock_sleep:
             github_searcher._handle_rate_limiting(mock_response)
             assert mock_sleep.called
 
@@ -31,11 +31,11 @@ class TestGitHubSearcher:
         """Test rate limiting handling when remaining is high."""
         mock_response = Mock()
         mock_response.headers = {
-            'X-RateLimit-Remaining': '50',
-            'X-RateLimit-Reset': str(int(time.time()) + 60)
+            "X-RateLimit-Remaining": "50",
+            "X-RateLimit-Reset": str(int(time.time()) + 60),
         }
 
-        with patch('time.sleep') as mock_sleep:
+        with patch("time.sleep") as mock_sleep:
             github_searcher._handle_rate_limiting(mock_response)
             assert not mock_sleep.called
 
@@ -57,10 +57,10 @@ class TestGitHubSearcher:
 
         result = github_searcher._create_candidate_dict(mock_repo, "claude.md")
 
-        assert result['full_name'] == "owner/repo"
-        assert result['stars'] == 100
-        assert result['claude_file_path'] == "claude.md"
-        assert result['organization'] is None
+        assert result["full_name"] == "owner/repo"
+        assert result["stars"] == 100
+        assert result["claude_file_path"] == "claude.md"
+        assert result["organization"] is None
 
     def test_process_single_repository_existing_repo(self, github_searcher):
         """Test processing a repository that already exists."""
@@ -84,18 +84,24 @@ class TestGitHubSearcher:
         result = github_searcher._process_single_repository(mock_repo, existing_repos)
         assert result is None
 
-    def test_process_single_repository_low_stars(self, github_searcher):
-        """Test processing a repository with low stars."""
+    def test_process_single_repository_with_claude_file(self, github_searcher):
+        """Test processing a repository with valid CLAUDE.md file."""
         mock_repo = Mock()
         mock_repo.full_name = "owner/repo"
         mock_repo.archived = False
         mock_repo.fork = False
-        mock_repo.stargazers_count = 10  # Below minimum
+        mock_repo.stargazers_count = 10  # Any star count is acceptable now
+
+        # Mock the CLAUDE.md file finding
+        github_searcher._find_claude_file = Mock(return_value="CLAUDE.md")
+        github_searcher._create_candidate_dict = Mock(
+            return_value={"full_name": "owner/repo"}
+        )
 
         existing_repos = set()
 
         result = github_searcher._process_single_repository(mock_repo, existing_repos)
-        assert result is None
+        assert result == {"full_name": "owner/repo"}
 
     def test_find_claude_file_found(self, github_searcher):
         """Test finding CLAUDE.md file in repository."""
@@ -124,7 +130,9 @@ class TestGitHubSearcher:
         from github.GithubException import UnknownObjectException
 
         mock_repo = Mock()
-        mock_repo.get_contents.side_effect = UnknownObjectException(404, "Not Found", headers={})
+        mock_repo.get_contents.side_effect = UnknownObjectException(
+            404, "Not Found", headers={}
+        )
 
         result = github_searcher._find_claude_file(mock_repo)
         assert result is None

@@ -18,7 +18,9 @@ class IssueFormatter:
         counts = self.priority_grouper.get_priority_counts(evaluations)
 
         title = f"🤖 Weekly Discovery: {counts['total']} New CLAUDE.md Candidates Found"
-        if counts['high'] > 0:
+        if counts["exceptional"] > 0:
+            title += f" ({counts['exceptional']} Exceptional)"
+        elif counts["high"] > 0:
             title += f" ({counts['high']} High Priority)"
 
         return title
@@ -40,9 +42,10 @@ class IssueFormatter:
 
         # Add priority sections
         priority_sections = [
-            (groups['high'], "High Priority (≥7 points)"),
-            (groups['medium'], "Medium Priority (4-6 points)"),
-            (groups['low'], "Low Priority (<4 points)")
+            (groups["exceptional"], "Exceptional Quality (≥85 points)"),
+            (groups["high"], "High Quality (70-84 points)"),
+            (groups["good"], "Good Quality (60-69 points)"),
+            (groups["below_threshold"], "Below Threshold (<60 points)"),
         ]
 
         for priority_group, title_suffix in priority_sections:
@@ -51,7 +54,9 @@ class IssueFormatter:
                 body_parts.append("")
 
                 for eval_data in priority_group:
-                    candidate_section = self.summary_generator.generate_candidate_section(eval_data)
+                    candidate_section = (
+                        self.summary_generator.generate_candidate_section(eval_data)
+                    )
                     body_parts.append(candidate_section)
 
         # Add guidelines

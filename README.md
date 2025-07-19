@@ -6,8 +6,8 @@ A curated collection of high-quality `claude.md` files from leading open-source 
 
 ## 🎯 Quick Filters
 
-**Filter by Stars**: [🔥 10K+](#10k-stars) | [⭐ 1K-10K](#1k-10k-stars) | [💫 100-1K](#100-1k-stars) | [🌟 <100](#under-100-stars)  
-**Filter by Language**: [TypeScript/JS](#-typescriptjavascript) | [Python](#-python) | [Rust](#-rust) | [Other](#-other-languages)  
+**Filter by Stars**: [🔥 10K+](#10k-stars) | [⭐ 1K-10K](#1k-10k-stars) | [💫 100-1K](#100-1k-stars) | [🌟 <100](#under-100-stars)
+**Filter by Language**: [TypeScript/JS](#-typescriptjavascript) | [Python](#-python) | [Rust](#-rust) | [Other](#-other-languages)
 **Filter by Purpose**: [AI/ML](#-ai--machine-learning) | [Infrastructure](#-infrastructure-projects) | [Developer Tools](#-developer-tooling) | [Libraries](#-libraries--frameworks)
 
 ## 📋 Table of Contents
@@ -304,13 +304,22 @@ Documentation focused on project state, blocking issues, and transition planning
 
 ## Quality Standards
 
-All examples in this collection meet these criteria:
+All examples in this collection meet these **content-first criteria**:
 
-- **Industry Recognition**: From organizations with proven track records
-- **Production Usage**: Actively maintained and used in production environments
-- **Comprehensive Documentation**: Detailed architecture, setup, and workflow information
-- **Best Practices**: Demonstrate advanced patterns and techniques
-- **AI-Friendly**: Structured to maximize AI assistant effectiveness
+### Primary Quality Indicators (70% weight)
+1. **Content Depth** - Comprehensive architecture, workflows, and context
+2. **Educational Value** - Demonstrates unique patterns and best practices
+3. **AI Effectiveness** - Well-structured for AI assistant consumption
+
+### Secondary Quality Indicators (30% weight)
+4. **Project Maturity** - Active maintenance and production usage
+5. **Community Recognition** - Industry validation and engagement
+
+### Our Approach
+- **100-point scoring system** emphasizing content quality over popularity
+- **60+ points required** for inclusion
+- **Stars contribute only 10%** of total score
+- **No hard star minimums** - quality content accepted from any repository size
 
 ## Contributing
 
@@ -328,11 +337,11 @@ When adding new examples:
 
 ### 🚀 Quick Start:
 - **Found a great example?** [Create a suggestion issue](https://github.com/josix/awesome-claude-md/issues/new?template=new-example.md)
-- **Want to improve analysis?** [Create an improvement issue](https://github.com/josix/awesome-claude-md/issues/new?template=improvement.md)  
+- **Want to improve analysis?** [Create an improvement issue](https://github.com/josix/awesome-claude-md/issues/new?template=improvement.md)
 - **Found a bug?** [Report it here](https://github.com/josix/awesome-claude-md/issues/new?template=bug-report.md)
 
 ### 📋 Key Guidelines:
-1. **Focus on Quality**: Prioritize examples from established projects (1,000+ stars preferred)
+1. **Focus on Content Quality**: Prioritize educational value over repository popularity
 2. **Preserve Originality**: Keep `claude.md` files exactly as they appear in source repositories
 3. **Provide Analysis**: Create detailed `README.md` files explaining what makes each example exemplary
 4. **Follow Structure**: Use the established directory structure and naming conventions
@@ -354,8 +363,10 @@ Read the full [Contributing Guide](CONTRIBUTING.md) for step-by-step instruction
 To find more high-quality examples:
 
 ```bash
-# Search for claude.md files in popular repositories
-filename:claude.md stars:>1000
+# Search for claude.md files with quality content
+filename:claude.md "## Architecture"
+filename:CLAUDE.md "## Development Commands"
+filename:claude.md "## Testing"
 
 # Search within specific organizations
 filename:claude.md org:microsoft

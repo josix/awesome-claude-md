@@ -19,7 +19,7 @@ logger = setup_logging()
 
 def main():
     """Main execution function."""
-    github_token = os.environ.get('GITHUB_TOKEN')
+    github_token = os.environ.get("GITHUB_TOKEN")
     if not github_token:
         logger.error("Error: GITHUB_TOKEN environment variable is required")
         return 1
@@ -31,10 +31,12 @@ def main():
     # Run the discovery workflow
     evaluations = discovery.discover_new_repositories()
 
-    # Filter for quality threshold
-    quality_evaluations = [e for e in evaluations if e['score'] >= 3]
+    # Filter for quality threshold (60+ points on 100-point scale)
+    quality_evaluations = [e for e in evaluations if e["score"] >= 60]
 
-    logger.info(f"Found {len(quality_evaluations)} candidates that meet quality thresholds")
+    logger.info(
+        f"Found {len(quality_evaluations)} candidates that meet quality thresholds (60+ points)"
+    )
 
     if not quality_evaluations:
         logger.info("No candidates met the quality threshold for review")
@@ -42,5 +44,5 @@ def main():
     return 0
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     exit(main())

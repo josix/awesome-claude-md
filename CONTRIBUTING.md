@@ -15,17 +15,23 @@ Thank you for your interest in contributing to this curated collection of high-q
 The most valuable contributions are high-quality `claude.md` files from established projects. Before suggesting:
 
 **Quality Criteria:**
-- From repositories with **1,000+ stars** (preferred) or recognized organizations
-- Actively maintained and used in production
-- Demonstrates advanced patterns or techniques
-- Well-structured to maximize AI assistant effectiveness
+
+Our selection prioritizes **content quality and educational value over popularity metrics**:
+
+- **Content Depth**: Comprehensive architecture, workflows, and context
+- **Educational Value**: Demonstrates unique patterns and best practices
+- **AI Effectiveness**: Well-structured for AI assistant consumption
+- **Project Maturity**: Active maintenance and production usage
+- **Community Recognition**: Industry validation (stars contribute only 10% of score)
 
 **Search for Examples:**
 ```bash
-# GitHub search patterns
-filename:claude.md stars:>1000
-filename:CLAUDE.md org:microsoft
+# GitHub search patterns focused on content quality
 filename:claude.md "## Architecture"
+filename:CLAUDE.md "## Development Commands"
+filename:claude.md "## Testing"
+filename:claude.md "## Deployment"
+filename:CLAUDE.md org:microsoft
 ```
 
 ### 📝 Improving Existing Analyses
@@ -50,10 +56,10 @@ Found broken links, typos, or incorrect information? Please report it!
 - Check recent repositories from industry leaders
 
 **Evaluate Quality:**
-- ✅ Does it demonstrate best practices?
-- ✅ Is the documentation comprehensive?
-- ✅ Would it help developers learn effective patterns?
-- ✅ Is it from a reputable source?
+- ✅ Does it demonstrate unique or advanced patterns?
+- ✅ Is the content comprehensive and well-structured?
+- ✅ Would it help developers learn transferable techniques?
+- ✅ Is it educational regardless of repository popularity?
 
 ### 2. **Create an Issue First**
 
@@ -104,10 +110,10 @@ Create `scenarios/[category]/[owner]_[repo]/analysis.md` using this template:
 ```markdown
 # Analysis: [Project Name]
 
-**Category**: [Category Name]  
-**Repository**: [GitHub Repository URL]  
-**Original CLAUDE.md**: [Direct link to the claude.md file]  
-**License**: [Repository License] - [Link to License]  
+**Category**: [Category Name]
+**Repository**: [GitHub Repository URL]
+**Original CLAUDE.md**: [Direct link to the claude.md file]
+**License**: [Repository License] - [Link to License]
 **Why it's exemplary**: [Brief explanation of what makes this special]
 
 ## Key Features That Make This Exemplary
@@ -194,7 +200,7 @@ git push origin your-branch-name
 Prioritize examples from these organizations known for quality:
 
 - **Anthropic**: Official AI development best practices
-- **Basic Machines**: Knowledge management and AI collaboration  
+- **Basic Machines**: Knowledge management and AI collaboration
 - **Cloudflare**: Infrastructure runtime and developer tooling
 - **CYRUP AI**: Advanced AI development methodologies
 - **Microsoft**: AI systems and enterprise tooling
@@ -206,12 +212,12 @@ Prioritize examples from these organizations known for quality:
 
 ## 🚫 What Not to Contribute
 
-- Examples from repositories with < 100 stars (unless exceptional circumstances)
+- Examples with poor content quality (regardless of repository popularity)
 - Outdated or unmaintained projects
 - Projects without clear licensing
 - Direct copies of `claude.md` files
 - Low-quality or incomplete documentation
-- Examples that don't demonstrate clear best practices
+- Examples that don't demonstrate educational value or best practices
 
 ## 📖 Style Guide
 

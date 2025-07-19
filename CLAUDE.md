@@ -65,10 +65,28 @@ The repository includes an automated discovery system for finding new CLAUDE.md 
 - **Respect copyright** and only reference publicly available files under permissive licenses
 
 ### Quality Standards
-- Focus analysis on concrete, learnable patterns
-- Highlight specific techniques (Mermaid diagrams, command lists, etc.)
-- Emphasize unique approaches over generic advice
-- Ensure educational value while respecting original authors
+
+Our selection prioritizes **content quality and educational value over popularity metrics**:
+
+#### Primary Criteria (70% weight)
+1. **Content Depth** - Comprehensive architecture, workflows, and context
+2. **Educational Value** - Demonstrates unique patterns and best practices
+3. **AI Effectiveness** - Well-structured for AI assistant consumption
+
+#### Secondary Criteria (30% weight)
+4. **Project Maturity** - Active maintenance and production usage
+5. **Community Recognition** - Industry validation and engagement
+
+#### Scoring Framework
+- **100-point scale** emphasizing content quality
+- **60+ points required** for inclusion
+- **Stars contribute only 10%** of total score
+- **No hard star minimums** - quality content from any repository size
+
+#### Selection Process
+1. **Automated Discovery** finds candidates using enhanced content analysis
+2. **Community Review** evaluates educational value and uniqueness
+3. **Manual Curation** ensures alignment with quality standards
 
 ### README Maintenance
 After adding examples, update main `README.md` with table of contents linking to each `README.md`, organized by category.
@@ -80,10 +98,11 @@ This repository includes `.github/copilot-instructions.md` for GitHub Copilot us
 ## Search Strategies
 
 Use these GitHub search queries to find quality examples:
-- `filename:claude.md stars:>100`
-- `filename:CLAUDE.md language:TypeScript`
-- `"## Architecture" filename:claude.md`
-- `"## Development Commands" filename:claude.md`
+- `filename:claude.md "## Architecture"`
+- `filename:CLAUDE.md "## Development Commands"`
+- `"## Testing" filename:claude.md`
+- `"## Deployment" filename:claude.md`
+- `filename:claude.md language:TypeScript`
 
 ## Development Commands
 
