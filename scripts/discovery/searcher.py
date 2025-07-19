@@ -85,7 +85,7 @@ class GitHubSearcher:
         try:
             # Search for repositories using the GitHub API
             # Use pagination to get more results (up to 3 pages = 300 results)
-            for page in range(1, 4):  # Pages 1, 2, 3
+            for page in range(1, 10):
                 search_results = self.github.search_code(
                     query=query, sort="indexed", order="desc"
                 )
