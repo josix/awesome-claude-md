@@ -6,7 +6,6 @@ A curated collection of high-quality `claude.md` files from leading open-source 
 
 ## 🎯 Quick Filters
 
-**Filter by Stars**: [🔥 10K+](#10k-stars) | [⭐ 1K-10K](#1k-10k-stars) | [💫 100-1K](#100-1k-stars) | [🌟 <100](#under-100-stars)
 **Filter by Language**: [TypeScript/JS](#-typescriptjavascript) | [Python](#-python) | [Rust](#-rust) | [Other](#-other-languages)
 **Filter by Purpose**: [AI/ML](#-ai--machine-learning) | [Infrastructure](#-infrastructure-projects) | [Developer Tools](#-developer-tooling) | [Libraries](#-libraries--frameworks)
 
@@ -37,51 +36,6 @@ A curated collection of high-quality `claude.md` files from leading open-source 
 - Click category headers to expand/collapse sections
 - Links marked with **bold** text are our top recommendations within each category
 - Each example includes analysis explaining what makes it exemplary
-
-## 🔢 Filter by Repository Size
-
-<details>
-<summary id="10k-stars"><strong>🔥 Repositories with 10K+ Stars</strong></summary>
-
-- **[Composio](scenarios/libraries-frameworks/ComposioHQ_composio/README.md)** ![Stars](https://img.shields.io/github/stars/ComposioHQ/composio?style=flat-square&logo=github) - AI agent integration platform (10,000+ stars)
-- **[Sentry](scenarios/complex-projects/getsentry_sentry/README.md)** ![Stars](https://img.shields.io/github/stars/getsentry/sentry?style=flat-square&logo=github) - Error tracking and performance monitoring (40,000+ stars)
-- **[Lerna](scenarios/developer-tooling/lerna_lerna/README.md)** ![Stars](https://img.shields.io/github/stars/lerna/lerna?style=flat-square&logo=github) - Monorepo management tool (35,000+ stars)
-
-</details>
-
-<details>
-<summary id="1k-10k-stars"><strong>⭐ Repositories with 1K-10K Stars</strong></summary>
-
-- **[Cloudflare Workers SDK](scenarios/developer-tooling/cloudflare_workers-sdk/README.md)** ![Stars](https://img.shields.io/github/stars/cloudflare/workers-sdk?style=flat-square&logo=github) - Official SDK and CLI (3,271 stars)
-- **[Cloudflare workerd](scenarios/infrastructure-projects/cloudflare_workerd/README.md)** ![Stars](https://img.shields.io/github/stars/cloudflare/workerd?style=flat-square&logo=github) - JavaScript/WebAssembly runtime (6,865 stars)
-- **[Ethereum.org Website](scenarios/getting-started/ethereum_ethereum-org-website/README.md)** ![Stars](https://img.shields.io/github/stars/ethereum/ethereum-org-website?style=flat-square&logo=github) - Official Ethereum community website (5,000+ stars)
-- **[Kubb](scenarios/developer-tooling/kubb-labs_kubb/README.md)** ![Stars](https://img.shields.io/github/stars/kubb-labs/kubb?style=flat-square&logo=github) - API toolkit for code generation (2,000+ stars)
-- **[Agentic](scenarios/libraries-frameworks/transitive-bullshit_agentic/README.md)** ![Stars](https://img.shields.io/github/stars/transitive-bullshit/agentic?style=flat-square&logo=github) - LLM tool integration framework (2,000+ stars)
-- **[mypy-boto3-builder](scenarios/developer-tooling/youtype_mypy-boto3-builder/README.md)** ![Stars](https://img.shields.io/github/stars/youtype/mypy-boto3-builder?style=flat-square&logo=github) - Type generation for AWS SDK (2,000+ stars)
-- **[Platformatic](scenarios/complex-projects/platformatic_platformatic/README.md)** ![Stars](https://img.shields.io/github/stars/platformatic/platformatic?style=flat-square&logo=github) - Node.js application platform (1,000+ stars)
-
-</details>
-
-<details>
-<summary id="100-1k-stars"><strong>💫 Repositories with 100-1K Stars</strong></summary>
-
-- **[Kotlinter Gradle](scenarios/developer-tooling/jeremymailen_kotlinter-gradle/README.md)** ![Stars](https://img.shields.io/github/stars/jeremymailen/kotlinter-gradle?style=flat-square&logo=github) - Kotlin code formatting plugin (500+ stars)
-- **[DataFog Python](scenarios/libraries-frameworks/DataFog_datafog-python/README.md)** ![Stars](https://img.shields.io/github/stars/DataFog/datafog-python?style=flat-square&logo=github) - Data privacy and masking library (500+ stars)
-- **[Microsoft Semantic Workbench](scenarios/complex-projects/microsoft_semanticworkbench/README.md)** ![Stars](https://img.shields.io/github/stars/microsoft/semanticworkbench?style=flat-square&logo=github) - AI assistant prototyping platform (325 stars)
-- **[Webhook Broker](scenarios/complex-projects/newscred_webhook-broker/README.md)** ![Stars](https://img.shields.io/github/stars/newscred/webhook-broker?style=flat-square&logo=github) - High-throughput webhook delivery system (200+ stars)
-- **[GenSX](scenarios/libraries-frameworks/gensx-inc_gensx/README.md)** ![Stars](https://img.shields.io/github/stars/gensx-inc/gensx?style=flat-square&logo=github) - Code generation framework (200+ stars)
-- **[TimeWarp Architecture](scenarios/complex-projects/TimeWarpEngineering_timewarp-architecture/README.md)** ![Stars](https://img.shields.io/github/stars/TimeWarpEngineering/timewarp-architecture?style=flat-square&logo=github) - .NET distributed application framework (100+ stars)
-
-</details>
-
-<details>
-<summary id="under-100-stars"><strong>🌟 Hidden Gems (Under 100 Stars)</strong></summary>
-
-- **[Basic Memory](scenarios/complex-projects/basicmachines-co_basic-memory/README.md)** ![Stars](https://img.shields.io/github/stars/basicmachines-co/basic-memory?style=flat-square&logo=github) - Cutting-edge MCP integration & AI collaboration
-- **[PyTorch tlparse](scenarios/developer-tooling/pytorch_tlparse/README.md)** ![Stars](https://img.shields.io/github/stars/pytorch/tlparse?style=flat-square&logo=github) - Log parsing and analysis tool (46 stars)
-- **[LangChain Redis](scenarios/libraries-frameworks/langchain-ai_langchain-redis/README.md)** ![Stars](https://img.shields.io/github/stars/langchain-ai/langchain-redis?style=flat-square&logo=github) - Redis integration for LangChain (34 stars)
-
-</details>
 
 ## 🎯 Top Picks
 
