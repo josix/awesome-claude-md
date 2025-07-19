@@ -83,7 +83,7 @@ class GitHubSearcher:
 
         try:
             # Search for repositories using the GitHub API
-            for page in range(1, 6):  # Limit to 5 pages
+            for page in range(1, 4):  # Limit to 3 pages to avoid timeout
                 search_results = self.github.search_code(
                     query=query, sort="indexed", order="desc"
                 )
@@ -97,8 +97,8 @@ class GitHubSearcher:
                 )
                 candidates.extend(page_candidates)
 
-                # Add a small delay between page requests to be respectful
-                time.sleep(10)
+                # Add a smaller delay between page requests for faster execution
+                time.sleep(5)
 
         except RateLimitExceededException:
             logger.warning(f"Rate limit exceeded for query: {query}")

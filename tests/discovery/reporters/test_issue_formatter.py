@@ -165,9 +165,9 @@ class TestIssueFormatter:
         # Add minimal candidate data
         for eval_data in evaluations:
             eval_data["candidate"] = {
-                "full_name": f'test/repo{eval_data["score"]}',
-                "html_url": f'https://github.com/test/repo{eval_data["score"]}',
-                "description": f'Test repository {eval_data["score"]}',
+                "full_name": f"test/repo{eval_data['score']}",
+                "html_url": f"https://github.com/test/repo{eval_data['score']}",
+                "description": f"Test repository {eval_data['score']}",
                 "stars": eval_data["score"] * 10,
                 "language": "Python",
                 "topics": ["test"],

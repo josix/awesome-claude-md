@@ -9,10 +9,10 @@ def setup_logging():
     """Configure logging for the discovery system."""
     logging.basicConfig(
         level=logging.INFO,
-        format='%(asctime)s - %(levelname)s - %(message)s',
+        format="%(asctime)s - %(levelname)s - %(message)s",
         handlers=[
             logging.StreamHandler(),
-        ]
+        ],
     )
     return logging.getLogger(__name__)
 
@@ -26,6 +26,7 @@ def retry_with_backoff(max_retries=3, backoff_factor=2, exceptions=(Exception,))
         backoff_factor: Factor to multiply delay between retries
         exceptions: Tuple of exceptions to catch and retry on
     """
+
     def decorator(func):
         @functools.wraps(func)
         def wrapper(*args, **kwargs):
@@ -41,9 +42,12 @@ def retry_with_backoff(max_retries=3, backoff_factor=2, exceptions=(Exception,))
                         raise e
 
                     # Log the retry attempt
-                    logger.warning(f"Attempt {attempt + 1} failed for {func.__name__}: {e}. Retrying in {delay} seconds...")
+                    logger.warning(
+                        f"Attempt {attempt + 1} failed for {func.__name__}: {e}. Retrying in {delay} seconds..."
+                    )
                     time.sleep(delay)
                     delay *= backoff_factor
 
         return wrapper
+
     return decorator
