@@ -63,9 +63,9 @@ class GitHubSearcher:
         logger.info("Starting GitHub repository search...")
 
         search_queries = [
-            "filename:claude.md",
-            "filename:CLAUDE.md",
-            "filename:Claude.md",
+            "filename:claude.md stars:>100 size:>1000",
+            "filename:CLAUDE.md stars:>100 size:>1000",
+            "filename:Claude.md stars:>100 size:>1000",
         ]
 
         all_candidates = []
@@ -84,10 +84,10 @@ class GitHubSearcher:
 
         try:
             # Search for repositories using the GitHub API
-            # Use pagination to get more results (up to 3 pages = 300 results)
-            for page in range(1, 10):
+            # Use pagination to get more results (up to 10 pages = 1000 results max)
+            for page in range(1, 11):  # GitHub allows max 1000 results (10 pages of 100)
                 search_results = self.github.search_code(
-                    query=query, sort="indexed", order="desc"
+                    query=query, sort="indexed", order="desc", per_page=100
                 )
 
                 # Get specific page results
