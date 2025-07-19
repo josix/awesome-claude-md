@@ -49,7 +49,7 @@ Focus on reducing complexity in distributed systems:
 - Easier testing and debugging
 - Clear operational procedures
 
-## Key Takeaways for claude.md Best Practices
+## Key Takeaways for CLAUDE.md Best Practices
 
 1. **Microservices Communication**: Document complex service-to-service communication patterns
 2. **System Architecture**: Address architectural decisions and their trade-offs
@@ -58,4 +58,4 @@ Focus on reducing complexity in distributed systems:
 5. **Operational Simplicity**: Focus on reducing complexity in distributed systems
 6. **Reliability Patterns**: Document failure handling and recovery mechanisms
 
-This example demonstrates how a claude.md file for infrastructure projects should explain not just the technical implementation, but also the architectural problems being solved and how the solution fits into broader distributed system patterns.
+This example demonstrates how a CLAUDE.md file for infrastructure projects should explain not just the technical implementation, but also the architectural problems being solved and how the solution fits into broader distributed system patterns.

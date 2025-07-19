@@ -44,7 +44,7 @@ Insights into building web frameworks:
 - Configuration management
 - Error handling strategies
 
-## Key Takeaways for claude.md Best Practices
+## Key Takeaways for CLAUDE.md Best Practices
 
 1. **Expert Knowledge Documentation**: Capture domain expert insights and advanced techniques
 2. **Performance Focus**: Include specific guidance for performance-critical development
@@ -53,4 +53,4 @@ Insights into building web frameworks:
 5. **Framework Architecture**: Address framework-specific development patterns and decisions
 6. **Expert Context**: Leverage the maintainer's expertise to provide exceptional guidance
 
-This example demonstrates how a claude.md file by a recognized expert should capture not just the technical implementation, but also the deep domain knowledge and professional practices that make the difference between good and exceptional development work. Matteo Collina's expertise in Node.js performance and ecosystem leadership provides invaluable context for understanding enterprise-level Node.js development.
+This example demonstrates how a CLAUDE.md file by a recognized expert should capture not just the technical implementation, but also the deep domain knowledge and professional practices that make the difference between good and exceptional development work. Matteo Collina's expertise in Node.js performance and ecosystem leadership provides invaluable context for understanding enterprise-level Node.js development.

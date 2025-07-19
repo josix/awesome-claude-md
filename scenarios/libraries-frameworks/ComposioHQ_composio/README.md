@@ -49,7 +49,7 @@ Enterprise-grade AI agent development:
 - Performance optimization
 - Enterprise deployment support
 
-## Key Takeaways for claude.md Best Practices
+## Key Takeaways for CLAUDE.md Best Practices
 
 1. **AI Integration Documentation**: Document complex AI agent integration patterns and workflows
 2. **Function Calling Standards**: Provide clear guidance for implementing function calling interfaces
@@ -58,4 +58,4 @@ Enterprise-grade AI agent development:
 5. **Production Considerations**: Include guidance for enterprise-grade AI agent deployment
 6. **Tool Ecosystem**: Document how to build and maintain a marketplace of AI tools
 
-This example demonstrates how a claude.md file for AI frameworks should address both the technical complexity of agent integration and the practical needs of developers building production AI applications with multiple service integrations.
+This example demonstrates how a CLAUDE.md file for AI frameworks should address both the technical complexity of agent integration and the practical needs of developers building production AI applications with multiple service integrations.

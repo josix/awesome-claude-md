@@ -33,7 +33,7 @@ class TestIssueGenerator:
                     "stars": 100,
                     "language": "Python",
                     "topics": ["test"],
-                    "claude_file_path": "claude.md",
+                    "claude_file_path": "CLAUDE.md",
                 },
                 "suggested_category": "test-category",
                 "claude_content_length": 1000,

@@ -176,7 +176,7 @@ class GitHubSearcher:
     )
     def _find_claude_file(self, repo) -> str | None:
         """Find CLAUDE.md file in repository and validate its size."""
-        possible_paths = ["claude.md", "CLAUDE.md", "Claude.md"]
+        possible_paths = ["CLAUDE.md"]
 
         for path in possible_paths:
             try:

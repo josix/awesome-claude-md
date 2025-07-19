@@ -35,11 +35,11 @@ The file includes important notes about:
 - Custom error handling patterns
 - Testing framework specifics (JUnit 5, Gradle TestKit)
 
-## Key Takeaways for claude.md Best Practices
+## Key Takeaways for CLAUDE.md Best Practices
 
 1. **Command-Centric Organization**: Structure the file around the commands developers will actually run, not just theoretical concepts
 2. **Tool-Specific Context**: Include domain-specific knowledge that's crucial for the particular type of tool
 3. **Workflow Integration**: Show how the tool fits into existing development workflows and ecosystems
 4. **Compatibility Notes**: Include important constraints and compatibility requirements that affect development decisions
 
-This example demonstrates how a claude.md file for developer tooling should focus on practical, actionable guidance that enables an AI assistant to effectively work with command-line tools and development utilities.
+This example demonstrates how a CLAUDE.md file for developer tooling should focus on practical, actionable guidance that enables an AI assistant to effectively work with command-line tools and development utilities.

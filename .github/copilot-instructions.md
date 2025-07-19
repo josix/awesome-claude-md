@@ -6,7 +6,7 @@ This file provides guidance to GitHub Copilot when working with code in this rep
 
 ## Project Overview
 
-**awesome-claude-md** is a curated collection of high-quality `claude.md` files from public GitHub repositories. The goal is to showcase best practices for using `claude.md` files to onboard AI assistants to codebases.
+**awesome-claude-md** is a curated collection of high-quality `CLAUDE.md` files from public GitHub repositories. The goal is to showcase best practices for using `CLAUDE.md` files to onboard AI assistants to codebases.
 
 ## Repository Structure
 
@@ -40,7 +40,7 @@ When adding new examples, use these primary categories:
 - Repository directories: `[owner]_[repo]` format (e.g., `microsoft_semanticworkbench`)
 
 ### File Names
-- Original files: `claude.md` (preserve exactly as found)
+- Original files: `CLAUDE.md` (preserve exactly as found)
 - Analysis files: `README.md` (our evaluation)
 - This displays automatically when browsing GitHub directories
 
@@ -85,16 +85,16 @@ When adding new examples, update the main README.md:
 ### Search Commands
 For finding new examples, suggest these GitHub search patterns:
 ```
-filename:claude.md stars:>100
+filename:CLAUDE.md stars:>100
 filename:CLAUDE.md language:TypeScript
-"## Architecture" filename:claude.md
-"## Development Commands" filename:claude.md
+"## Architecture" filename:CLAUDE.md
+"## Development Commands" filename:CLAUDE.md
 ```
 
 ## Quality Standards
 
 ### Ethical Guidelines
-- **Never copy** `claude.md` files directly into this repository
+- **Never copy** `CLAUDE.md` files directly into this repository
 - **Always link** to the original source repository
 - **Include attribution** with source links, licensing information, and proper credit
 - **Respect copyright** and only reference publicly available files under permissive licenses
@@ -186,7 +186,7 @@ When working with this repository:
 - Include links to repositories and documentation
 
 ### For GitHub search
-- Use specific filename searches: `filename:claude.md`
+- Use specific filename searches: `filename:CLAUDE.md`
 - Focus on content quality: `"## Architecture"`, `"## Development Commands"`
 - Include quoted strings for specific sections: `"## Testing"`, `"## Deployment"`
 

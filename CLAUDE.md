@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This is **awesome-claude-md** - a curated collection of high-quality `claude.md` files from public GitHub repositories. The goal is to showcase best practices for using `claude.md` files to onboard AI assistants to codebases.
+This is **awesome-claude-md** - a curated collection of high-quality `CLAUDE.md` files from public GitHub repositories. The goal is to showcase best practices for using `CLAUDE.md` files to onboard AI assistants to codebases.
 
 ## Repository Structure
 
@@ -49,7 +49,7 @@ The repository includes an automated discovery system for finding new CLAUDE.md 
 
 ### Adding New Examples
 1. **Automated Path**: Review discovery issues created by the automation system
-2. **Manual Search**: Use GitHub search (`filename:claude.md` or `filename:CLAUDE.md`) to find examples
+2. **Manual Search**: Use GitHub search (`filename:CLAUDE.md`) to find examples
 3. **Create Directory Structure**: `scenarios/[category]/[owner]_[repo]/`
 4. **Write Analysis**: Create `analysis.md` with:
    - Category assignment and rationale
@@ -59,7 +59,7 @@ The repository includes an automated discovery system for finding new CLAUDE.md 
    - 2-3 key takeaways for developers
 
 ### Ethical Guidelines
-- **Never copy** `claude.md` files directly into this repository
+- **Never copy** `CLAUDE.md` files directly into this repository
 - **Always link** to the original source repository
 - **Include attribution** with source links, licensing information, and proper credit
 - **Respect copyright** and only reference publicly available files under permissive licenses
@@ -98,11 +98,11 @@ This repository includes `.github/copilot-instructions.md` for GitHub Copilot us
 ## Search Strategies
 
 Use these GitHub search queries to find quality examples:
-- `filename:claude.md "## Architecture"`
+- `filename:CLAUDE.md "## Architecture"`
 - `filename:CLAUDE.md "## Development Commands"`
-- `"## Testing" filename:claude.md`
-- `"## Deployment" filename:claude.md`
-- `filename:claude.md language:TypeScript`
+- `"## Testing" filename:CLAUDE.md`
+- `"## Deployment" filename:CLAUDE.md`
+- `filename:CLAUDE.md language:TypeScript`
 
 ## Development Commands
 

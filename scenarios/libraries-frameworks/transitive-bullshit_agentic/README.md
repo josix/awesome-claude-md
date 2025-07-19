@@ -49,7 +49,7 @@ Production-ready AI tool infrastructure:
 - Performance monitoring and optimization
 - Integration with popular AI platforms
 
-## Key Takeaways for claude.md Best Practices
+## Key Takeaways for CLAUDE.md Best Practices
 
 1. **Modern AI Protocols**: Document implementation of cutting-edge AI protocols like MCP
 2. **API Transformation**: Address complex API-to-protocol conversion patterns
@@ -58,4 +58,4 @@ Production-ready AI tool infrastructure:
 5. **LLM Integration**: Provide comprehensive guidance for LLM tool development
 6. **Enterprise Readiness**: Address production deployment and scalability concerns
 
-This example demonstrates how a claude.md file for modern AI frameworks should address not just the technical implementation, but also the commercial and ecosystem aspects of building platforms that bridge traditional APIs with modern AI agent workflows.
+This example demonstrates how a CLAUDE.md file for modern AI frameworks should address not just the technical implementation, but also the commercial and ecosystem aspects of building platforms that bridge traditional APIs with modern AI agent workflows.

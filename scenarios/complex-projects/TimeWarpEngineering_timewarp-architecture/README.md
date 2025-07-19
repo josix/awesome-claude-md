@@ -49,7 +49,7 @@ Provides reusable architectural patterns:
 - Testing strategies across distributed systems
 - Documentation templates for new projects
 
-## Key Takeaways for claude.md Best Practices
+## Key Takeaways for CLAUDE.md Best Practices
 
 1. **Distributed System Documentation**: Address the complexity of multi-service architectures comprehensively
 2. **Modern Technology Stack**: Document cutting-edge technology integration and best practices
@@ -58,4 +58,4 @@ Provides reusable architectural patterns:
 5. **Service Communication**: Document various inter-service communication patterns and when to use each
 6. **Enterprise Considerations**: Address production deployment, monitoring, and operational concerns
 
-This example demonstrates how a claude.md file for complex distributed systems should serve as both architectural documentation and practical implementation guidance, enabling developers to understand and contribute to sophisticated multi-service applications built with modern .NET technologies.
+This example demonstrates how a CLAUDE.md file for complex distributed systems should serve as both architectural documentation and practical implementation guidance, enabling developers to understand and contribute to sophisticated multi-service applications built with modern .NET technologies.

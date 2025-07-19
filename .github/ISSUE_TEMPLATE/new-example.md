@@ -1,6 +1,6 @@
 ---
 name: 🆕 New Example Suggestion
-about: Suggest a new claude.md file to add to the collection
+about: Suggest a new CLAUDE.md file to add to the collection
 title: '[NEW] Add [Project Name] - [Brief Description]'
 labels: ['enhancement', 'new-example']
 assignees: ''
@@ -9,7 +9,7 @@ assignees: ''
 ## 📋 Project Information
 
 **Repository URL:** [GitHub repository URL]  
-**CLAUDE.md URL:** [Direct link to the claude.md file]  
+**CLAUDE.md URL:** [Direct link to the CLAUDE.md file]  
 **Star Count:** [Number of GitHub stars]  
 **Organization/Author:** [Organization or author name]  
 **License:** [Repository license]  
@@ -26,7 +26,7 @@ Which category best fits this example?
 
 ## ⭐ Why This Example is Exemplary
 
-Please explain what makes this `claude.md` file special:
+Please explain what makes this `CLAUDE.md` file special:
 
 ### Key Features:
 - **[Feature 1]**: [Description]
@@ -48,7 +48,7 @@ Please explain what makes this `claude.md` file special:
 
 - [ ] Repository has 100+ stars (or is from a recognized organization)
 - [ ] Project is actively maintained (commits within last 6 months)
-- [ ] `claude.md` demonstrates clear best practices
+- [ ] `CLAUDE.md` demonstrates clear best practices
 - [ ] Documentation is comprehensive and AI-friendly
 - [ ] Repository has proper licensing for public reference
 - [ ] No existing similar examples in our collection

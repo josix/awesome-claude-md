@@ -50,7 +50,7 @@ Specialized knowledge requirements:
 - Cryptographic concepts explanation
 - Consensus mechanism documentation
 
-## Key Takeaways for claude.md Best Practices
+## Key Takeaways for CLAUDE.md Best Practices
 
 1. **Community Onboarding**: Provide clear guidance for diverse contributor backgrounds
 2. **Content Strategy**: Document content creation and maintenance workflows
@@ -59,4 +59,4 @@ Specialized knowledge requirements:
 5. **Educational Focus**: Document approaches for technical education and learning resources
 6. **Community Governance**: Address decision-making processes for community-driven projects
 
-This example demonstrates how a claude.md file for community-driven educational projects should balance technical onboarding with domain knowledge transfer, making it accessible for both technical contributors and subject matter experts from the broader community.
+This example demonstrates how a CLAUDE.md file for community-driven educational projects should balance technical onboarding with domain knowledge transfer, making it accessible for both technical contributors and subject matter experts from the broader community.

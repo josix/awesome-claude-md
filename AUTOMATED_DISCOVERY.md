@@ -12,9 +12,7 @@ This repository includes an automated system for discovering new CLAUDE.md files
 ### 🔍 Search Process
 
 The discovery system searches GitHub for repositories containing:
-- `claude.md` (lowercase)
 - `CLAUDE.md` (uppercase)
-- `Claude.md` (title case)
 
 ### 📊 Quality Evaluation
 

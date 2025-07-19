@@ -38,7 +38,7 @@ class TestClaudeFileDiscovery:
             'owner': 'test',
             'stars': 100,
             'html_url': 'https://github.com/test/repo',
-            'claude_file_path': 'claude.md'
+            'claude_file_path': 'CLAUDE.md'
         }
 
         mock_evaluation = {
@@ -63,7 +63,7 @@ class TestClaudeFileDiscovery:
             'owner': 'test',
             'stars': 100,
             'html_url': 'https://github.com/test/repo',
-            'claude_file_path': 'claude.md'
+            'claude_file_path': 'CLAUDE.md'
         }
 
         with patch.object(discovery.github_searcher, 'search_github_repos', return_value=[mock_candidate]):
@@ -81,7 +81,7 @@ class TestClaudeFileDiscovery:
                 'owner': 'test',
                 'stars': 100,
                 'html_url': 'https://github.com/test/repo1',
-                'claude_file_path': 'claude.md'
+                'claude_file_path': 'CLAUDE.md'
             },
             {
                 'full_name': 'test/repo2',

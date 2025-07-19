@@ -8,14 +8,14 @@ assignees: ''
 
 ## 📍 Target Analysis
 
-**Analysis File:** [Path to the analysis.md file, e.g., scenarios/complex-projects/microsoft_semanticworkbench/analysis.md]  
-**Original Repository:** [GitHub repository URL]  
+**Analysis File:** [Path to the analysis.md file, e.g., scenarios/complex-projects/microsoft_semanticworkbench/analysis.md]
+**Original Repository:** [GitHub repository URL]
 
 ## 🎯 Type of Improvement
 
 What kind of improvement are you suggesting?
 - [ ] **Missing Technical Details** - Add important technical information
-- [ ] **Outdated Information** - Update changed or deprecated information  
+- [ ] **Outdated Information** - Update changed or deprecated information
 - [ ] **Better Examples** - Improve code examples or explanations
 - [ ] **Enhanced Takeaways** - Add more actionable insights
 - [ ] **Formatting/Structure** - Improve readability and organization
@@ -60,7 +60,7 @@ What kind of improvement are you suggesting?
 
 ## 🔍 Research Done
 
-- [ ] I've reviewed the original `claude.md` file recently
+- [ ] I've reviewed the original `CLAUDE.md` file recently
 - [ ] I've checked the project's current documentation
 - [ ] I've looked for recent updates or changes to the project
 - [ ] I've verified the accuracy of my suggestions

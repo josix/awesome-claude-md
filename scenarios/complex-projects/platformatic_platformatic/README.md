@@ -49,7 +49,7 @@ Professional open source development practices:
 - Issue triage and support processes
 - Backward compatibility strategies
 
-## Key Takeaways for claude.md Best Practices
+## Key Takeaways for CLAUDE.md Best Practices
 
 1. **Monorepo Management**: Document complex package interdependencies and build orchestration
 2. **Platform Development**: Address framework and tooling development patterns
@@ -58,4 +58,4 @@ Professional open source development practices:
 5. **Community Management**: Document open source project management and contribution processes
 6. **Enterprise Readiness**: Address production deployment and operational considerations
 
-This example demonstrates how a claude.md file for complex platform projects should balance technical depth with practical usability, making it easier for contributors to understand both the platform architecture and how to build applications using the platform effectively.
+This example demonstrates how a CLAUDE.md file for complex platform projects should balance technical depth with practical usability, making it easier for contributors to understand both the platform architecture and how to build applications using the platform effectively.

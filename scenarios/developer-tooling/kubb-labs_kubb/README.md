@@ -2,7 +2,7 @@
 
 **Category: Developer Tooling**  
 **Source**: [kubb-labs/kubb](https://github.com/kubb-labs/kubb)  
-**CLAUDE.md**: [View Original](https://github.com/kubb-labs/kubb/blob/main/docs/knowledge-base/claude.md)  
+**CLAUDE.md**: [View Original](https://github.com/kubb-labs/kubb/blob/main/docs/knowledge-base/CLAUDE.md)  
 **License**: MIT License
 
 ## Why This Example Was Selected
@@ -49,7 +49,7 @@ Implementation of current best practices:
 - Performance optimization
 - Tree-shaking and code splitting
 
-## Key Takeaways for claude.md Best Practices
+## Key Takeaways for CLAUDE.md Best Practices
 
 1. **Code Generation Documentation**: Clearly explain complex code generation patterns and templates
 2. **Plugin Architecture**: Document extensible plugin systems and their APIs
@@ -58,4 +58,4 @@ Implementation of current best practices:
 5. **Type Safety**: Document approaches for maintaining type safety across generated code
 6. **Framework Integration**: Include guidance for integrating with popular development frameworks
 
-This example demonstrates how a claude.md file for developer tooling should address both the technical complexity of code generation and the practical aspects of integrating the tool into real-world development workflows, making it easier for contributors to understand and extend the toolkit.
+This example demonstrates how a CLAUDE.md file for developer tooling should address both the technical complexity of code generation and the practical aspects of integrating the tool into real-world development workflows, making it easier for contributors to understand and extend the toolkit.

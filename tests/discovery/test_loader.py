@@ -64,7 +64,7 @@ class TestRepositoryLoader:
         """Test extracting repo name from analysis file."""
         mock_content = """
         **Repository**: [test-repo](https://github.com/owner/repo)
-        **CLAUDE.md**: [claude.md](https://github.com/owner/repo/blob/main/claude.md)
+        **CLAUDE.md**: [CLAUDE.md](https://github.com/owner/repo/blob/main/CLAUDE.md)
         """
 
         mock_repo_dir = Path("scenarios/test-category/owner_repo")

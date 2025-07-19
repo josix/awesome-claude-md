@@ -44,7 +44,7 @@ Serves as a handoff document for:
 - Community engagement strategies
 - Future testing roadmap items
 
-## Key Takeaways for claude.md Best Practices
+## Key Takeaways for CLAUDE.md Best Practices
 
 1. **Testing Initiative Documentation**: Document comprehensive testing strategies and methodologies
 2. **Community Guidelines**: Include clear guidelines for community testing contributions
@@ -53,4 +53,4 @@ Serves as a handoff document for:
 5. **Cross-Platform Considerations**: Document testing approaches across multiple platforms
 6. **Quality Gates**: Define clear quality criteria and testing standards
 
-This example demonstrates how a claude.md file for project handoffs should serve as both current status documentation and future guidance, particularly for enterprise-level testing initiatives where multiple stakeholders need to understand both the technical and organizational aspects of the project.
+This example demonstrates how a CLAUDE.md file for project handoffs should serve as both current status documentation and future guidance, particularly for enterprise-level testing initiatives where multiple stakeholders need to understand both the technical and organizational aspects of the project.

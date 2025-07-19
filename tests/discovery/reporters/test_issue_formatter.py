@@ -67,7 +67,7 @@ class TestIssueFormatter:
                     "stars": 100,
                     "language": "Python",
                     "topics": ["test"],
-                    "claude_file_path": "claude.md",
+                    "claude_file_path": "CLAUDE.md",
                 },
                 "suggested_category": "test-category",
                 "claude_content_length": 1000,
@@ -128,7 +128,7 @@ class TestIssueFormatter:
                     "stars": 20,
                     "language": "Python",
                     "topics": ["test"],
-                    "claude_file_path": "claude.md",
+                    "claude_file_path": "CLAUDE.md",
                 },
                 "suggested_category": "getting-started",
                 "claude_content_length": 200,
@@ -171,7 +171,7 @@ class TestIssueFormatter:
                 "stars": eval_data["score"] * 10,
                 "language": "Python",
                 "topics": ["test"],
-                "claude_file_path": "claude.md",
+                "claude_file_path": "CLAUDE.md",
             }
             eval_data["suggested_category"] = "test-category"
             eval_data["claude_content_length"] = 1000

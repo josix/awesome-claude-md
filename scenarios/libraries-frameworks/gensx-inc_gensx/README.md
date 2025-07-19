@@ -43,7 +43,7 @@ Includes practical development reminders:
 - Documentation update requirements for API changes
 - Specific guidance about commit messages
 
-## Key Takeaways for claude.md Best Practices
+## Key Takeaways for CLAUDE.md Best Practices
 
 1. **Architecture-Aware Commands**: Provide commands that understand the project's architectural complexity (monorepo, packages, etc.)
 2. **Framework Conventions**: Document domain-specific patterns that are unique to the framework being developed
@@ -51,4 +51,4 @@ Includes practical development reminders:
 4. **Quality Gates**: Clearly specify code quality requirements and automated checks
 5. **Scaling Considerations**: Address how development practices work across multiple packages/modules
 
-This example shows how a claude.md for a framework should bridge the gap between general development practices and the specific paradigms that the framework introduces, making it easier for contributors to work effectively within the framework's conventions.
+This example shows how a CLAUDE.md for a framework should bridge the gap between general development practices and the specific paradigms that the framework introduces, making it easier for contributors to work effectively within the framework's conventions.

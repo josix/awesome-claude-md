@@ -44,7 +44,7 @@ Detailed architectural guidance covering:
 - Parser implementation patterns
 - Output validation and testing strategies
 
-## Key Takeaways for claude.md Best Practices
+## Key Takeaways for CLAUDE.md Best Practices
 
 1. **Generation Pipeline Documentation**: Clearly document complex code generation workflows and dependencies
 2. **Multi-Target Output**: Address how to manage code generation for multiple target environments
@@ -53,4 +53,4 @@ Detailed architectural guidance covering:
 5. **Packaging Complexity**: Address sophisticated packaging and distribution requirements
 6. **Type System Integration**: Document how the tool integrates with language-specific type systems
 
-This example demonstrates how a claude.md for developer tooling should document not just the build process, but the entire ecosystem integration including IDE support, type system integration, and complex distribution workflows.
+This example demonstrates how a CLAUDE.md for developer tooling should document not just the build process, but the entire ecosystem integration including IDE support, type system integration, and complex distribution workflows.

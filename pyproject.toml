@@ -5,7 +5,7 @@ build-backend = "hatchling.build"
 [project]
 name = "awesome-claude-md"
 version = "1.0.0"
-description = "A curated collection of high-quality claude.md files from public GitHub repositories"
+description = "A curated collection of high-quality CLAUDE.md files from public GitHub repositories"
 readme = "README.md"
 license = {text = "MIT"}
 authors = [

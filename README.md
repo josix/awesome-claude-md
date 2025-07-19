@@ -1,6 +1,6 @@
 # Awesome Claude.md
 
-A curated collection of high-quality `claude.md` files from leading open-source projects. These examples demonstrate industry best practices for onboarding AI assistants to complex codebases.
+A curated collection of high-quality `CLAUDE.md` files from leading open-source projects. These examples demonstrate industry best practices for onboarding AI assistants to complex codebases.
 
 > **🚀 Quick Start**: New here? Jump to [Top Picks](#-top-picks) or browse by [Technology](#-browse-by-technology) | [Use Case](#-browse-by-use-case)
 
@@ -39,7 +39,7 @@ A curated collection of high-quality `claude.md` files from leading open-source 
 
 ## 🎯 Top Picks
 
-**Start with these exceptional examples** - hand-picked for learning effective `claude.md` patterns:
+**Start with these exceptional examples** - hand-picked for learning effective `CLAUDE.md` patterns:
 
 ### 🥇 **Essential (Must Read)**
 | Example | Badges | Why It's Great | Tech Stack |
@@ -321,7 +321,7 @@ When adding new examples:
 
 ### 📋 Key Guidelines:
 1. **Focus on Content Quality**: Prioritize educational value over repository popularity
-2. **Preserve Originality**: Keep `claude.md` files exactly as they appear in source repositories
+2. **Preserve Originality**: Keep `CLAUDE.md` files exactly as they appear in source repositories
 3. **Provide Analysis**: Create detailed `README.md` files explaining what makes each example exemplary
 4. **Follow Structure**: Use the established directory structure and naming conventions
 
@@ -345,17 +345,17 @@ Read the full [Contributing Guide](CONTRIBUTING.md) for step-by-step instruction
 To find more high-quality examples:
 
 ```bash
-# Search for claude.md files with quality content
-filename:claude.md "## Architecture"
+# Search for CLAUDE.md files with quality content
+filename:CLAUDE.md "## Architecture"
 filename:CLAUDE.md "## Development Commands"
-filename:claude.md "## Testing"
+filename:CLAUDE.md "## Testing"
 
 # Search within specific organizations
-filename:claude.md org:microsoft
-filename:claude.md org:cloudflare
-filename:claude.md org:pytorch
+filename:CLAUDE.md org:microsoft
+filename:CLAUDE.md org:cloudflare
+filename:CLAUDE.md org:pytorch
 ```
 
 ## License
 
-This collection is provided under MIT License. Original `claude.md` files retain their respective licenses from source repositories.
+This collection is provided under MIT License. Original `CLAUDE.md` files retain their respective licenses from source repositories.

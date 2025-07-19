@@ -55,11 +55,11 @@ class TestGitHubSearcher:
         mock_repo.updated_at.isoformat.return_value = "2023-12-01T00:00:00Z"
         mock_repo.organization = None
 
-        result = github_searcher._create_candidate_dict(mock_repo, "claude.md")
+        result = github_searcher._create_candidate_dict(mock_repo, "CLAUDE.md")
 
         assert result["full_name"] == "owner/repo"
         assert result["stars"] == 100
-        assert result["claude_file_path"] == "claude.md"
+        assert result["claude_file_path"] == "CLAUDE.md"
         assert result["organization"] is None
 
     def test_process_single_repository_existing_repo(self, github_searcher):
@@ -112,7 +112,7 @@ class TestGitHubSearcher:
         mock_repo.get_contents.return_value = mock_file_contents
 
         result = github_searcher._find_claude_file(mock_repo)
-        assert result == "claude.md"
+        assert result == "CLAUDE.md"
 
     def test_find_claude_file_too_small(self, github_searcher):
         """Test finding CLAUDE.md file that is too small."""

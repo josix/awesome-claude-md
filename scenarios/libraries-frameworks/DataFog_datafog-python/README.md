@@ -44,7 +44,7 @@ Professional library development practices:
 - API stability and backward compatibility
 - Compliance and audit trail requirements
 
-## Key Takeaways for claude.md Best Practices
+## Key Takeaways for CLAUDE.md Best Practices
 
 1. **Performance Documentation**: Include specific performance characteristics and optimization guidance
 2. **Security Standards**: Document security practices and compliance requirements
@@ -53,4 +53,4 @@ Professional library development practices:
 5. **ML Integration**: Document machine learning workflow integration and model management
 6. **Sensitive Data Handling**: Provide clear guidance for working with sensitive data safely
 
-This example demonstrates how a claude.md for a performance-critical, security-focused library should address not just the technical implementation, but also the broader context of compliance, security, and enterprise adoption requirements.
+This example demonstrates how a CLAUDE.md for a performance-critical, security-focused library should address not just the technical implementation, but also the broader context of compliance, security, and enterprise adoption requirements.

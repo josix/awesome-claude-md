@@ -1,10 +1,10 @@
 # Contributing to Awesome Claude.md
 
-Thank you for your interest in contributing to this curated collection of high-quality `claude.md` files! This guide will help you add valuable examples while maintaining our quality standards.
+Thank you for your interest in contributing to this curated collection of high-quality `CLAUDE.md` files! This guide will help you add valuable examples while maintaining our quality standards.
 
 ## 🚀 Quick Start
 
-1. **Found a great `claude.md` file?** [Submit a suggestion using our issue template](#-suggesting-new-examples)
+1. **Found a great `CLAUDE.md` file?** [Submit a suggestion using our issue template](#-suggesting-new-examples)
 2. **Want to improve an existing analysis?** [Use our improvement template](#-improving-existing-analyses)
 3. **Found a bug or issue?** [Report it using our bug template](#-reporting-issues)
 
@@ -12,7 +12,7 @@ Thank you for your interest in contributing to this curated collection of high-q
 
 ### 🎯 Suggesting New Examples
 
-The most valuable contributions are high-quality `claude.md` files from established projects. Before suggesting:
+The most valuable contributions are high-quality `CLAUDE.md` files from established projects. Before suggesting:
 
 **Quality Criteria:**
 
@@ -27,10 +27,10 @@ Our selection prioritizes **content quality and educational value over popularit
 **Search for Examples:**
 ```bash
 # GitHub search patterns focused on content quality
-filename:claude.md "## Architecture"
+filename:CLAUDE.md "## Architecture"
 filename:CLAUDE.md "## Development Commands"
-filename:claude.md "## Testing"
-filename:claude.md "## Deployment"
+filename:CLAUDE.md "## Testing"
+filename:CLAUDE.md "## Deployment"
 filename:CLAUDE.md org:microsoft
 ```
 
@@ -112,7 +112,7 @@ Create `scenarios/[category]/[owner]_[repo]/analysis.md` using this template:
 
 **Category**: [Category Name]
 **Repository**: [GitHub Repository URL]
-**Original CLAUDE.md**: [Direct link to the claude.md file]
+**Original CLAUDE.md**: [Direct link to the CLAUDE.md file]
 **License**: [Repository License] - [Link to License]
 **Why it's exemplary**: [Brief explanation of what makes this special]
 
@@ -170,7 +170,7 @@ Before submitting, verify:
 - [ ] Proper attribution and licensing information included
 
 **Ethical Guidelines:**
-- [ ] **NO copying** of original `claude.md` files into this repository
+- [ ] **NO copying** of original `CLAUDE.md` files into this repository
 - [ ] All links point to original sources
 - [ ] Proper attribution with source links and license info
 - [ ] Respects copyright of publicly available files
@@ -215,7 +215,7 @@ Prioritize examples from these organizations known for quality:
 - Examples with poor content quality (regardless of repository popularity)
 - Outdated or unmaintained projects
 - Projects without clear licensing
-- Direct copies of `claude.md` files
+- Direct copies of `CLAUDE.md` files
 - Low-quality or incomplete documentation
 - Examples that don't demonstrate educational value or best practices
 

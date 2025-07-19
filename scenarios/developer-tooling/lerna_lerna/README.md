@@ -52,7 +52,7 @@ Tools designed for maximum developer productivity:
 - Integration with popular tools
 - Extensive documentation and examples
 
-## Key Takeaways for claude.md Best Practices
+## Key Takeaways for CLAUDE.md Best Practices
 
 1. **Build System Documentation**: Clearly explain complex build orchestration and dependency management
 2. **Performance Optimization**: Document strategies for handling large-scale development workflows
@@ -61,4 +61,4 @@ Tools designed for maximum developer productivity:
 5. **Workflow Automation**: Document end-to-end development and release workflows
 6. **Developer Experience**: Focus on usability and productivity improvements
 
-This example demonstrates how a claude.md file for developer tooling should address both the technical complexity of the tool itself and the practical workflows that developers use day-to-day, ensuring that contributors can understand and improve the tool effectively.
+This example demonstrates how a CLAUDE.md file for developer tooling should address both the technical complexity of the tool itself and the practical workflows that developers use day-to-day, ensuring that contributors can understand and improve the tool effectively.

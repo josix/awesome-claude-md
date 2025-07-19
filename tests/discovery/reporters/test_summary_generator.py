@@ -76,7 +76,7 @@ class TestSummaryGenerator:
                 "stars": 100,
                 "language": "Python",
                 "topics": ["test", "python", "automation"],
-                "claude_file_path": "claude.md",
+                "claude_file_path": "CLAUDE.md",
             },
             "suggested_category": "test-category",
             "claude_content_length": 1000,
@@ -93,7 +93,7 @@ class TestSummaryGenerator:
         assert "Language**: Python" in section
         assert "Suggested Category**: test-category" in section
         assert "test, python, automation" in section
-        assert "claude.md" in section
+        assert "CLAUDE.md" in section
         assert "1,000 bytes" in section
         assert "5 days ago" in section
         assert "High quality" in section
@@ -143,7 +143,7 @@ class TestSummaryGenerator:
                     "topic6",
                     "topic7",
                 ],
-                "claude_file_path": "claude.md",
+                "claude_file_path": "CLAUDE.md",
             },
             "suggested_category": "test-category",
             "claude_content_length": 2000,
@@ -169,7 +169,7 @@ class TestSummaryGenerator:
                 "stars": 75,
                 "language": "Go",
                 "topics": ["go"],
-                "claude_file_path": "claude.md",
+                "claude_file_path": "CLAUDE.md",
             },
             "suggested_category": "test-category",
             "claude_content_length": 800,
