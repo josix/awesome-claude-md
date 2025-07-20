@@ -84,11 +84,41 @@ When adding new examples, update the main README.md:
 
 ### Search Commands
 For finding new examples, suggest these GitHub search patterns:
+
+#### Manual Search Queries
 ```
-filename:CLAUDE.md stars:>100
+filename:CLAUDE.md "## Architecture"
+filename:CLAUDE.md "## Development Commands" 
+"## Testing" filename:CLAUDE.md
+"## Deployment" filename:CLAUDE.md
 filename:CLAUDE.md language:TypeScript
-"## Architecture" filename:CLAUDE.md
-"## Development Commands" filename:CLAUDE.md
+```
+
+#### KOL and Expert Organization Search
+Target repositories from key opinion leaders and expert organizations:
+```
+filename:CLAUDE.md user:anthropics       # AI experts and Claude creators
+filename:CLAUDE.md user:pydantic         # Python validation library experts
+filename:CLAUDE.md user:microsoft        # Enterprise AI and infrastructure
+filename:CLAUDE.md user:gaearon          # React co-creator Dan Abramov
+filename:CLAUDE.md user:openai           # AI research and development
+filename:CLAUDE.md user:cloudflare       # Infrastructure and runtime systems
+filename:CLAUDE.md user:pytorch          # Machine learning frameworks
+```
+
+#### Domain-Specific Searches
+```
+# Python Ecosystem
+filename:CLAUDE.md user:fastapi OR user:tiangolo OR user:pydantic
+
+# JavaScript/React  
+filename:CLAUDE.md user:vercel OR user:facebook OR user:nextjs
+
+# AI/ML
+filename:CLAUDE.md user:huggingface OR user:langchain-ai
+
+# Infrastructure
+filename:CLAUDE.md user:docker OR user:kubernetes
 ```
 
 ## Quality Standards
@@ -238,13 +268,29 @@ The discovery system follows a modular design with single responsibility princip
 ## Organizations to Prioritize
 
 When suggesting new examples, prioritize these organizations:
-- **Anthropic**: Official AI development best practices
+- **Anthropic**: Official AI development best practices and Claude creators
+- **Pydantic**: Python validation and data processing expertise
 - **Basic Machines**: Knowledge management and AI collaboration
 - **Cloudflare**: Infrastructure runtime and developer tooling
-- **CYRUP AI**: Advanced AI development methodologies
+- **OpenAI**: AI research and development frameworks
 - **Microsoft**: AI systems and enterprise tooling
+- **CYRUP AI**: Advanced AI development methodologies
 - **PyTorch**: Machine learning infrastructure
 - **LangChain**: AI application frameworks
 - **Sentry**: Error tracking and monitoring
 - **Ethereum Foundation**: Blockchain infrastructure
 - **Mattermost**: Enterprise collaboration
+
+### Current Top Examples from Expert Search
+Based on embedding-based similarity search for high-quality patterns:
+
+#### Exceptional Quality (Industry Leaders)
+- **pydantic/genai-prices**: Expert Python data processing pipeline patterns
+- **gaearon/overreacted.io**: React co-creator's advanced Next.js blog architecture  
+- **anthropics/anthropic-quickstarts**: Official AI development best practices
+- **microsoft/semanticworkbench**: Enterprise AI assistant platform
+
+#### High Quality (Established Organizations)
+- **openai/openai-agents-python**: Multi-agent workflow framework
+- **microsoft/recipe-tool**: Automation recipe patterns
+- **blueprintui/blueprintui**: UI component library architecture

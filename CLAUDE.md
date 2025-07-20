@@ -97,12 +97,43 @@ This repository includes `.github/copilot-instructions.md` for GitHub Copilot us
 
 ## Search Strategies
 
+### Manual Search Queries
 Use these GitHub search queries to find quality examples:
 - `filename:CLAUDE.md "## Architecture"`
 - `filename:CLAUDE.md "## Development Commands"`
 - `"## Testing" filename:CLAUDE.md`
 - `"## Deployment" filename:CLAUDE.md`
 - `filename:CLAUDE.md language:TypeScript`
+
+### KOL and Expert Organization Search
+Target repositories from key opinion leaders and expert organizations:
+- `filename:CLAUDE.md user:anthropics` - AI experts and Claude creators
+- `filename:CLAUDE.md user:pydantic` - Python validation library experts
+- `filename:CLAUDE.md user:microsoft` - Enterprise AI and infrastructure
+- `filename:CLAUDE.md user:gaearon` - React co-creator Dan Abramov
+- `filename:CLAUDE.md user:openai` - AI research and development
+- `filename:CLAUDE.md user:cloudflare` - Infrastructure and runtime systems
+- `filename:CLAUDE.md user:pytorch` - Machine learning frameworks
+
+### Domain-Specific Searches
+- **Python Ecosystem**: `filename:CLAUDE.md user:fastapi OR user:tiangolo OR user:pydantic`
+- **JavaScript/React**: `filename:CLAUDE.md user:vercel OR user:facebook OR user:nextjs`
+- **AI/ML**: `filename:CLAUDE.md user:huggingface OR user:langchain-ai`
+- **Infrastructure**: `filename:CLAUDE.md user:docker OR user:kubernetes`
+
+### Current Top Examples from Expert Search
+Based on embedding-based similarity search for high-quality patterns:
+
+#### Exceptional Quality (Industry Leaders)
+- **pydantic/genai-prices**: Expert Python data processing pipeline patterns
+- **gaearon/overreacted.io**: React co-creator's advanced Next.js blog architecture
+- **anthropics/anthropic-quickstarts**: Official AI development best practices
+- **microsoft/semanticworkbench**: Enterprise AI assistant platform
+
+#### High Quality (Established Organizations)  
+- **openai/openai-agents-python**: Multi-agent workflow framework
+- **microsoft/recipe-tool**: Automation recipe patterns
+- **blueprintui/blueprintui**: UI component library architecture
 
 ## Development Commands
 

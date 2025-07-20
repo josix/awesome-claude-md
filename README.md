@@ -47,12 +47,13 @@ A curated collection of high-quality `CLAUDE.md` files from leading open-source 
 | **[Basic Memory](scenarios/complex-projects/basicmachines-co_basic-memory/README.md)** | ![Stars](https://img.shields.io/github/stars/basicmachines-co/basic-memory?style=flat&logo=github) ![License](https://img.shields.io/github/license/basicmachines-co/basic-memory?style=flat) ![Activity](https://img.shields.io/github/last-commit/basicmachines-co/basic-memory?style=flat) | Cutting-edge MCP integration & AI collaboration | Python, FastAPI, SQLAlchemy |
 | **[CYRUP AI Kargo](scenarios/developer-tooling/cyrup-ai_kargo/README.md)** | ![Stars](https://img.shields.io/github/stars/cyrup-ai/kargo?style=flat&logo=github) ![License](https://img.shields.io/github/license/cyrup-ai/kargo?style=flat) ![Activity](https://img.shields.io/github/last-commit/cyrup-ai/kargo?style=flat) | State machine workflows & research methodology | Rust, MCP Tools |
 | **[Overreacted.io](scenarios/complex-projects/gaearon_overreacted.io/README.md)** | ![Stars](https://img.shields.io/github/stars/gaearon/overreacted.io?style=flat&logo=github) ![License](https://img.shields.io/github/license/gaearon/overreacted.io?style=flat) ![Activity](https://img.shields.io/github/last-commit/gaearon/overreacted.io?style=flat) | Technical depth with personality | Next.js, React, MDX |
+| **[Pydantic GenAI Prices](scenarios/libraries-frameworks/pydantic_genai-prices/README.md)** | ![Stars](https://img.shields.io/github/stars/pydantic/genai-prices?style=flat&logo=github) ![License](https://img.shields.io/github/license/pydantic/genai-prices?style=flat) ![Activity](https://img.shields.io/github/last-commit/pydantic/genai-prices?style=flat) | Expert data processing pipeline patterns | Python, Pydantic, YAML |
 
 ### 🥈 **Advanced Patterns**
 | Example | Badges | Why It's Great | Tech Stack |
 |---------|--------|---------------|------------|
 | **[Cloudflare Workers SDK](scenarios/developer-tooling/cloudflare_workers-sdk/README.md)** | ![Stars](https://img.shields.io/github/stars/cloudflare/workers-sdk?style=flat&logo=github) ![License](https://img.shields.io/github/license/cloudflare/workers-sdk?style=flat) ![Activity](https://img.shields.io/github/last-commit/cloudflare/workers-sdk?style=flat) | Monorepo & testing excellence | TypeScript, Monorepo |
-| **[Anthropic Quickstarts](scenarios/getting-started/anthropics_anthropic-quickstarts/README.md)** | ![Stars](https://img.shields.io/github/stars/anthropics/anthropic-quickstarts?style=flat&logo=github) ![License](https://img.shields.io/github/license/anthropics/anthropic-quickstarts?style=flat) ![Activity](https://img.shields.io/github/last-commit/anthropics/anthropic-quickstarts?style=flat) | Multi-project organization | Python, TypeScript, React |
+| **[Anthropic Quickstarts](scenarios/getting-started/anthropics_anthropic-quickstarts/README.md)** | ![Stars](https://img.shields.io/github/stars/anthropics/anthropic-quickstarts?style=flat&logo=github) ![License](https://img.shields.io/github/license/anthropics/anthropic-quickstarts?style=flat) ![Activity](https://img.shields.io/github/last-commit/anthropics/anthropic-quickstarts?style=flat) | Multi-project organization by AI experts | Python, TypeScript, React |
 | **[GoMall](scenarios/developer-tooling/li0on3_GoMall/README.md)** | ![Stars](https://img.shields.io/github/stars/li0on3/GoMall?style=flat&logo=github) ![License](https://img.shields.io/github/license/li0on3/GoMall?style=flat) ![Activity](https://img.shields.io/github/last-commit/li0on3/GoMall?style=flat) | RIPER-5 AI methodology | Go, AI Development |
 | **[Web MuJoCo Gym](scenarios/libraries-frameworks/ninjaa_web-mujoco-gym/README.md)** | ![Stars](https://img.shields.io/github/stars/ninjaa/web-mujoco-gym?style=flat&logo=github) ![License](https://img.shields.io/github/license/ninjaa/web-mujoco-gym?style=flat) ![Activity](https://img.shields.io/github/last-commit/ninjaa/web-mujoco-gym?style=flat) | High-performance WebAssembly | WebAssembly, ML/RL |
 
@@ -75,6 +76,7 @@ A curated collection of high-quality `CLAUDE.md` files from leading open-source 
 <summary><strong>🟧 Python</strong></summary>
 
 - **[Basic Memory](scenarios/complex-projects/basicmachines-co_basic-memory/README.md)** ![Stars](https://img.shields.io/github/stars/basicmachines-co/basic-memory?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/basicmachines-co/basic-memory?style=flat-square) - MCP integration
+- **[Pydantic GenAI Prices](scenarios/libraries-frameworks/pydantic_genai-prices/README.md)** ![Stars](https://img.shields.io/github/stars/pydantic/genai-prices?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/pydantic/genai-prices?style=flat-square) - Expert data processing pipeline
 - **[PyTorch tlparse](scenarios/developer-tooling/pytorch_tlparse/README.md)** ![Stars](https://img.shields.io/github/stars/pytorch/tlparse?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/pytorch/tlparse?style=flat-square) - Dual-language (Rust/Python)
 - **[Anthropic Quickstarts](scenarios/getting-started/anthropics_anthropic-quickstarts/README.md)** ![Stars](https://img.shields.io/github/stars/anthropics/anthropic-quickstarts?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/anthropics/anthropic-quickstarts?style=flat-square) - Computer-use demo
 
@@ -292,6 +294,11 @@ CLI tools, build systems, and developer productivity solutions.
 
 Reusable components, SDKs, and framework implementations.
 
+- **[Pydantic GenAI Prices](scenarios/libraries-frameworks/pydantic_genai-prices/README.md)** ![Stars](https://img.shields.io/github/stars/pydantic/genai-prices?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/pydantic/genai-prices?style=flat-square) ![Activity](https://img.shields.io/github/last-commit/pydantic/genai-prices?style=flat-square) - LLM pricing data processing pipeline
+  - Multi-component architecture documentation
+  - Expert data processing patterns from Pydantic team
+  - Comprehensive development and data management commands
+
 - **[LangChain Redis](scenarios/libraries-frameworks/langchain-ai_langchain-redis/README.md)** ![Stars](https://img.shields.io/github/stars/langchain-ai/langchain-redis?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/langchain-ai/langchain-redis?style=flat-square) ![Activity](https://img.shields.io/github/last-commit/langchain-ai/langchain-redis?style=flat-square) - Redis integration for LangChain (34 stars)
   - Comprehensive testing architecture
   - Sophisticated configuration system
@@ -342,9 +349,9 @@ Reusable components, SDKs, and framework implementations.
 Projects focused on developer onboarding and initial setup experiences.
 
 - **[Anthropic Quickstarts](scenarios/getting-started/anthropics_anthropic-quickstarts/README.md)** ![Stars](https://img.shields.io/github/stars/anthropics/anthropic-quickstarts?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/anthropics/anthropic-quickstarts?style=flat-square) ![Activity](https://img.shields.io/github/last-commit/anthropics/anthropic-quickstarts?style=flat-square) - Official Anthropic quickstart examples
-  - Multi-project organization (Python, TypeScript, React)
-  - Docker integration for complex environments
-  - Clear technology separation across projects
+  - Multi-project organization (Python, TypeScript, React) by AI experts
+  - Docker containerization with production patterns
+  - Technology-specific coding standards and best practices
 
 - **[Ethereum.org Website](scenarios/getting-started/ethereum_ethereum-org-website/README.md)** ![Stars](https://img.shields.io/github/stars/ethereum/ethereum-org-website?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/ethereum/ethereum-org-website?style=flat-square) ![Activity](https://img.shields.io/github/last-commit/ethereum/ethereum-org-website?style=flat-square) - Official Ethereum community website (5,000+ stars)
   - Community-driven development
@@ -419,6 +426,7 @@ Read the full [Contributing Guide](CONTRIBUTING.md) for step-by-step instruction
 ## Organizations Represented
 
 - **Anthropic**: Official AI quickstarts and best practices
+- **Pydantic**: Python validation and data processing expertise  
 - **Cloudflare**: Infrastructure runtime and developer tooling
 - **Microsoft**: AI systems and enterprise tooling
 - **PyTorch**: Machine learning infrastructure
