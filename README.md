@@ -88,6 +88,9 @@ A curated collection of high-quality `CLAUDE.md` files from leading open-source 
 
 - **[Kent Beck's BPlusTree3](scenarios/project-handoffs/KentBeck_BPlusTree3/README.md)** ![Stars](https://img.shields.io/github/stars/KentBeck/BPlusTree3?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/KentBeck/BPlusTree3?style=flat-square) - TDD methodology
 - **[Cloudflare workerd](scenarios/infrastructure-projects/cloudflare_workerd/README.md)** ![Stars](https://img.shields.io/github/stars/cloudflare/workerd?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/cloudflare/workerd?style=flat-square) - C++/WebAssembly runtime
+- **[GoMall](scenarios/developer-tooling/li0on3_GoMall/README.md)** ![Stars](https://img.shields.io/github/stars/li0on3/GoMall?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/li0on3/GoMall?style=flat-square) - Go with advanced AI methodology
+- **[pipewire-hs](scenarios/libraries-frameworks/JonathanLorimer_pipewire-hs/README.md)** ![Stars](https://img.shields.io/github/stars/JonathanLorimer/pipewire-hs?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/JonathanLorimer/pipewire-hs?style=flat-square) - Haskell FFI bindings
+- **[TrysteroSwift](scenarios/libraries-frameworks/posix4e_TrysteroSwift/README.md)** ![Stars](https://img.shields.io/github/stars/posix4e/TrysteroSwift?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/posix4e/TrysteroSwift?style=flat-square) - Swift P2P networking
 
 </details>
 
@@ -224,6 +227,16 @@ CLI tools, build systems, and developer productivity solutions.
   - Strict coding standards and automation
   - Professional error handling patterns
 
+- **[GoMall](scenarios/developer-tooling/li0on3_GoMall/README.md)** ![Stars](https://img.shields.io/github/stars/li0on3/GoMall?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/li0on3/GoMall?style=flat-square) ![Activity](https://img.shields.io/github/last-commit/li0on3/GoMall?style=flat-square) - Advanced AI development protocol
+  - RIPER-5 methodology with multidimensional thinking
+  - Structured AI interaction framework
+  - Systematic documentation and validation approach
+
+- **[svgc](scenarios/developer-tooling/okuvshynov_svgc/README.md)** ![Stars](https://img.shields.io/github/stars/okuvshynov/svgc?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/okuvshynov/svgc?style=flat-square) ![Activity](https://img.shields.io/github/last-commit/okuvshynov/svgc?style=flat-square) - Pure embedded SVG chart generator
+  - Zero-dependency interactive charts
+  - Innovative module loading system
+  - Multi-context execution architecture
+
 ### 📚 Libraries & Frameworks
 
 Reusable components, SDKs, and framework implementations.
@@ -252,6 +265,16 @@ Reusable components, SDKs, and framework implementations.
   - Template-based generation
   - Multi-language support
   - Extensible architecture
+
+- **[pipewire-hs](scenarios/libraries-frameworks/JonathanLorimer_pipewire-hs/README.md)** ![Stars](https://img.shields.io/github/stars/JonathanLorimer/pipewire-hs?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/JonathanLorimer/pipewire-hs?style=flat-square) ![Activity](https://img.shields.io/github/last-commit/JonathanLorimer/pipewire-hs?style=flat-square) - Haskell PipeWire bindings
+  - Layered FFI architecture
+  - Automated binding generation
+  - Type-safe system integration
+
+- **[TrysteroSwift](scenarios/libraries-frameworks/posix4e_TrysteroSwift/README.md)** ![Stars](https://img.shields.io/github/stars/posix4e/TrysteroSwift?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/posix4e/TrysteroSwift?style=flat-square) ![Activity](https://img.shields.io/github/last-commit/posix4e/TrysteroSwift?style=flat-square) - Decentralized P2P networking
+  - Nostr-based peer discovery
+  - WebRTC signaling innovation
+  - Modern Swift async patterns
 
 ### 🚀 Getting Started
 
