@@ -139,6 +139,11 @@ Large-scale systems and runtime environments that power modern applications.
   - Comprehensive testing strategy across multiple environments
   - Production deployment guidance
 
+- **[Ansible MCP Server](scenarios/infrastructure-projects/washyu_ansible-mcp-server/README.md)** ![Stars](https://img.shields.io/github/stars/washyu/ansible-mcp-server?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/washyu/ansible-mcp-server?style=flat-square) ![Activity](https://img.shields.io/github/last-commit/washyu/ansible-mcp-server?style=flat-square) - Infrastructure management with MCP integration
+  - Terraform + Ansible hybrid approach
+  - Automated deviation detection
+  - Platform-agnostic deployment patterns
+
 ### 🏢 Complex Projects
 
 Multi-service applications with sophisticated architectures and enterprise-scale concerns.
@@ -177,6 +182,11 @@ Multi-service applications with sophisticated architectures and enterprise-scale
   - Technical depth with personality
   - Complete development workflow
   - Advanced MDX features and static site generation
+
+- **[WhereAmI](scenarios/complex-projects/Cmxu_whereami/README.md)** ![Stars](https://img.shields.io/github/stars/Cmxu/whereami?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/Cmxu/whereami?style=flat-square) ![Activity](https://img.shields.io/github/last-commit/Cmxu/whereami?style=flat-square) - SvelteKit geolocation game
+  - Svelte 5 runes and modern patterns
+  - Cloudflare Workers integration
+  - Advanced state management
 
 ### 🛠️ Developer Tooling
 
@@ -276,6 +286,16 @@ Reusable components, SDKs, and framework implementations.
   - WebRTC signaling innovation
   - Modern Swift async patterns
 
+- **[mdx-prompt](scenarios/libraries-frameworks/edspencer_mdx-prompt/README.md)** ![Stars](https://img.shields.io/github/stars/edspencer/mdx-prompt?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/edspencer/mdx-prompt?style=flat-square) ![Activity](https://img.shields.io/github/last-commit/edspencer/mdx-prompt?style=flat-square) - LLM prompt components
+  - Component-based prompt engineering
+  - JSX/MDX to string transformation
+  - TypeScript-first prompt development
+
+- **[Web MuJoCo Gym](scenarios/libraries-frameworks/ninjaa_web-mujoco-gym/README.md)** ![Stars](https://img.shields.io/github/stars/ninjaa/web-mujoco-gym?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/ninjaa/web-mujoco-gym?style=flat-square) ![Activity](https://img.shields.io/github/last-commit/ninjaa/web-mujoco-gym?style=flat-square) - High-performance physics simulation
+  - WebAssembly-based MuJoCo integration
+  - Parallel environment rendering
+  - ML/RL inference support
+
 ### 🚀 Getting Started
 
 Projects focused on developer onboarding and initial setup experiences.
@@ -289,6 +309,11 @@ Projects focused on developer onboarding and initial setup experiences.
   - Community-driven development
   - Multi-language support
   - Documentation workflows
+
+- **[KleverConnect Starter](scenarios/getting-started/klever-hub_kleverconnect-starter/README.md)** ![Stars](https://img.shields.io/github/stars/klever-hub/kleverconnect-starter?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/klever-hub/kleverconnect-starter?style=flat-square) ![Activity](https://img.shields.io/github/last-commit/klever-hub/kleverconnect-starter?style=flat-square) - Web3 React + Vite starter kit
+  - Klever Wallet integration patterns
+  - Custom hook design for Web3
+  - TypeScript-first blockchain development
 
 ### 🔄 Project Handoffs
 
