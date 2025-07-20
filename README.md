@@ -44,9 +44,10 @@ A curated collection of high-quality `CLAUDE.md` files from leading open-source 
 ### 🥇 **Essential (Must Read)**
 | Example | Badges | Why It's Great | Tech Stack |
 |---------|--------|---------------|------------|
+| **[OpenAI Agents Python](scenarios/complex-projects/openai_openai-agents-python/README.md)** | ![Stars](https://img.shields.io/github/stars/openai/openai-agents-python?style=flat&logo=github) ![License](https://img.shields.io/github/license/openai/openai-agents-python?style=flat) ![Activity](https://img.shields.io/github/last-commit/openai/openai-agents-python?style=flat) | Official OpenAI multi-agent framework | Python, Multi-Agent Systems |
 | **[Basic Memory](scenarios/complex-projects/basicmachines-co_basic-memory/README.md)** | ![Stars](https://img.shields.io/github/stars/basicmachines-co/basic-memory?style=flat&logo=github) ![License](https://img.shields.io/github/license/basicmachines-co/basic-memory?style=flat) ![Activity](https://img.shields.io/github/last-commit/basicmachines-co/basic-memory?style=flat) | Cutting-edge MCP integration & AI collaboration | Python, FastAPI, SQLAlchemy |
-| **[CYRUP AI Kargo](scenarios/developer-tooling/cyrup-ai_kargo/README.md)** | ![Stars](https://img.shields.io/github/stars/cyrup-ai/kargo?style=flat&logo=github) ![License](https://img.shields.io/github/license/cyrup-ai/kargo?style=flat) ![Activity](https://img.shields.io/github/last-commit/cyrup-ai/kargo?style=flat) | State machine workflows & research methodology | Rust, MCP Tools |
 | **[Overreacted.io](scenarios/complex-projects/gaearon_overreacted.io/README.md)** | ![Stars](https://img.shields.io/github/stars/gaearon/overreacted.io?style=flat&logo=github) ![License](https://img.shields.io/github/license/gaearon/overreacted.io?style=flat) ![Activity](https://img.shields.io/github/last-commit/gaearon/overreacted.io?style=flat) | Technical depth with personality | Next.js, React, MDX |
+| **[Pydantic GenAI Prices](scenarios/libraries-frameworks/pydantic_genai-prices/README.md)** | ![Stars](https://img.shields.io/github/stars/pydantic/genai-prices?style=flat&logo=github) ![License](https://img.shields.io/github/license/pydantic/genai-prices?style=flat) ![Activity](https://img.shields.io/github/last-commit/pydantic/genai-prices?style=flat) | Expert data processing pipeline patterns | Python, Pydantic, YAML |
 | **[Pydantic GenAI Prices](scenarios/libraries-frameworks/pydantic_genai-prices/README.md)** | ![Stars](https://img.shields.io/github/stars/pydantic/genai-prices?style=flat&logo=github) ![License](https://img.shields.io/github/license/pydantic/genai-prices?style=flat) ![Activity](https://img.shields.io/github/last-commit/pydantic/genai-prices?style=flat) | Expert data processing pipeline patterns | Python, Pydantic, YAML |
 
 ### 🥈 **Advanced Patterns**
@@ -75,10 +76,12 @@ A curated collection of high-quality `CLAUDE.md` files from leading open-source 
 <details>
 <summary><strong>🟧 Python</strong></summary>
 
+- **[OpenAI Agents Python](scenarios/complex-projects/openai_openai-agents-python/README.md)** ![Stars](https://img.shields.io/github/stars/openai/openai-agents-python?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/openai/openai-agents-python?style=flat-square) - Official multi-agent framework
 - **[Basic Memory](scenarios/complex-projects/basicmachines-co_basic-memory/README.md)** ![Stars](https://img.shields.io/github/stars/basicmachines-co/basic-memory?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/basicmachines-co/basic-memory?style=flat-square) - MCP integration
 - **[Pydantic GenAI Prices](scenarios/libraries-frameworks/pydantic_genai-prices/README.md)** ![Stars](https://img.shields.io/github/stars/pydantic/genai-prices?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/pydantic/genai-prices?style=flat-square) - Expert data processing pipeline
 - **[PyTorch tlparse](scenarios/developer-tooling/pytorch_tlparse/README.md)** ![Stars](https://img.shields.io/github/stars/pytorch/tlparse?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/pytorch/tlparse?style=flat-square) - Dual-language (Rust/Python)
 - **[Anthropic Quickstarts](scenarios/getting-started/anthropics_anthropic-quickstarts/README.md)** ![Stars](https://img.shields.io/github/stars/anthropics/anthropic-quickstarts?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/anthropics/anthropic-quickstarts?style=flat-square) - Computer-use demo
+- **[Jason Liu Blog](scenarios/developer-tooling/jxnl_blog/README.md)** ![Stars](https://img.shields.io/github/stars/jxnl/blog?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/jxnl/blog?style=flat-square) - AI/ML thought leadership
 
 </details>
 
@@ -122,8 +125,10 @@ A curated collection of high-quality `CLAUDE.md` files from leading open-source 
 <details>
 <summary><strong>🤖 AI & Machine Learning</strong></summary>
 
+- **[OpenAI Agents Python](scenarios/complex-projects/openai_openai-agents-python/README.md)** ![Stars](https://img.shields.io/github/stars/openai/openai-agents-python?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/openai/openai-agents-python?style=flat-square) - Official multi-agent framework
 - **[Basic Memory](scenarios/complex-projects/basicmachines-co_basic-memory/README.md)** ![Stars](https://img.shields.io/github/stars/basicmachines-co/basic-memory?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/basicmachines-co/basic-memory?style=flat-square) - AI collaboration workflows
 - **[Microsoft Semantic Workbench](scenarios/complex-projects/microsoft_semanticworkbench/README.md)** ![Stars](https://img.shields.io/github/stars/microsoft/semanticworkbench?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/microsoft/semanticworkbench?style=flat-square) - AI assistant platform
+- **[Jason Liu Blog](scenarios/developer-tooling/jxnl_blog/README.md)** ![Stars](https://img.shields.io/github/stars/jxnl/blog?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/jxnl/blog?style=flat-square) - AI/ML thought leadership
 
 </details>
 
@@ -147,7 +152,9 @@ A curated collection of high-quality `CLAUDE.md` files from leading open-source 
 <details>
 <summary><strong>🧠 Advanced AI Development</strong></summary>
 
+- **[OpenAI Agents Python](scenarios/complex-projects/openai_openai-agents-python/README.md)** ![Stars](https://img.shields.io/github/stars/openai/openai-agents-python?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/openai/openai-agents-python?style=flat-square) - Official multi-agent framework
 - **[Basic Memory](scenarios/complex-projects/basicmachines-co_basic-memory/README.md)** ![Stars](https://img.shields.io/github/stars/basicmachines-co/basic-memory?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/basicmachines-co/basic-memory?style=flat-square) - MCP integration patterns
+- **[Jason Liu Blog](scenarios/developer-tooling/jxnl_blog/README.md)** ![Stars](https://img.shields.io/github/stars/jxnl/blog?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/jxnl/blog?style=flat-square) - AI/ML thought leadership
 - **[GoMall](scenarios/developer-tooling/li0on3_GoMall/README.md)** ![Stars](https://img.shields.io/github/stars/li0on3/GoMall?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/li0on3/GoMall?style=flat-square) - RIPER-5 methodology
 - **[mdx-prompt](scenarios/libraries-frameworks/edspencer_mdx-prompt/README.md)** ![Stars](https://img.shields.io/github/stars/edspencer/mdx-prompt?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/edspencer/mdx-prompt?style=flat-square) - Prompt engineering
 - **[Ansible MCP Server](scenarios/infrastructure-projects/washyu_ansible-mcp-server/README.md)** ![Stars](https://img.shields.io/github/stars/washyu/ansible-mcp-server?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/washyu/ansible-mcp-server?style=flat-square) - Infrastructure AI automation
@@ -226,6 +233,11 @@ Multi-service applications with sophisticated architectures and enterprise-scale
   - Complete development workflow
   - Advanced MDX features and static site generation
 
+- **[OpenAI Agents Python](scenarios/complex-projects/openai_openai-agents-python/README.md)** ![Stars](https://img.shields.io/github/stars/openai/openai-agents-python?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/openai/openai-agents-python?style=flat-square) ![Activity](https://img.shields.io/github/last-commit/openai/openai-agents-python?style=flat-square) - Official OpenAI multi-agent framework
+  - Official OpenAI documentation patterns
+  - Multi-agent architecture and coordination
+  - Enterprise-grade AI system design
+
 - **[WhereAmI](scenarios/complex-projects/Cmxu_whereami/README.md)** ![Stars](https://img.shields.io/github/stars/Cmxu/whereami?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/Cmxu/whereami?style=flat-square) ![Activity](https://img.shields.io/github/last-commit/Cmxu/whereami?style=flat-square) - SvelteKit geolocation game
   - Svelte 5 runes and modern patterns
   - Cloudflare Workers integration
@@ -285,6 +297,11 @@ CLI tools, build systems, and developer productivity solutions.
   - Structured AI interaction framework
   - Systematic documentation and validation approach
 
+- **[Jason Liu Blog](scenarios/developer-tooling/jxnl_blog/README.md)** ![Stars](https://img.shields.io/github/stars/jxnl/blog?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/jxnl/blog?style=flat-square) ![Activity](https://img.shields.io/github/last-commit/jxnl/blog?style=flat-square) - AI/ML thought leadership content
+  - Expert practitioner documentation patterns
+  - Content-driven architecture for AI assistants
+  - Personal project standards from industry leader
+
 - **[svgc](scenarios/developer-tooling/okuvshynov_svgc/README.md)** ![Stars](https://img.shields.io/github/stars/okuvshynov/svgc?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/okuvshynov/svgc?style=flat-square) ![Activity](https://img.shields.io/github/last-commit/okuvshynov/svgc?style=flat-square) - Pure embedded SVG chart generator
   - Zero-dependency interactive charts
   - Innovative module loading system
@@ -339,6 +356,7 @@ Reusable components, SDKs, and framework implementations.
   - JSX/MDX to string transformation
   - TypeScript-first prompt development
 
+
 - **[Web MuJoCo Gym](scenarios/libraries-frameworks/ninjaa_web-mujoco-gym/README.md)** ![Stars](https://img.shields.io/github/stars/ninjaa/web-mujoco-gym?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/ninjaa/web-mujoco-gym?style=flat-square) ![Activity](https://img.shields.io/github/last-commit/ninjaa/web-mujoco-gym?style=flat-square) - High-performance physics simulation
   - WebAssembly-based MuJoCo integration
   - Parallel environment rendering
@@ -357,6 +375,7 @@ Projects focused on developer onboarding and initial setup experiences.
   - Community-driven development
   - Multi-language support
   - Documentation workflows
+
 
 - **[KleverConnect Starter](scenarios/getting-started/klever-hub_kleverconnect-starter/README.md)** ![Stars](https://img.shields.io/github/stars/klever-hub/kleverconnect-starter?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/klever-hub/kleverconnect-starter?style=flat-square) ![Activity](https://img.shields.io/github/last-commit/klever-hub/kleverconnect-starter?style=flat-square) - Web3 React + Vite starter kit
   - Klever Wallet integration patterns
@@ -426,7 +445,6 @@ Read the full [Contributing Guide](CONTRIBUTING.md) for step-by-step instruction
 ## Organizations Represented
 
 - **Anthropic**: Official AI quickstarts and best practices
-- **Pydantic**: Python validation and data processing expertise  
 - **Cloudflare**: Infrastructure runtime and developer tooling
 - **Microsoft**: AI systems and enterprise tooling
 - **PyTorch**: Machine learning infrastructure
@@ -435,7 +453,8 @@ Read the full [Contributing Guide](CONTRIBUTING.md) for step-by-step instruction
 - **Ethereum Foundation**: Blockchain infrastructure
 - **Mattermost**: Enterprise collaboration
 - **CYRUP AI**: Advanced AI development methodologies
-- **Individual Contributors**: Kent Beck (TDD methodology), Dan Abramov (React/Next.js)
+- **OpenAI**: Official multi-agent frameworks and AI development patterns
+- **Individual Contributors**: Kent Beck (TDD methodology), Dan Abramov (React/Next.js), Jason Liu (AI/ML thought leadership)
 
 ## Search GitHub
 
