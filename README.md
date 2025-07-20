@@ -6,8 +6,8 @@ A curated collection of high-quality `CLAUDE.md` files from leading open-source 
 
 ## 🎯 Quick Filters
 
-**Filter by Language**: [TypeScript/JS](#-typescriptjavascript) | [Python](#-python) | [Rust](#-rust) | [Other](#-other-languages)
-**Filter by Purpose**: [AI/ML](#-ai--machine-learning) | [Infrastructure](#-infrastructure-projects) | [Developer Tools](#-developer-tooling) | [Libraries](#-libraries--frameworks)
+**Filter by Language**: [TypeScript/JS](#-typescriptjavascript) | [Python](#-python) | [Rust](#-rust) | [WebAssembly](#-webassembly--high-performance) | [Other](#-other-languages)
+**Filter by Purpose**: [AI Development](#-advanced-ai-development) | [Infrastructure](#-infrastructure-projects) | [Web3/Blockchain](#-web3--blockchain) | [High Performance](#-high-performance-computing) | [Getting Started](#-getting-started)
 
 ## 📋 Table of Contents
 
@@ -53,6 +53,8 @@ A curated collection of high-quality `CLAUDE.md` files from leading open-source 
 |---------|--------|---------------|------------|
 | **[Cloudflare Workers SDK](scenarios/developer-tooling/cloudflare_workers-sdk/README.md)** | ![Stars](https://img.shields.io/github/stars/cloudflare/workers-sdk?style=flat&logo=github) ![License](https://img.shields.io/github/license/cloudflare/workers-sdk?style=flat) ![Activity](https://img.shields.io/github/last-commit/cloudflare/workers-sdk?style=flat) | Monorepo & testing excellence | TypeScript, Monorepo |
 | **[Anthropic Quickstarts](scenarios/getting-started/anthropics_anthropic-quickstarts/README.md)** | ![Stars](https://img.shields.io/github/stars/anthropics/anthropic-quickstarts?style=flat&logo=github) ![License](https://img.shields.io/github/license/anthropics/anthropic-quickstarts?style=flat) ![Activity](https://img.shields.io/github/last-commit/anthropics/anthropic-quickstarts?style=flat) | Multi-project organization | Python, TypeScript, React |
+| **[GoMall](scenarios/developer-tooling/li0on3_GoMall/README.md)** | ![Stars](https://img.shields.io/github/stars/li0on3/GoMall?style=flat&logo=github) ![License](https://img.shields.io/github/license/li0on3/GoMall?style=flat) ![Activity](https://img.shields.io/github/last-commit/li0on3/GoMall?style=flat) | RIPER-5 AI methodology | Go, AI Development |
+| **[Web MuJoCo Gym](scenarios/libraries-frameworks/ninjaa_web-mujoco-gym/README.md)** | ![Stars](https://img.shields.io/github/stars/ninjaa/web-mujoco-gym?style=flat&logo=github) ![License](https://img.shields.io/github/license/ninjaa/web-mujoco-gym?style=flat) ![Activity](https://img.shields.io/github/last-commit/ninjaa/web-mujoco-gym?style=flat) | High-performance WebAssembly | WebAssembly, ML/RL |
 
 ## 🔍 Browse by Technology
 
@@ -63,6 +65,9 @@ A curated collection of high-quality `CLAUDE.md` files from leading open-source 
 - **[Cloudflare Workers SDK](scenarios/developer-tooling/cloudflare_workers-sdk/README.md)** ![Stars](https://img.shields.io/github/stars/cloudflare/workers-sdk?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/cloudflare/workers-sdk?style=flat-square) - Monorepo patterns
 - **[Claude Crew](scenarios/developer-tooling/d-kimuson_claude-crew/README.md)** ![Stars](https://img.shields.io/github/stars/d-kimuson/claude-crew?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/d-kimuson/claude-crew?style=flat-square) - Strict TypeScript standards
 - **[Anthropic Quickstarts](scenarios/getting-started/anthropics_anthropic-quickstarts/README.md)** ![Stars](https://img.shields.io/github/stars/anthropics/anthropic-quickstarts?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/anthropics/anthropic-quickstarts?style=flat-square) - Multi-project setup
+- **[mdx-prompt](scenarios/libraries-frameworks/edspencer_mdx-prompt/README.md)** ![Stars](https://img.shields.io/github/stars/edspencer/mdx-prompt?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/edspencer/mdx-prompt?style=flat-square) - LLM prompt components
+- **[KleverConnect Starter](scenarios/getting-started/klever-hub_kleverconnect-starter/README.md)** ![Stars](https://img.shields.io/github/stars/klever-hub/kleverconnect-starter?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/klever-hub/kleverconnect-starter?style=flat-square) - Web3 React + Vite
+- **[WhereAmI](scenarios/complex-projects/Cmxu_whereami/README.md)** ![Stars](https://img.shields.io/github/stars/Cmxu/whereami?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/Cmxu/whereami?style=flat-square) - SvelteKit with Svelte 5
 
 </details>
 
@@ -91,6 +96,14 @@ A curated collection of high-quality `CLAUDE.md` files from leading open-source 
 - **[GoMall](scenarios/developer-tooling/li0on3_GoMall/README.md)** ![Stars](https://img.shields.io/github/stars/li0on3/GoMall?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/li0on3/GoMall?style=flat-square) - Go with advanced AI methodology
 - **[pipewire-hs](scenarios/libraries-frameworks/JonathanLorimer_pipewire-hs/README.md)** ![Stars](https://img.shields.io/github/stars/JonathanLorimer/pipewire-hs?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/JonathanLorimer/pipewire-hs?style=flat-square) - Haskell FFI bindings
 - **[TrysteroSwift](scenarios/libraries-frameworks/posix4e_TrysteroSwift/README.md)** ![Stars](https://img.shields.io/github/stars/posix4e/TrysteroSwift?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/posix4e/TrysteroSwift?style=flat-square) - Swift P2P networking
+
+</details>
+
+<details>
+<summary><strong>🔧 WebAssembly & High Performance</strong></summary>
+
+- **[Web MuJoCo Gym](scenarios/libraries-frameworks/ninjaa_web-mujoco-gym/README.md)** ![Stars](https://img.shields.io/github/stars/ninjaa/web-mujoco-gym?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/ninjaa/web-mujoco-gym?style=flat-square) - High-performance physics simulation
+- **[Cloudflare workerd](scenarios/infrastructure-projects/cloudflare_workerd/README.md)** ![Stars](https://img.shields.io/github/stars/cloudflare/workerd?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/cloudflare/workerd?style=flat-square) - JavaScript/WebAssembly runtime
 
 </details>
 
@@ -125,6 +138,34 @@ A curated collection of high-quality `CLAUDE.md` files from leading open-source 
 
 - **[Anthropic Quickstarts](scenarios/getting-started/anthropics_anthropic-quickstarts/README.md)** ![Stars](https://img.shields.io/github/stars/anthropics/anthropic-quickstarts?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/anthropics/anthropic-quickstarts?style=flat-square) - Multi-project documentation
 - **[Ethereum.org Website](scenarios/getting-started/ethereum_ethereum-org-website/README.md)** ![Stars](https://img.shields.io/github/stars/ethereum/ethereum-org-website?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/ethereum/ethereum-org-website?style=flat-square) - Community-driven development
+- **[KleverConnect Starter](scenarios/getting-started/klever-hub_kleverconnect-starter/README.md)** ![Stars](https://img.shields.io/github/stars/klever-hub/kleverconnect-starter?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/klever-hub/kleverconnect-starter?style=flat-square) - Web3 development starter
+
+</details>
+
+<details>
+<summary><strong>🧠 Advanced AI Development</strong></summary>
+
+- **[Basic Memory](scenarios/complex-projects/basicmachines-co_basic-memory/README.md)** ![Stars](https://img.shields.io/github/stars/basicmachines-co/basic-memory?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/basicmachines-co/basic-memory?style=flat-square) - MCP integration patterns
+- **[GoMall](scenarios/developer-tooling/li0on3_GoMall/README.md)** ![Stars](https://img.shields.io/github/stars/li0on3/GoMall?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/li0on3/GoMall?style=flat-square) - RIPER-5 methodology
+- **[mdx-prompt](scenarios/libraries-frameworks/edspencer_mdx-prompt/README.md)** ![Stars](https://img.shields.io/github/stars/edspencer/mdx-prompt?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/edspencer/mdx-prompt?style=flat-square) - Prompt engineering
+- **[Ansible MCP Server](scenarios/infrastructure-projects/washyu_ansible-mcp-server/README.md)** ![Stars](https://img.shields.io/github/stars/washyu/ansible-mcp-server?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/washyu/ansible-mcp-server?style=flat-square) - Infrastructure AI automation
+
+</details>
+
+<details>
+<summary><strong>🔧 High-Performance Computing</strong></summary>
+
+- **[Web MuJoCo Gym](scenarios/libraries-frameworks/ninjaa_web-mujoco-gym/README.md)** ![Stars](https://img.shields.io/github/stars/ninjaa/web-mujoco-gym?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/ninjaa/web-mujoco-gym?style=flat-square) - WebAssembly physics simulation
+- **[Cloudflare workerd](scenarios/infrastructure-projects/cloudflare_workerd/README.md)** ![Stars](https://img.shields.io/github/stars/cloudflare/workerd?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/cloudflare/workerd?style=flat-square) - JavaScript/WebAssembly runtime
+- **[pipewire-hs](scenarios/libraries-frameworks/JonathanLorimer_pipewire-hs/README.md)** ![Stars](https://img.shields.io/github/stars/JonathanLorimer/pipewire-hs?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/JonathanLorimer/pipewire-hs?style=flat-square) - High-performance Haskell bindings
+
+</details>
+
+<details>
+<summary><strong>🌐 Web3 & Blockchain</strong></summary>
+
+- **[KleverConnect Starter](scenarios/getting-started/klever-hub_kleverconnect-starter/README.md)** ![Stars](https://img.shields.io/github/stars/klever-hub/kleverconnect-starter?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/klever-hub/kleverconnect-starter?style=flat-square) - Klever Wallet integration
+- **[TrysteroSwift](scenarios/libraries-frameworks/posix4e_TrysteroSwift/README.md)** ![Stars](https://img.shields.io/github/stars/posix4e/TrysteroSwift?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/posix4e/TrysteroSwift?style=flat-square) - Decentralized P2P networking
 
 </details>
 
