@@ -52,6 +52,7 @@ A curated collection of high-quality `CLAUDE.md` files from leading open-source 
 ### 🥈 **Advanced Patterns**
 | Example | Badges | Why It's Great | Tech Stack |
 |---------|--------|---------------|------------|
+| **[H1B Visa Analysis](scenarios/complex-projects/ChaseNoCap_h1b-visa-analysis/README.md)** | ![Stars](https://img.shields.io/github/stars/ChaseNoCap/h1b-visa-analysis?style=flat&logo=github) ![License](https://img.shields.io/github/license/ChaseNoCap/h1b-visa-analysis?style=flat) ![Activity](https://img.shields.io/github/last-commit/ChaseNoCap/h1b-visa-analysis?style=flat) | AI-guided development framework | TypeScript, Meta-Repository |
 | **[Cloudflare Workers SDK](scenarios/developer-tooling/cloudflare_workers-sdk/README.md)** | ![Stars](https://img.shields.io/github/stars/cloudflare/workers-sdk?style=flat&logo=github) ![License](https://img.shields.io/github/license/cloudflare/workers-sdk?style=flat) ![Activity](https://img.shields.io/github/last-commit/cloudflare/workers-sdk?style=flat) | Monorepo & testing excellence | TypeScript, Monorepo |
 | **[Anthropic Quickstarts](scenarios/getting-started/anthropics_anthropic-quickstarts/README.md)** | ![Stars](https://img.shields.io/github/stars/anthropics/anthropic-quickstarts?style=flat&logo=github) ![License](https://img.shields.io/github/license/anthropics/anthropic-quickstarts?style=flat) ![Activity](https://img.shields.io/github/last-commit/anthropics/anthropic-quickstarts?style=flat) | Multi-project organization by AI experts | Python, TypeScript, React |
 | **[GoMall](scenarios/developer-tooling/li0on3_GoMall/README.md)** | ![Stars](https://img.shields.io/github/stars/li0on3/GoMall?style=flat&logo=github) ![License](https://img.shields.io/github/license/li0on3/GoMall?style=flat) ![Activity](https://img.shields.io/github/last-commit/li0on3/GoMall?style=flat) | RIPER-5 AI methodology | Go, AI Development |
@@ -62,6 +63,9 @@ A curated collection of high-quality `CLAUDE.md` files from leading open-source 
 <details>
 <summary><strong>🟦 TypeScript/JavaScript</strong></summary>
 
+- **[H1B Visa Analysis](scenarios/complex-projects/ChaseNoCap_h1b-visa-analysis/README.md)** ![Stars](https://img.shields.io/github/stars/ChaseNoCap/h1b-visa-analysis?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/ChaseNoCap/h1b-visa-analysis?style=flat-square) - AI-guided meta-repository framework
+- **[Image Generation MCP](scenarios/developer-tooling/johnw188_image-generation-mcp/README.md)** ![Stars](https://img.shields.io/github/stars/johnw188/image-generation-mcp?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/johnw188/image-generation-mcp?style=flat-square) - MCP server with Cloudflare Workers
+- **[Nine Week Challenge](scenarios/complex-projects/nerveband_nine-week-challenge/README.md)** ![Stars](https://img.shields.io/github/stars/nerveband/nine-week-challenge?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/nerveband/nine-week-challenge?style=flat-square) - Next.js 14 App Router wellness app
 - **[Overreacted.io](scenarios/complex-projects/gaearon_overreacted.io/README.md)** ![Stars](https://img.shields.io/github/stars/gaearon/overreacted.io?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/gaearon/overreacted.io?style=flat-square) - Next.js with MDX
 - **[Cloudflare Workers SDK](scenarios/developer-tooling/cloudflare_workers-sdk/README.md)** ![Stars](https://img.shields.io/github/stars/cloudflare/workers-sdk?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/cloudflare/workers-sdk?style=flat-square) - Monorepo patterns
 - **[Claude Crew](scenarios/developer-tooling/d-kimuson_claude-crew/README.md)** ![Stars](https://img.shields.io/github/stars/d-kimuson/claude-crew?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/d-kimuson/claude-crew?style=flat-square) - Strict TypeScript standards
@@ -197,6 +201,11 @@ Large-scale systems and runtime environments that power modern applications.
 
 Multi-service applications with sophisticated architectures and enterprise-scale concerns.
 
+- **[H1B Visa Analysis](scenarios/complex-projects/ChaseNoCap_h1b-visa-analysis/README.md)** ![Stars](https://img.shields.io/github/stars/ChaseNoCap/h1b-visa-analysis?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/ChaseNoCap/h1b-visa-analysis?style=flat-square) ![Activity](https://img.shields.io/github/last-commit/ChaseNoCap/h1b-visa-analysis?style=flat-square) - AI-guided meta-repository framework
+  - 17-module meta-repository architecture
+  - Progressive context loading for AI assistants
+  - XML-structured prompt engineering system
+
 - **[Basic Memory](scenarios/complex-projects/basicmachines-co_basic-memory/README.md)** ![Stars](https://img.shields.io/github/stars/basicmachines-co/basic-memory?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/basicmachines-co/basic-memory?style=flat-square) ![Activity](https://img.shields.io/github/last-commit/basicmachines-co/basic-memory?style=flat-square) - Cutting-edge MCP integration & AI collaboration
   - MCP-first architecture patterns
   - AI-human collaborative development
@@ -237,6 +246,11 @@ Multi-service applications with sophisticated architectures and enterprise-scale
   - Multi-agent architecture and coordination
   - Enterprise-grade AI system design
 
+- **[Nine Week Challenge](scenarios/complex-projects/nerveband_nine-week-challenge/README.md)** ![Stars](https://img.shields.io/github/stars/nerveband/nine-week-challenge?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/nerveband/nine-week-challenge?style=flat-square) ![Activity](https://img.shields.io/github/last-commit/nerveband/nine-week-challenge?style=flat-square) - Next.js 14 wellness tracking application
+  - App Router with server components
+  - Supabase with Row Level Security
+  - Progressive habit formation system
+
 - **[WhereAmI](scenarios/complex-projects/Cmxu_whereami/README.md)** ![Stars](https://img.shields.io/github/stars/Cmxu/whereami?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/Cmxu/whereami?style=flat-square) ![Activity](https://img.shields.io/github/last-commit/Cmxu/whereami?style=flat-square) - SvelteKit geolocation game
   - Svelte 5 runes and modern patterns
   - Cloudflare Workers integration
@@ -245,6 +259,11 @@ Multi-service applications with sophisticated architectures and enterprise-scale
 ### 🛠️ Developer Tooling
 
 CLI tools, build systems, and developer productivity solutions.
+
+- **[Image Generation MCP](scenarios/developer-tooling/johnw188_image-generation-mcp/README.md)** ![Stars](https://img.shields.io/github/stars/johnw188/image-generation-mcp?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/johnw188/image-generation-mcp?style=flat-square) ![Activity](https://img.shields.io/github/last-commit/johnw188/image-generation-mcp?style=flat-square) - MCP server for AI image generation
+  - Cloudflare Workers with AI model integration
+  - OAuth authentication patterns
+  - Serverless deployment architecture
 
 - **[Cloudflare Workers SDK](scenarios/developer-tooling/cloudflare_workers-sdk/README.md)** ![Stars](https://img.shields.io/github/stars/cloudflare/workers-sdk?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/cloudflare/workers-sdk?style=flat-square) ![Activity](https://img.shields.io/github/last-commit/cloudflare/workers-sdk?style=flat-square) - Official SDK and CLI for Cloudflare Workers (3,271 stars)
   - Strict package management conventions
