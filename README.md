@@ -64,6 +64,8 @@ A curated collection of high-quality `CLAUDE.md` files from leading open-source 
 <summary><strong>🟦 TypeScript/JavaScript</strong></summary>
 
 - **[H1B Visa Analysis](scenarios/complex-projects/ChaseNoCap_h1b-visa-analysis/README.md)** ![Stars](https://img.shields.io/github/stars/ChaseNoCap/h1b-visa-analysis?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/ChaseNoCap/h1b-visa-analysis?style=flat-square) - AI-guided meta-repository framework
+- **[SDLC Engine](scenarios/developer-tooling/ChaseNoCap_sdlc-engine/README.md)** ![Stars](https://img.shields.io/github/stars/ChaseNoCap/sdlc-engine?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/ChaseNoCap/sdlc-engine?style=flat-square) - State machine workflow orchestration
+- **[Web Builder](scenarios/complex-projects/dev-mahfuj80_web-builder/README.md)** ![Stars](https://img.shields.io/github/stars/dev-mahfuj80/web-builder?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/dev-mahfuj80/web-builder?style=flat-square) - B2B2B SaaS platform with Next.js 14
 - **[Image Generation MCP](scenarios/developer-tooling/johnw188_image-generation-mcp/README.md)** ![Stars](https://img.shields.io/github/stars/johnw188/image-generation-mcp?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/johnw188/image-generation-mcp?style=flat-square) - MCP server with Cloudflare Workers
 - **[Nine Week Challenge](scenarios/complex-projects/nerveband_nine-week-challenge/README.md)** ![Stars](https://img.shields.io/github/stars/nerveband/nine-week-challenge?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/nerveband/nine-week-challenge?style=flat-square) - Next.js 14 App Router wellness app
 - **[Overreacted.io](scenarios/complex-projects/gaearon_overreacted.io/README.md)** ![Stars](https://img.shields.io/github/stars/gaearon/overreacted.io?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/gaearon/overreacted.io?style=flat-square) - Next.js with MDX
@@ -206,6 +208,11 @@ Multi-service applications with sophisticated architectures and enterprise-scale
   - Progressive context loading for AI assistants
   - XML-structured prompt engineering system
 
+- **[Web Builder](scenarios/complex-projects/dev-mahfuj80_web-builder/README.md)** ![Stars](https://img.shields.io/github/stars/dev-mahfuj80/web-builder?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/dev-mahfuj80/web-builder?style=flat-square) ![Activity](https://img.shields.io/github/last-commit/dev-mahfuj80/web-builder?style=flat-square) - B2B2B SaaS platform with Next.js 14
+  - Multi-tenant architecture with agency sub-accounts
+  - Drag & drop website/funnel builder
+  - Stripe Connect integration for multi-vendor payments
+
 - **[Basic Memory](scenarios/complex-projects/basicmachines-co_basic-memory/README.md)** ![Stars](https://img.shields.io/github/stars/basicmachines-co/basic-memory?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/basicmachines-co/basic-memory?style=flat-square) ![Activity](https://img.shields.io/github/last-commit/basicmachines-co/basic-memory?style=flat-square) - Cutting-edge MCP integration & AI collaboration
   - MCP-first architecture patterns
   - AI-human collaborative development
@@ -259,6 +266,11 @@ Multi-service applications with sophisticated architectures and enterprise-scale
 ### 🛠️ Developer Tooling
 
 CLI tools, build systems, and developer productivity solutions.
+
+- **[SDLC Engine](scenarios/developer-tooling/ChaseNoCap_sdlc-engine/README.md)** ![Stars](https://img.shields.io/github/stars/ChaseNoCap/sdlc-engine?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/ChaseNoCap/sdlc-engine?style=flat-square) ![Activity](https://img.shields.io/github/last-commit/ChaseNoCap/sdlc-engine?style=flat-square) - State machine workflow orchestration engine
+  - Event-driven architecture for development workflows
+  - Automated task execution with error recovery
+  - AI-assisted development process management
 
 - **[Image Generation MCP](scenarios/developer-tooling/johnw188_image-generation-mcp/README.md)** ![Stars](https://img.shields.io/github/stars/johnw188/image-generation-mcp?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/johnw188/image-generation-mcp?style=flat-square) ![Activity](https://img.shields.io/github/last-commit/johnw188/image-generation-mcp?style=flat-square) - MCP server for AI image generation
   - Cloudflare Workers with AI model integration
