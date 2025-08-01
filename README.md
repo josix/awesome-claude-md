@@ -90,6 +90,8 @@ A curated collection of high-quality `CLAUDE.md` files from leading open-source 
 - **[Jason Liu Blog](scenarios/developer-tooling/jxnl_blog/README.md)** ![Stars](https://img.shields.io/github/stars/jxnl/blog?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/jxnl/blog?style=flat-square) - AI/ML thought leadership
 - **[Ultimate RVC](scenarios/libraries-frameworks/JackismyShephard_ultimate-rvc/README.md)** ![Stars](https://img.shields.io/github/stars/JackismyShephard/ultimate-rvc?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/JackismyShephard/ultimate-rvc?style=flat-square) - AI-powered audio content creation
 - **[Web Monitoring](scenarios/complex-projects/leenbj_web-Monitoring/README.md)** ![Stars](https://img.shields.io/github/stars/leenbj/web-Monitoring?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/leenbj/web-Monitoring?style=flat-square) - Enterprise monitoring system
+- **[HA Irrigation Strategy](scenarios/developer-tooling/JakeTheRabbit_HA-Irrigation-Strategy/README.md)** ![Stars](https://img.shields.io/github/stars/JakeTheRabbit/HA-Irrigation-Strategy?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/JakeTheRabbit/HA-Irrigation-Strategy?style=flat-square) - Smart home agriculture automation
+- **[Swift Law](scenarios/developer-tooling/etisamhaq_Swift-Law/README.md)** ![Stars](https://img.shields.io/github/stars/etisamhaq/Swift-Law?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/etisamhaq/Swift-Law?style=flat-square) - Legal AI assistant
 
 </details>
 
@@ -112,6 +114,7 @@ A curated collection of high-quality `CLAUDE.md` files from leading open-source 
 - **[GoMall](scenarios/developer-tooling/li0on3_GoMall/README.md)** ![Stars](https://img.shields.io/github/stars/li0on3/GoMall?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/li0on3/GoMall?style=flat-square) - Go with advanced AI methodology
 - **[pipewire-hs](scenarios/libraries-frameworks/JonathanLorimer_pipewire-hs/README.md)** ![Stars](https://img.shields.io/github/stars/JonathanLorimer/pipewire-hs?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/JonathanLorimer/pipewire-hs?style=flat-square) - Haskell FFI bindings
 - **[TrysteroSwift](scenarios/libraries-frameworks/posix4e_TrysteroSwift/README.md)** ![Stars](https://img.shields.io/github/stars/posix4e/TrysteroSwift?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/posix4e/TrysteroSwift?style=flat-square) - Swift P2P networking
+- **[macMCP](scenarios/developer-tooling/obra_macMCP/README.md)** ![Stars](https://img.shields.io/github/stars/obra/macMCP?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/obra/macMCP?style=flat-square) - macOS MCP server
 
 </details>
 
@@ -367,6 +370,21 @@ CLI tools, build systems, and developer productivity solutions.
   - High-performance Rust CLI with parallel processing
   - LLM-optimized Markdown generation from codebases
   - Semantic analysis and language support
+
+- **[HA Irrigation Strategy](scenarios/developer-tooling/JakeTheRabbit_HA-Irrigation-Strategy/README.md)** ![Stars](https://img.shields.io/github/stars/JakeTheRabbit/HA-Irrigation-Strategy?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/JakeTheRabbit/HA-Irrigation-Strategy?style=flat-square) ![Activity](https://img.shields.io/github/last-commit/JakeTheRabbit/HA-Irrigation-Strategy?style=flat-square) - Advanced smart home agriculture automation
+  - Four-phase irrigation cycle with statistical analysis
+  - Home Assistant integration with crop steering algorithms
+  - VWC monitoring with adaptive thresholds and emergency triggers
+
+- **[macMCP](scenarios/developer-tooling/obra_macMCP/README.md)** ![Stars](https://img.shields.io/github/stars/obra/macMCP?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/obra/macMCP?style=flat-square) ![Activity](https://img.shields.io/github/last-commit/obra/macMCP?style=flat-square) - macOS MCP server implementation
+  - Advanced macOS Accessibility APIs integration
+  - Swift system programming with comprehensive testing
+  - No-mock testing philosophy with real system interactions
+
+- **[Swift Law](scenarios/developer-tooling/etisamhaq_Swift-Law/README.md)** ![Stars](https://img.shields.io/github/stars/etisamhaq/Swift-Law?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/etisamhaq/Swift-Law?style=flat-square) ![Activity](https://img.shields.io/github/last-commit/etisamhaq/Swift-Law?style=flat-square) - Domain-specific legal AI assistant
+  - Context-bounded RAG system for Pakistan's Constitution
+  - Professional AI deployment with security considerations
+  - Streamlit-based legal technology patterns
 
 ### 📚 Libraries & Frameworks
 
