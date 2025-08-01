@@ -75,6 +75,7 @@ A curated collection of high-quality `CLAUDE.md` files from leading open-source 
 - **[mdx-prompt](scenarios/libraries-frameworks/edspencer_mdx-prompt/README.md)** ![Stars](https://img.shields.io/github/stars/edspencer/mdx-prompt?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/edspencer/mdx-prompt?style=flat-square) - LLM prompt components
 - **[KleverConnect Starter](scenarios/getting-started/klever-hub_kleverconnect-starter/README.md)** ![Stars](https://img.shields.io/github/stars/klever-hub/kleverconnect-starter?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/klever-hub/kleverconnect-starter?style=flat-square) - Web3 React + Vite
 - **[WhereAmI](scenarios/complex-projects/Cmxu_whereami/README.md)** ![Stars](https://img.shields.io/github/stars/Cmxu/whereami?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/Cmxu/whereami?style=flat-square) - SvelteKit with Svelte 5
+- **[Yutodo](scenarios/developer-tooling/yutotnh_yutodo/README.md)** ![Stars](https://img.shields.io/github/stars/yutotnh/yutodo?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/yutotnh/yutodo?style=flat-square) - Full-stack application documentation
 
 </details>
 
@@ -87,6 +88,10 @@ A curated collection of high-quality `CLAUDE.md` files from leading open-source 
 - **[PyTorch tlparse](scenarios/developer-tooling/pytorch_tlparse/README.md)** ![Stars](https://img.shields.io/github/stars/pytorch/tlparse?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/pytorch/tlparse?style=flat-square) - Dual-language (Rust/Python)
 - **[Anthropic Quickstarts](scenarios/getting-started/anthropics_anthropic-quickstarts/README.md)** ![Stars](https://img.shields.io/github/stars/anthropics/anthropic-quickstarts?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/anthropics/anthropic-quickstarts?style=flat-square) - Computer-use demo
 - **[Jason Liu Blog](scenarios/developer-tooling/jxnl_blog/README.md)** ![Stars](https://img.shields.io/github/stars/jxnl/blog?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/jxnl/blog?style=flat-square) - AI/ML thought leadership
+- **[Ultimate RVC](scenarios/libraries-frameworks/JackismyShephard_ultimate-rvc/README.md)** ![Stars](https://img.shields.io/github/stars/JackismyShephard/ultimate-rvc?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/JackismyShephard/ultimate-rvc?style=flat-square) - AI-powered audio content creation
+- **[Web Monitoring](scenarios/complex-projects/leenbj_web-Monitoring/README.md)** ![Stars](https://img.shields.io/github/stars/leenbj/web-Monitoring?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/leenbj/web-Monitoring?style=flat-square) - Enterprise monitoring system
+- **[HA Irrigation Strategy](scenarios/developer-tooling/JakeTheRabbit_HA-Irrigation-Strategy/README.md)** ![Stars](https://img.shields.io/github/stars/JakeTheRabbit/HA-Irrigation-Strategy?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/JakeTheRabbit/HA-Irrigation-Strategy?style=flat-square) - Smart home agriculture automation
+- **[Swift Law](scenarios/developer-tooling/etisamhaq_Swift-Law/README.md)** ![Stars](https://img.shields.io/github/stars/etisamhaq/Swift-Law?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/etisamhaq/Swift-Law?style=flat-square) - Legal AI assistant
 
 </details>
 
@@ -95,6 +100,9 @@ A curated collection of high-quality `CLAUDE.md` files from leading open-source 
 
 - **[CYRUP AI Kargo](scenarios/developer-tooling/cyrup-ai_kargo/README.md)** ![Stars](https://img.shields.io/github/stars/cyrup-ai/kargo?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/cyrup-ai/kargo?style=flat-square) - State machine workflows
 - **[PyTorch tlparse](scenarios/developer-tooling/pytorch_tlparse/README.md)** ![Stars](https://img.shields.io/github/stars/pytorch/tlparse?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/pytorch/tlparse?style=flat-square) - Performance optimization
+- **[Tasker Core RS](scenarios/developer-tooling/tasker-systems_tasker-core-rs/README.md)** ![Stars](https://img.shields.io/github/stars/tasker-systems/tasker-core-rs?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/tasker-systems/tasker-core-rs?style=flat-square) - Workflow orchestration architecture
+- **[Context Creator](scenarios/developer-tooling/matiasvillaverde_context-creator/README.md)** ![Stars](https://img.shields.io/github/stars/matiasvillaverde/context-creator?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/matiasvillaverde/context-creator?style=flat-square) - AI-optimized codebase analysis
+- **[OAuth2 Passkey](scenarios/libraries-frameworks/ktaka-ccmp_oauth2-passkey/README.md)** ![Stars](https://img.shields.io/github/stars/ktaka-ccmp/oauth2-passkey?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/ktaka-ccmp/oauth2-passkey?style=flat-square) - Modern authentication library
 
 </details>
 
@@ -106,6 +114,7 @@ A curated collection of high-quality `CLAUDE.md` files from leading open-source 
 - **[GoMall](scenarios/developer-tooling/li0on3_GoMall/README.md)** ![Stars](https://img.shields.io/github/stars/li0on3/GoMall?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/li0on3/GoMall?style=flat-square) - Go with advanced AI methodology
 - **[pipewire-hs](scenarios/libraries-frameworks/JonathanLorimer_pipewire-hs/README.md)** ![Stars](https://img.shields.io/github/stars/JonathanLorimer/pipewire-hs?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/JonathanLorimer/pipewire-hs?style=flat-square) - Haskell FFI bindings
 - **[TrysteroSwift](scenarios/libraries-frameworks/posix4e_TrysteroSwift/README.md)** ![Stars](https://img.shields.io/github/stars/posix4e/TrysteroSwift?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/posix4e/TrysteroSwift?style=flat-square) - Swift P2P networking
+- **[macMCP](scenarios/developer-tooling/obra_macMCP/README.md)** ![Stars](https://img.shields.io/github/stars/obra/macMCP?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/obra/macMCP?style=flat-square) - macOS MCP server
 
 </details>
 
@@ -263,6 +272,11 @@ Multi-service applications with sophisticated architectures and enterprise-scale
   - Cloudflare Workers integration
   - Advanced state management
 
+- **[Web Monitoring](scenarios/complex-projects/leenbj_web-Monitoring/README.md)** ![Stars](https://img.shields.io/github/stars/leenbj/web-Monitoring?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/leenbj/web-Monitoring?style=flat-square) ![Activity](https://img.shields.io/github/last-commit/leenbj/web-Monitoring?style=flat-square) - Enterprise website monitoring system
+  - Full-stack Flask backend with Vue.js frontend
+  - Multilingual documentation approach with internationalization patterns
+  - Production-ready Docker configuration and security implementation
+
 ### 🛠️ Developer Tooling
 
 CLI tools, build systems, and developer productivity solutions.
@@ -337,6 +351,41 @@ CLI tools, build systems, and developer productivity solutions.
   - Innovative module loading system
   - Multi-context execution architecture
 
+- **[Yutodo](scenarios/developer-tooling/yutotnh_yutodo/README.md)** ![Stars](https://img.shields.io/github/stars/yutotnh/yutodo?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/yutotnh/yutodo?style=flat-square) ![Activity](https://img.shields.io/github/last-commit/yutotnh/yutodo?style=flat-square) - Comprehensive full-stack application documentation
+  - Multi-layered architecture with sophisticated testing infrastructure
+  - Docker-based E2E testing with parallel execution
+  - Modern development practices with AI-assisted documentation
+
+- **[Claude Code F2](scenarios/developer-tooling/pransil_claude-code-f2/README.md)** ![Stars](https://img.shields.io/github/stars/pransil/claude-code-f2?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/pransil/claude-code-f2?style=flat-square) ![Activity](https://img.shields.io/github/last-commit/pransil/claude-code-f2?style=flat-square) - Systematic development framework
+  - 6-phase development workflow with quality gates
+  - Template-driven approach eliminating setup mistakes
+  - Quality-first philosophy with built-in standards
+
+- **[Tasker Core RS](scenarios/developer-tooling/tasker-systems_tasker-core-rs/README.md)** ![Stars](https://img.shields.io/github/stars/tasker-systems/tasker-core-rs?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/tasker-systems/tasker-core-rs?style=flat-square) ![Activity](https://img.shields.io/github/last-commit/tasker-systems/tasker-core-rs?style=flat-square) - Rust workflow orchestration architecture
+  - Handle-based FFI architecture with zero global lookup patterns
+  - Testing-driven development philosophy
+  - Transparent development methodology with iterative refinement
+
+- **[Context Creator](scenarios/developer-tooling/matiasvillaverde_context-creator/README.md)** ![Stars](https://img.shields.io/github/stars/matiasvillaverde/context-creator?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/matiasvillaverde/context-creator?style=flat-square) ![Activity](https://img.shields.io/github/last-commit/matiasvillaverde/context-creator?style=flat-square) - AI-optimized codebase analysis tool
+  - High-performance Rust CLI with parallel processing
+  - LLM-optimized Markdown generation from codebases
+  - Semantic analysis and language support
+
+- **[HA Irrigation Strategy](scenarios/developer-tooling/JakeTheRabbit_HA-Irrigation-Strategy/README.md)** ![Stars](https://img.shields.io/github/stars/JakeTheRabbit/HA-Irrigation-Strategy?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/JakeTheRabbit/HA-Irrigation-Strategy?style=flat-square) ![Activity](https://img.shields.io/github/last-commit/JakeTheRabbit/HA-Irrigation-Strategy?style=flat-square) - Advanced smart home agriculture automation
+  - Four-phase irrigation cycle with statistical analysis
+  - Home Assistant integration with crop steering algorithms
+  - VWC monitoring with adaptive thresholds and emergency triggers
+
+- **[macMCP](scenarios/developer-tooling/obra_macMCP/README.md)** ![Stars](https://img.shields.io/github/stars/obra/macMCP?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/obra/macMCP?style=flat-square) ![Activity](https://img.shields.io/github/last-commit/obra/macMCP?style=flat-square) - macOS MCP server implementation
+  - Advanced macOS Accessibility APIs integration
+  - Swift system programming with comprehensive testing
+  - No-mock testing philosophy with real system interactions
+
+- **[Swift Law](scenarios/developer-tooling/etisamhaq_Swift-Law/README.md)** ![Stars](https://img.shields.io/github/stars/etisamhaq/Swift-Law?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/etisamhaq/Swift-Law?style=flat-square) ![Activity](https://img.shields.io/github/last-commit/etisamhaq/Swift-Law?style=flat-square) - Domain-specific legal AI assistant
+  - Context-bounded RAG system for Pakistan's Constitution
+  - Professional AI deployment with security considerations
+  - Streamlit-based legal technology patterns
+
 ### 📚 Libraries & Frameworks
 
 Reusable components, SDKs, and framework implementations.
@@ -391,6 +440,16 @@ Reusable components, SDKs, and framework implementations.
   - WebAssembly-based MuJoCo integration
   - Parallel environment rendering
   - ML/RL inference support
+
+- **[Ultimate RVC](scenarios/libraries-frameworks/JackismyShephard_ultimate-rvc/README.md)** ![Stars](https://img.shields.io/github/stars/JackismyShephard/ultimate-rvc?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/JackismyShephard/ultimate-rvc?style=flat-square) ![Activity](https://img.shields.io/github/last-commit/JackismyShephard/ultimate-rvc?style=flat-square) - AI-powered audio content creation
+  - Exceptional testing methodology with evidence-based approach
+  - Advanced AI collaboration framework
+  - Systematic development workflow with quality gates
+
+- **[OAuth2 Passkey](scenarios/libraries-frameworks/ktaka-ccmp_oauth2-passkey/README.md)** ![Stars](https://img.shields.io/github/stars/ktaka-ccmp/oauth2-passkey?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/ktaka-ccmp/oauth2-passkey?style=flat-square) ![Activity](https://img.shields.io/github/last-commit/ktaka-ccmp/oauth2-passkey?style=flat-square) - Modern authentication library for Rust
+  - Layered architecture with coordination patterns
+  - Security-first design with comprehensive protection
+  - Publication-ready development standards
 
 ### 🚀 Getting Started
 
