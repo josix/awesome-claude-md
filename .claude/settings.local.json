@@ -13,7 +13,8 @@
       "mcp__personal-github__get_pull_request_comments",
       "Bash(git add:*)",
       "Bash(git checkout:*)",
-      "Bash(grep:*)"
+      "Bash(grep:*)",
+      "Bash(gh search repos:*)"
     ],
     "deny": []
   }
