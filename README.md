@@ -52,6 +52,9 @@ A curated collection of high-quality `CLAUDE.md` files from leading open-source 
 ### 🥈 **Advanced Patterns**
 | Example | Badges | Why It's Great | Tech Stack |
 |---------|--------|---------------|------------|
+| **[Citadel Protocol Contracts](scenarios/complex-projects/Citadel-Protocol_contracts/analysis.md)** | ![Stars](https://img.shields.io/github/stars/Citadel-Protocol/contracts?style=flat&logo=github) ![License](https://img.shields.io/github/license/Citadel-Protocol/contracts?style=flat) ![Activity](https://img.shields.io/github/last-commit/Citadel-Protocol/contracts?style=flat) | Security-first DeFi protocol architecture | Solidity, TypeScript, DeFi |
+| **[OpenFeign QueryDSL](scenarios/developer-tooling/OpenFeign_querydsl/analysis.md)** | ![Stars](https://img.shields.io/github/stars/OpenFeign/querydsl?style=flat&logo=github) ![License](https://img.shields.io/github/license/OpenFeign/querydsl?style=flat) ![Activity](https://img.shields.io/github/last-commit/OpenFeign/querydsl?style=flat) | Enterprise Java framework excellence | Java, Multi-Backend Query |
+| **[Callstack React Native Testing](scenarios/libraries-frameworks/callstack_react-native-testing-library/analysis.md)** | ![Stars](https://img.shields.io/github/stars/callstack/react-native-testing-library?style=flat&logo=github) ![License](https://img.shields.io/github/license/callstack/react-native-testing-library?style=flat) ![Activity](https://img.shields.io/github/last-commit/callstack/react-native-testing-library?style=flat) | Testing library gold standard | TypeScript, React Native |
 | **[H1B Visa Analysis](scenarios/complex-projects/ChaseNoCap_h1b-visa-analysis/README.md)** | ![Stars](https://img.shields.io/github/stars/ChaseNoCap/h1b-visa-analysis?style=flat&logo=github) ![License](https://img.shields.io/github/license/ChaseNoCap/h1b-visa-analysis?style=flat) ![Activity](https://img.shields.io/github/last-commit/ChaseNoCap/h1b-visa-analysis?style=flat) | AI-guided development framework | TypeScript, Meta-Repository |
 | **[Claude Flow](scenarios/complex-projects/ruvnet_claude-flow/README.md)** | ![Stars](https://img.shields.io/github/stars/ruvnet/claude-flow?style=flat&logo=github) ![License](https://img.shields.io/github/license/ruvnet/claude-flow?style=flat) ![Activity](https://img.shields.io/github/last-commit/ruvnet/claude-flow?style=flat) | Enterprise AI orchestration platform | JavaScript, 64-Agent System |
 | **[Cloudflare Workers SDK](scenarios/developer-tooling/cloudflare_workers-sdk/README.md)** | ![Stars](https://img.shields.io/github/stars/cloudflare/workers-sdk?style=flat&logo=github) ![License](https://img.shields.io/github/license/cloudflare/workers-sdk?style=flat) ![Activity](https://img.shields.io/github/last-commit/cloudflare/workers-sdk?style=flat) | Monorepo & testing excellence | TypeScript, Monorepo |
@@ -61,8 +64,10 @@ A curated collection of high-quality `CLAUDE.md` files from leading open-source 
 ## 🔍 Browse by Technology
 
 <details>
-<summary><strong>🟦 TypeScript/JavaScript</strong> (22 examples)</summary>
+<summary><strong>🟦 TypeScript/JavaScript</strong> (25 examples)</summary>
 
+- **[Callstack React Native Testing](scenarios/libraries-frameworks/callstack_react-native-testing-library/analysis.md)** ![Stars](https://img.shields.io/github/stars/callstack/react-native-testing-library?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/callstack/react-native-testing-library?style=flat-square) - Testing library gold standard from React Native experts
+- **[Citadel Protocol Contracts](scenarios/complex-projects/Citadel-Protocol_contracts/analysis.md)** ![Stars](https://img.shields.io/github/stars/Citadel-Protocol/contracts?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/Citadel-Protocol/contracts?style=flat-square) - Security-first DeFi protocol documentation
 - **[H1B Visa Analysis](scenarios/complex-projects/ChaseNoCap_h1b-visa-analysis/README.md)** ![Stars](https://img.shields.io/github/stars/ChaseNoCap/h1b-visa-analysis?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/ChaseNoCap/h1b-visa-analysis?style=flat-square) - AI-guided meta-repository framework
 - **[SDLC Engine](scenarios/developer-tooling/ChaseNoCap_sdlc-engine/README.md)** ![Stars](https://img.shields.io/github/stars/ChaseNoCap/sdlc-engine?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/ChaseNoCap/sdlc-engine?style=flat-square) - State machine workflow orchestration
 - **[WhereAmI](scenarios/complex-projects/Cmxu_whereami/README.md)** ![Stars](https://img.shields.io/github/stars/Cmxu/whereami?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/Cmxu/whereami?style=flat-square) - SvelteKit with Svelte 5
@@ -81,6 +86,7 @@ A curated collection of high-quality `CLAUDE.md` files from leading open-source 
 - **[Semantic Workbench](scenarios/complex-projects/microsoft_semanticworkbench/README.md)** ![Stars](https://img.shields.io/github/stars/microsoft/semanticworkbench?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/microsoft/semanticworkbench?style=flat-square) - Microsoft AI assistant platform
 - **[Nine Week Challenge](scenarios/complex-projects/nerveband_nine-week-challenge/README.md)** ![Stars](https://img.shields.io/github/stars/nerveband/nine-week-challenge?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/nerveband/nine-week-challenge?style=flat-square) - Next.js 14 App Router wellness app
 - **[Webhook Broker](scenarios/complex-projects/newscred_webhook-broker/README.md)** ![Stars](https://img.shields.io/github/stars/newscred/webhook-broker?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/newscred/webhook-broker?style=flat-square) - Event-driven microservice architecture
+- **[Omar Dulaimi Prisma tRPC Generator](scenarios/libraries-frameworks/omar-dulaimi_prisma-trpc-generator/analysis.md)** ![Stars](https://img.shields.io/github/stars/omar-dulaimi/prisma-trpc-generator?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/omar-dulaimi/prisma-trpc-generator?style=flat-square) - Modern full-stack TypeScript tooling integration
 - **[Platformatic](scenarios/complex-projects/platformatic_platformatic/README.md)** ![Stars](https://img.shields.io/github/stars/platformatic/platformatic?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/platformatic/platformatic?style=flat-square) - Node.js application platform
 - **[Claude Flow](scenarios/complex-projects/ruvnet_claude-flow/README.md)** ![Stars](https://img.shields.io/github/stars/ruvnet/claude-flow?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/ruvnet/claude-flow?style=flat-square) - Enterprise AI orchestration platform
 - **[PMStander Web Tools](scenarios/libraries-frameworks/PMStander_web-tools/analysis.md)** ![Stars](https://img.shields.io/github/stars/PMStander/web-tools?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/PMStander/web-tools?style=flat-square) - Advanced performance optimization patterns
@@ -120,6 +126,13 @@ A curated collection of high-quality `CLAUDE.md` files from leading open-source 
 - **[PyTorch tlparse](scenarios/developer-tooling/pytorch_tlparse/README.md)** ![Stars](https://img.shields.io/github/stars/pytorch/tlparse?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/pytorch/tlparse?style=flat-square) - Log parsing with Python bindings
 - **[SVGC](scenarios/developer-tooling/okuvshynov_svgc/README.md)** ![Stars](https://img.shields.io/github/stars/okuvshynov/svgc?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/okuvshynov/svgc?style=flat-square) - SVG optimization tool
 - **[Tasker Core](scenarios/developer-tooling/tasker-systems_tasker-core-rs/README.md)** ![Stars](https://img.shields.io/github/stars/tasker-systems/tasker-core-rs?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/tasker-systems/tasker-core-rs?style=flat-square) - Workflow orchestration engine
+
+</details>
+
+<details>
+<summary><strong>🔶 Java</strong> (1 example)</summary>
+
+- **[OpenFeign QueryDSL](scenarios/developer-tooling/OpenFeign_querydsl/analysis.md)** ![Stars](https://img.shields.io/github/stars/OpenFeign/querydsl?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/OpenFeign/querydsl?style=flat-square) - Enterprise multi-backend query framework
 
 </details>
 
@@ -184,11 +197,19 @@ A curated collection of high-quality `CLAUDE.md` files from leading open-source 
 </details>
 
 <details>
-<summary><strong>🌐 Web3 & Blockchain</strong> (3 examples)</summary>
+<summary><strong>🌐 Web3 & Blockchain</strong> (4 examples)</summary>
 
+- **[Citadel Protocol Contracts](scenarios/complex-projects/Citadel-Protocol_contracts/analysis.md)** ![Stars](https://img.shields.io/github/stars/Citadel-Protocol/contracts?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/Citadel-Protocol/contracts?style=flat-square) - Security-first DeFi protocol with multi-stakeholder architecture
 - **[GalaChain SDK](scenarios/libraries-frameworks/GalaChain_sdk/analysis.md)** ![Stars](https://img.shields.io/github/stars/GalaChain/sdk?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/GalaChain/sdk?style=flat-square) - Blockchain SDK for chaincode development
 - **[KleverConnect Starter](scenarios/getting-started/klever-hub_kleverconnect-starter/README.md)** ![Stars](https://img.shields.io/github/stars/klever-hub/kleverconnect-starter?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/klever-hub/kleverconnect-starter?style=flat-square) - Web3 React + Vite starter kit
 - **[Ethereum.org Website](scenarios/getting-started/ethereum_ethereum-org-website/README.md)** ![Stars](https://img.shields.io/github/stars/ethereum/ethereum-org-website?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/ethereum/ethereum-org-website?style=flat-square) - Official Ethereum community website
+
+</details>
+
+<details>
+<summary><strong>🧪 Testing & Quality</strong> (1 example)</summary>
+
+- **[Callstack React Native Testing](scenarios/libraries-frameworks/callstack_react-native-testing-library/analysis.md)** ![Stars](https://img.shields.io/github/stars/callstack/react-native-testing-library?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/callstack/react-native-testing-library?style=flat-square) - Professional testing library with three-tier query system
 
 </details>
 
@@ -215,6 +236,11 @@ A curated collection of high-quality `CLAUDE.md` files from leading open-source 
 
 ### 🏢 Complex Projects
 Multi-service applications with sophisticated architectures and enterprise-scale concerns.
+
+- **[Citadel Protocol Contracts](scenarios/complex-projects/Citadel-Protocol_contracts/analysis.md)** ![Stars](https://img.shields.io/github/stars/Citadel-Protocol/contracts?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/Citadel-Protocol/contracts?style=flat-square) ![Activity](https://img.shields.io/github/last-commit/Citadel-Protocol/contracts?style=flat-square) - Security-first DeFi protocol architecture
+  - Multi-stakeholder documentation (Minters vs Liquidity Providers)
+  - Protocol economics and synthetic stablecoin mechanics
+  - Comprehensive security considerations and deployment strategies
 
 - **[H1B Visa Analysis](scenarios/complex-projects/ChaseNoCap_h1b-visa-analysis/README.md)** ![Stars](https://img.shields.io/github/stars/ChaseNoCap/h1b-visa-analysis?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/ChaseNoCap/h1b-visa-analysis?style=flat-square) ![Activity](https://img.shields.io/github/last-commit/ChaseNoCap/h1b-visa-analysis?style=flat-square) - AI-guided meta-repository framework
   - 17-module meta-repository architecture
@@ -298,6 +324,11 @@ CLI tools, build systems, and development utilities with focus on commands and c
   - Model Context Protocol server development
   - Multi-site WordPress management patterns
   - Security-first architecture with data sanitization
+
+- **[OpenFeign QueryDSL](scenarios/developer-tooling/OpenFeign_querydsl/analysis.md)** ![Stars](https://img.shields.io/github/stars/OpenFeign/querydsl?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/OpenFeign/querydsl?style=flat-square) ![Activity](https://img.shields.io/github/last-commit/OpenFeign/querydsl?style=flat-square) - Enterprise Java multi-backend query framework
+  - Advanced Maven profiles and build system documentation
+  - Code generation patterns with Q-classes and annotation processing
+  - Sophisticated testing strategies across multiple database backends
 
 - **[SDLC Engine](scenarios/developer-tooling/ChaseNoCap_sdlc-engine/README.md)** ![Stars](https://img.shields.io/github/stars/ChaseNoCap/sdlc-engine?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/ChaseNoCap/sdlc-engine?style=flat-square) ![Activity](https://img.shields.io/github/last-commit/ChaseNoCap/sdlc-engine?style=flat-square) - State machine workflow orchestration
   - Comprehensive workflow automation
@@ -448,6 +479,11 @@ Large-scale systems, runtime environments, and platform-agnostic deployment patt
 ### 📚 Libraries & Frameworks
 Core concepts, APIs, usage patterns, and publication-ready development standards.
 
+- **[Callstack React Native Testing](scenarios/libraries-frameworks/callstack_react-native-testing-library/analysis.md)** ![Stars](https://img.shields.io/github/stars/callstack/react-native-testing-library?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/callstack/react-native-testing-library?style=flat-square) ![Activity](https://img.shields.io/github/last-commit/callstack/react-native-testing-library?style=flat-square) - Professional React Native testing library
+  - Three-tier query system design pattern (get*/query*/find*)
+  - Behavioral testing philosophy from industry experts
+  - Comprehensive testing practices for React Native applications
+
 - **[GalaChain SDK](scenarios/libraries-frameworks/GalaChain_sdk/analysis.md)** ![Stars](https://img.shields.io/github/stars/GalaChain/sdk?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/GalaChain/sdk?style=flat-square) ![Activity](https://img.shields.io/github/last-commit/GalaChain/sdk?style=flat-square) - Blockchain SDK for TypeScript development
   - Chaincode development patterns with TypeScript
   - Multi-level testing strategy (unit, integration, e2e)
@@ -502,6 +538,11 @@ Core concepts, APIs, usage patterns, and publication-ready development standards
   - WebAssembly for high-performance computing
   - Physics simulation and reinforcement learning
   - Browser-based ML/RL environments
+
+- **[Omar Dulaimi Prisma tRPC Generator](scenarios/libraries-frameworks/omar-dulaimi_prisma-trpc-generator/analysis.md)** ![Stars](https://img.shields.io/github/stars/omar-dulaimi/prisma-trpc-generator?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/omar-dulaimi/prisma-trpc-generator?style=flat-square) ![Activity](https://img.shields.io/github/last-commit/omar-dulaimi/prisma-trpc-generator?style=flat-square) - Modern full-stack TypeScript tooling integration
+  - Multi-tool integration (Prisma + tRPC + Zod)
+  - Advanced code generation workflows with ts-morph
+  - Configuration-driven design for type-safe APIs
 
 - **[TrysteroSwift](scenarios/libraries-frameworks/posix4e_TrysteroSwift/README.md)** ![Stars](https://img.shields.io/github/stars/posix4e/TrysteroSwift?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/posix4e/TrysteroSwift?style=flat-square) ![Activity](https://img.shields.io/github/last-commit/posix4e/TrysteroSwift?style=flat-square) - P2P WebRTC data channels in Swift
   - Peer-to-peer networking patterns
@@ -601,6 +642,6 @@ Find more `CLAUDE.md` examples using these search strategies:
 
 ---
 
-**Total Examples**: 61 | **Last Updated**: August 2025 | **Maintained by**: Community Contributors
+**Total Examples**: 65 | **Last Updated**: January 2025 | **Maintained by**: Community Contributors
 
 > 🤖 This collection is maintained with assistance from Claude Code for quality analysis and curation
