@@ -14,7 +14,10 @@
       "Bash(git add:*)",
       "Bash(git checkout:*)",
       "Bash(grep:*)",
-      "Bash(gh search repos:*)"
+      "Bash(gh search repos:*)",
+      "mcp__personal-github__get_issue",
+      "Bash(sed:*)",
+      "WebFetch(domain:api.github.com)"
     ],
     "deny": []
   }
