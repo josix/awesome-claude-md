@@ -61,7 +61,7 @@ A curated collection of high-quality `CLAUDE.md` files from leading open-source 
 ## 🔍 Browse by Technology
 
 <details>
-<summary><strong>🟦 TypeScript/JavaScript</strong> (19 examples)</summary>
+<summary><strong>🟦 TypeScript/JavaScript</strong> (21 examples)</summary>
 
 - **[H1B Visa Analysis](scenarios/complex-projects/ChaseNoCap_h1b-visa-analysis/README.md)** ![Stars](https://img.shields.io/github/stars/ChaseNoCap/h1b-visa-analysis?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/ChaseNoCap/h1b-visa-analysis?style=flat-square) - AI-guided meta-repository framework
 - **[SDLC Engine](scenarios/developer-tooling/ChaseNoCap_sdlc-engine/README.md)** ![Stars](https://img.shields.io/github/stars/ChaseNoCap/sdlc-engine?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/ChaseNoCap/sdlc-engine?style=flat-square) - State machine workflow orchestration
@@ -70,6 +70,8 @@ A curated collection of high-quality `CLAUDE.md` files from leading open-source 
 - **[Claude Crew](scenarios/developer-tooling/d-kimuson_claude-crew/README.md)** ![Stars](https://img.shields.io/github/stars/d-kimuson/claude-crew?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/d-kimuson/claude-crew?style=flat-square) - Strict TypeScript standards
 - **[Web Builder](scenarios/complex-projects/dev-mahfuj80_web-builder/README.md)** ![Stars](https://img.shields.io/github/stars/dev-mahfuj80/web-builder?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/dev-mahfuj80/web-builder?style=flat-square) - B2B2B SaaS platform with Next.js 14
 - **[mdx-prompt](scenarios/libraries-frameworks/edspencer_mdx-prompt/README.md)** ![Stars](https://img.shields.io/github/stars/edspencer/mdx-prompt?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/edspencer/mdx-prompt?style=flat-square) - LLM prompt components
+- **[MCP WordPress](scenarios/developer-tooling/docdyhr_mcp-wordpress/README.md)** ![Stars](https://img.shields.io/github/stars/docdyhr/mcp-wordpress?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/docdyhr/mcp-wordpress?style=flat-square) - MCP server for WordPress CMS
+- **[GalaChain SDK](scenarios/libraries-frameworks/GalaChain_sdk/README.md)** ![Stars](https://img.shields.io/github/stars/GalaChain/sdk?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/GalaChain/sdk?style=flat-square) - Blockchain SDK with TypeScript
 - **[Overreacted.io](scenarios/complex-projects/gaearon_overreacted.io/README.md)** ![Stars](https://img.shields.io/github/stars/gaearon/overreacted.io?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/gaearon/overreacted.io?style=flat-square) - Next.js with MDX
 - **[Image Generation MCP](scenarios/developer-tooling/johnw188_image-generation-mcp/README.md)** ![Stars](https://img.shields.io/github/stars/johnw188/image-generation-mcp?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/johnw188/image-generation-mcp?style=flat-square) - MCP server with Cloudflare Workers
 - **[KleverConnect Starter](scenarios/getting-started/klever-hub_kleverconnect-starter/README.md)** ![Stars](https://img.shields.io/github/stars/klever-hub/kleverconnect-starter?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/klever-hub/kleverconnect-starter?style=flat-square) - Web3 React + Vite
@@ -178,8 +180,9 @@ A curated collection of high-quality `CLAUDE.md` files from leading open-source 
 </details>
 
 <details>
-<summary><strong>🌐 Web3 & Blockchain</strong> (2 examples)</summary>
+<summary><strong>🌐 Web3 & Blockchain</strong> (3 examples)</summary>
 
+- **[GalaChain SDK](scenarios/libraries-frameworks/GalaChain_sdk/README.md)** ![Stars](https://img.shields.io/github/stars/GalaChain/sdk?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/GalaChain/sdk?style=flat-square) - Blockchain SDK for chaincode development
 - **[KleverConnect Starter](scenarios/getting-started/klever-hub_kleverconnect-starter/README.md)** ![Stars](https://img.shields.io/github/stars/klever-hub/kleverconnect-starter?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/klever-hub/kleverconnect-starter?style=flat-square) - Web3 React + Vite starter kit
 - **[Ethereum.org Website](scenarios/getting-started/ethereum_ethereum-org-website/README.md)** ![Stars](https://img.shields.io/github/stars/ethereum/ethereum-org-website?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/ethereum/ethereum-org-website?style=flat-square) - Official Ethereum community website
 
@@ -281,6 +284,11 @@ Multi-service applications with sophisticated architectures and enterprise-scale
 
 ### 🛠️ Developer Tooling
 CLI tools, build systems, and development utilities with focus on commands and configuration.
+
+- **[MCP WordPress](scenarios/developer-tooling/docdyhr_mcp-wordpress/README.md)** ![Stars](https://img.shields.io/github/stars/docdyhr/mcp-wordpress?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/docdyhr/mcp-wordpress?style=flat-square) ![Activity](https://img.shields.io/github/last-commit/docdyhr/mcp-wordpress?style=flat-square) - MCP server for WordPress CMS integration
+  - Model Context Protocol server development
+  - Multi-site WordPress management patterns
+  - Security-first architecture with data sanitization
 
 - **[SDLC Engine](scenarios/developer-tooling/ChaseNoCap_sdlc-engine/README.md)** ![Stars](https://img.shields.io/github/stars/ChaseNoCap/sdlc-engine?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/ChaseNoCap/sdlc-engine?style=flat-square) ![Activity](https://img.shields.io/github/last-commit/ChaseNoCap/sdlc-engine?style=flat-square) - State machine workflow orchestration
   - Comprehensive workflow automation
@@ -426,6 +434,11 @@ Large-scale systems, runtime environments, and platform-agnostic deployment patt
 ### 📚 Libraries & Frameworks
 Core concepts, APIs, usage patterns, and publication-ready development standards.
 
+- **[GalaChain SDK](scenarios/libraries-frameworks/GalaChain_sdk/README.md)** ![Stars](https://img.shields.io/github/stars/GalaChain/sdk?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/GalaChain/sdk?style=flat-square) ![Activity](https://img.shields.io/github/last-commit/GalaChain/sdk?style=flat-square) - Blockchain SDK for TypeScript development
+  - Chaincode development patterns with TypeScript
+  - Multi-level testing strategy (unit, integration, e2e)
+  - Modular SDK architecture for blockchain applications
+
 - **[Composio](scenarios/libraries-frameworks/ComposioHQ_composio/README.md)** ![Stars](https://img.shields.io/github/stars/ComposioHQ/composio?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/ComposioHQ/composio?style=flat-square) ![Activity](https://img.shields.io/github/last-commit/ComposioHQ/composio?style=flat-square) - AI agent integration platform
   - Multi-tool AI agent ecosystem
   - Integration framework for AI assistants
@@ -564,6 +577,6 @@ Find more `CLAUDE.md` examples using these search strategies:
 
 ---
 
-**Total Examples**: 51 | **Last Updated**: August 2025 | **Maintained by**: Community Contributors
+**Total Examples**: 53 | **Last Updated**: August 2025 | **Maintained by**: Community Contributors
 
 > 🤖 This collection is maintained with assistance from Claude Code for quality analysis and curation
