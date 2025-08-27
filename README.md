@@ -61,7 +61,7 @@ A curated collection of high-quality `CLAUDE.md` files from leading open-source 
 ## 🔍 Browse by Technology
 
 <details>
-<summary><strong>🟦 TypeScript/JavaScript</strong> (21 examples)</summary>
+<summary><strong>🟦 TypeScript/JavaScript</strong> (23 examples)</summary>
 
 - **[H1B Visa Analysis](scenarios/complex-projects/ChaseNoCap_h1b-visa-analysis/README.md)** ![Stars](https://img.shields.io/github/stars/ChaseNoCap/h1b-visa-analysis?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/ChaseNoCap/h1b-visa-analysis?style=flat-square) - AI-guided meta-repository framework
 - **[SDLC Engine](scenarios/developer-tooling/ChaseNoCap_sdlc-engine/README.md)** ![Stars](https://img.shields.io/github/stars/ChaseNoCap/sdlc-engine?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/ChaseNoCap/sdlc-engine?style=flat-square) - State machine workflow orchestration
@@ -83,12 +83,13 @@ A curated collection of high-quality `CLAUDE.md` files from leading open-source 
 - **[Webhook Broker](scenarios/complex-projects/newscred_webhook-broker/README.md)** ![Stars](https://img.shields.io/github/stars/newscred/webhook-broker?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/newscred/webhook-broker?style=flat-square) - Event-driven microservice architecture
 - **[Platformatic](scenarios/complex-projects/platformatic_platformatic/README.md)** ![Stars](https://img.shields.io/github/stars/platformatic/platformatic?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/platformatic/platformatic?style=flat-square) - Node.js application platform
 - **[Claude Flow](scenarios/complex-projects/ruvnet_claude-flow/README.md)** ![Stars](https://img.shields.io/github/stars/ruvnet/claude-flow?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/ruvnet/claude-flow?style=flat-square) - Enterprise AI orchestration platform
+- **[PMStander Web Tools](scenarios/libraries-frameworks/PMStander_web-tools/analysis.md)** ![Stars](https://img.shields.io/github/stars/PMStander/web-tools?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/PMStander/web-tools?style=flat-square) - Advanced performance optimization patterns
 - **[Yutodo](scenarios/developer-tooling/yutotnh_yutodo/README.md)** ![Stars](https://img.shields.io/github/stars/yutotnh/yutodo?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/yutotnh/yutodo?style=flat-square) - Full-stack application documentation
 
 </details>
 
 <details>
-<summary><strong>🟧 Python</strong> (16 examples)</summary>
+<summary><strong>🟧 Python</strong> (17 examples)</summary>
 
 - **[Anthropic Quickstarts](scenarios/getting-started/anthropics_anthropic-quickstarts/README.md)** ![Stars](https://img.shields.io/github/stars/anthropics/anthropic-quickstarts?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/anthropics/anthropic-quickstarts?style=flat-square) - Computer-use demo
 - **[Basic Memory](scenarios/complex-projects/basicmachines-co_basic-memory/README.md)** ![Stars](https://img.shields.io/github/stars/basicmachines-co/basic-memory?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/basicmachines-co/basic-memory?style=flat-square) - MCP integration
@@ -106,6 +107,7 @@ A curated collection of high-quality `CLAUDE.md` files from leading open-source 
 - **[OpenAI Agents Python](scenarios/complex-projects/openai_openai-agents-python/README.md)** ![Stars](https://img.shields.io/github/stars/openai/openai-agents-python?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/openai/openai-agents-python?style=flat-square) - Official multi-agent framework
 - **[Pydantic GenAI Prices](scenarios/libraries-frameworks/pydantic_genai-prices/README.md)** ![Stars](https://img.shields.io/github/stars/pydantic/genai-prices?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/pydantic/genai-prices?style=flat-square) - Expert data processing pipeline
 - **[PyTorch tlparse](scenarios/developer-tooling/pytorch_tlparse/README.md)** ![Stars](https://img.shields.io/github/stars/pytorch/tlparse?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/pytorch/tlparse?style=flat-square) - Dual-language (Rust/Python)
+- **[Demo MCP](scenarios/infrastructure-projects/sedwardstx_demomcp/analysis.md)** ![Stars](https://img.shields.io/github/stars/sedwardstx/demomcp?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/sedwardstx/demomcp?style=flat-square) - MCP server architecture patterns
 
 </details>
 
@@ -139,13 +141,15 @@ A curated collection of high-quality `CLAUDE.md` files from leading open-source 
 </details>
 
 <details>
-<summary><strong>🟨 Other Languages</strong> (5 examples)</summary>
+<summary><strong>🟨 Other Languages</strong> (7 examples)</summary>
 
 - **[Kotlinter Gradle](scenarios/developer-tooling/jeremymailen_kotlinter-gradle/README.md)** ![Stars](https://img.shields.io/github/stars/jeremymailen/kotlinter-gradle?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/jeremymailen/kotlinter-gradle?style=flat-square) - Kotlin linting plugin
 - **[HWP](scenarios/developer-tooling/mcollina_hwp/README.md)** ![Stars](https://img.shields.io/github/stars/mcollina/hwp?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/mcollina/hwp?style=flat-square) - Node.js HTTP benchmarking
 - **[B+ Tree](scenarios/project-handoffs/KentBeck_BPlusTree3/README.md)** ![Stars](https://img.shields.io/github/stars/KentBeck/BPlusTree3?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/KentBeck/BPlusTree3?style=flat-square) - Smalltalk data structure implementation
 - **[Pipewire-HS](scenarios/libraries-frameworks/JonathanLorimer_pipewire-hs/README.md)** ![Stars](https://img.shields.io/github/stars/JonathanLorimer/pipewire-hs?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/JonathanLorimer/pipewire-hs?style=flat-square) - Haskell bindings for PipeWire
 - **[mypy-boto3-builder](scenarios/developer-tooling/youtype_mypy-boto3-builder/README.md)** ![Stars](https://img.shields.io/github/stars/youtype/mypy-boto3-builder?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/youtype/mypy-boto3-builder?style=flat-square) - AWS SDK type stubs generator
+- **[WindPress](scenarios/complex-projects/wind-press_windpress/analysis.md)** ![Stars](https://img.shields.io/github/stars/wind-press/windpress?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/wind-press/windpress?style=flat-square) - Vue.js with WebAssembly Tailwind compilation
+- **[Tasker Systems Book](scenarios/project-handoffs/tasker-systems_book/analysis.md)** ![Stars](https://img.shields.io/github/stars/tasker-systems/book?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/tasker-systems/book?style=flat-square) - Narrative-driven technical documentation
 
 </details>
 
@@ -281,6 +285,11 @@ Multi-service applications with sophisticated architectures and enterprise-scale
   - Full-stack Node.js development platform
   - Database-to-API automation
   - Plugin-based architecture
+
+- **[WindPress](scenarios/complex-projects/wind-press_windpress/analysis.md)** ![Stars](https://img.shields.io/github/stars/wind-press/windpress?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/wind-press/windpress?style=flat-square) ![Activity](https://img.shields.io/github/last-commit/wind-press/windpress?style=flat-square) - Vue.js with WebAssembly Tailwind compilation
+  - In-browser CSS compilation using WebAssembly
+  - WordPress plugin development patterns
+  - Modern Vue.js Composition API with TypeScript
 
 ### 🛠️ Developer Tooling
 CLI tools, build systems, and development utilities with focus on commands and configuration.
@@ -431,6 +440,11 @@ Large-scale systems, runtime environments, and platform-agnostic deployment patt
   - Infrastructure as code patterns
   - DevOps workflow automation
 
+- **[Demo MCP](scenarios/infrastructure-projects/sedwardstx_demomcp/analysis.md)** ![Stars](https://img.shields.io/github/stars/sedwardstx/demomcp?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/sedwardstx/demomcp?style=flat-square) ![Activity](https://img.shields.io/github/last-commit/sedwardstx/demomcp?style=flat-square) - MCP server architecture for system monitoring
+  - Cross-platform system monitoring patterns
+  - Async-first design with Pydantic validation
+  - Real-time log analysis and process management
+
 ### 📚 Libraries & Frameworks
 Core concepts, APIs, usage patterns, and publication-ready development standards.
 
@@ -443,6 +457,11 @@ Core concepts, APIs, usage patterns, and publication-ready development standards
   - Multi-tool AI agent ecosystem
   - Integration framework for AI assistants
   - Comprehensive API and tooling support
+
+- **[PMStander Web Tools](scenarios/libraries-frameworks/PMStander_web-tools/analysis.md)** ![Stars](https://img.shields.io/github/stars/PMStander/web-tools?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/PMStander/web-tools?style=flat-square) ![Activity](https://img.shields.io/github/last-commit/PMStander/web-tools?style=flat-square) - Advanced TypeScript/Next.js performance patterns
+  - Multi-tier caching strategy (memory, Redis, CDN)
+  - Type-safe file processing with security validation
+  - Server Components with dynamic imports optimization
 
 - **[DataFog Python](scenarios/libraries-frameworks/DataFog_datafog-python/README.md)** ![Stars](https://img.shields.io/github/stars/DataFog/datafog-python?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/DataFog/datafog-python?style=flat-square) ![Activity](https://img.shields.io/github/last-commit/DataFog/datafog-python?style=flat-square) - Privacy-focused data processing library
   - Privacy-preserving data processing
@@ -512,6 +531,11 @@ Documentation focused on project state, blocking issues, and transition planning
   - QA workflow automation
   - Team collaboration in testing
 
+- **[Tasker Systems Book](scenarios/project-handoffs/tasker-systems_book/analysis.md)** ![Stars](https://img.shields.io/github/stars/tasker-systems/book?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/tasker-systems/book?style=flat-square) ![Activity](https://img.shields.io/github/last-commit/tasker-systems/book?style=flat-square) - Narrative-driven technical documentation approach
+  - Revolutionary storytelling with technical depth
+  - Workflow orchestration using Tasker Rails engine
+  - Chapter-based development with version control standards
+
 ## Quality Standards
 
 Our collection prioritizes **content quality and educational value over popularity metrics**:
@@ -577,6 +601,6 @@ Find more `CLAUDE.md` examples using these search strategies:
 
 ---
 
-**Total Examples**: 53 | **Last Updated**: August 2025 | **Maintained by**: Community Contributors
+**Total Examples**: 57 | **Last Updated**: August 2025 | **Maintained by**: Community Contributors
 
 > 🤖 This collection is maintained with assistance from Claude Code for quality analysis and curation
