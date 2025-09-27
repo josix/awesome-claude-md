@@ -187,9 +187,10 @@ A curated collection of high-quality `CLAUDE.md` files from leading open-source 
 </details>
 
 <details>
-<summary><strong>🏗️ Infrastructure Projects</strong> (4 examples)</summary>
+<summary><strong>🏗️ Infrastructure Projects</strong> (5 examples)</summary>
 
 - **[Cloudflare Workerd](scenarios/infrastructure-projects/cloudflare_workerd/README.md)** ![Stars](https://img.shields.io/github/stars/cloudflare/workerd?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/cloudflare/workerd?style=flat-square) - JavaScript runtime for Cloudflare Workers
+- **[TrailOfBits Algo](scenarios/infrastructure-projects/trailofbits_algo/analysis.md)** ![Stars](https://img.shields.io/github/stars/trailofbits/algo?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/trailofbits/algo?style=flat-square) - Security-first VPN server setup
 - **[Ansible MCP Server](scenarios/infrastructure-projects/washyu_ansible-mcp-server/README.md)** ![Stars](https://img.shields.io/github/stars/washyu/ansible-mcp-server?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/washyu/ansible-mcp-server?style=flat-square) - Infrastructure automation with MCP
 - **[Sentry](scenarios/complex-projects/getsentry_sentry/README.md)** ![Stars](https://img.shields.io/github/stars/getsentry/sentry?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/getsentry/sentry?style=flat-square) - Multi-language error tracking platform
 - **[Webhook Broker](scenarios/complex-projects/newscred_webhook-broker/README.md)** ![Stars](https://img.shields.io/github/stars/newscred/webhook-broker?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/newscred/webhook-broker?style=flat-square) - Event-driven microservice architecture
@@ -276,6 +277,11 @@ Multi-service applications with sophisticated architectures and enterprise-scale
   - 64-agent system with sophisticated coordination patterns
   - Modular AI platform architecture with comprehensive testing
   - Production-ready deployment with advanced workflow management
+
+- **[HADES](scenarios/complex-projects/r3d91ll_HADES-defunct/analysis.md)** ![Stars](https://img.shields.io/github/stars/r3d91ll/HADES-defunct?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/r3d91ll/HADES-defunct?style=flat-square) ![Activity](https://img.shields.io/github/last-commit/r3d91ll/HADES-defunct?style=flat-square) - Research-grade academic paper processing system
+  - Mathematical framework integration with GPU-accelerated processing
+  - Complex multi-component architecture with theoretical foundations
+  - Advanced context management for AI systems (note: project marked as defunct)
 
 - **[Sentry](scenarios/complex-projects/getsentry_sentry/README.md)** ![Stars](https://img.shields.io/github/stars/getsentry/sentry?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/getsentry/sentry?style=flat-square) ![Activity](https://img.shields.io/github/last-commit/getsentry/sentry?style=flat-square) - Multi-language error tracking and performance monitoring
   - Cross-platform error tracking system
@@ -410,6 +416,11 @@ CLI tools, build systems, and development utilities with focus on commands and c
   - Command-line tool development
   - Performance-focused design
 
+- **[OpenShift ROSA](scenarios/developer-tooling/openshift_rosa/analysis.md)** ![Stars](https://img.shields.io/github/stars/openshift/rosa?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/openshift/rosa?style=flat-square) ![Activity](https://img.shields.io/github/last-commit/openshift/rosa?style=flat-square) - Enterprise Kubernetes CLI tool with ethical AI integration
+  - Clear role boundaries and professional development standards
+  - Comprehensive testing framework with Ginkgo/Gomega patterns
+  - Enterprise-grade Go development with community guidelines
+
 - **[Claude Code F2](scenarios/developer-tooling/pransil_claude-code-f2/README.md)** ![Stars](https://img.shields.io/github/stars/pransil/claude-code-f2?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/pransil/claude-code-f2?style=flat-square) ![Activity](https://img.shields.io/github/last-commit/pransil/claude-code-f2?style=flat-square) - Systematic development framework
   - 6-phase development workflow methodology
   - Testing-driven development with comprehensive validation
@@ -465,6 +476,11 @@ Large-scale systems, runtime environments, and platform-agnostic deployment patt
   - High-performance JavaScript runtime built in Rust
   - Edge computing platform architecture
   - V8 engine integration patterns
+
+- **[TrailOfBits Algo](scenarios/infrastructure-projects/trailofbits_algo/analysis.md)** ![Stars](https://img.shields.io/github/stars/trailofbits/algo?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/trailofbits/algo?style=flat-square) ![Activity](https://img.shields.io/github/last-commit/trailofbits/algo?style=flat-square) - Security-first VPN server setup and automation
+  - Comprehensive security documentation and hardening guidelines
+  - Multi-cloud deployment with detailed troubleshooting workflows
+  - Production-ready operations with performance optimization strategies
 
 - **[Ansible MCP Server](scenarios/infrastructure-projects/washyu_ansible-mcp-server/README.md)** ![Stars](https://img.shields.io/github/stars/washyu/ansible-mcp-server?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/washyu/ansible-mcp-server?style=flat-square) ![Activity](https://img.shields.io/github/last-commit/washyu/ansible-mcp-server?style=flat-square) - Infrastructure automation with MCP integration
   - Ansible automation with MCP protocol
@@ -642,6 +658,6 @@ Find more `CLAUDE.md` examples using these search strategies:
 
 ---
 
-**Total Examples**: 65 | **Last Updated**: January 2025 | **Maintained by**: Community Contributors
+**Total Examples**: 68 | **Last Updated**: January 2025 | **Maintained by**: Community Contributors
 
 > 🤖 This collection is maintained with assistance from Claude Code for quality analysis and curation
