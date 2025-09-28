@@ -16,7 +16,7 @@
 This CLAUDE.md file demonstrates exceptional infrastructure project documentation with several standout features:
 
 ### 1. Security-First Architecture Documentation
-The file establishes clear security principles and architectural decisions that prioritize privacy and security. It provides comprehensive context about VPN technologies, encryption protocols (IKEv2, IPsec, WireGuard), and security trade-offs.
+The file establishes clear security principles and architectural decisions that prioritize privacy and security. It provides comprehensive context about VPN technologies, encryption protocols (`IKEv2`, `IPsec`, `WireGuard`), and security trade-offs.
 
 ### 2. Comprehensive Development Philosophy
 Contains explicit guidance for AI assistants with principles like "Think Security First, Test Thoroughly, Document Clearly, Be Conservative, Respect Privacy" - demonstrating how to embed organizational values into AI assistance.
