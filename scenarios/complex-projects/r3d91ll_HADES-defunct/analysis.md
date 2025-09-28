@@ -16,8 +16,10 @@
 This CLAUDE.md file demonstrates exceptional complex project documentation with several standout features:
 
 ### 1. Mathematical Framework Integration
-Provides a formal mathematical framework with the "Conveyance Equation": C = (W·R·H)/T · Ctx^α, demonstrating how to document complex algorithmic and mathematical concepts for AI understanding.
+Provides a formal mathematical framework with the "Conveyance Equation", demonstrating how to document complex algorithmic and mathematical concepts for AI understanding.
 
+```math
+C = \frac{W \cdot R \cdot H}{T} \cdot \mathrm{Ctx}^{\alpha}
 ### 2. Multi-Component Architecture Documentation
 Describes a sophisticated MCP (Master Control Program) server architecture with multiple integration points including ArangoDB, GitHub repository search, Language Server Protocol analysis, and Tree-sitter code parsing.
 
