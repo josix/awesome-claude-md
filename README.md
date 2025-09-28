@@ -64,7 +64,7 @@ A curated collection of high-quality `CLAUDE.md` files from leading open-source 
 ## 🔍 Browse by Technology
 
 <details>
-<summary><strong>🟦 TypeScript/JavaScript</strong> (25 examples)</summary>
+<summary><strong>🟦 TypeScript/JavaScript</strong> (26 examples)</summary>
 
 - **[Callstack React Native Testing](scenarios/libraries-frameworks/callstack_react-native-testing-library/analysis.md)** ![Stars](https://img.shields.io/github/stars/callstack/react-native-testing-library?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/callstack/react-native-testing-library?style=flat-square) - Testing library gold standard from React Native experts
 - **[Citadel Protocol Contracts](scenarios/complex-projects/Citadel-Protocol_contracts/analysis.md)** ![Stars](https://img.shields.io/github/stars/Citadel-Protocol/contracts?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/Citadel-Protocol/contracts?style=flat-square) - Security-first DeFi protocol documentation
@@ -82,6 +82,7 @@ A curated collection of high-quality `CLAUDE.md` files from leading open-source 
 - **[KleverConnect Starter](scenarios/getting-started/klever-hub_kleverconnect-starter/README.md)** ![Stars](https://img.shields.io/github/stars/klever-hub/kleverconnect-starter?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/klever-hub/kleverconnect-starter?style=flat-square) - Web3 React + Vite
 - **[Kubb](scenarios/developer-tooling/kubb-labs_kubb/README.md)** ![Stars](https://img.shields.io/github/stars/kubb-labs/kubb?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/kubb-labs/kubb?style=flat-square) - OpenAPI TypeScript generator
 - **[Lerna](scenarios/developer-tooling/lerna_lerna/README.md)** ![Stars](https://img.shields.io/github/stars/lerna/lerna?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/lerna/lerna?style=flat-square) - Monorepo management tool
+- **[MeFood Next.js](scenarios/libraries-frameworks/KarnYong_mefood-next-public/analysis.md)** ![Stars](https://img.shields.io/github/stars/KarnYong/mefood-next-public?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/KarnYong/mefood-next-public?style=flat-square) - Modern Next.js food application
 - **[Agentic](scenarios/libraries-frameworks/transitive-bullshit_agentic/README.md)** ![Stars](https://img.shields.io/github/stars/transitive-bullshit/agentic?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/transitive-bullshit/agentic?style=flat-square) - AI agent orchestration library
 - **[Semantic Workbench](scenarios/complex-projects/microsoft_semanticworkbench/README.md)** ![Stars](https://img.shields.io/github/stars/microsoft/semanticworkbench?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/microsoft/semanticworkbench?style=flat-square) - Microsoft AI assistant platform
 - **[Nine Week Challenge](scenarios/complex-projects/nerveband_nine-week-challenge/README.md)** ![Stars](https://img.shields.io/github/stars/nerveband/nine-week-challenge?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/nerveband/nine-week-challenge?style=flat-square) - Next.js 14 App Router wellness app
@@ -95,7 +96,7 @@ A curated collection of high-quality `CLAUDE.md` files from leading open-source 
 </details>
 
 <details>
-<summary><strong>🟧 Python</strong> (17 examples)</summary>
+<summary><strong>🟧 Python</strong> (19 examples)</summary>
 
 - **[Anthropic Quickstarts](scenarios/getting-started/anthropics_anthropic-quickstarts/README.md)** ![Stars](https://img.shields.io/github/stars/anthropics/anthropic-quickstarts?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/anthropics/anthropic-quickstarts?style=flat-square) - Computer-use demo
 - **[Basic Memory](scenarios/complex-projects/basicmachines-co_basic-memory/README.md)** ![Stars](https://img.shields.io/github/stars/basicmachines-co/basic-memory?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/basicmachines-co/basic-memory?style=flat-square) - MCP integration
@@ -106,6 +107,8 @@ A curated collection of high-quality `CLAUDE.md` files from leading open-source 
 - **[Ultimate RVC](scenarios/libraries-frameworks/JackismyShephard_ultimate-rvc/README.md)** ![Stars](https://img.shields.io/github/stars/JackismyShephard/ultimate-rvc?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/JackismyShephard/ultimate-rvc?style=flat-square) - AI-powered audio content creation
 - **[HA Irrigation Strategy](scenarios/developer-tooling/JakeTheRabbit_HA-Irrigation-Strategy/README.md)** ![Stars](https://img.shields.io/github/stars/JakeTheRabbit/HA-Irrigation-Strategy?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/JakeTheRabbit/HA-Irrigation-Strategy?style=flat-square) - Smart home agriculture automation
 - **[Jason Liu Blog](scenarios/developer-tooling/jxnl_blog/README.md)** ![Stars](https://img.shields.io/github/stars/jxnl/blog?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/jxnl/blog?style=flat-square) - AI/ML thought leadership
+- **[HendrixVideo](scenarios/complex-projects/material-lab-io_HendrixVideo/analysis.md)** ![Stars](https://img.shields.io/github/stars/material-lab-io/HendrixVideo?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/material-lab-io/HendrixVideo?style=flat-square) - AI-powered video analysis pipeline
+- **[SummaryBot NG](scenarios/developer-tooling/mrjcleaver_summarybot-ng/analysis.md)** ![Stars](https://img.shields.io/github/stars/mrjcleaver/summarybot-ng?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/mrjcleaver/summarybot-ng?style=flat-square) - Agent-based development framework
 - **[LangChain Redis](scenarios/libraries-frameworks/langchain-ai_langchain-redis/README.md)** ![Stars](https://img.shields.io/github/stars/langchain-ai/langchain-redis?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/langchain-ai/langchain-redis?style=flat-square) - Redis integration for LangChain
 - **[Web Monitoring](scenarios/complex-projects/leenbj_web-Monitoring/README.md)** ![Stars](https://img.shields.io/github/stars/leenbj/web-Monitoring?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/leenbj/web-Monitoring?style=flat-square) - Enterprise monitoring system
 - **[Context Creator](scenarios/developer-tooling/matiasvillaverde_context-creator/README.md)** ![Stars](https://img.shields.io/github/stars/matiasvillaverde/context-creator?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/matiasvillaverde/context-creator?style=flat-square) - AI-optimized codebase analysis
@@ -118,9 +121,10 @@ A curated collection of high-quality `CLAUDE.md` files from leading open-source 
 </details>
 
 <details>
-<summary><strong>🟫 Rust</strong> (6 examples)</summary>
+<summary><strong>🟫 Rust</strong> (7 examples)</summary>
 
 - **[Workerd](scenarios/infrastructure-projects/cloudflare_workerd/README.md)** ![Stars](https://img.shields.io/github/stars/cloudflare/workerd?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/cloudflare/workerd?style=flat-square) - JavaScript runtime for Cloudflare Workers
+- **[msg-rs](scenarios/libraries-frameworks/chainbound_msg-rs/analysis.md)** ![Stars](https://img.shields.io/github/stars/chainbound/msg-rs?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/chainbound/msg-rs?style=flat-square) - Distributed systems messaging library
 - **[OAuth2 Passkey](scenarios/libraries-frameworks/ktaka-ccmp_oauth2-passkey/README.md)** ![Stars](https://img.shields.io/github/stars/ktaka-ccmp/oauth2-passkey?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/ktaka-ccmp/oauth2-passkey?style=flat-square) - Modern authentication library
 - **[Claude Code F2](scenarios/developer-tooling/pransil_claude-code-f2/README.md)** ![Stars](https://img.shields.io/github/stars/pransil/claude-code-f2?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/pransil/claude-code-f2?style=flat-square) - Systematic development framework
 - **[PyTorch tlparse](scenarios/developer-tooling/pytorch_tlparse/README.md)** ![Stars](https://img.shields.io/github/stars/pytorch/tlparse?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/pytorch/tlparse?style=flat-square) - Log parsing with Python bindings
@@ -145,9 +149,10 @@ A curated collection of high-quality `CLAUDE.md` files from leading open-source 
 </details>
 
 <details>
-<summary><strong>🔵 Swift</strong> (2 examples)</summary>
+<summary><strong>🔵 Swift</strong> (3 examples)</summary>
 
 - **[macMCP](scenarios/developer-tooling/obra_macMCP/README.md)** ![Stars](https://img.shields.io/github/stars/obra/macMCP?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/obra/macMCP?style=flat-square) - macOS MCP server implementation
+- **[Xcode Project CLI](scenarios/developer-tooling/tolo_xcodeproj-cli/analysis.md)** ![Stars](https://img.shields.io/github/stars/tolo/xcodeproj-cli?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/tolo/xcodeproj-cli?style=flat-square) - Xcode project manipulation tool
 - **[TrysteroSwift](scenarios/libraries-frameworks/posix4e_TrysteroSwift/README.md)** ![Stars](https://img.shields.io/github/stars/posix4e/TrysteroSwift?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/posix4e/TrysteroSwift?style=flat-square) - P2P WebRTC data channels
 
 </details>
@@ -282,6 +287,11 @@ Multi-service applications with sophisticated architectures and enterprise-scale
   - Mathematical framework integration with GPU-accelerated processing
   - Complex multi-component architecture with theoretical foundations
   - Advanced context management for AI systems (note: project marked as defunct)
+
+- **[HendrixVideo](scenarios/complex-projects/material-lab-io_HendrixVideo/analysis.md)** ![Stars](https://img.shields.io/github/stars/material-lab-io/HendrixVideo?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/material-lab-io/HendrixVideo?style=flat-square) ![Activity](https://img.shields.io/github/last-commit/material-lab-io/HendrixVideo?style=flat-square) - AI-powered video analysis pipeline
+  - Multi-modal AI pipeline architecture with video, audio, and text processing
+  - Configuration-driven architecture with multiple processing profiles
+  - Advanced resource management for AI-intensive applications
 
 - **[Sentry](scenarios/complex-projects/getsentry_sentry/README.md)** ![Stars](https://img.shields.io/github/stars/getsentry/sentry?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/getsentry/sentry?style=flat-square) ![Activity](https://img.shields.io/github/last-commit/getsentry/sentry?style=flat-square) - Multi-language error tracking and performance monitoring
   - Cross-platform error tracking system
@@ -441,6 +451,16 @@ CLI tools, build systems, and development utilities with focus on commands and c
   - AWS integration patterns
   - Developer tooling for cloud services
 
+- **[SummaryBot NG](scenarios/developer-tooling/mrjcleaver_summarybot-ng/analysis.md)** ![Stars](https://img.shields.io/github/stars/mrjcleaver/summarybot-ng?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/mrjcleaver/summarybot-ng?style=flat-square) ![Activity](https://img.shields.io/github/last-commit/mrjcleaver/summarybot-ng?style=flat-square) - Agent-based development framework
+  - SPARC methodology for structured AI-assisted development
+  - Performance-optimized AI workflows with measurable improvements
+  - Advanced concurrent execution patterns with AI assistant coordination
+
+- **[Xcode Project CLI](scenarios/developer-tooling/tolo_xcodeproj-cli/analysis.md)** ![Stars](https://img.shields.io/github/stars/tolo/xcodeproj-cli?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/tolo/xcodeproj-cli?style=flat-square) ![Activity](https://img.shields.io/github/last-commit/tolo/xcodeproj-cli?style=flat-square) - Xcode project manipulation tool
+  - Swift-based CLI architecture with comprehensive command documentation
+  - Domain-specific tool development for Xcode project file manipulation
+  - Clear development philosophy with proactive error prevention patterns
+
 - **[Yutodo](scenarios/developer-tooling/yutotnh_yutodo/README.md)** ![Stars](https://img.shields.io/github/stars/yutotnh/yutodo?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/yutotnh/yutodo?style=flat-square) ![Activity](https://img.shields.io/github/last-commit/yutotnh/yutodo?style=flat-square) - Full-stack TypeScript application
   - Comprehensive testing infrastructure with 6 testing methodologies
   - Full-stack development patterns
@@ -570,6 +590,16 @@ Core concepts, APIs, usage patterns, and publication-ready development standards
   - AI pricing analysis and comparison
   - YAML-driven configuration patterns
 
+- **[msg-rs](scenarios/libraries-frameworks/chainbound_msg-rs/analysis.md)** ![Stars](https://img.shields.io/github/stars/chainbound/msg-rs?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/chainbound/msg-rs?style=flat-square) ![Activity](https://img.shields.io/github/last-commit/chainbound/msg-rs?style=flat-square) - Distributed systems messaging library
+  - Async-first architecture with Tokio integration
+  - Trait-based extensibility for transport and authentication
+  - Comprehensive testing strategy including chaos testing
+
+- **[MeFood Next.js](scenarios/libraries-frameworks/KarnYong_mefood-next-public/analysis.md)** ![Stars](https://img.shields.io/github/stars/KarnYong/mefood-next-public?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/KarnYong/mefood-next-public?style=flat-square) ![Activity](https://img.shields.io/github/last-commit/KarnYong/mefood-next-public?style=flat-square) - Modern Next.js food application
+  - Next.js 15 with comprehensive technology stack documentation
+  - Database-centric architecture with detailed schema descriptions
+  - Production deployment patterns with PM2 process management
+
 - **[Agentic](scenarios/libraries-frameworks/transitive-bullshit_agentic/README.md)** ![Stars](https://img.shields.io/github/stars/transitive-bullshit/agentic?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/transitive-bullshit/agentic?style=flat-square) ![Activity](https://img.shields.io/github/last-commit/transitive-bullshit/agentic?style=flat-square) - AI agent orchestration library
   - Multi-agent coordination patterns
   - TypeScript-based AI agent framework
@@ -658,6 +688,6 @@ Find more `CLAUDE.md` examples using these search strategies:
 
 ---
 
-**Total Examples**: 68 | **Last Updated**: January 2025 | **Maintained by**: Community Contributors
+**Total Examples**: 73 | **Last Updated**: January 2025 | **Maintained by**: Community Contributors
 
 > 🤖 This collection is maintained with assistance from Claude Code for quality analysis and curation
