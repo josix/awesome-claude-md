@@ -2,7 +2,7 @@
 
 **Category**: Complex Projects  
 **Source**: [getsentry/sentry](https://github.com/getsentry/sentry)  
-**CLAUDE.md**: [View Original](https://github.com/getsentry/sentry/blob/main/CLAUDE.md)  
+**CLAUDE.md**: [View Original](https://github.com/getsentry/sentry/blob/master/CLAUDE.md)  
 **License**: BSL-1.1 License  
 
 This CLAUDE.md file from Sentry demonstrates comprehensive documentation for a large-scale error tracking and performance monitoring platform with complex microservices architecture.
