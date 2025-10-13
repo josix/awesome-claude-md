@@ -64,7 +64,7 @@ A curated collection of high-quality `CLAUDE.md` files from leading open-source 
 ## 🔍 Browse by Technology
 
 <details>
-<summary><strong>🟦 TypeScript/JavaScript</strong> (26 examples)</summary>
+<summary><strong>🟦 TypeScript/JavaScript</strong> (28 examples)</summary>
 
 - **[Callstack React Native Testing](scenarios/libraries-frameworks/callstack_react-native-testing-library/analysis.md)** ![Stars](https://img.shields.io/github/stars/callstack/react-native-testing-library?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/callstack/react-native-testing-library?style=flat-square) - Testing library gold standard from React Native experts
 - **[Citadel Protocol Contracts](scenarios/complex-projects/Citadel-Protocol_contracts/analysis.md)** ![Stars](https://img.shields.io/github/stars/Citadel-Protocol/contracts?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/Citadel-Protocol/contracts?style=flat-square) - Security-first DeFi protocol documentation
@@ -78,6 +78,7 @@ A curated collection of high-quality `CLAUDE.md` files from leading open-source 
 - **[MCP WordPress](scenarios/developer-tooling/docdyhr_mcp-wordpress/analysis.md)** ![Stars](https://img.shields.io/github/stars/docdyhr/mcp-wordpress?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/docdyhr/mcp-wordpress?style=flat-square) - MCP server for WordPress CMS
 - **[GalaChain SDK](scenarios/libraries-frameworks/GalaChain_sdk/analysis.md)** ![Stars](https://img.shields.io/github/stars/GalaChain/sdk?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/GalaChain/sdk?style=flat-square) - Blockchain SDK with TypeScript
 - **[Overreacted.io](scenarios/complex-projects/gaearon_overreacted.io/README.md)** ![Stars](https://img.shields.io/github/stars/gaearon/overreacted.io?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/gaearon/overreacted.io?style=flat-square) - Next.js with MDX
+- **[noren](scenarios/libraries-frameworks/himorishige_noren/README.md)** ![Stars](https://img.shields.io/github/stars/himorishige/noren?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/himorishige/noren?style=flat-square) - Edge-native PII redaction library
 - **[Image Generation MCP](scenarios/developer-tooling/johnw188_image-generation-mcp/README.md)** ![Stars](https://img.shields.io/github/stars/johnw188/image-generation-mcp?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/johnw188/image-generation-mcp?style=flat-square) - MCP server with Cloudflare Workers
 - **[KleverConnect Starter](scenarios/getting-started/klever-hub_kleverconnect-starter/README.md)** ![Stars](https://img.shields.io/github/stars/klever-hub/kleverconnect-starter?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/klever-hub/kleverconnect-starter?style=flat-square) - Web3 React + Vite
 - **[Kubb](scenarios/developer-tooling/kubb-labs_kubb/README.md)** ![Stars](https://img.shields.io/github/stars/kubb-labs/kubb?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/kubb-labs/kubb?style=flat-square) - OpenAPI TypeScript generator
@@ -88,15 +89,17 @@ A curated collection of high-quality `CLAUDE.md` files from leading open-source 
 - **[Nine Week Challenge](scenarios/complex-projects/nerveband_nine-week-challenge/README.md)** ![Stars](https://img.shields.io/github/stars/nerveband/nine-week-challenge?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/nerveband/nine-week-challenge?style=flat-square) - Next.js 14 App Router wellness app
 - **[Webhook Broker](scenarios/complex-projects/newscred_webhook-broker/README.md)** ![Stars](https://img.shields.io/github/stars/newscred/webhook-broker?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/newscred/webhook-broker?style=flat-square) - Event-driven microservice architecture
 - **[Omar Dulaimi Prisma tRPC Generator](scenarios/libraries-frameworks/omar-dulaimi_prisma-trpc-generator/analysis.md)** ![Stars](https://img.shields.io/github/stars/omar-dulaimi/prisma-trpc-generator?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/omar-dulaimi/prisma-trpc-generator?style=flat-square) - Modern full-stack TypeScript tooling integration
+- **[SYMBIONT](scenarios/developer-tooling/pinfada_SYMBIONT/README.md)** ![Stars](https://img.shields.io/github/stars/pinfada/SYMBIONT?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/pinfada/SYMBIONT?style=flat-square) - First browser extension example with AI integration
 - **[Platformatic](scenarios/complex-projects/platformatic_platformatic/README.md)** ![Stars](https://img.shields.io/github/stars/platformatic/platformatic?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/platformatic/platformatic?style=flat-square) - Node.js application platform
 - **[Claude Flow](scenarios/complex-projects/ruvnet_claude-flow/README.md)** ![Stars](https://img.shields.io/github/stars/ruvnet/claude-flow?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/ruvnet/claude-flow?style=flat-square) - Enterprise AI orchestration platform
+- **[claude-code-mastra](scenarios/developer-tooling/t3ta_claude-code-mastra/README.md)** ![Stars](https://img.shields.io/github/stars/t3ta/claude-code-mastra?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/t3ta/claude-code-mastra?style=flat-square) - AI SDK adapter patterns for framework integration
 - **[PMStander Web Tools](scenarios/libraries-frameworks/PMStander_web-tools/analysis.md)** ![Stars](https://img.shields.io/github/stars/PMStander/web-tools?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/PMStander/web-tools?style=flat-square) - Advanced performance optimization patterns
 - **[Yutodo](scenarios/developer-tooling/yutotnh_yutodo/README.md)** ![Stars](https://img.shields.io/github/stars/yutotnh/yutodo?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/yutotnh/yutodo?style=flat-square) - Full-stack application documentation
 
 </details>
 
 <details>
-<summary><strong>🟧 Python</strong> (19 examples)</summary>
+<summary><strong>🟧 Python</strong> (20 examples)</summary>
 
 - **[Anthropic Quickstarts](scenarios/getting-started/anthropics_anthropic-quickstarts/README.md)** ![Stars](https://img.shields.io/github/stars/anthropics/anthropic-quickstarts?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/anthropics/anthropic-quickstarts?style=flat-square) - Computer-use demo
 - **[Basic Memory](scenarios/complex-projects/basicmachines-co_basic-memory/README.md)** ![Stars](https://img.shields.io/github/stars/basicmachines-co/basic-memory?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/basicmachines-co/basic-memory?style=flat-square) - MCP integration
@@ -106,6 +109,7 @@ A curated collection of high-quality `CLAUDE.md` files from leading open-source 
 - **[GenSX](scenarios/libraries-frameworks/gensx-inc_gensx/README.md)** ![Stars](https://img.shields.io/github/stars/gensx-inc/gensx?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/gensx-inc/gensx?style=flat-square) - AI-powered scientific computing
 - **[Ultimate RVC](scenarios/libraries-frameworks/JackismyShephard_ultimate-rvc/README.md)** ![Stars](https://img.shields.io/github/stars/JackismyShephard/ultimate-rvc?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/JackismyShephard/ultimate-rvc?style=flat-square) - AI-powered audio content creation
 - **[HA Irrigation Strategy](scenarios/developer-tooling/JakeTheRabbit_HA-Irrigation-Strategy/README.md)** ![Stars](https://img.shields.io/github/stars/JakeTheRabbit/HA-Irrigation-Strategy?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/JakeTheRabbit/HA-Irrigation-Strategy?style=flat-square) - Smart home agriculture automation
+- **[FastAPI Template](scenarios/libraries-frameworks/JiayuXu0_FastAPI-Template/README.md)** ![Stars](https://img.shields.io/github/stars/JiayuXu0/FastAPI-Template?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/JiayuXu0/FastAPI-Template?style=flat-square) - Enterprise-grade Python backend with three-layer architecture
 - **[Jason Liu Blog](scenarios/developer-tooling/jxnl_blog/README.md)** ![Stars](https://img.shields.io/github/stars/jxnl/blog?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/jxnl/blog?style=flat-square) - AI/ML thought leadership
 - **[HendrixVideo](scenarios/complex-projects/material-lab-io_HendrixVideo/analysis.md)** ![Stars](https://img.shields.io/github/stars/material-lab-io/HendrixVideo?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/material-lab-io/HendrixVideo?style=flat-square) - AI-powered video analysis pipeline
 - **[SummaryBot NG](scenarios/developer-tooling/mrjcleaver_summarybot-ng/analysis.md)** ![Stars](https://img.shields.io/github/stars/mrjcleaver/summarybot-ng?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/mrjcleaver/summarybot-ng?style=flat-square) - Agent-based development framework
@@ -158,15 +162,33 @@ A curated collection of high-quality `CLAUDE.md` files from leading open-source 
 </details>
 
 <details>
-<summary><strong>🟨 Other Languages</strong> (8 examples)</summary>
+<summary><strong>🟨 Other Languages</strong> (9 examples)</summary>
 
+**Elixir**
+- **[trifle_stats](scenarios/libraries-frameworks/trifle-io_trifle_stats/README.md)** ![Stars](https://img.shields.io/github/stars/trifle-io/trifle_stats?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/trifle-io/trifle_stats?style=flat-square) - First Elixir example - Multi-database time-series library
+
+**Kotlin**
 - **[Kotlinter Gradle](scenarios/developer-tooling/jeremymailen_kotlinter-gradle/README.md)** ![Stars](https://img.shields.io/github/stars/jeremymailen/kotlinter-gradle?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/jeremymailen/kotlinter-gradle?style=flat-square) - Kotlin linting plugin
+
+**Node.js (C++)**
 - **[HWP](scenarios/developer-tooling/mcollina_hwp/README.md)** ![Stars](https://img.shields.io/github/stars/mcollina/hwp?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/mcollina/hwp?style=flat-square) - Node.js HTTP benchmarking
+
+**Smalltalk**
 - **[B+ Tree](scenarios/project-handoffs/KentBeck_BPlusTree3/README.md)** ![Stars](https://img.shields.io/github/stars/KentBeck/BPlusTree3?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/KentBeck/BPlusTree3?style=flat-square) - Smalltalk data structure implementation
+
+**Haskell**
 - **[Pipewire-HS](scenarios/libraries-frameworks/JonathanLorimer_pipewire-hs/README.md)** ![Stars](https://img.shields.io/github/stars/JonathanLorimer/pipewire-hs?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/JonathanLorimer/pipewire-hs?style=flat-square) - Haskell bindings for PipeWire
+
+**Python (Type Generation)**
 - **[mypy-boto3-builder](scenarios/developer-tooling/youtype_mypy-boto3-builder/README.md)** ![Stars](https://img.shields.io/github/stars/youtype/mypy-boto3-builder?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/youtype/mypy-boto3-builder?style=flat-square) - AWS SDK type stubs generator
+
+**PHP/Vue.js**
 - **[WindPress](scenarios/complex-projects/wind-press_windpress/analysis.md)** ![Stars](https://img.shields.io/github/stars/wind-press/windpress?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/wind-press/windpress?style=flat-square) - Vue.js with WebAssembly Tailwind compilation
+
+**C#/.NET**
 - **[TimeWarp Architecture](scenarios/complex-projects/TimeWarpEngineering_timewarp-architecture/README.md)** ![Stars](https://img.shields.io/github/stars/TimeWarpEngineering/timewarp-architecture?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/TimeWarpEngineering/timewarp-architecture?style=flat-square) - C#/.NET Blazor WebAssembly framework
+
+**Markdown/Documentation**
 - **[Tasker Systems Book](scenarios/project-handoffs/tasker-systems_book/analysis.md)** ![Stars](https://img.shields.io/github/stars/tasker-systems/book?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/tasker-systems/book?style=flat-square) - Narrative-driven technical documentation
 
 </details>
@@ -431,6 +453,11 @@ CLI tools, build systems, and development utilities with focus on commands and c
   - Comprehensive testing framework with Ginkgo/Gomega patterns
   - Enterprise-grade Go development with community guidelines
 
+- **[SYMBIONT](scenarios/developer-tooling/pinfada_SYMBIONT/README.md)** ![Stars](https://img.shields.io/github/stars/pinfada/SYMBIONT?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/pinfada/SYMBIONT?style=flat-square) ![Activity](https://img.shields.io/github/last-commit/pinfada/SYMBIONT?style=flat-square) - AI-powered Chrome extension architecture (First browser extension example)
+  - Message-driven architecture with MessageBus for inter-component communication
+  - Security-first design with GDPR compliance and client-side encryption
+  - Dual-stack architecture (TypeScript + React frontend, Express + PostgreSQL backend)
+
 - **[Claude Code F2](scenarios/developer-tooling/pransil_claude-code-f2/README.md)** ![Stars](https://img.shields.io/github/stars/pransil/claude-code-f2?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/pransil/claude-code-f2?style=flat-square) ![Activity](https://img.shields.io/github/last-commit/pransil/claude-code-f2?style=flat-square) - Systematic development framework
   - 6-phase development workflow methodology
   - Testing-driven development with comprehensive validation
@@ -440,6 +467,11 @@ CLI tools, build systems, and development utilities with focus on commands and c
   - Dual-language (Rust/Python) architecture
   - Performance-critical log processing
   - ML/AI debugging and optimization
+
+- **[claude-code-mastra](scenarios/developer-tooling/t3ta_claude-code-mastra/README.md)** ![Stars](https://img.shields.io/github/stars/t3ta/claude-code-mastra?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/t3ta/claude-code-mastra?style=flat-square) ![Activity](https://img.shields.io/github/last-commit/t3ta/claude-code-mastra?style=flat-square) - Claude Code SDK integration for Mastra framework
+  - Clean adapter patterns for AI SDK interoperability
+  - Session lifecycle management with automatic cleanup
+  - Tool conflict resolution and unified interface patterns
 
 - **[Tasker Core](scenarios/developer-tooling/tasker-systems_tasker-core-rs/README.md)** ![Stars](https://img.shields.io/github/stars/tasker-systems/tasker-core-rs?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/tasker-systems/tasker-core-rs?style=flat-square) ![Activity](https://img.shields.io/github/last-commit/tasker-systems/tasker-core-rs?style=flat-square) - Rust workflow orchestration engine
   - Advanced workflow orchestration patterns
@@ -550,10 +582,20 @@ Core concepts, APIs, usage patterns, and publication-ready development standards
   - Research and development patterns
   - Data analysis and visualization
 
+- **[noren](scenarios/libraries-frameworks/himorishige_noren/README.md)** ![Stars](https://img.shields.io/github/stars/himorishige/noren?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/himorishige/noren?style=flat-square) ![Activity](https://img.shields.io/github/last-commit/himorishige/noren?style=flat-square) - Edge-native PII redaction library
+  - WHATWG Streams API for efficient stream processing
+  - Plugin architecture for country-specific PII detection
+  - MCP (Model Context Protocol) integration ready
+
 - **[Ultimate RVC](scenarios/libraries-frameworks/JackismyShephard_ultimate-rvc/README.md)** ![Stars](https://img.shields.io/github/stars/JackismyShephard/ultimate-rvc?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/JackismyShephard/ultimate-rvc?style=flat-square) ![Activity](https://img.shields.io/github/last-commit/JackismyShephard/ultimate-rvc?style=flat-square) - AI-powered audio content creation
   - Exceptional testing methodology with 6 distinct testing approaches
   - Real-time voice conversion and audio processing
   - Advanced AI model integration patterns
+
+- **[FastAPI Template](scenarios/libraries-frameworks/JiayuXu0_FastAPI-Template/README.md)** ![Stars](https://img.shields.io/github/stars/JiayuXu0/FastAPI-Template?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/JiayuXu0/FastAPI-Template?style=flat-square) ![Activity](https://img.shields.io/github/last-commit/JiayuXu0/FastAPI-Template?style=flat-square) - Enterprise-grade Python backend architecture
+  - Three-layer architecture (API → Service → Repository → Model)
+  - Comprehensive RBAC and JWT authentication with security audit logging
+  - Complete feature development lifecycle from model to testing
 
 - **[Pipewire-HS](scenarios/libraries-frameworks/JonathanLorimer_pipewire-hs/README.md)** ![Stars](https://img.shields.io/github/stars/JonathanLorimer/pipewire-hs?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/JonathanLorimer/pipewire-hs?style=flat-square) ![Activity](https://img.shields.io/github/last-commit/JonathanLorimer/pipewire-hs?style=flat-square) - Haskell bindings for PipeWire audio system
   - Functional programming patterns for audio systems
@@ -599,6 +641,11 @@ Core concepts, APIs, usage patterns, and publication-ready development standards
   - Next.js 15 with comprehensive technology stack documentation
   - Database-centric architecture with detailed schema descriptions
   - Production deployment patterns with PM2 process management
+
+- **[trifle_stats](scenarios/libraries-frameworks/trifle-io_trifle_stats/README.md)** ![Stars](https://img.shields.io/github/stars/trifle-io/trifle_stats?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/trifle-io/trifle_stats?style=flat-square) ![Activity](https://img.shields.io/github/last-commit/trifle-io/trifle_stats?style=flat-square) - Multi-database time-series library in Elixir (First Elixir example)
+  - Unified API across MongoDB, PostgreSQL, SQLite, and Redis
+  - Fluent API design with Elixir-idiomatic pipeline operations
+  - Pattern matching excellence for data transformation
 
 - **[Agentic](scenarios/libraries-frameworks/transitive-bullshit_agentic/README.md)** ![Stars](https://img.shields.io/github/stars/transitive-bullshit/agentic?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/transitive-bullshit/agentic?style=flat-square) ![Activity](https://img.shields.io/github/last-commit/transitive-bullshit/agentic?style=flat-square) - AI agent orchestration library
   - Multi-agent coordination patterns
