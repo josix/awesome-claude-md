@@ -64,7 +64,7 @@ A curated collection of high-quality `CLAUDE.md` files from leading open-source 
 ## 🔍 Browse by Technology
 
 <details>
-<summary><strong>🟦 TypeScript/JavaScript</strong> (28 examples)</summary>
+<summary><strong>🟦 TypeScript/JavaScript</strong> (30 examples)</summary>
 
 - **[Callstack React Native Testing](scenarios/libraries-frameworks/callstack_react-native-testing-library/analysis.md)** ![Stars](https://img.shields.io/github/stars/callstack/react-native-testing-library?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/callstack/react-native-testing-library?style=flat-square) - Testing library gold standard from React Native experts
 - **[Citadel Protocol Contracts](scenarios/complex-projects/Citadel-Protocol_contracts/analysis.md)** ![Stars](https://img.shields.io/github/stars/Citadel-Protocol/contracts?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/Citadel-Protocol/contracts?style=flat-square) - Security-first DeFi protocol documentation
@@ -80,12 +80,14 @@ A curated collection of high-quality `CLAUDE.md` files from leading open-source 
 - **[Overreacted.io](scenarios/complex-projects/gaearon_overreacted.io/README.md)** ![Stars](https://img.shields.io/github/stars/gaearon/overreacted.io?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/gaearon/overreacted.io?style=flat-square) - Next.js with MDX
 - **[noren](scenarios/libraries-frameworks/himorishige_noren/README.md)** ![Stars](https://img.shields.io/github/stars/himorishige/noren?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/himorishige/noren?style=flat-square) - Edge-native PII redaction library
 - **[Image Generation MCP](scenarios/developer-tooling/johnw188_image-generation-mcp/README.md)** ![Stars](https://img.shields.io/github/stars/johnw188/image-generation-mcp?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/johnw188/image-generation-mcp?style=flat-square) - MCP server with Cloudflare Workers
+- **[Pixel Banner](scenarios/developer-tooling/jparkerweb_pixel-banner/README.md)** ![Stars](https://img.shields.io/github/stars/jparkerweb/pixel-banner?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/jparkerweb/pixel-banner?style=flat-square) - Obsidian plugin with customizable banners
 - **[KleverConnect Starter](scenarios/getting-started/klever-hub_kleverconnect-starter/README.md)** ![Stars](https://img.shields.io/github/stars/klever-hub/kleverconnect-starter?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/klever-hub/kleverconnect-starter?style=flat-square) - Web3 React + Vite
 - **[Kubb](scenarios/developer-tooling/kubb-labs_kubb/README.md)** ![Stars](https://img.shields.io/github/stars/kubb-labs/kubb?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/kubb-labs/kubb?style=flat-square) - OpenAPI TypeScript generator
 - **[Lerna](scenarios/developer-tooling/lerna_lerna/README.md)** ![Stars](https://img.shields.io/github/stars/lerna/lerna?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/lerna/lerna?style=flat-square) - Monorepo management tool
 - **[MeFood Next.js](scenarios/libraries-frameworks/KarnYong_mefood-next-public/analysis.md)** ![Stars](https://img.shields.io/github/stars/KarnYong/mefood-next-public?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/KarnYong/mefood-next-public?style=flat-square) - Modern Next.js food application
 - **[Agentic](scenarios/libraries-frameworks/transitive-bullshit_agentic/README.md)** ![Stars](https://img.shields.io/github/stars/transitive-bullshit/agentic?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/transitive-bullshit/agentic?style=flat-square) - AI agent orchestration library
 - **[Semantic Workbench](scenarios/complex-projects/microsoft_semanticworkbench/README.md)** ![Stars](https://img.shields.io/github/stars/microsoft/semanticworkbench?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/microsoft/semanticworkbench?style=flat-square) - Microsoft AI assistant platform
+- **[Neon MCP Server](scenarios/developer-tooling/neondatabase_mcp-server-neon/README.md)** ![Stars](https://img.shields.io/github/stars/neondatabase/mcp-server-neon?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/neondatabase/mcp-server-neon?style=flat-square) - Production MCP server for Neon database
 - **[Nine Week Challenge](scenarios/complex-projects/nerveband_nine-week-challenge/README.md)** ![Stars](https://img.shields.io/github/stars/nerveband/nine-week-challenge?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/nerveband/nine-week-challenge?style=flat-square) - Next.js 14 App Router wellness app
 - **[Webhook Broker](scenarios/complex-projects/newscred_webhook-broker/README.md)** ![Stars](https://img.shields.io/github/stars/newscred/webhook-broker?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/newscred/webhook-broker?style=flat-square) - Event-driven microservice architecture
 - **[Omar Dulaimi Prisma tRPC Generator](scenarios/libraries-frameworks/omar-dulaimi_prisma-trpc-generator/analysis.md)** ![Stars](https://img.shields.io/github/stars/omar-dulaimi/prisma-trpc-generator?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/omar-dulaimi/prisma-trpc-generator?style=flat-square) - Modern full-stack TypeScript tooling integration
@@ -408,6 +410,11 @@ CLI tools, build systems, and development utilities with focus on commands and c
   - Cloudflare Workers deployment
   - AI service integration patterns
 
+- **[Pixel Banner](scenarios/developer-tooling/jparkerweb_pixel-banner/README.md)** ![Stars](https://img.shields.io/github/stars/jparkerweb/pixel-banner?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/jparkerweb/pixel-banner?style=flat-square) ![Activity](https://img.shields.io/github/last-commit/jparkerweb/pixel-banner?style=flat-square) - Obsidian plugin with customizable banner images
+  - Task-oriented plugin documentation
+  - Multi-layered testing strategy
+  - Complete architectural flow mapping
+
 - **[Jason Liu Blog](scenarios/developer-tooling/jxnl_blog/README.md)** ![Stars](https://img.shields.io/github/stars/jxnl/blog?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/jxnl/blog?style=flat-square) ![Activity](https://img.shields.io/github/last-commit/jxnl/blog?style=flat-square) - AI/ML thought leadership and technical blogging
   - Technical content creation workflows
   - AI/ML best practices and insights
@@ -437,6 +444,11 @@ CLI tools, build systems, and development utilities with focus on commands and c
   - Performance testing methodologies
   - HTTP benchmarking tools
   - Node.js performance optimization
+
+- **[Neon MCP Server](scenarios/developer-tooling/neondatabase_mcp-server-neon/README.md)** ![Stars](https://img.shields.io/github/stars/neondatabase/mcp-server-neon?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/neondatabase/mcp-server-neon?style=flat-square) ![Activity](https://img.shields.io/github/last-commit/neondatabase/mcp-server-neon?style=flat-square) - Production-grade MCP server for Neon database API
+  - Dual-purpose architecture (remote server + local CLI)
+  - Stateless serverless design patterns
+  - Comprehensive tool development guide
 
 - **[macMCP](scenarios/developer-tooling/obra_macMCP/README.md)** ![Stars](https://img.shields.io/github/stars/obra/macMCP?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/obra/macMCP?style=flat-square) ![Activity](https://img.shields.io/github/last-commit/obra/macMCP?style=flat-square) - macOS MCP server implementation
   - Platform-specific MCP integration with macOS accessibility APIs
