@@ -180,7 +180,7 @@ A curated collection of high-quality `CLAUDE.md` files from leading open-source 
 - **[Pipewire-HS](scenarios/libraries-frameworks/JonathanLorimer_pipewire-hs/README.md)** ![Stars](https://img.shields.io/github/stars/JonathanLorimer/pipewire-hs?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/JonathanLorimer/pipewire-hs?style=flat-square) - Haskell bindings for PipeWire
 
 **Python (Type Generation)**
-- **[mypy-boto3-builder](scenarios/developer-tooling/youtype_mypy-boto3-builder/README.md)** ![Stars](https://img.shields.io/github/stars/youtype/mypy-boto3-builder?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/youtype/mypy-boto3-builder?style=flat-square) - AWS SDK type stubs generator
+- **[mypy-boto3-builder](scenarios/developer-tooling/youtype_mypy_boto3_builder/README.md)** ![Stars](https://img.shields.io/github/stars/youtype/mypy_boto3_builder?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/youtype/mypy_boto3_builder?style=flat-square) - AWS SDK type stubs generator
 
 **PHP/Vue.js**
 - **[WindPress](scenarios/complex-projects/wind-press_windpress/analysis.md)** ![Stars](https://img.shields.io/github/stars/wind-press/windpress?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/wind-press/windpress?style=flat-square) - Vue.js with WebAssembly Tailwind compilation
@@ -735,6 +735,6 @@ Find more `CLAUDE.md` examples using these search strategies:
 
 ---
 
-**Total Examples**: 73 | **Last Updated**: January 2025 | **Maintained by**: Community Contributors
+**Total Examples**: 80 | **Last Updated**: January 2025 | **Maintained by**: Community Contributors
 
 > 🤖 This collection is maintained with assistance from Claude Code for quality analysis and curation

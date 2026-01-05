@@ -28,9 +28,9 @@ class TestRepositoryLoader:
     )
     def test_validate_repo_name_valid(self, repo_loader, repo_name):
         """Test repository name validation with valid names."""
-        assert repo_loader._validate_repo_name(
-            repo_name
-        ), f"Expected {repo_name} to be valid"
+        assert repo_loader._validate_repo_name(repo_name), (
+            f"Expected {repo_name} to be valid"
+        )
 
     @pytest.mark.parametrize(
         "repo_name",
@@ -50,9 +50,9 @@ class TestRepositoryLoader:
     )
     def test_validate_repo_name_invalid(self, repo_loader, repo_name):
         """Test repository name validation with invalid names."""
-        assert not repo_loader._validate_repo_name(
-            repo_name
-        ), f"Expected {repo_name} to be invalid"
+        assert not repo_loader._validate_repo_name(repo_name), (
+            f"Expected {repo_name} to be invalid"
+        )
 
     def test_load_existing_repos_no_scenarios(self, repo_loader):
         """Test loading existing repos when scenarios directory doesn't exist."""

@@ -45,3 +45,4 @@ Thumbs.db
 /tmp/
 discovery-report-*.md
 .aider*
+**/verification_results.json
