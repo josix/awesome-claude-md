@@ -64,10 +64,11 @@ A curated collection of high-quality `CLAUDE.md` files from leading open-source 
 ## 🔍 Browse by Technology
 
 <details>
-<summary><strong>🟦 TypeScript/JavaScript</strong> (30 examples)</summary>
+<summary><strong>🟦 TypeScript/JavaScript</strong> (31 examples)</summary>
 
 - **[Callstack React Native Testing](scenarios/libraries-frameworks/callstack_react-native-testing-library/analysis.md)** ![Stars](https://img.shields.io/github/stars/callstack/react-native-testing-library?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/callstack/react-native-testing-library?style=flat-square) - Testing library gold standard from React Native experts
 - **[Citadel Protocol Contracts](scenarios/complex-projects/Citadel-Protocol_contracts/analysis.md)** ![Stars](https://img.shields.io/github/stars/Citadel-Protocol/contracts?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/Citadel-Protocol/contracts?style=flat-square) - Security-first DeFi protocol documentation
+- **[Foam](scenarios/developer-tooling/foambubble_foam/README.md)** ![Stars](https://img.shields.io/github/stars/foambubble/foam?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/foambubble/foam?style=flat-square) - Personal knowledge management and sharing system for VSCode
 - **[H1B Visa Analysis](scenarios/complex-projects/ChaseNoCap_h1b-visa-analysis/README.md)** ![Stars](https://img.shields.io/github/stars/ChaseNoCap/h1b-visa-analysis?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/ChaseNoCap/h1b-visa-analysis?style=flat-square) - AI-guided meta-repository framework
 - **[SDLC Engine](scenarios/developer-tooling/ChaseNoCap_sdlc-engine/README.md)** ![Stars](https://img.shields.io/github/stars/ChaseNoCap/sdlc-engine?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/ChaseNoCap/sdlc-engine?style=flat-square) - State machine workflow orchestration
 - **[WhereAmI](scenarios/complex-projects/Cmxu_whereami/README.md)** ![Stars](https://img.shields.io/github/stars/Cmxu/whereami?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/Cmxu/whereami?style=flat-square) - SvelteKit with Svelte 5
@@ -101,7 +102,7 @@ A curated collection of high-quality `CLAUDE.md` files from leading open-source 
 </details>
 
 <details>
-<summary><strong>🟧 Python</strong> (20 examples)</summary>
+<summary><strong>🟧 Python</strong> (21 examples)</summary>
 
 - **[Anthropic Quickstarts](scenarios/getting-started/anthropics_anthropic-quickstarts/README.md)** ![Stars](https://img.shields.io/github/stars/anthropics/anthropic-quickstarts?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/anthropics/anthropic-quickstarts?style=flat-square) - Computer-use demo
 - **[Basic Memory](scenarios/complex-projects/basicmachines-co_basic-memory/README.md)** ![Stars](https://img.shields.io/github/stars/basicmachines-co/basic-memory?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/basicmachines-co/basic-memory?style=flat-square) - MCP integration
@@ -123,6 +124,7 @@ A curated collection of high-quality `CLAUDE.md` files from leading open-source 
 - **[Pydantic GenAI Prices](scenarios/libraries-frameworks/pydantic_genai-prices/README.md)** ![Stars](https://img.shields.io/github/stars/pydantic/genai-prices?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/pydantic/genai-prices?style=flat-square) - Expert data processing pipeline
 - **[PyTorch tlparse](scenarios/developer-tooling/pytorch_tlparse/README.md)** ![Stars](https://img.shields.io/github/stars/pytorch/tlparse?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/pytorch/tlparse?style=flat-square) - Dual-language (Rust/Python)
 - **[Demo MCP](scenarios/infrastructure-projects/sedwardstx_demomcp/analysis.md)** ![Stars](https://img.shields.io/github/stars/sedwardstx/demomcp?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/sedwardstx/demomcp?style=flat-square) - MCP server architecture patterns
+- **[Weaviate Docs](scenarios/getting-started/weaviate_docs/README.md)** ![Stars](https://img.shields.io/github/stars/weaviate/docs?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/weaviate/docs?style=flat-square) - Documentation for Weaviate Database with multi-language testing
 
 </details>
 
@@ -164,13 +166,16 @@ A curated collection of high-quality `CLAUDE.md` files from leading open-source 
 </details>
 
 <details>
-<summary><strong>🟨 Other Languages</strong> (9 examples)</summary>
+<summary><strong>🟨 Other Languages</strong> (10 examples)</summary>
 
 **Elixir**
 - **[trifle_stats](scenarios/libraries-frameworks/trifle-io_trifle_stats/README.md)** ![Stars](https://img.shields.io/github/stars/trifle-io/trifle_stats?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/trifle-io/trifle_stats?style=flat-square) - First Elixir example - Multi-database time-series library
 
 **Kotlin**
 - **[Kotlinter Gradle](scenarios/developer-tooling/jeremymailen_kotlinter-gradle/README.md)** ![Stars](https://img.shields.io/github/stars/jeremymailen/kotlinter-gradle?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/jeremymailen/kotlinter-gradle?style=flat-square) - Kotlin linting plugin
+
+**Lua**
+- **[claudecode.nvim](scenarios/developer-tooling/coder_claudecode.nvim/README.md)** ![Stars](https://img.shields.io/github/stars/coder/claudecode.nvim?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/coder/claudecode.nvim?style=flat-square) - Claude Code Neovim IDE Extension
 
 **Node.js (C++)**
 - **[HWP](scenarios/developer-tooling/mcollina_hwp/README.md)** ![Stars](https://img.shields.io/github/stars/mcollina/hwp?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/mcollina/hwp?style=flat-square) - Node.js HTTP benchmarking
@@ -253,12 +258,13 @@ A curated collection of high-quality `CLAUDE.md` files from leading open-source 
 </details>
 
 <details>
-<summary><strong>🚀 Getting Started</strong> (4 examples)</summary>
+<summary><strong>🚀 Getting Started</strong> (5 examples)</summary>
 
 - **[Anthropic Quickstarts](scenarios/getting-started/anthropics_anthropic-quickstarts/README.md)** ![Stars](https://img.shields.io/github/stars/anthropics/anthropic-quickstarts?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/anthropics/anthropic-quickstarts?style=flat-square) - Official Anthropic quickstart examples
 - **[Ethereum.org Website](scenarios/getting-started/ethereum_ethereum-org-website/README.md)** ![Stars](https://img.shields.io/github/stars/ethereum/ethereum-org-website?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/ethereum/ethereum-org-website?style=flat-square) - Official Ethereum community website
 - **[KleverConnect Starter](scenarios/getting-started/klever-hub_kleverconnect-starter/README.md)** ![Stars](https://img.shields.io/github/stars/klever-hub/kleverconnect-starter?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/klever-hub/kleverconnect-starter?style=flat-square) - Web3 React + Vite starter kit
 - **[Dotfiles](scenarios/getting-started/obra_dotfiles/README.md)** ![Stars](https://img.shields.io/github/stars/obra/dotfiles?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/obra/dotfiles?style=flat-square) - Personal development environment configuration
+- **[Weaviate Docs](scenarios/getting-started/weaviate_docs/README.md)** ![Stars](https://img.shields.io/github/stars/weaviate/docs?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/weaviate/docs?style=flat-square) - Documentation for Weaviate Database
 
 </details>
 
@@ -360,6 +366,11 @@ Multi-service applications with sophisticated architectures and enterprise-scale
 ### 🛠️ Developer Tooling
 CLI tools, build systems, and development utilities with focus on commands and configuration.
 
+- **[claudecode.nvim](scenarios/developer-tooling/coder_claudecode.nvim/README.md)** ![Stars](https://img.shields.io/github/stars/coder/claudecode.nvim?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/coder/claudecode.nvim?style=flat-square) ![Activity](https://img.shields.io/github/last-commit/coder/claudecode.nvim?style=flat-square) - Claude Code Neovim IDE Extension
+  - WebSocket server with MCP protocol implementation
+  - Zero-dependency architecture using Neovim built-ins
+  - 320+ tests covering all MCP tools
+
 - **[MCP WordPress](scenarios/developer-tooling/docdyhr_mcp-wordpress/analysis.md)** ![Stars](https://img.shields.io/github/stars/docdyhr/mcp-wordpress?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/docdyhr/mcp-wordpress?style=flat-square) ![Activity](https://img.shields.io/github/last-commit/docdyhr/mcp-wordpress?style=flat-square) - MCP server for WordPress CMS integration
   - Model Context Protocol server development
   - Multi-site WordPress management patterns
@@ -399,6 +410,11 @@ CLI tools, build systems, and development utilities with focus on commands and c
   - Context-bounded RAG architecture for legal documents
   - Professional AI deployment patterns
   - Domain-specific validation techniques
+
+- **[Foam](scenarios/developer-tooling/foambubble_foam/README.md)** ![Stars](https://img.shields.io/github/stars/foambubble/foam?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/foambubble/foam?style=flat-square) ![Activity](https://img.shields.io/github/last-commit/foambubble/foam?style=flat-square) - Personal knowledge management for VSCode
+  - Platform-agnostic core with event-driven architecture
+  - Planning-first development workflow methodology
+  - Sophisticated testing architecture with test category distinction
 
 - **[Kotlinter Gradle](scenarios/developer-tooling/jeremymailen_kotlinter-gradle/README.md)** ![Stars](https://img.shields.io/github/stars/jeremymailen/kotlinter-gradle?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/jeremymailen/kotlinter-gradle?style=flat-square) ![Activity](https://img.shields.io/github/last-commit/jeremymailen/kotlinter-gradle?style=flat-square) - Kotlin linting and formatting plugin
   - Gradle plugin development patterns
@@ -532,6 +548,11 @@ Projects focused on developer onboarding and initial setup experiences.
   - Comprehensive collaboration guidelines for AI assistant integration
   - Personal dotfiles with extensive tool configuration patterns
   - Detailed working parameters and communication preferences
+
+- **[Weaviate Docs](scenarios/getting-started/weaviate_docs/README.md)** ![Stars](https://img.shields.io/github/stars/weaviate/docs?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/weaviate/docs?style=flat-square) ![Activity](https://img.shields.io/github/last-commit/weaviate/docs?style=flat-square) - Documentation for Weaviate Database
+  - Multi-language testing patterns (Python, Java, Go)
+  - Dynamic version management with automated GitHub release fetching
+  - Docker-centric testing environments
 
 ### 🏗️ Infrastructure Projects
 Large-scale systems, runtime environments, and platform-agnostic deployment patterns.
