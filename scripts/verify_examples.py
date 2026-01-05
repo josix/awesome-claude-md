@@ -73,18 +73,17 @@ def extract_github_links(file_path: str) -> dict[str, str]:
             links["repo_owner"] = repo_match2.group(1)
             links["repo_name"] = repo_match2.group(2)
 
-    # Pattern for CLAUDE.md link
-    claude_pattern = (
-        r"\[CLAUDE\.md\]\((https://github\.com/[^/]+/[^/]+/blob/[^)]+/CLAUDE\.md)\)"
-    )
-    claude_match = re.search(claude_pattern, content)
+    # Pattern for CLAUDE.md/Claude.md/AGENTS.md link (case-insensitive)
+    # Matches [CLAUDE.md], [Claude.md], [AGENTS.md] etc. with URLs
+    claude_pattern = r"\[(?:CLAUDE\.md|Claude\.md|AGENTS\.md)\]\((https://github\.com/[^/]+/[^/]+/blob/[^)]+/(?:CLAUDE|Claude|AGENTS)\.md)\)"
+    claude_match = re.search(claude_pattern, content, re.IGNORECASE)
     if claude_match:
         links["claude_md_url"] = claude_match.group(1)
 
-    # Alternative CLAUDE.md pattern
+    # Alternative pattern - match URLs directly (case-insensitive)
     if not links["claude_md_url"]:
-        claude_pattern2 = r"(https://github\.com/[^/]+/[^/]+/blob/[^/\s]+/CLAUDE\.md)"
-        claude_match2 = re.search(claude_pattern2, content)
+        claude_pattern2 = r"(https://github\.com/[^/]+/[^/]+/blob/[^/\s]+/(?:CLAUDE|Claude|AGENTS)\.md)"
+        claude_match2 = re.search(claude_pattern2, content, re.IGNORECASE)
         if claude_match2:
             links["claude_md_url"] = claude_match2.group(1)
 
