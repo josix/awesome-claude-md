@@ -1,0 +1,40 @@
+# Jekyll configuration for awesome-claude-md GitHub Pages
+
+title: Awesome CLAUDE.md
+description: A curated collection of high-quality CLAUDE.md files from public GitHub repositories
+baseurl: "/awesome-claude-md"
+url: "https://josix.github.io"
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+
+# Theme
+remote_theme: pages-themes/minimal@v0.2.0
+
+# Exclude files from build
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+
+# Collections for examples
+collections:
+  examples:
+    output: false
+
+# Default front matter
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+
+# GitHub metadata
+github:
+  repository_url: https://github.com/josix/awesome-claude-md
+
+plugins:
+  - jekyll-remote-theme
+  - jekyll-seo-tag

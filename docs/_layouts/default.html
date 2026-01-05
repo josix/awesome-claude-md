@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page.title | default: site.title }}</title>
+  <meta name="description" content="{{ page.description | default: site.description }}">
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <div class="header-content">
+        <a href="{{ '/' | relative_url }}" class="logo">
+          <span class="logo-icon">&#128218;</span>
+          <span class="logo-text">Awesome CLAUDE.md</span>
+        </a>
+        <nav class="main-nav">
+          <a href="{{ '/' | relative_url }}">Home</a>
+          <a href="{{ '/#categories' | relative_url }}">Categories</a>
+          <a href="https://github.com/josix/awesome-claude-md" target="_blank" rel="noopener">GitHub</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main class="site-main">
+    {{ content }}
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>
+        Curated with care by the community.
+        <a href="https://github.com/josix/awesome-claude-md/blob/main/CONTRIBUTING.md" target="_blank" rel="noopener">Contribute</a> |
+        <a href="https://github.com/josix/awesome-claude-md" target="_blank" rel="noopener">GitHub</a>
+      </p>
+      <p class="footer-note">All examples link to their original repositories. We respect open source licenses.</p>
+    </div>
+  </footer>
+
+  <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
+</body>
+</html>

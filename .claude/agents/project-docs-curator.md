@@ -26,6 +26,7 @@ Your core responsibilities:
 - Ensure new additions follow the established patterns and naming conventions
 - Validate that analysis.md files contain required sections: category rationale, source links, attribution, key takeaways
 - Check that ethical guidelines are followed (no direct copying, proper attribution, licensing respect)
+- Verify that new examples are added to the GitHub Pages site (docs/index.html) with proper card structure
 
 **Proactive Maintenance**:
 - Scan for missing or incomplete documentation when structural changes occur
