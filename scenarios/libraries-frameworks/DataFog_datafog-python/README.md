@@ -1,8 +1,8 @@
 # datafog-python - Libraries & Frameworks Example
 
-**Category: Libraries & Frameworks**  
-**Source**: [DataFog/datafog-python](https://github.com/DataFog/datafog-python)  
-**CLAUDE.md**: [View Original](https://github.com/DataFog/datafog-python/blob/main/Claude.md)  
+**Category: Libraries & Frameworks**
+**Source**: [DataFog/datafog-python](https://github.com/DataFog/datafog-python)
+**Claude.md**: [View Original](https://github.com/DataFog/datafog-python/blob/dev/Claude.md)
 **License**: MIT License
 
 ## Why This Example Was Selected

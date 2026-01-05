@@ -1,8 +1,8 @@
 # Composio - Libraries & Frameworks Example
 
-**Category: Libraries & Frameworks**  
-**Source**: [ComposioHQ/composio](https://github.com/ComposioHQ/composio)  
-**CLAUDE.md**: [View Original](https://github.com/ComposioHQ/composio/blob/main/fern/CLAUDE.md)  
+**Category: Libraries & Frameworks**
+**Source**: [ComposioHQ/composio](https://github.com/ComposioHQ/composio)
+**CLAUDE.md**: [View Original](https://github.com/ComposioHQ/composio/blob/master/CLAUDE.md)
 **License**: Apache-2.0 License
 
 ## Why This Example Was Selected

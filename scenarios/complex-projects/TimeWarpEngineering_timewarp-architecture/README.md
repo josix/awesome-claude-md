@@ -1,8 +1,8 @@
 # TimeWarp Architecture - Complex Projects & Microservices Example
 
-**Category: Complex Projects**  
-**Source**: [TimeWarpEngineering/timewarp-architecture](https://github.com/TimeWarpEngineering/timewarp-architecture)  
-**CLAUDE.md**: [View Original](https://github.com/TimeWarpEngineering/timewarp-architecture/blob/main/TimeWarp.Architecture/Claude.md)  
+**Category: Complex Projects**
+**Source**: [TimeWarpEngineering/timewarp-architecture](https://github.com/TimeWarpEngineering/timewarp-architecture)
+**CLAUDE.md**: [View Original](https://github.com/TimeWarpEngineering/timewarp-architecture/blob/master/CLAUDE.md)
 **License**: MIT License
 
 ## Why This Example Was Selected

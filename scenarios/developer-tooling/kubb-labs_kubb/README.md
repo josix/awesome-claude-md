@@ -1,13 +1,13 @@
 # Kubb - Developer Tooling Example
 
-**Category: Developer Tooling**  
-**Source**: [kubb-labs/kubb](https://github.com/kubb-labs/kubb)  
-**CLAUDE.md**: [View Original](https://github.com/kubb-labs/kubb/blob/main/docs/knowledge-base/CLAUDE.md)  
+**Category: Developer Tooling**
+**Source**: [kubb-labs/kubb](https://github.com/kubb-labs/kubb)
+**AGENTS.md**: [View Original](https://github.com/kubb-labs/kubb/blob/main/AGENTS.md)
 **License**: MIT License
 
 ## Why This Example Was Selected
 
-This CLAUDE.md file represents an exceptional example of **Developer Tooling** for API development and code generation:
+This AGENTS.md file (similar to CLAUDE.md) represents an exceptional example of **Developer Tooling** for API development and code generation:
 
 ### 1. **Comprehensive API Toolkit**
 Kubb provides a complete solution for API development workflows:
