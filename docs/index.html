@@ -23,15 +23,22 @@ title: Awesome CLAUDE.md - Curated Examples
     </div>
   </section>
 
-  <section class="search-section">
+  <section class="search-section" aria-label="Search and filter examples">
     <div class="search-container">
       <div class="search-box">
-        <input type="text" id="search-input" class="search-input" placeholder="Search examples... (Ctrl+K)" autocomplete="off">
+        <input type="text" id="search-input" class="search-input" placeholder="Search examples..." autocomplete="off" aria-label="Search examples">
+        <button id="search-clear" class="search-clear" aria-label="Clear search">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+        <span id="keyboard-shortcut" class="keyboard-shortcut">Ctrl+K</span>
       </div>
 
       <div style="margin-bottom: 16px;">
-        <span class="filter-label">Filter by Category</span>
-        <div class="filter-group">
+        <span class="filter-label" id="category-filter-label">Filter by Category</span>
+        <div class="filter-group" role="group" aria-labelledby="category-filter-label">
           <button class="filter-btn active" data-category="all">All</button>
           <button class="filter-btn" data-category="complex-projects">Complex Projects</button>
           <button class="filter-btn" data-category="developer-tooling">Developer Tooling</button>
@@ -43,8 +50,8 @@ title: Awesome CLAUDE.md - Curated Examples
       </div>
 
       <div>
-        <span class="filter-label">Filter by Language</span>
-        <div class="filter-group">
+        <span class="filter-label" id="language-filter-label">Filter by Language</span>
+        <div class="filter-group" role="group" aria-labelledby="language-filter-label">
           <button class="filter-btn active" data-language="all">All</button>
           <button class="filter-btn" data-language="typescript">TypeScript</button>
           <button class="filter-btn" data-language="python">Python</button>
@@ -54,6 +61,8 @@ title: Awesome CLAUDE.md - Curated Examples
           <button class="filter-btn" data-language="java">Java</button>
         </div>
       </div>
+
+      <div id="active-filters" class="active-filters" aria-live="polite"></div>
     </div>
   </section>
 
@@ -105,11 +114,11 @@ title: Awesome CLAUDE.md - Curated Examples
     </div>
   </section>
 
-  <section class="examples-section">
+  <section id="examples" class="examples-section" aria-label="All examples">
     <h2 class="section-title"><span class="icon">&#128214;</span> All Examples</h2>
-    <p id="results-count" class="results-count">Showing 81 of 81 examples</p>
+    <p id="results-count" class="results-count" aria-live="polite">Showing 81 of 81 examples</p>
 
-    <div class="examples-grid">
+    <div class="examples-grid" role="list">
 
       <!-- Complex Projects -->
       <div class="example-card" data-category="complex-projects" data-language="python" data-title="H1B Visa Analysis" data-repo="ChaseNoCap/h1b-visa-analysis" data-description="Data analysis pipeline for H1B visa data processing">
