@@ -15,6 +15,13 @@ awesome-claude-md/
 ├── CLAUDE.md                    # Project guidance for Claude Code
 ├── .github/
 │   └── copilot-instructions.md  # GitHub Copilot instructions
+├── docs/                        # GitHub Pages static site
+│   ├── _config.yml              # Jekyll configuration
+│   ├── _layouts/                # HTML layouts
+│   ├── assets/                  # CSS and JavaScript
+│   │   ├── css/style.css        # Dark-themed responsive styles
+│   │   └── js/main.js           # Search and filter functionality
+│   └── index.html               # Main browsable page
 └── scenarios/                   # Categorized examples
     ├── [category]/
     │   └── [owner]_[repo]/
@@ -90,6 +97,44 @@ Our selection prioritizes **content quality and educational value over popularit
 
 ### README Maintenance
 After adding examples, update main `README.md` with table of contents linking to each `README.md`, organized by category.
+
+## GitHub Pages Static Site
+
+The repository includes a browsable static site at `https://josix.github.io/awesome-claude-md/` for easy example navigation.
+
+### Site Structure
+- **Location**: `docs/` folder (served via GitHub Pages)
+- **Technology**: Jekyll with custom dark theme
+- **Features**: Search, category filters, language filters, responsive design
+
+### Key Files
+- `docs/_config.yml`: Jekyll configuration (baseurl, title, theme settings)
+- `docs/_layouts/default.html`: Base HTML layout with header, footer, navigation
+- `docs/assets/css/style.css`: Dark-themed responsive CSS with CSS variables
+- `docs/assets/js/main.js`: Client-side search and filter functionality
+- `docs/index.html`: Main page with all examples as filterable cards
+
+### Adding New Examples to the Site
+When adding new examples to `scenarios/`, also update `docs/index.html`:
+1. Add a new `<div class="example-card">` in the appropriate category section
+2. Include required data attributes: `data-category`, `data-language`, `data-title`, `data-repo`, `data-description`
+3. Follow the existing card structure with icon, title, description, tags, and links
+
+### Site Features
+- **Search**: Real-time filtering by title, repo name, or description (Ctrl+K shortcut)
+- **Category Filters**: Filter by 6 categories (complex-projects, developer-tooling, etc.)
+- **Language Filters**: Filter by programming language (TypeScript, Python, Rust, Go, Swift, Java)
+- **Responsive Design**: Mobile-friendly layout with dark theme
+- **Direct Links**: Each card links to both the analysis page and original repository
+
+### Local Development
+To preview the site locally:
+```bash
+cd docs
+bundle install  # First time only
+bundle exec jekyll serve
+# Visit http://localhost:4000/awesome-claude-md/
+```
 
 ## GitHub Copilot Integration
 

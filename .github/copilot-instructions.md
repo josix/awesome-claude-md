@@ -17,6 +17,13 @@ awesome-claude-md/
 ├── CLAUDE.md                    # Project guidance for Claude Code
 ├── .github/
 │   └── copilot-instructions.md  # This file
+├── docs/                        # GitHub Pages static site
+│   ├── _config.yml              # Jekyll configuration
+│   ├── _layouts/                # HTML layouts
+│   ├── assets/                  # CSS and JavaScript
+│   │   ├── css/style.css        # Dark-themed responsive styles
+│   │   └── js/main.js           # Search and filter functionality
+│   └── index.html               # Main browsable page
 └── scenarios/                   # Categorized examples
     ├── [category]/
     │   └── [owner]_[repo]/
@@ -264,6 +271,36 @@ The discovery system follows a modular design with single responsibility princip
 - Review discovery issues created by the automation system
 - Update main README.md with table of contents after adding examples
 - Keep copilot-instructions.md and CLAUDE.md synchronized
+
+## GitHub Pages Static Site
+
+The repository includes a browsable static site at `https://josix.github.io/awesome-claude-md/`.
+
+### Site Structure
+- **Location**: `docs/` folder (served via GitHub Pages)
+- **Technology**: Jekyll with custom dark theme
+- **Features**: Search, category filters, language filters, responsive design
+
+### Key Files
+- `docs/_config.yml`: Jekyll configuration
+- `docs/_layouts/default.html`: Base HTML layout
+- `docs/assets/css/style.css`: Dark-themed responsive CSS
+- `docs/assets/js/main.js`: Search and filter functionality
+- `docs/index.html`: Main page with all examples
+
+### Adding New Examples to the Site
+When adding new examples to `scenarios/`, also update `docs/index.html`:
+1. Add a new `<div class="example-card">` in the appropriate category section
+2. Include data attributes: `data-category`, `data-language`, `data-title`, `data-repo`, `data-description`
+3. Follow the existing card structure
+
+### Local Development
+```bash
+cd docs
+bundle install  # First time only
+bundle exec jekyll serve
+# Visit http://localhost:4000/awesome-claude-md/
+```
 
 ## Organizations to Prioritize
 
