@@ -129,8 +129,8 @@ These examples have CLAUDE.md files in non-standard locations (subdirectories), 
 
 ## Files Generated During Review
 
-- `verify_examples.py` - Python script for systematic verification
-- `verification_results.json` - Detailed verification results in JSON format
+- `scripts/verify_examples.py` - Python script for systematic verification
+- `scripts/verification_results.json` - Detailed verification results in JSON format
 - `REVIEW_FINDINGS.md` - This comprehensive report
 
 ## Methodology
