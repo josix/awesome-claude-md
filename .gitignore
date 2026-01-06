@@ -46,3 +46,8 @@ Thumbs.db
 discovery-report-*.md
 .aider*
 **/verification_results.json
+
+# Node.js
+node_modules/
+docs/dist/
+docs/.astro/

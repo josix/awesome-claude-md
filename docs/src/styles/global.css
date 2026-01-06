@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply antialiased;
+  }
+}
+
+@layer components {
+  .card {
+    @apply bg-white rounded-lg border border-gray-200 shadow-sm hover:shadow-md transition-shadow duration-200;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center px-4 py-2 rounded-md font-medium transition-colors duration-200;
+  }
+
+  .btn-primary {
+    @apply bg-primary-600 text-white hover:bg-primary-700;
+  }
+
+  .btn-secondary {
+    @apply bg-gray-100 text-gray-700 hover:bg-gray-200;
+  }
+
+  .badge {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium;
+  }
+
+  .badge-category {
+    @apply bg-primary-100 text-primary-800;
+  }
+
+  .badge-language {
+    @apply bg-gray-100 text-gray-700;
+  }
+}
+
+/* Pagefind search styling */
+.pagefind-ui {
+  --pagefind-ui-scale: 1;
+  --pagefind-ui-primary: #0ea5e9;
+  --pagefind-ui-text: #1f2937;
+  --pagefind-ui-background: #ffffff;
+  --pagefind-ui-border: #e5e7eb;
+  --pagefind-ui-tag: #f3f4f6;
+  --pagefind-ui-border-width: 1px;
+  --pagefind-ui-border-radius: 8px;
+  --pagefind-ui-image-border-radius: 8px;
+  --pagefind-ui-image-box-ratio: 3 / 2;
+  --pagefind-ui-font: inherit;
+}

@@ -1,0 +1,121 @@
+---
+interface Props {
+  categories: string[];
+  languages: string[];
+}
+
+const { categories, languages } = Astro.props;
+---
+
+<div class="flex flex-wrap gap-4 items-center" id="filter-panel">
+  <div class="flex items-center gap-2">
+    <label for="category-filter" class="text-sm font-medium text-gray-700">Category:</label>
+    <select
+      id="category-filter"
+      class="rounded-md border-gray-300 text-sm focus:border-primary-500 focus:ring-primary-500"
+    >
+      <option value="">All Categories</option>
+      {categories.map((cat) => (
+        <option value={cat}>{cat.replace(/-/g, " ")}</option>
+      ))}
+    </select>
+  </div>
+
+  <div class="flex items-center gap-2">
+    <label for="language-filter" class="text-sm font-medium text-gray-700">Language:</label>
+    <select
+      id="language-filter"
+      class="rounded-md border-gray-300 text-sm focus:border-primary-500 focus:ring-primary-500"
+    >
+      <option value="">All Languages</option>
+      {languages.map((lang) => (
+        <option value={lang}>{lang}</option>
+      ))}
+    </select>
+  </div>
+
+  <div class="flex items-center gap-2">
+    <label for="sort-filter" class="text-sm font-medium text-gray-700">Sort:</label>
+    <select
+      id="sort-filter"
+      class="rounded-md border-gray-300 text-sm focus:border-primary-500 focus:ring-primary-500"
+    >
+      <option value="title">Name (A-Z)</option>
+      <option value="category">Category</option>
+      <option value="recent">Recently Updated</option>
+    </select>
+  </div>
+
+  <button
+    id="clear-filters"
+    class="text-sm text-gray-500 hover:text-gray-700 transition-colors hidden"
+  >
+    Clear filters
+  </button>
+</div>
+
+<script>
+  const categoryFilter = document.getElementById('category-filter') as HTMLSelectElement;
+  const languageFilter = document.getElementById('language-filter') as HTMLSelectElement;
+  const sortFilter = document.getElementById('sort-filter') as HTMLSelectElement;
+  const clearBtn = document.getElementById('clear-filters');
+  const scenarioGrid = document.getElementById('scenario-grid');
+  const countDisplay = document.getElementById('scenario-count');
+
+  function updateFilters() {
+    const category = categoryFilter?.value || '';
+    const language = languageFilter?.value || '';
+    const sort = sortFilter?.value || 'title';
+
+    if (!scenarioGrid) return;
+
+    const cards = Array.from(scenarioGrid.querySelectorAll('[data-scenario]')) as HTMLElement[];
+    let visibleCount = 0;
+
+    cards.forEach((card) => {
+      const cardCategory = card.dataset.category || '';
+      const cardLanguages = (card.dataset.languages || '').split(',');
+
+      const matchesCategory = !category || cardCategory === category;
+      const matchesLanguage = !language || cardLanguages.includes(language);
+
+      if (matchesCategory && matchesLanguage) {
+        card.style.display = '';
+        visibleCount++;
+      } else {
+        card.style.display = 'none';
+      }
+    });
+
+    const visibleCards = cards.filter((c) => c.style.display !== 'none');
+    visibleCards.sort((a, b) => {
+      if (sort === 'category') {
+        return (a.dataset.category || '').localeCompare(b.dataset.category || '');
+      } else if (sort === 'recent') {
+        return (b.dataset.updated || '').localeCompare(a.dataset.updated || '');
+      }
+      return (a.dataset.title || '').localeCompare(b.dataset.title || '');
+    });
+
+    visibleCards.forEach((card) => scenarioGrid.appendChild(card));
+
+    if (countDisplay) {
+      countDisplay.textContent = `Showing ${visibleCount} of ${cards.length} scenarios`;
+    }
+
+    if (clearBtn) {
+      clearBtn.classList.toggle('hidden', !category && !language);
+    }
+  }
+
+  function clearFilters() {
+    if (categoryFilter) categoryFilter.value = '';
+    if (languageFilter) languageFilter.value = '';
+    updateFilters();
+  }
+
+  categoryFilter?.addEventListener('change', updateFilters);
+  languageFilter?.addEventListener('change', updateFilters);
+  sortFilter?.addEventListener('change', updateFilters);
+  clearBtn?.addEventListener('click', clearFilters);
+</script>
