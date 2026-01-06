@@ -106,7 +106,7 @@ A curated collection of high-quality `CLAUDE.md` files from leading open-source 
 </details>
 
 <details>
-<summary><strong>🟧 Python</strong> (21 examples)</summary>
+<summary><strong>🟧 Python</strong> (22 examples)</summary>
 
 - **[Anthropic Quickstarts](scenarios/getting-started/anthropics_anthropic-quickstarts/README.md)** ![Stars](https://img.shields.io/github/stars/anthropics/anthropic-quickstarts?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/anthropics/anthropic-quickstarts?style=flat-square) - Computer-use demo
 - **[Basic Memory](scenarios/complex-projects/basicmachines-co_basic-memory/README.md)** ![Stars](https://img.shields.io/github/stars/basicmachines-co/basic-memory?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/basicmachines-co/basic-memory?style=flat-square) - MCP integration
@@ -114,6 +114,7 @@ A curated collection of high-quality `CLAUDE.md` files from leading open-source 
 - **[DataFog Python](scenarios/libraries-frameworks/DataFog_datafog-python/README.md)** ![Stars](https://img.shields.io/github/stars/DataFog/datafog-python?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/DataFog/datafog-python?style=flat-square) - Privacy-focused data processing
 - **[Swift Law](scenarios/developer-tooling/etisamhaq_Swift-Law/README.md)** ![Stars](https://img.shields.io/github/stars/etisamhaq/Swift-Law?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/etisamhaq/Swift-Law?style=flat-square) - Legal AI assistant
 - **[GenSX](scenarios/libraries-frameworks/gensx-inc_gensx/README.md)** ![Stars](https://img.shields.io/github/stars/gensx-inc/gensx?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/gensx-inc/gensx?style=flat-square) - AI-powered scientific computing
+- **[HADES](scenarios/complex-projects/r3d91ll_HADES/README.md)** ![Stars](https://img.shields.io/github/stars/r3d91ll/HADES?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/r3d91ll/HADES?style=flat-square) - Information processing network architecture
 - **[Ultimate RVC](scenarios/libraries-frameworks/JackismyShephard_ultimate-rvc/README.md)** ![Stars](https://img.shields.io/github/stars/JackismyShephard/ultimate-rvc?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/JackismyShephard/ultimate-rvc?style=flat-square) - AI-powered audio content creation
 - **[HA Irrigation Strategy](scenarios/developer-tooling/JakeTheRabbit_HA-Irrigation-Strategy/README.md)** ![Stars](https://img.shields.io/github/stars/JakeTheRabbit/HA-Irrigation-Strategy?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/JakeTheRabbit/HA-Irrigation-Strategy?style=flat-square) - Smart home agriculture automation
 - **[FastAPI Template](scenarios/libraries-frameworks/JiayuXu0_FastAPI-Template/README.md)** ![Stars](https://img.shields.io/github/stars/JiayuXu0/FastAPI-Template?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/JiayuXu0/FastAPI-Template?style=flat-square) - Enterprise-grade Python backend with three-layer architecture
@@ -133,8 +134,9 @@ A curated collection of high-quality `CLAUDE.md` files from leading open-source 
 </details>
 
 <details>
-<summary><strong>🟫 Rust</strong> (7 examples)</summary>
+<summary><strong>🟫 Rust</strong> (8 examples)</summary>
 
+- **[Breenix OS](scenarios/infrastructure-projects/ryanbreen_breenix/README.md)** ![Stars](https://img.shields.io/github/stars/ryanbreen/breenix?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/ryanbreen/breenix?style=flat-square) - Rust kernel development with rigorous engineering standards
 - **[Workerd](scenarios/infrastructure-projects/cloudflare_workerd/README.md)** ![Stars](https://img.shields.io/github/stars/cloudflare/workerd?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/cloudflare/workerd?style=flat-square) - JavaScript runtime for Cloudflare Workers
 - **[msg-rs](scenarios/libraries-frameworks/chainbound_msg-rs/analysis.md)** ![Stars](https://img.shields.io/github/stars/chainbound/msg-rs?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/chainbound/msg-rs?style=flat-square) - Distributed systems messaging library
 - **[OAuth2 Passkey](scenarios/libraries-frameworks/ktaka-ccmp_oauth2-passkey/README.md)** ![Stars](https://img.shields.io/github/stars/ktaka-ccmp/oauth2-passkey?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/ktaka-ccmp/oauth2-passkey?style=flat-square) - Modern authentication library
@@ -225,8 +227,9 @@ A curated collection of high-quality `CLAUDE.md` files from leading open-source 
 </details>
 
 <details>
-<summary><strong>🏗️ Infrastructure Projects</strong> (5 examples)</summary>
+<summary><strong>🏗️ Infrastructure Projects</strong> (6 examples)</summary>
 
+- **[Breenix OS](scenarios/infrastructure-projects/ryanbreen_breenix/README.md)** ![Stars](https://img.shields.io/github/stars/ryanbreen/breenix?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/ryanbreen/breenix?style=flat-square) - Rust kernel development with rigorous engineering
 - **[Cloudflare Workerd](scenarios/infrastructure-projects/cloudflare_workerd/README.md)** ![Stars](https://img.shields.io/github/stars/cloudflare/workerd?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/cloudflare/workerd?style=flat-square) - JavaScript runtime for Cloudflare Workers
 - **[TrailOfBits Algo](scenarios/infrastructure-projects/trailofbits_algo/analysis.md)** ![Stars](https://img.shields.io/github/stars/trailofbits/algo?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/trailofbits/algo?style=flat-square) - Security-first VPN server setup
 - **[Ansible MCP Server](scenarios/infrastructure-projects/washyu_ansible-mcp-server/README.md)** ![Stars](https://img.shields.io/github/stars/washyu/ansible-mcp-server?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/washyu/ansible-mcp-server?style=flat-square) - Infrastructure automation with MCP
@@ -317,7 +320,12 @@ Multi-service applications with sophisticated architectures and enterprise-scale
   - Modular AI platform architecture with comprehensive testing
   - Production-ready deployment with advanced workflow management
 
-- **[HADES](scenarios/complex-projects/r3d91ll_HADES-defunct/analysis.md)** ![Stars](https://img.shields.io/github/stars/r3d91ll/HADES-defunct?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/r3d91ll/HADES-defunct?style=flat-square) ![Activity](https://img.shields.io/github/last-commit/r3d91ll/HADES-defunct?style=flat-square) - Research-grade academic paper processing system
+- **[HADES](scenarios/complex-projects/r3d91ll_HADES/README.md)** ![Stars](https://img.shields.io/github/stars/r3d91ll/HADES?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/r3d91ll/HADES?style=flat-square) ![Activity](https://img.shields.io/github/last-commit/r3d91ll/HADES?style=flat-square) - Information processing network architecture
+  - Mathematical conveyance framework with hybrid database architecture
+  - PostgreSQL and ArangoDB integration with MCP server patterns
+  - Context amplification and late chunking embedding strategies
+
+- **[HADES (Defunct)](scenarios/complex-projects/r3d91ll_HADES-defunct/analysis.md)** ![Stars](https://img.shields.io/github/stars/r3d91ll/HADES-defunct?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/r3d91ll/HADES-defunct?style=flat-square) ![Activity](https://img.shields.io/github/last-commit/r3d91ll/HADES-defunct?style=flat-square) - Research-grade academic paper processing system
   - Mathematical framework integration with GPU-accelerated processing
   - Complex multi-component architecture with theoretical foundations
   - Advanced context management for AI systems (note: project marked as defunct)
@@ -515,7 +523,7 @@ CLI tools, build systems, and development utilities with focus on commands and c
   - Testing-driven development methodology
   - High-performance task processing
 
-- **[mypy-boto3-builder](scenarios/developer-tooling/youtype_mypy-boto3-builder/README.md)** ![Stars](https://img.shields.io/github/stars/youtype/mypy-boto3-builder?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/youtype/mypy-boto3-builder?style=flat-square) ![Activity](https://img.shields.io/github/last-commit/youtype/mypy-boto3-builder?style=flat-square) - AWS SDK type stubs generator
+- **[mypy-boto3-builder](scenarios/developer-tooling/youtype_mypy_boto3_builder/README.md)** ![Stars](https://img.shields.io/github/stars/youtype/mypy_boto3_builder?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/youtype/mypy_boto3_builder?style=flat-square) ![Activity](https://img.shields.io/github/last-commit/youtype/mypy_boto3_builder?style=flat-square) - AWS SDK type stubs generator
   - Type stub generation for Python
   - AWS integration patterns
   - Developer tooling for cloud services
@@ -575,6 +583,11 @@ Projects focused on developer onboarding and initial setup experiences.
 
 ### 🏗️ Infrastructure Projects
 Large-scale systems, runtime environments, and platform-agnostic deployment patterns.
+
+- **[Breenix OS](scenarios/infrastructure-projects/ryanbreen_breenix/README.md)** ![Stars](https://img.shields.io/github/stars/ryanbreen/breenix?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/ryanbreen/breenix?style=flat-square) ![Activity](https://img.shields.io/github/last-commit/ryanbreen/breenix?style=flat-square) - Rust operating system kernel development
+  - Bare metal Rust compilation with QEMU integration
+  - Model Context Protocol for kernel interaction
+  - Rigorous engineering standards with comprehensive logging
 
 - **[Cloudflare Workerd](scenarios/infrastructure-projects/cloudflare_workerd/README.md)** ![Stars](https://img.shields.io/github/stars/cloudflare/workerd?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/cloudflare/workerd?style=flat-square) ![Activity](https://img.shields.io/github/last-commit/cloudflare/workerd?style=flat-square) - JavaScript runtime for Cloudflare Workers
   - High-performance JavaScript runtime built in Rust
@@ -792,6 +805,6 @@ Find more `CLAUDE.md` examples using these search strategies:
 
 ---
 
-**Total Examples**: 80 | **Last Updated**: January 2025 | **Maintained by**: Community Contributors
+**Total Examples**: 89 | **Last Updated**: January 2025 | **Maintained by**: Community Contributors
 
 > 🤖 This collection is maintained with assistance from Claude Code for quality analysis and curation
