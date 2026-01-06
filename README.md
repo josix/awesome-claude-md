@@ -64,7 +64,7 @@ A curated collection of high-quality `CLAUDE.md` files from leading open-source 
 ## 🔍 Browse by Technology
 
 <details>
-<summary><strong>🟦 TypeScript/JavaScript</strong> (31 examples)</summary>
+<summary><strong>🟦 TypeScript/JavaScript</strong> (35 examples)</summary>
 
 - **[Callstack React Native Testing](scenarios/libraries-frameworks/callstack_react-native-testing-library/analysis.md)** ![Stars](https://img.shields.io/github/stars/callstack/react-native-testing-library?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/callstack/react-native-testing-library?style=flat-square) - Testing library gold standard from React Native experts
 - **[Citadel Protocol Contracts](scenarios/complex-projects/Citadel-Protocol_contracts/analysis.md)** ![Stars](https://img.shields.io/github/stars/Citadel-Protocol/contracts?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/Citadel-Protocol/contracts?style=flat-square) - Security-first DeFi protocol documentation
@@ -98,6 +98,10 @@ A curated collection of high-quality `CLAUDE.md` files from leading open-source 
 - **[claude-code-mastra](scenarios/developer-tooling/t3ta_claude-code-mastra/README.md)** ![Stars](https://img.shields.io/github/stars/t3ta/claude-code-mastra?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/t3ta/claude-code-mastra?style=flat-square) - AI SDK adapter patterns for framework integration
 - **[PMStander Web Tools](scenarios/libraries-frameworks/PMStander_web-tools/analysis.md)** ![Stars](https://img.shields.io/github/stars/PMStander/web-tools?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/PMStander/web-tools?style=flat-square) - Advanced performance optimization patterns
 - **[Yutodo](scenarios/developer-tooling/yutotnh_yutodo/README.md)** ![Stars](https://img.shields.io/github/stars/yutotnh/yutodo?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/yutotnh/yutodo?style=flat-square) - Full-stack application documentation
+- **[CKBoost](scenarios/libraries-frameworks/Alive24_CKBoost/README.md)** ![Stars](https://img.shields.io/github/stars/Alive24/CKBoost?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/Alive24/CKBoost?style=flat-square) - CKB blockchain gamified engagement platform
+- **[SmartQ](scenarios/complex-projects/reallygood83_smartq/README.md)** ![Stars](https://img.shields.io/github/stars/reallygood83/smartq?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/reallygood83/smartq?style=flat-square) - AI-powered educational question analysis platform
+- **[VeilChat](scenarios/developer-tooling/rcwells1879_veil-chat/README.md)** ![Stars](https://img.shields.io/github/stars/rcwells1879/veil-chat?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/rcwells1879/veil-chat?style=flat-square) - Full-stack chat with PWA and MCP integration
+- **[pkg-to-jsr](scenarios/developer-tooling/ryoppippi_pkg-to-jsr/README.md)** ![Stars](https://img.shields.io/github/stars/ryoppippi/pkg-to-jsr?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/ryoppippi/pkg-to-jsr?style=flat-square) - Zero-config JSR generator from package.json
 
 </details>
 
@@ -363,6 +367,11 @@ Multi-service applications with sophisticated architectures and enterprise-scale
   - WordPress plugin development patterns
   - Modern Vue.js Composition API with TypeScript
 
+- **[SmartQ](scenarios/complex-projects/reallygood83_smartq/README.md)** ![Stars](https://img.shields.io/github/stars/reallygood83/smartq?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/reallygood83/smartq?style=flat-square) ![Activity](https://img.shields.io/github/last-commit/reallygood83/smartq?style=flat-square) - AI-powered educational question analysis platform
+  - Adaptive education level system with Bloom's Taxonomy integration
+  - Dual authentication (teacher OAuth + student anonymous access)
+  - Real-time classroom coordination with Firebase
+
 ### 🛠️ Developer Tooling
 CLI tools, build systems, and development utilities with focus on commands and configuration.
 
@@ -526,6 +535,16 @@ CLI tools, build systems, and development utilities with focus on commands and c
   - Full-stack development patterns
   - Modern TypeScript development practices
 
+- **[VeilChat](scenarios/developer-tooling/rcwells1879_veil-chat/README.md)** ![Stars](https://img.shields.io/github/stars/rcwells1879/veil-chat?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/rcwells1879/veil-chat?style=flat-square) ![Activity](https://img.shields.io/github/last-commit/rcwells1879/veil-chat?style=flat-square) - Full-stack chat with PWA and MCP integration
+  - Multi-system architecture with Azure TTS and fallback strategies
+  - PWA implementation with service worker caching patterns
+  - Comprehensive troubleshooting-first documentation
+
+- **[pkg-to-jsr](scenarios/developer-tooling/ryoppippi_pkg-to-jsr/README.md)** ![Stars](https://img.shields.io/github/stars/ryoppippi/pkg-to-jsr?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/ryoppippi/pkg-to-jsr?style=flat-square) ![Activity](https://img.shields.io/github/last-commit/ryoppippi/pkg-to-jsr?style=flat-square) - Zero-config JSR generator from package.json
+  - AI-optimized code navigation patterns
+  - zod-mini validation with tree-shakable architecture
+  - Semantic indexing guidance for efficient development
+
 ### 🚀 Getting Started
 Projects focused on developer onboarding and initial setup experiences.
 
@@ -594,6 +613,11 @@ Core concepts, APIs, usage patterns, and publication-ready development standards
   - Multi-tool AI agent ecosystem
   - Integration framework for AI assistants
   - Comprehensive API and tooling support
+
+- **[CKBoost](scenarios/libraries-frameworks/Alive24_CKBoost/README.md)** ![Stars](https://img.shields.io/github/stars/Alive24/CKBoost?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/Alive24/CKBoost?style=flat-square) ![Activity](https://img.shields.io/github/last-commit/Alive24/CKBoost?style=flat-square) - CKB blockchain gamified engagement platform
+  - Task Master AI integration with PRD-First development mandate
+  - Blockchain-specific patterns (SSRI, ConnectedTypeID for O(1) lookups)
+  - Multi-Claude workflow orchestration with custom slash commands
 
 - **[PMStander Web Tools](scenarios/libraries-frameworks/PMStander_web-tools/analysis.md)** ![Stars](https://img.shields.io/github/stars/PMStander/web-tools?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/PMStander/web-tools?style=flat-square) ![Activity](https://img.shields.io/github/last-commit/PMStander/web-tools?style=flat-square) - Advanced TypeScript/Next.js performance patterns
   - Multi-tier caching strategy (memory, Redis, CDN)
