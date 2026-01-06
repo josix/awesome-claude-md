@@ -1,0 +1,20 @@
+{
+  "name": "awesome-claude-md-site",
+  "type": "module",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "postbuild": "pagefind --site dist"
+  },
+  "dependencies": {
+    "astro": "^4.16.0",
+    "@astrojs/tailwind": "^5.1.0",
+    "tailwindcss": "^3.4.0"
+  },
+  "devDependencies": {
+    "pagefind": "^1.1.0"
+  }
+}

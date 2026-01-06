@@ -1,0 +1,62 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ScenarioCard from '../components/ScenarioCard.astro';
+import FilterPanel from '../components/FilterPanel.astro';
+import SearchBar from '../components/SearchBar.astro';
+
+import scenariosData from '../../public/scenarios.json';
+
+const { scenarios, categories, languages, totalCount } = scenariosData;
+---
+
+<BaseLayout title="Browse CLAUDE.md Examples">
+  <div class="space-y-8">
+    <section class="text-center max-w-3xl mx-auto">
+      <h1 class="text-4xl font-bold text-gray-900 mb-4">
+        Discover CLAUDE.md Examples
+      </h1>
+      <p class="text-lg text-gray-600">
+        Browse {totalCount} curated examples of high-quality CLAUDE.md files from open source projects.
+        Learn patterns, conventions, and best practices for AI-assisted development.
+      </p>
+    </section>
+
+    <SearchBar />
+
+    <section>
+      <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-6">
+        <FilterPanel categories={categories} languages={languages} />
+      </div>
+
+      <p id="scenario-count" class="text-sm text-gray-500 mb-4">
+        Showing {scenarios.length} of {totalCount} scenarios
+      </p>
+
+      <div
+        id="scenario-grid"
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+      >
+        {scenarios.map((scenario: any) => (
+          <div
+            data-scenario
+            data-category={scenario.category}
+            data-languages={scenario.languages.join(',')}
+            data-title={scenario.title}
+            data-updated={scenario.lastUpdated}
+          >
+            <ScenarioCard
+              id={scenario.id}
+              title={scenario.title}
+              owner={scenario.owner}
+              repo={scenario.repo}
+              category={scenario.category}
+              languages={scenario.languages}
+              takeaways={scenario.takeaways}
+              sourceUrl={scenario.sourceUrl}
+            />
+          </div>
+        ))}
+      </div>
+    </section>
+  </div>
+</BaseLayout>
