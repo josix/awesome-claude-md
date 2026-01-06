@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import scenariosData from '../../../public/scenarios.json';
+import { marked } from 'marked';
 
 export async function getStaticPaths() {
   const { scenarios } = scenariosData;
@@ -29,6 +30,9 @@ interface Props {
 
 const { scenario } = Astro.props;
 const baseUrl = import.meta.env.BASE_URL;
+
+// Convert markdown content to HTML
+const contentHtml = await marked(scenario.content.replace(/^#\s+.+\n/, ''));
 
 const categoryColors: Record<string, string> = {
   "complex-projects": "bg-purple-100 text-purple-800",
@@ -136,7 +140,7 @@ const categoryColor = categoryColors[scenario.category] || "bg-gray-100 text-gra
         </svg>
         Analysis
       </h2>
-      <div class="prose prose-gray max-w-none" set:html={scenario.content.replace(/^#\s+.+\n/, '')} />
+      <div class="prose prose-gray max-w-none" set:html={contentHtml} />
     </section>
 
     <footer class="mt-8 pt-6 border-t border-gray-200">
