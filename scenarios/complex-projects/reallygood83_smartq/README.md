@@ -85,3 +85,7 @@ Multiple analysis perspectives for different use cases.
 3. **Pedagogical Integration**: Domain expertise (Bloom's Taxonomy) in technical docs
 4. **Zero-Impact Philosophy**: Emphasize backward compatibility in all changes
 5. **Complete Workflows**: Document end-to-end flows, not just individual components
+
+## Attribution
+
+This analysis references the original CLAUDE.md from [reallygood83/smartq](https://github.com/reallygood83/smartq). All credit for the original documentation belongs to the repository maintainers.

@@ -65,3 +65,7 @@ Step-by-step debugging guidance with specific file locations.
 3. **Architecture Clarity**: Separate frontend, backend, and integration layer documentation
 4. **PWA Patterns**: Document service worker lifecycle and caching strategies explicitly
 5. **Pragmatic Choices**: Simple solutions (localStorage) over complex state management
+
+## Attribution
+
+This analysis references the original CLAUDE.md from [rcwells1879/veil-chat](https://github.com/rcwells1879/veil-chat). All credit for the original documentation belongs to the repository maintainers.

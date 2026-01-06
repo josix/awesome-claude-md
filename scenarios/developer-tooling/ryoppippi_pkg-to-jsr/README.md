@@ -80,3 +80,7 @@ Explicit guidance on tool selection for efficiency.
 3. **Minimal Dependencies**: Choose tree-shakable libraries for bundle optimization
 4. **Progressive Context**: Build understanding incrementally, not all at once
 5. **Constraint Documentation**: Explicit coding style rules reduce iteration cycles
+
+## Attribution
+
+This analysis references the original CLAUDE.md from [ryoppippi/pkg-to-jsr](https://github.com/ryoppippi/pkg-to-jsr). All credit for the original documentation belongs to the repository maintainers.

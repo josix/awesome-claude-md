@@ -82,3 +82,7 @@ Explicit documentation of common mistakes to avoid.
 3. **Domain Patterns**: Document blockchain-specific patterns (SSRI, ConnectedTypeID)
 4. **Anti-Pattern Documentation**: Explicitly state what NOT to do, not just what to do
 5. **Multi-Agent Coordination**: Patterns for orchestrating multiple AI assistant sessions
+
+## Attribution
+
+This analysis references the original CLAUDE.md from [Alive24/CKBoost](https://github.com/Alive24/CKBoost). All credit for the original documentation belongs to the repository maintainers.
