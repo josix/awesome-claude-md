@@ -64,10 +64,11 @@ A curated collection of high-quality `CLAUDE.md` files from leading open-source 
 ## 🔍 Browse by Technology
 
 <details>
-<summary><strong>🟦 TypeScript/JavaScript</strong> (35 examples)</summary>
+<summary><strong>🟦 TypeScript/JavaScript</strong> (36 examples)</summary>
 
 - **[Callstack React Native Testing](scenarios/libraries-frameworks/callstack_react-native-testing-library/analysis.md)** ![Stars](https://img.shields.io/github/stars/callstack/react-native-testing-library?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/callstack/react-native-testing-library?style=flat-square) - Testing library gold standard from React Native experts
 - **[Citadel Protocol Contracts](scenarios/complex-projects/Citadel-Protocol_contracts/analysis.md)** ![Stars](https://img.shields.io/github/stars/Citadel-Protocol/contracts?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/Citadel-Protocol/contracts?style=flat-square) - Security-first DeFi protocol documentation
+- **[Clueless](scenarios/complex-projects/vijaythecoder_clueless/README.md)** ![Stars](https://img.shields.io/github/stars/vijaythecoder/clueless?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/vijaythecoder/clueless?style=flat-square) - AI meeting assistant with Vue 3 + Laravel real-time architecture
 - **[Foam](scenarios/developer-tooling/foambubble_foam/README.md)** ![Stars](https://img.shields.io/github/stars/foambubble/foam?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/foambubble/foam?style=flat-square) - Personal knowledge management for VSCode
 - **[H1B Visa Analysis](scenarios/complex-projects/ChaseNoCap_h1b-visa-analysis/README.md)** ![Stars](https://img.shields.io/github/stars/ChaseNoCap/h1b-visa-analysis?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/ChaseNoCap/h1b-visa-analysis?style=flat-square) - AI-guided meta-repository framework
 - **[SDLC Engine](scenarios/developer-tooling/ChaseNoCap_sdlc-engine/README.md)** ![Stars](https://img.shields.io/github/stars/ChaseNoCap/sdlc-engine?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/ChaseNoCap/sdlc-engine?style=flat-square) - State machine workflow orchestration
@@ -134,9 +135,10 @@ A curated collection of high-quality `CLAUDE.md` files from leading open-source 
 </details>
 
 <details>
-<summary><strong>🟫 Rust</strong> (8 examples)</summary>
+<summary><strong>🟫 Rust</strong> (9 examples)</summary>
 
 - **[Breenix OS](scenarios/infrastructure-projects/ryanbreen_breenix/README.md)** ![Stars](https://img.shields.io/github/stars/ryanbreen/breenix?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/ryanbreen/breenix?style=flat-square) - Rust kernel development with rigorous engineering standards
+- **[cctx](scenarios/developer-tooling/nwiizo_cctx/README.md)** ![Stars](https://img.shields.io/github/stars/nwiizo/cctx?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/nwiizo/cctx?style=flat-square) - Claude Code context manager with UX philosophy documentation
 - **[Workerd](scenarios/infrastructure-projects/cloudflare_workerd/README.md)** ![Stars](https://img.shields.io/github/stars/cloudflare/workerd?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/cloudflare/workerd?style=flat-square) - JavaScript runtime for Cloudflare Workers
 - **[msg-rs](scenarios/libraries-frameworks/chainbound_msg-rs/analysis.md)** ![Stars](https://img.shields.io/github/stars/chainbound/msg-rs?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/chainbound/msg-rs?style=flat-square) - Distributed systems messaging library
 - **[OAuth2 Passkey](scenarios/libraries-frameworks/ktaka-ccmp_oauth2-passkey/README.md)** ![Stars](https://img.shields.io/github/stars/ktaka-ccmp/oauth2-passkey?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/ktaka-ccmp/oauth2-passkey?style=flat-square) - Modern authentication library
@@ -155,16 +157,18 @@ A curated collection of high-quality `CLAUDE.md` files from leading open-source 
 </details>
 
 <details>
-<summary><strong>🟢 Go</strong> (2 examples)</summary>
+<summary><strong>🟢 Go</strong> (3 examples)</summary>
 
+- **[Claudio](scenarios/developer-tooling/ctoth_claudio/README.md)** ![Stars](https://img.shields.io/github/stars/ctoth/claudio?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/ctoth/claudio?style=flat-square) - Audio feedback plugin with TDD methodology
 - **[GoMall](scenarios/developer-tooling/li0on3_GoMall/README.md)** ![Stars](https://img.shields.io/github/stars/li0on3/GoMall?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/li0on3/GoMall?style=flat-square) - RIPER-5 AI methodology
 - **[Sentry](scenarios/complex-projects/getsentry_sentry/README.md)** ![Stars](https://img.shields.io/github/stars/getsentry/sentry?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/getsentry/sentry?style=flat-square) - Multi-language error tracking platform
 
 </details>
 
 <details>
-<summary><strong>🔵 Swift</strong> (3 examples)</summary>
+<summary><strong>🔵 Swift</strong> (4 examples)</summary>
 
+- **[CartWise](scenarios/complex-projects/sergelents_CartWise/README.md)** ![Stars](https://img.shields.io/github/stars/sergelents/CartWise?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/sergelents/CartWise?style=flat-square) - iOS shopping app with MVVM+Coordinator and Swift Actor model
 - **[macMCP](scenarios/developer-tooling/obra_macMCP/README.md)** ![Stars](https://img.shields.io/github/stars/obra/macMCP?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/obra/macMCP?style=flat-square) - macOS MCP server implementation
 - **[Xcode Project CLI](scenarios/developer-tooling/tolo_xcodeproj-cli/analysis.md)** ![Stars](https://img.shields.io/github/stars/tolo/xcodeproj-cli?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/tolo/xcodeproj-cli?style=flat-square) - Xcode project manipulation tool
 - **[TrysteroSwift](scenarios/libraries-frameworks/posix4e_TrysteroSwift/README.md)** ![Stars](https://img.shields.io/github/stars/posix4e/TrysteroSwift?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/posix4e/TrysteroSwift?style=flat-square) - P2P WebRTC data channels
@@ -380,8 +384,23 @@ Multi-service applications with sophisticated architectures and enterprise-scale
   - Dual authentication (teacher OAuth + student anonymous access)
   - Real-time classroom coordination with Firebase
 
+- **[CartWise](scenarios/complex-projects/sergelents_CartWise/README.md)** ![Stars](https://img.shields.io/github/stars/sergelents/CartWise?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/sergelents/CartWise?style=flat-square) ![Activity](https://img.shields.io/github/last-commit/sergelents/CartWise?style=flat-square) - Comprehensive iOS shopping application with MVVM+Coordinator architecture
+  - Swift Actor model for thread-safe Core Data operations
+  - Soft-delete implementation preserving historical data
+  - Reputation-based gamification system with social features
+
+- **[Clueless](scenarios/complex-projects/vijaythecoder_clueless/README.md)** ![Stars](https://img.shields.io/github/stars/vijaythecoder/clueless?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/vijaythecoder/clueless?style=flat-square) ![Activity](https://img.shields.io/github/last-commit/vijaythecoder/clueless?style=flat-square) - AI meeting assistant with real-time transcription and analysis
+  - Direct frontend WebSocket to OpenAI Realtime API via ephemeral keys
+  - Dual SQLite database management for NativePHP/Electron desktop app
+  - Comprehensive service architecture with Vue 3 + Laravel 12
+
 ### 🛠️ Developer Tooling
 CLI tools, build systems, and development utilities with focus on commands and configuration.
+
+- **[Claudio](scenarios/developer-tooling/ctoth_claudio/README.md)** ![Stars](https://img.shields.io/github/stars/ctoth/claudio?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/ctoth/claudio?style=flat-square) ![Activity](https://img.shields.io/github/last-commit/ctoth/claudio?style=flat-square) - Hook-based audio feedback plugin for Claude Code
+  - Strict TDD methodology with Red-Green-Refactor discipline
+  - 5-level sound fallback system with graceful degradation
+  - Cross-platform audio via malgo with XDG-compliant configuration
 
 - **[claudecode.nvim](scenarios/developer-tooling/coder_claudecode.nvim/README.md)** ![Stars](https://img.shields.io/github/stars/coder/claudecode.nvim?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/coder/claudecode.nvim?style=flat-square) ![Activity](https://img.shields.io/github/last-commit/coder/claudecode.nvim?style=flat-square) - Claude Code Neovim IDE Extension
   - WebSocket server with MCP protocol implementation
@@ -477,6 +496,11 @@ CLI tools, build systems, and development utilities with focus on commands and c
   - Performance testing methodologies
   - HTTP benchmarking tools
   - Node.js performance optimization
+
+- **[cctx](scenarios/developer-tooling/nwiizo_cctx/README.md)** ![Stars](https://img.shields.io/github/stars/nwiizo/cctx?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/nwiizo/cctx?style=flat-square) ![Activity](https://img.shields.io/github/last-commit/nwiizo/cctx?style=flat-square) - Claude Code context manager for switching between settings
+  - UX philosophy documentation: predictability over cleverness
+  - File-based context architecture with transparent state management
+  - Dedicated "Notes for AI Assistants" section with testing checklists
 
 - **[Neon MCP Server](scenarios/developer-tooling/neondatabase_mcp-server-neon/README.md)** ![Stars](https://img.shields.io/github/stars/neondatabase/mcp-server-neon?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/neondatabase/mcp-server-neon?style=flat-square) ![Activity](https://img.shields.io/github/last-commit/neondatabase/mcp-server-neon?style=flat-square) - Production-grade MCP server for Neon database API
   - Dual-purpose architecture (remote server + local CLI)
