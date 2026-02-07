@@ -1,6 +1,7 @@
 """Repository evaluator for scoring and assessing repository candidates."""
 
 import logging
+import re
 from datetime import datetime
 
 import requests.exceptions
@@ -201,15 +202,15 @@ class RepositoryEvaluator:
             score += 6
             reasons.append("Contains testing and deployment guidance")
 
-        # File organization and context (0-4 points)
+        # File organization and context (0-2 points)
         if len(claude_content) > 3000:
-            score += 4
+            score += 2
             reasons.append("Comprehensive and detailed documentation")
         elif len(claude_content) > 1500:
-            score += 2
+            score += 1
             reasons.append("Substantial documentation")
 
-        # Troubleshooting information (0-4 points)
+        # Troubleshooting information (0-2 points)
         troubleshoot_keywords = [
             "## troubleshooting",
             "## debugging",
@@ -217,8 +218,23 @@ class RepositoryEvaluator:
             "## faq",
         ]
         if any(keyword in content_lower for keyword in troubleshoot_keywords):
-            score += 4
+            score += 2
             reasons.append("Contains troubleshooting information")
+
+        # Function-level code navigation (0-4 points)
+        file_path_pattern = (
+            r"[`/][a-zA-Z0-9_./]+\.(py|ts|js|rs|go|java|tsx|jsx|rb|cpp|swift|kt)"
+        )
+        func_ref_pattern = r"[a-zA-Z_]\w*(?:::\w+)?\(\)"
+        file_refs = len(re.findall(file_path_pattern, claude_content))
+        func_refs = len(re.findall(func_ref_pattern, claude_content))
+        nav_refs = file_refs + func_refs
+        if nav_refs >= 5:
+            score += 4
+            reasons.append("Provides function-level code navigation")
+        elif nav_refs >= 2:
+            score += 2
+            reasons.append("Contains specific file/function references")
 
         return min(score, self.content_depth_weight), reasons
 
@@ -251,16 +267,49 @@ class RepositoryEvaluator:
             score += 5
             reasons.append("Shows some advanced patterns")
 
-        # Concrete examples and code snippets (0-8 points)
-        if "```" in claude_content or "example" in content_lower:
-            score += 8
-            reasons.append("Includes concrete examples and code snippets")
+        # Concrete code snippets (0-5 points)
+        code_example_score = 0
+        if "```" in claude_content:
+            code_example_score += 5
+            reasons.append("Includes concrete code snippets")
 
-        # Actionable guidance (0-7 points)
+        # Example documentation (0-3 points, additive with code snippets but capped)
+        if "example" in content_lower:
+            code_example_score += 3
+            reasons.append("References examples or usage patterns")
+
+        score += min(code_example_score, 8)
+
+        # Actionable guidance (0-5 points)
         actionable_keywords = ["step", "how to", "guide", "tutorial", "instruction"]
         if any(keyword in content_lower for keyword in actionable_keywords):
-            score += 7
+            score += 5
             reasons.append("Provides actionable, specific guidance")
+
+        # Rejected approaches and deliberate decisions (0-3 points)
+        rejection_patterns = [
+            "rejected",
+            "decided against",
+            "instead of",
+            "why not",
+            "deliberately",
+            "intentionally",
+            "chose not to",
+            "we don't",
+        ]
+        if any(p in content_lower for p in rejection_patterns):
+            score += 3
+            reasons.append(
+                "Documents rejected approaches or deliberate design decisions"
+            )
+
+        # Tool preferences with reasoning (0-2 points)
+        tool_pref_pattern = (
+            r"(use|prefer|choose)\s+\w+\s+(instead of|over|rather than|not)\s+\w+"
+        )
+        if re.search(tool_pref_pattern, content_lower):
+            score += 2
+            reasons.append("Provides tool preferences with reasoning")
 
         return min(score, self.educational_value_weight), reasons
 
@@ -271,6 +320,7 @@ class RepositoryEvaluator:
         if not claude_content:
             return 0, []
 
+        content_lower = claude_content.lower()
         score = 0
         reasons = []
 
@@ -283,17 +333,17 @@ class RepositoryEvaluator:
             score += 3
             reasons.append("Good section organization")
 
-        # Specific commands and workflows (0-5 points)
+        # Specific commands and workflows (0-3 points)
         if (
             "npm" in claude_content
             or "yarn" in claude_content
             or "pip" in claude_content
             or "cargo" in claude_content
         ):
-            score += 5
+            score += 3
             reasons.append("Contains specific commands and workflows")
 
-        # Context about goals and constraints (0-4 points)
+        # Context about goals and constraints (0-2 points)
         context_keywords = [
             "goal",
             "purpose",
@@ -301,9 +351,44 @@ class RepositoryEvaluator:
             "requirement",
             "limitation",
         ]
-        if any(keyword in claude_content.lower() for keyword in context_keywords):
-            score += 4
+        if any(keyword in content_lower for keyword in context_keywords):
+            score += 2
             reasons.append("Provides project context and constraints")
+
+        # Explicit constraints and directives (0-4 points)
+        constraint_patterns = [
+            "never ",
+            "must not",
+            "do not ",
+            "don't ",
+            "always ",
+            "important:",
+            "## constraints",
+            "## rules",
+            "## guidelines",
+            "required:",
+        ]
+        constraint_count = sum(1 for p in constraint_patterns if p in content_lower)
+        if constraint_count >= 3:
+            score += 4
+            reasons.append("Contains explicit constraints and behavioral directives")
+        elif constraint_count >= 1:
+            score += 2
+            reasons.append("Contains some constraints or directives")
+
+        # Role assignment and methodology (0-2 points)
+        role_patterns = ["you are", "act as", "your role", "## role"]
+        methodology_patterns = [
+            "tdd",
+            "test-driven",
+            "## methodology",
+            "## protocol",
+            "## workflow",
+            "phase",
+        ]
+        if any(p in content_lower for p in role_patterns + methodology_patterns):
+            score += 2
+            reasons.append("Assigns AI role or enforces development methodology")
 
         return min(score, self.ai_effectiveness_weight), reasons
 
@@ -323,14 +408,27 @@ class RepositoryEvaluator:
             score += 4
             reasons.append("Recently updated (last 90 days)")
 
-        # Community engagement (0-6 points)
-        stars = candidate["stars"]
-        if stars >= 100:
-            score += 6
-            reasons.append(f"Good community engagement ({stars} stars)")
-        elif stars >= 10:
+        # CI/CD indicators (0-3 points)
+        desc = candidate.get("description", "").lower()
+        topics_str = " ".join(t.lower() for t in candidate.get("topics", []))
+        ci_keywords = [
+            "ci/cd",
+            "pipeline",
+            "actions",
+            "continuous integration",
+            "continuous delivery",
+            "automation",
+            "github actions",
+        ]
+        if any(kw in desc or kw in topics_str for kw in ci_keywords):
             score += 3
-            reasons.append(f"Some community engagement ({stars} stars)")
+            reasons.append("Has CI/CD or automation indicators")
+
+        # Maintenance signals (0-3 points)
+        maintenance_keywords = ["maintained", "production", "active", "stable"]
+        if any(kw in desc for kw in maintenance_keywords):
+            score += 3
+            reasons.append("Shows active maintenance signals")
 
         # Production indicators (0-6 points)
         if candidate.get("description"):
