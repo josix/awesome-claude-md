@@ -1,8 +1,8 @@
 # Webhook Broker - Complex Projects & Microservices Example
 
-**Category: Complex Projects**  
-**Source**: [newscred/webhook-broker](https://github.com/newscred/webhook-broker)  
-**CLAUDE.md**: [View Original](https://github.com/newscred/webhook-broker/blob/main/CLAUDE.md)  
+**Category: Complex Projects**
+**Source**: [newscred/webhook-broker](https://github.com/newscred/webhook-broker)
+**CLAUDE.md**: [View Original](https://github.com/newscred/webhook-broker/blob/main/CLAUDE.md)
 **License**: MIT License
 
 ## Why This Example Was Selected

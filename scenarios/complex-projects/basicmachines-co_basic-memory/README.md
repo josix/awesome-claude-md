@@ -1,9 +1,9 @@
 # Analysis: Basic Memory's Comprehensive MCP Integration CLAUDE.md
 
-**Category: Complex Projects**  
-**Source**: [basicmachines-co/basic-memory](https://github.com/basicmachines-co/basic-memory)  
-**CLAUDE.md**: [View Original](https://github.com/basicmachines-co/basic-memory/blob/main/CLAUDE.md)  
-**License**: MIT License  
+**Category: Complex Projects**
+**Source**: [basicmachines-co/basic-memory](https://github.com/basicmachines-co/basic-memory)
+**CLAUDE.md**: [View Original](https://github.com/basicmachines-co/basic-memory/blob/main/CLAUDE.md)
+**License**: MIT License
 
 This CLAUDE.md file from Basic Memory demonstrates an exceptional approach to documenting Model Context Protocol (MCP) integration and AI-human collaborative development workflows.
 

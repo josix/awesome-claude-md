@@ -1,9 +1,9 @@
 # Analysis: Anthropic's Multi-Project Quickstart CLAUDE.md
 
-**Category: Getting Started**  
-**Source**: [anthropics/anthropic-quickstarts](https://github.com/anthropics/anthropic-quickstarts)  
-**CLAUDE.md**: [View Original](https://github.com/anthropics/anthropic-quickstarts/blob/main/CLAUDE.md)  
-**License**: MIT License  
+**Category: Getting Started**
+**Source**: [anthropics/anthropic-quickstarts](https://github.com/anthropics/anthropic-quickstarts)
+**CLAUDE.md**: [View Original](https://github.com/anthropics/anthropic-quickstarts/blob/main/CLAUDE.md)
+**License**: MIT License
 
 This CLAUDE.md file from Anthropic's official quickstarts repository demonstrates how to document multiple related projects within a single guide, providing clear getting-started patterns for diverse AI applications.
 

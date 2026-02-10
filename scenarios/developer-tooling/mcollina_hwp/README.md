@@ -1,8 +1,8 @@
 # HWP by Matteo Collina - Developer Tooling Example
 
-**Category: Developer Tooling**  
-**Source**: [mcollina/hwp](https://github.com/mcollina/hwp)  
-**CLAUDE.md**: [View Original](https://github.com/mcollina/hwp/blob/main/CLAUDE.md)  
+**Category: Developer Tooling**
+**Source**: [mcollina/hwp](https://github.com/mcollina/hwp)
+**CLAUDE.md**: [View Original](https://github.com/mcollina/hwp/blob/main/CLAUDE.md)
 **License**: MIT License
 
 ## Why This Example Was Selected

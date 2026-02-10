@@ -2,9 +2,9 @@
 
 ## Category: Libraries/Frameworks
 
-**Source Repository:** [pydantic/genai-prices](https://github.com/pydantic/genai-prices)  
-**Original CLAUDE.md:** [View Source](https://github.com/pydantic/genai-prices/blob/main/CLAUDE.md)  
-**License:** MIT License  
+**Source Repository:** [pydantic/genai-prices](https://github.com/pydantic/genai-prices)
+**Original CLAUDE.md:** [View Source](https://github.com/pydantic/genai-prices/blob/main/CLAUDE.md)
+**License:** MIT License
 **Domain Expert:** Pydantic Team (Industry-leading Python validation library)
 
 ## Overview
@@ -43,7 +43,7 @@ prices/providers/*.yml → build-prices → data.json → package-data → packa
 
 ### Command Organization
 - **Setup**: `make install`, `make sync`
-- **Development**: `make format`, `make lint`, `make typecheck`, `make test`  
+- **Development**: `make format`, `make lint`, `make typecheck`, `make test`
 - **Data Management**: `make get-all-prices`, `make check-for-price-discrepancies`
 - **Building**: `make build-prices`, `make package-data`
 
@@ -56,7 +56,7 @@ prices/providers/*.yml → build-prices → data.json → package-data → packa
 ## Key Takeaways
 
 1. **Architecture First**: Leading with clear component relationships and data flow before diving into commands
-2. **Production Warnings**: Explicit "DO NOT EDIT" warnings for generated files with explanation of proper update procedures  
+2. **Production Warnings**: Explicit "DO NOT EDIT" warnings for generated files with explanation of proper update procedures
 3. **Command Categorization**: Logical grouping of commands by purpose (setup, development, data management, building)
 4. **Tool-Specific Guidance**: Clear preferences for specific tools (UV over pip, basedpyright over mypy) with reasoning
 

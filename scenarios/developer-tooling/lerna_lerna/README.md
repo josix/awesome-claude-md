@@ -1,9 +1,9 @@
 # Analysis: Lerna Monorepo Management Tool CLAUDE.md
 
-**Category**: Developer Tooling  
-**Source**: [lerna/lerna](https://github.com/lerna/lerna)  
-**CLAUDE.md**: [View Original](https://github.com/lerna/lerna/blob/main/CLAUDE.md)  
-**License**: MIT License  
+**Category**: Developer Tooling
+**Source**: [lerna/lerna](https://github.com/lerna/lerna)
+**CLAUDE.md**: [View Original](https://github.com/lerna/lerna/blob/main/CLAUDE.md)
+**License**: MIT License
 
 This CLAUDE.md file from Lerna demonstrates comprehensive documentation for a monorepo management tool with multi-package workflows and release management capabilities.
 

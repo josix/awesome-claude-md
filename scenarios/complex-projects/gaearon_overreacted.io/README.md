@@ -2,10 +2,10 @@
 
 ## Category: Complex Projects
 
-**Source Repository:** [gaearon/overreacted.io](https://github.com/gaearon/overreacted.io)  
-**Original CLAUDE.md:** [View Source](https://github.com/gaearon/overreacted.io/blob/main/CLAUDE.md)  
-**License:** MIT License  
-**Stars:** 7,000+  
+**Source Repository:** [gaearon/overreacted.io](https://github.com/gaearon/overreacted.io)
+**Original CLAUDE.md:** [View Source](https://github.com/gaearon/overreacted.io/blob/main/CLAUDE.md)
+**License:** MIT License
+**Stars:** 7,000+
 **Domain Expert:** Dan Abramov (React co-creator, Meta)
 
 ## Overview

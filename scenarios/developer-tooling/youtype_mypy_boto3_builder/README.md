@@ -1,8 +1,8 @@
 # mypy-boto3-builder - Developer Tooling Example
 
-**Category: Developer Tooling**  
-**Source**: [youtype/mypy_boto3_builder](https://github.com/youtype/mypy_boto3_builder)  
-**CLAUDE.md**: [View Original](https://github.com/youtype/mypy_boto3_builder/blob/main/CLAUDE.md)  
+**Category: Developer Tooling**
+**Source**: [youtype/mypy_boto3_builder](https://github.com/youtype/mypy_boto3_builder)
+**CLAUDE.md**: [View Original](https://github.com/youtype/mypy_boto3_builder/blob/main/CLAUDE.md)
 **License**: MIT License
 
 ## Why This Example Was Selected

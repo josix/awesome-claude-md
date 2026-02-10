@@ -1,8 +1,8 @@
 # GenSX - Libraries & Frameworks Example
 
-**Category: Libraries & Frameworks**  
-**Source**: [gensx-inc/gensx](https://github.com/gensx-inc/gensx)  
-**CLAUDE.md**: [View Original](https://github.com/gensx-inc/gensx/blob/main/CLAUDE.md)  
+**Category: Libraries & Frameworks**
+**Source**: [gensx-inc/gensx](https://github.com/gensx-inc/gensx)
+**CLAUDE.md**: [View Original](https://github.com/gensx-inc/gensx/blob/main/CLAUDE.md)
 **License**: MIT License
 
 ## Why This Example Was Selected
