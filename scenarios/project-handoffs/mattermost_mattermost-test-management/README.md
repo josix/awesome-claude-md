@@ -1,8 +1,8 @@
 # mattermost-test-management - Project Handoffs & Status Reports Example
 
-**Category: Project Handoffs**  
-**Source**: [mattermost/mattermost-test-management](https://github.com/mattermost/mattermost-test-management)  
-**CLAUDE.md**: [View Original](https://github.com/mattermost/mattermost-test-management/blob/main/CLAUDE.md)  
+**Category: Project Handoffs**
+**Source**: [mattermost/mattermost-test-management](https://github.com/mattermost/mattermost-test-management)
+**CLAUDE.md**: [View Original](https://github.com/mattermost/mattermost-test-management/blob/main/CLAUDE.md)
 **License**: MIT License
 
 ## Why This Example Was Selected

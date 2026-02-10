@@ -175,7 +175,7 @@ Based on embedding-based similarity search for high-quality patterns:
 - **anthropics/anthropic-quickstarts**: Official AI development best practices
 - **microsoft/semanticworkbench**: Enterprise AI assistant platform
 
-#### High Quality (Established Organizations)  
+#### High Quality (Established Organizations)
 - **openai/openai-agents-python**: Multi-agent workflow framework
 - **microsoft/recipe-tool**: Automation recipe patterns
 - **blueprintui/blueprintui**: UI component library architecture

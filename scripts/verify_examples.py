@@ -67,9 +67,9 @@ def extract_github_links(file_path: str) -> dict[str, str]:
         repo_pattern2 = r"https://github\.com/([^/\s]+)/([^/\s)]+)"
         repo_match2 = re.search(repo_pattern2, content)
         if repo_match2:
-            links["repo_url"] = (
-                f"https://github.com/{repo_match2.group(1)}/{repo_match2.group(2)}"
-            )
+            links[
+                "repo_url"
+            ] = f"https://github.com/{repo_match2.group(1)}/{repo_match2.group(2)}"
             links["repo_owner"] = repo_match2.group(1)
             links["repo_name"] = repo_match2.group(2)
 

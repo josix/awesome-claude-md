@@ -8,17 +8,17 @@ assignees: ''
 
 ## 📋 Project Information
 
-**Repository URL:** [GitHub repository URL]  
-**CLAUDE.md URL:** [Direct link to the CLAUDE.md file]  
-**Star Count:** [Number of GitHub stars]  
-**Organization/Author:** [Organization or author name]  
-**License:** [Repository license]  
+**Repository URL:** [GitHub repository URL]
+**CLAUDE.md URL:** [Direct link to the CLAUDE.md file]
+**Star Count:** [Number of GitHub stars]
+**Organization/Author:** [Organization or author name]
+**License:** [Repository license]
 
 ## 🎯 Proposed Category
 
 Which category best fits this example?
 - [ ] `complex-projects/` - Multi-service projects with detailed architecture
-- [ ] `libraries-frameworks/` - Core concepts, APIs, and usage patterns  
+- [ ] `libraries-frameworks/` - Core concepts, APIs, and usage patterns
 - [ ] `developer-tooling/` - CLI tools with commands and configuration
 - [ ] `project-handoffs/` - Current state with blocking issues and next steps
 - [ ] `getting-started/` - Development environment setup focused
@@ -40,9 +40,9 @@ Please explain what makes this `CLAUDE.md` file special:
 
 ## 🛠️ Technical Details
 
-**Primary Technologies:** [e.g., TypeScript, Python, Rust, etc.]  
-**Architecture Type:** [e.g., Monorepo, Microservices, CLI tool, etc.]  
-**Project Scale:** [e.g., Enterprise, Open source library, etc.]  
+**Primary Technologies:** [e.g., TypeScript, Python, Rust, etc.]
+**Architecture Type:** [e.g., Monorepo, Microservices, CLI tool, etc.]
+**Project Scale:** [e.g., Enterprise, Open source library, etc.]
 
 ## 📋 Quality Checklist
 

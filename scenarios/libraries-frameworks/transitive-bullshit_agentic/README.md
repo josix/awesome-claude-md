@@ -1,8 +1,8 @@
 # Agentic - Libraries & Frameworks Example
 
-**Category: Libraries & Frameworks**  
-**Source**: [transitive-bullshit/agentic](https://github.com/transitive-bullshit/agentic)  
-**CLAUDE.md**: [View Original](https://github.com/transitive-bullshit/agentic/blob/main/CLAUDE.md)  
+**Category: Libraries & Frameworks**
+**Source**: [transitive-bullshit/agentic](https://github.com/transitive-bullshit/agentic)
+**CLAUDE.md**: [View Original](https://github.com/transitive-bullshit/agentic/blob/main/CLAUDE.md)
 **License**: MIT License
 
 ## Why This Example Was Selected

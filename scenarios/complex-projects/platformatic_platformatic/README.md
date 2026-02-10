@@ -1,8 +1,8 @@
 # Platformatic - Complex Projects & Microservices Example
 
-**Category: Complex Projects**  
-**Source**: [platformatic/platformatic](https://github.com/platformatic/platformatic)  
-**CLAUDE.md**: [View Original](https://github.com/platformatic/platformatic/blob/main/CLAUDE.md)  
+**Category: Complex Projects**
+**Source**: [platformatic/platformatic](https://github.com/platformatic/platformatic)
+**CLAUDE.md**: [View Original](https://github.com/platformatic/platformatic/blob/main/CLAUDE.md)
 **License**: Apache-2.0 License
 
 ## Why This Example Was Selected

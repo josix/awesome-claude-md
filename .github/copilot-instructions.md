@@ -95,7 +95,7 @@ For finding new examples, suggest these GitHub search patterns:
 #### Manual Search Queries
 ```
 filename:CLAUDE.md "## Architecture"
-filename:CLAUDE.md "## Development Commands" 
+filename:CLAUDE.md "## Development Commands"
 "## Testing" filename:CLAUDE.md
 "## Deployment" filename:CLAUDE.md
 filename:CLAUDE.md language:TypeScript
@@ -118,7 +118,7 @@ filename:CLAUDE.md user:pytorch          # Machine learning frameworks
 # Python Ecosystem
 filename:CLAUDE.md user:fastapi OR user:tiangolo OR user:pydantic
 
-# JavaScript/React  
+# JavaScript/React
 filename:CLAUDE.md user:vercel OR user:facebook OR user:nextjs
 
 # AI/ML
@@ -323,7 +323,7 @@ Based on embedding-based similarity search for high-quality patterns:
 
 #### Exceptional Quality (Industry Leaders)
 - **pydantic/genai-prices**: Expert Python data processing pipeline patterns
-- **gaearon/overreacted.io**: React co-creator's advanced Next.js blog architecture  
+- **gaearon/overreacted.io**: React co-creator's advanced Next.js blog architecture
 - **anthropics/anthropic-quickstarts**: Official AI development best practices
 - **microsoft/semanticworkbench**: Enterprise AI assistant platform
 

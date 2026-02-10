@@ -1,8 +1,8 @@
 # kotlinter-gradle - Developer Tooling Example
 
-**Category: Developer Tooling**  
-**Source**: [jeremymailen/kotlinter-gradle](https://github.com/jeremymailen/kotlinter-gradle)  
-**CLAUDE.md**: [View Original](https://github.com/jeremymailen/kotlinter-gradle/blob/main/CLAUDE.md)  
+**Category: Developer Tooling**
+**Source**: [jeremymailen/kotlinter-gradle](https://github.com/jeremymailen/kotlinter-gradle)
+**CLAUDE.md**: [View Original](https://github.com/jeremymailen/kotlinter-gradle/blob/main/CLAUDE.md)
 **License**: MIT License
 
 ## Why This Example Was Selected
