@@ -64,7 +64,7 @@ A curated collection of high-quality `CLAUDE.md` files from leading open-source 
 ## 🔍 Browse by Technology
 
 <details>
-<summary><strong>🟦 TypeScript/JavaScript</strong> (37 examples)</summary>
+<summary><strong>🟦 TypeScript/JavaScript</strong> (38 examples)</summary>
 
 - **[Callstack React Native Testing](scenarios/libraries-frameworks/callstack_react-native-testing-library/analysis.md)** ![Stars](https://img.shields.io/github/stars/callstack/react-native-testing-library?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/callstack/react-native-testing-library?style=flat-square) - Testing library gold standard from React Native experts
 - **[Citadel Protocol Contracts](scenarios/complex-projects/Citadel-Protocol_contracts/analysis.md)** ![Stars](https://img.shields.io/github/stars/Citadel-Protocol/contracts?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/Citadel-Protocol/contracts?style=flat-square) - Security-first DeFi protocol documentation
@@ -76,8 +76,9 @@ A curated collection of high-quality `CLAUDE.md` files from leading open-source 
 - **[Cloudflare Workers SDK](scenarios/developer-tooling/cloudflare_workers-sdk/README.md)** ![Stars](https://img.shields.io/github/stars/cloudflare/workers-sdk?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/cloudflare/workers-sdk?style=flat-square) - Monorepo patterns
 - **[Claude Crew](scenarios/developer-tooling/d-kimuson_claude-crew/README.md)** ![Stars](https://img.shields.io/github/stars/d-kimuson/claude-crew?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/d-kimuson/claude-crew?style=flat-square) - Strict TypeScript standards
 - **[Web Builder](scenarios/complex-projects/dev-mahfuj80_web-builder/README.md)** ![Stars](https://img.shields.io/github/stars/dev-mahfuj80/web-builder?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/dev-mahfuj80/web-builder?style=flat-square) - B2B2B SaaS platform with Next.js 14
-- **[mdx-prompt](scenarios/libraries-frameworks/edspencer_mdx-prompt/README.md)** ![Stars](https://img.shields.io/github/stars/edspencer/mdx-prompt?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/edspencer/mdx-prompt?style=flat-square) - LLM prompt components
+- **[Lula 2](scenarios/developer-tooling/defenseunicorns_lula/README.md)** ![Stars](https://img.shields.io/github/stars/defenseunicorns/lula?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/defenseunicorns/lula?style=flat-square) - Git-friendly compliance control management
 - **[MCP WordPress](scenarios/developer-tooling/docdyhr_mcp-wordpress/analysis.md)** ![Stars](https://img.shields.io/github/stars/docdyhr/mcp-wordpress?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/docdyhr/mcp-wordpress?style=flat-square) - MCP server for WordPress CMS
+- **[mdx-prompt](scenarios/libraries-frameworks/edspencer_mdx-prompt/README.md)** ![Stars](https://img.shields.io/github/stars/edspencer/mdx-prompt?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/edspencer/mdx-prompt?style=flat-square) - LLM prompt components
 - **[GalaChain SDK](scenarios/libraries-frameworks/GalaChain_sdk/analysis.md)** ![Stars](https://img.shields.io/github/stars/GalaChain/sdk?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/GalaChain/sdk?style=flat-square) - Blockchain SDK with TypeScript
 - **[Overreacted.io](scenarios/complex-projects/gaearon_overreacted.io/README.md)** ![Stars](https://img.shields.io/github/stars/gaearon/overreacted.io?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/gaearon/overreacted.io?style=flat-square) - Next.js with MDX
 - **[noren](scenarios/libraries-frameworks/himorishige_noren/README.md)** ![Stars](https://img.shields.io/github/stars/himorishige/noren?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/himorishige/noren?style=flat-square) - Edge-native PII redaction library
@@ -107,7 +108,7 @@ A curated collection of high-quality `CLAUDE.md` files from leading open-source 
 </details>
 
 <details>
-<summary><strong>🟧 Python</strong> (24 examples)</summary>
+<summary><strong>🟧 Python</strong> (25 examples)</summary>
 
 - **[Anthropic Quickstarts](scenarios/getting-started/anthropics_anthropic-quickstarts/README.md)** ![Stars](https://img.shields.io/github/stars/anthropics/anthropic-quickstarts?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/anthropics/anthropic-quickstarts?style=flat-square) - Computer-use demo
 - **[Basic Memory](scenarios/complex-projects/basicmachines-co_basic-memory/README.md)** ![Stars](https://img.shields.io/github/stars/basicmachines-co/basic-memory?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/basicmachines-co/basic-memory?style=flat-square) - MCP integration
@@ -131,6 +132,7 @@ A curated collection of high-quality `CLAUDE.md` files from leading open-source 
 - **[Pydantic GenAI Prices](scenarios/libraries-frameworks/pydantic_genai-prices/README.md)** ![Stars](https://img.shields.io/github/stars/pydantic/genai-prices?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/pydantic/genai-prices?style=flat-square) - Expert data processing pipeline
 - **[PyTorch tlparse](scenarios/developer-tooling/pytorch_tlparse/README.md)** ![Stars](https://img.shields.io/github/stars/pytorch/tlparse?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/pytorch/tlparse?style=flat-square) - Dual-language (Rust/Python)
 - **[Demo MCP](scenarios/infrastructure-projects/sedwardstx_demomcp/analysis.md)** ![Stars](https://img.shields.io/github/stars/sedwardstx/demomcp?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/sedwardstx/demomcp?style=flat-square) - MCP server architecture patterns
+- **[Stata-MCP](scenarios/developer-tooling/SepineTam_stata-mcp/README.md)** ![Stars](https://img.shields.io/github/stars/SepineTam/stata-mcp?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/SepineTam/stata-mcp?style=flat-square) - MCP server for Stata statistical analysis
 - **[viral-assemble](scenarios/libraries-frameworks/broadinstitute_viral-assemble/README.md)** ![Stars](https://img.shields.io/github/stars/broadinstitute/viral-assemble?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/broadinstitute/viral-assemble?style=flat-square) - Viral genome assembly toolkit from Broad Institute
 - **[Weaviate Docs](scenarios/getting-started/weaviate_docs/README.md)** ![Stars](https://img.shields.io/github/stars/weaviate/docs?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/weaviate/docs?style=flat-square) - Documentation for Weaviate Database
 
@@ -181,7 +183,10 @@ A curated collection of high-quality `CLAUDE.md` files from leading open-source 
 </details>
 
 <details>
-<summary><strong>🟨 Other Languages</strong> (13 examples)</summary>
+<summary><strong>🟨 Other Languages</strong> (14 examples)</summary>
+
+**C++**
+- **[ada](scenarios/libraries-frameworks/ada-url_ada/README.md)** ![Stars](https://img.shields.io/github/stars/ada-url/ada?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/ada-url/ada?style=flat-square) - WHATWG-compliant URL parser library
 
 **Elixir**
 - **[mehr-schulferien.de](scenarios/complex-projects/mehr-schulferien-de_www.mehr-schulferien.de/README.md)** ![Stars](https://img.shields.io/github/stars/mehr-schulferien-de/www.mehr-schulferien.de?style=flat-square&logo=github) - Phoenix web application with rigorous test quality standards
@@ -223,7 +228,7 @@ A curated collection of high-quality `CLAUDE.md` files from leading open-source 
 ## 🎨 Browse by Use Case
 
 <details>
-<summary><strong>🤖 Advanced AI Development</strong> (12 examples)</summary>
+<summary><strong>🤖 Advanced AI Development</strong> (13 examples)</summary>
 
 - **[OpenAI Agents Python](scenarios/complex-projects/openai_openai-agents-python/README.md)** ![Stars](https://img.shields.io/github/stars/openai/openai-agents-python?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/openai/openai-agents-python?style=flat-square) - Official multi-agent framework
 - **[Basic Memory](scenarios/complex-projects/basicmachines-co_basic-memory/README.md)** ![Stars](https://img.shields.io/github/stars/basicmachines-co/basic-memory?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/basicmachines-co/basic-memory?style=flat-square) - MCP integration patterns
@@ -231,6 +236,7 @@ A curated collection of high-quality `CLAUDE.md` files from leading open-source 
 - **[Anthropic Quickstarts](scenarios/getting-started/anthropics_anthropic-quickstarts/README.md)** ![Stars](https://img.shields.io/github/stars/anthropics/anthropic-quickstarts?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/anthropics/anthropic-quickstarts?style=flat-square) - Computer-use demo
 - **[Composio](scenarios/libraries-frameworks/ComposioHQ_composio/README.md)** ![Stars](https://img.shields.io/github/stars/ComposioHQ/composio?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/ComposioHQ/composio?style=flat-square) - AI agent integration platform
 - **[Agentic](scenarios/libraries-frameworks/transitive-bullshit_agentic/README.md)** ![Stars](https://img.shields.io/github/stars/transitive-bullshit/agentic?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/transitive-bullshit/agentic?style=flat-square) - AI agent orchestration library
+- **[Stata-MCP](scenarios/developer-tooling/SepineTam_stata-mcp/README.md)** ![Stars](https://img.shields.io/github/stars/SepineTam/stata-mcp?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/SepineTam/stata-mcp?style=flat-square) - MCP server for Stata statistical analysis
 - **[GoMall](scenarios/developer-tooling/li0on3_GoMall/README.md)** ![Stars](https://img.shields.io/github/stars/li0on3/GoMall?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/li0on3/GoMall?style=flat-square) - RIPER-5 AI methodology
 - **[Jason Liu Blog](scenarios/developer-tooling/jxnl_blog/README.md)** ![Stars](https://img.shields.io/github/stars/jxnl/blog?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/jxnl/blog?style=flat-square) - AI/ML thought leadership
 - **[Ultimate RVC](scenarios/libraries-frameworks/JackismyShephard_ultimate-rvc/README.md)** ![Stars](https://img.shields.io/github/stars/JackismyShephard/ultimate-rvc?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/JackismyShephard/ultimate-rvc?style=flat-square) - AI-powered audio creation
@@ -241,10 +247,11 @@ A curated collection of high-quality `CLAUDE.md` files from leading open-source 
 </details>
 
 <details>
-<summary><strong>🏗️ Infrastructure Projects</strong> (7 examples)</summary>
+<summary><strong>🏗️ Infrastructure Projects</strong> (8 examples)</summary>
 
 - **[Breenix OS](scenarios/infrastructure-projects/ryanbreen_breenix/README.md)** ![Stars](https://img.shields.io/github/stars/ryanbreen/breenix?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/ryanbreen/breenix?style=flat-square) - Rust kernel development with rigorous engineering
 - **[Cloudflare Workerd](scenarios/infrastructure-projects/cloudflare_workerd/README.md)** ![Stars](https://img.shields.io/github/stars/cloudflare/workerd?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/cloudflare/workerd?style=flat-square) - JavaScript runtime for Cloudflare Workers
+- **[Lula 2](scenarios/developer-tooling/defenseunicorns_lula/README.md)** ![Stars](https://img.shields.io/github/stars/defenseunicorns/lula?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/defenseunicorns/lula?style=flat-square) - Git-friendly compliance control management
 - **[Dymension Hub](scenarios/infrastructure-projects/dymensionxyz_dymension/README.md)** ![Stars](https://img.shields.io/github/stars/dymensionxyz/dymension?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/dymensionxyz/dymension?style=flat-square) - Cosmos SDK settlement layer for modular rollups
 - **[TrailOfBits Algo](scenarios/infrastructure-projects/trailofbits_algo/analysis.md)** ![Stars](https://img.shields.io/github/stars/trailofbits/algo?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/trailofbits/algo?style=flat-square) - Security-first VPN server setup
 - **[Ansible MCP Server](scenarios/infrastructure-projects/washyu_ansible-mcp-server/README.md)** ![Stars](https://img.shields.io/github/stars/washyu/ansible-mcp-server?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/washyu/ansible-mcp-server?style=flat-square) - Infrastructure automation with MCP
@@ -271,8 +278,9 @@ A curated collection of high-quality `CLAUDE.md` files from leading open-source 
 </details>
 
 <details>
-<summary><strong>⚡ High Performance Computing</strong> (3 examples)</summary>
+<summary><strong>⚡ High Performance Computing</strong> (4 examples)</summary>
 
+- **[ada](scenarios/libraries-frameworks/ada-url_ada/README.md)** ![Stars](https://img.shields.io/github/stars/ada-url/ada?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/ada-url/ada?style=flat-square) - WHATWG-compliant C++ URL parser
 - **[Web MuJoCo Gym](scenarios/libraries-frameworks/ninjaa_web-mujoco-gym/README.md)** ![Stars](https://img.shields.io/github/stars/ninjaa/web-mujoco-gym?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/ninjaa/web-mujoco-gym?style=flat-square) - WebAssembly ML/RL environment
 - **[TimeWarp Architecture](scenarios/complex-projects/TimeWarpEngineering_timewarp-architecture/README.md)** ![Stars](https://img.shields.io/github/stars/TimeWarpEngineering/timewarp-architecture?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/TimeWarpEngineering/timewarp-architecture?style=flat-square) - Blazor WebAssembly framework
 - **[Pipewire-HS](scenarios/libraries-frameworks/JonathanLorimer_pipewire-hs/README.md)** ![Stars](https://img.shields.io/github/stars/JonathanLorimer/pipewire-hs?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/JonathanLorimer/pipewire-hs?style=flat-square) - Haskell bindings for PipeWire
@@ -449,6 +457,11 @@ CLI tools, build systems, and development utilities with focus on commands and c
   - State machine patterns for software development
   - Testing-driven development methodology
 
+- **[Stata-MCP](scenarios/developer-tooling/SepineTam_stata-mcp/README.md)** ![Stars](https://img.shields.io/github/stars/SepineTam/stata-mcp?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/SepineTam/stata-mcp?style=flat-square) ![Activity](https://img.shields.io/github/last-commit/SepineTam/stata-mcp?style=flat-square) - MCP server for Stata statistical analysis and LLM integration
+  - Security Guard pattern with command blacklisting for safe code execution
+  - RAM Monitor pattern with automatic process termination
+  - Hierarchical configuration system (env vars > config file > defaults)
+
 - **[HA Irrigation Strategy](scenarios/developer-tooling/JakeTheRabbit_HA-Irrigation-Strategy/README.md)** ![Stars](https://img.shields.io/github/stars/JakeTheRabbit/HA-Irrigation-Strategy?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/JakeTheRabbit/HA-Irrigation-Strategy?style=flat-square) ![Activity](https://img.shields.io/github/last-commit/JakeTheRabbit/HA-Irrigation-Strategy?style=flat-square) - Advanced smart home agriculture automation
   - Four-Phase automation cycle with statistical analysis
   - Home Assistant integration with real-time sensor processing
@@ -468,6 +481,11 @@ CLI tools, build systems, and development utilities with focus on commands and c
   - Function-level code navigation guide with exact file paths
   - Critical decision point documentation for wrapper-vs-inline classification
   - Strict AI agent behavioral directives with deterministic output requirements
+
+- **[Lula 2](scenarios/developer-tooling/defenseunicorns_lula/README.md)** ![Stars](https://img.shields.io/github/stars/defenseunicorns/lula?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/defenseunicorns/lula?style=flat-square) ![Activity](https://img.shields.io/github/last-commit/defenseunicorns/lula?style=flat-square) - Git-friendly compliance control management system
+  - Individual YAML files per security control for meaningful Git diffs
+  - SvelteKit 5 Runes state management with CLI-embedded Express server
+  - OSCAL framework integration for NIST 800-53 compliance
 
 - **[Kargo](scenarios/developer-tooling/cyrup-ai_kargo/README.md)** ![Stars](https://img.shields.io/github/stars/cyrup-ai/kargo?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/cyrup-ai/kargo?style=flat-square) ![Activity](https://img.shields.io/github/last-commit/cyrup-ai/kargo?style=flat-square) - Knowledge graphs and information retrieval
   - Graph-based data management
@@ -688,6 +706,11 @@ Large-scale systems, runtime environments, and platform-agnostic deployment patt
 ### 📚 Libraries & Frameworks
 Core concepts, APIs, usage patterns, and publication-ready development standards.
 
+- **[ada](scenarios/libraries-frameworks/ada-url_ada/README.md)** ![Stars](https://img.shields.io/github/stars/ada-url/ada?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/ada-url/ada?style=flat-square) ![Activity](https://img.shields.io/github/last-commit/ada-url/ada?style=flat-square) - WHATWG-compliant C++ URL parser library
+  - Development Checks concept distinguishing debug assertions from release builds
+  - CMake development workflow with comprehensive option documentation
+  - Benchmark methodology with explicit performance measurement guidance
+
 - **[Callstack React Native Testing](scenarios/libraries-frameworks/callstack_react-native-testing-library/analysis.md)** ![Stars](https://img.shields.io/github/stars/callstack/react-native-testing-library?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/callstack/react-native-testing-library?style=flat-square) ![Activity](https://img.shields.io/github/last-commit/callstack/react-native-testing-library?style=flat-square) - Professional React Native testing library
   - Three-tier query system design pattern (get*/query*/find*)
   - Behavioral testing philosophy from industry experts
@@ -901,6 +924,6 @@ Find more `CLAUDE.md` examples using these search strategies:
 
 ---
 
-**Total Examples**: 101 | **Last Updated**: February 2026 | **Maintained by**: Community Contributors
+**Total Examples**: 104 | **Last Updated**: February 2026 | **Maintained by**: Community Contributors
 
 > 🤖 This collection is maintained with assistance from Claude Code for quality analysis and curation

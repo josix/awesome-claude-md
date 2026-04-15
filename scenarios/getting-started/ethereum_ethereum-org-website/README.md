@@ -1,8 +1,8 @@
 # Ethereum.org Website - Getting Started Example
 
-**Category: Getting Started**  
-**Source**: [ethereum/ethereum-org-website](https://github.com/ethereum/ethereum-org-website)  
-**CLAUDE.md**: [View Original](https://github.com/ethereum/ethereum-org-website/blob/main/CLAUDE.md)  
+**Category: Getting Started**
+**Source**: [ethereum/ethereum-org-website](https://github.com/ethereum/ethereum-org-website)
+**CLAUDE.md**: [View Original](https://github.com/ethereum/ethereum-org-website/blob/main/CLAUDE.md)
 **License**: MIT License
 
 ## Why This Example Was Selected
