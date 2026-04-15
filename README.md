@@ -334,6 +334,11 @@ Multi-service applications with sophisticated architectures and enterprise-scale
   - Drag & drop website/funnel builder
   - Stripe Connect integration for multi-vendor payments
 
+- **[action-idle](scenarios/complex-projects/ebergstedt_action-idle/README.md)** ![Stars](https://img.shields.io/github/stars/ebergstedt/action-idle?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/ebergstedt/action-idle?style=flat-square) ![Activity](https://img.shields.io/github/last-commit/ebergstedt/action-idle?style=flat-square) - TypeScript idle game with ESLint-enforced Godot portability constraint
+  - Architectural boundary (`/src/core/` pure TypeScript) enforced via ESLint rule, not just documentation
+  - TypeScript↔GDScript translation table mapping idioms to their Godot equivalents
+  - 11 named design principles with ✅/❌ code comparisons and entity-to-signal architecture mapping
+
 - **[Overreacted.io](scenarios/complex-projects/gaearon_overreacted.io/README.md)** ![Stars](https://img.shields.io/github/stars/gaearon/overreacted.io?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/gaearon/overreacted.io?style=flat-square) ![Activity](https://img.shields.io/github/last-commit/gaearon/overreacted.io?style=flat-square) - Dan Abramov's technical blog with exceptional documentation
   - Technical depth with personality
   - Complete development workflow
@@ -511,6 +516,11 @@ CLI tools, build systems, and development utilities with focus on commands and c
   - MCP protocol implementation
   - Cloudflare Workers deployment
   - AI service integration patterns
+
+- **[repo-reconnoiter-rails](scenarios/developer-tooling/jimmypocock_repo-reconnoiter-rails/README.md)** ![Stars](https://img.shields.io/github/stars/jimmypocock/repo-reconnoiter-rails?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/jimmypocock/repo-reconnoiter-rails?style=flat-square) ![Activity](https://img.shields.io/github/last-commit/jimmypocock/repo-reconnoiter-rails?style=flat-square) - Rails 8.1 OSINT dashboard with cost-first AI integration philosophy
+  - "Cost Control" as the first core principle with $10/month target enforced via a single cost-tracking service
+  - "Doer" naming convention documented with ✅/❌ strikethrough examples for service objects
+  - AI prompts as versioned ERB templates in `app/prompts/` — prompt-as-code pattern in a Rails context
 
 - **[Pixel Banner](scenarios/developer-tooling/jparkerweb_pixel-banner/README.md)** ![Stars](https://img.shields.io/github/stars/jparkerweb/pixel-banner?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/jparkerweb/pixel-banner?style=flat-square) ![Activity](https://img.shields.io/github/last-commit/jparkerweb/pixel-banner?style=flat-square) - Obsidian plugin with customizable banner images
   - Task-oriented plugin documentation
@@ -741,6 +751,11 @@ Core concepts, APIs, usage patterns, and publication-ready development standards
   - Research and development patterns
   - Data analysis and visualization
 
+- **[brix-lang](scenarios/libraries-frameworks/guycanella_brix-lang/README.md)** ![Stars](https://img.shields.io/github/stars/guycanella/brix-lang?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/guycanella/brix-lang?style=flat-square) ![Activity](https://img.shields.io/github/last-commit/guycanella/brix-lang?style=flat-square) - New data-oriented language with full LLVM 18 compiler pipeline in Rust
+  - Complete compilation pipeline documented: Lexer (logos) → Parser (chumsky) → AST → Codegen (inkwell/LLVM 18) → native binary
+  - Quantified test baseline: 1,194 unit + 152 integration + 390 Test Library tests pinned post-Phase 4
+  - Step-by-step "Adding Features" guide with exact file paths and function names (`compile_binary_op()`)
+
 - **[noren](scenarios/libraries-frameworks/himorishige_noren/README.md)** ![Stars](https://img.shields.io/github/stars/himorishige/noren?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/himorishige/noren?style=flat-square) ![Activity](https://img.shields.io/github/last-commit/himorishige/noren?style=flat-square) - Edge-native PII redaction library
   - WHATWG Streams API for efficient stream processing
   - Plugin architecture for country-specific PII detection
@@ -770,6 +785,11 @@ Core concepts, APIs, usage patterns, and publication-ready development standards
   - Vector database integration patterns
   - LangChain ecosystem extension
   - Memory and caching strategies for AI applications
+
+- **[mivoa](scenarios/libraries-frameworks/mariepop13_mivoa/README.md)** ![Stars](https://img.shields.io/github/stars/mariepop13/mivoa?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/mariepop13/mivoa?style=flat-square) ![Activity](https://img.shields.io/github/last-commit/mariepop13/mivoa?style=flat-square) - Next.js 15 app with enforced Firebase abstraction via `StorageBackend` interface
+  - `StorageBackend` interface decouples Firebase from UI layer; enforced import rule ("Nothing in `components/` or `hooks/` may import from `firebase/*`")
+  - Two concrete implementations: production Firebase backend and in-memory local backend for testing without network
+  - BYOK AI model integration with layered architecture and explicit directory-level enforcement
 
 - **[Web MuJoCo Gym](scenarios/libraries-frameworks/ninjaa_web-mujoco-gym/README.md)** ![Stars](https://img.shields.io/github/stars/ninjaa/web-mujoco-gym?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/ninjaa/web-mujoco-gym?style=flat-square) ![Activity](https://img.shields.io/github/last-commit/ninjaa/web-mujoco-gym?style=flat-square) - High-performance WebAssembly machine learning environment
   - WebAssembly for high-performance computing
