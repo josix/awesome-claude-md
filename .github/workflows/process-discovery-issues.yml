@@ -1,0 +1,199 @@
+name: Process Discovery Issues
+
+on:
+  issues:
+    types: [labeled]
+  workflow_dispatch:
+    inputs:
+      issue_number:
+        description: 'Issue number to process'
+        required: true
+        type: number
+
+concurrency:
+  group: process-discovery
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+  pull-requests: write
+  issues: write
+
+jobs:
+  process:
+    if: >
+      (github.event_name == 'workflow_dispatch') ||
+      (github.event_name == 'issues' && contains(github.event.label.name, 'review-needed'))
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+
+    - name: Install uv
+      uses: astral-sh/setup-uv@v3
+      with:
+        version: "latest"
+
+    - name: Install dependencies
+      run: uv sync
+
+    - name: Set issue number
+      id: issue
+      run: |
+        if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+          echo "number=${{ github.event.inputs.issue_number }}" >> $GITHUB_OUTPUT
+        else
+          echo "number=${{ github.event.issue.number }}" >> $GITHUB_OUTPUT
+        fi
+
+    - name: Add processing label
+      env:
+        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: |
+        gh issue edit ${{ steps.issue.outputs.number }} --add-label "processing" --remove-label "review-needed"
+
+    - name: Extract candidates from issue
+      env:
+        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: |
+        gh issue view ${{ steps.issue.outputs.number }} --json body --jq '.body' > /tmp/issue_body.txt
+        uv run python scripts/process_issue.py --body-file /tmp/issue_body.txt --output /tmp/candidates.json
+        echo "Extracted candidates:"
+        cat /tmp/candidates.json | python -m json.tool
+
+    - name: Process candidates with Claude Code
+      uses: anthropics/claude-code-action@v1
+      with:
+        anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+        prompt: |
+          You are processing discovery candidates to add to the awesome-claude-md collection.
+
+          ## Instructions
+
+          1. Read the candidates file at `/tmp/candidates.json`
+          2. For each candidate:
+             a. Fetch the CLAUDE.md content from the candidate's `claude_file_url` to verify it's accessible
+             b. Check if `scenarios/[suggested_category]/[owner]_[repo]/` already exists - skip if it does
+             c. Create `scenarios/[suggested_category]/[owner]_[repo]/README.md` with an analysis based on the actual CLAUDE.md content
+
+          3. Use this README.md template for each new example:
+          ```markdown
+          # [Project Name] - [Short Description]
+
+          ## Source Repository
+          - **Repository**: [owner/repo](html_url)
+          - **CLAUDE.md**: [Link to original file](claude_file_url)
+          - **Language**: [language]
+          - **Stars**: [stars]
+          - **License**: To be verified
+
+          ## Category Assignment
+          **Category**: `[suggested_category]`
+
+          **Rationale**: [2-3 sentences explaining why this category fits based on the CLAUDE.md content]
+
+          ## Key Educational Features
+
+          ### 1. [Feature Title]
+          - [Specific details from the CLAUDE.md]
+
+          ### 2. [Feature Title]
+          - [Specific details from the CLAUDE.md]
+
+          ### 3. [Feature Title]
+          - [Specific details from the CLAUDE.md]
+
+          ## Key Takeaways for Developers
+
+          1. **[Takeaway]**: [Explanation]
+          2. **[Takeaway]**: [Explanation]
+          3. **[Takeaway]**: [Explanation]
+          ```
+
+          4. After creating all analysis files, update the main README.md:
+             - Add entries under the appropriate category in the "All Categories" section
+             - Use format: `- **[Name](scenarios/category/owner_repo/README.md)** - Short description`
+
+          5. IMPORTANT ethical rules:
+             - NEVER copy CLAUDE.md content directly - only reference and analyze it
+             - ALWAYS link to the original repository
+             - Include proper attribution
+
+          6. Create a git branch named `auto/process-issue-${{ steps.issue.outputs.number }}` and commit all changes.
+        claude_args: "--max-turns 30 --model claude-sonnet-4-6"
+
+    - name: Create Pull Request
+      env:
+        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: |
+        ISSUE_NUM="${{ steps.issue.outputs.number }}"
+        BRANCH="auto/process-issue-${ISSUE_NUM}"
+
+        # Check if branch exists and has changes
+        if git rev-parse --verify "${BRANCH}" 2>/dev/null; then
+          git checkout "${BRANCH}"
+
+          # Count new files
+          NEW_FILES=$(git diff --name-only main...HEAD -- 'scenarios/' | wc -l | tr -d ' ')
+
+          if [ "$NEW_FILES" -gt 0 ]; then
+            git push -u origin "${BRANCH}"
+
+            CHANGED_FILES=$(git diff --name-only main...HEAD -- 'scenarios/' | sed 's/^/- /')
+            PR_BODY_FILE=$(mktemp)
+            {
+              echo "## Summary"
+              echo "Automatically processed candidates from discovery issue #${ISSUE_NUM}."
+              echo ""
+              echo "- **New examples added**: ${NEW_FILES}"
+              echo "- **Source issue**: #${ISSUE_NUM}"
+              echo ""
+              echo "## Changes"
+              echo "${CHANGED_FILES}"
+              echo ""
+              echo "## Review Checklist"
+              echo "- [ ] Analysis files are accurate and well-written"
+              echo "- [ ] Categories are appropriate"
+              echo "- [ ] Links to original repositories are correct"
+              echo "- [ ] README.md table of contents is updated"
+              echo ""
+              echo "Closes #${ISSUE_NUM}"
+              echo ""
+              echo "🤖 Generated with [Claude Code](https://claude.ai/code)"
+            } > "${PR_BODY_FILE}"
+
+            gh pr create \
+              --title "Add ${NEW_FILES} new CLAUDE.md examples from discovery issue #${ISSUE_NUM}" \
+              --body-file "${PR_BODY_FILE}" \
+              --label "automation"
+
+            rm -f "${PR_BODY_FILE}"
+
+            # Mark issue as processed
+            gh issue edit "${ISSUE_NUM}" --add-label "processed" --remove-label "processing"
+          else
+            echo "No new examples were added"
+            gh issue edit "${ISSUE_NUM}" --add-label "processing-failed" --remove-label "processing"
+            gh issue comment "${ISSUE_NUM}" --body "⚠️ Automated processing completed but no new examples were added. All candidates may already exist or were inaccessible."
+          fi
+        else
+          echo "Branch ${BRANCH} was not created by Claude Code"
+          gh issue edit "${ISSUE_NUM}" --add-label "processing-failed" --remove-label "processing"
+          gh issue comment "${ISSUE_NUM}" --body "⚠️ Automated processing failed - Claude Code did not create the expected branch."
+        fi
+
+    - name: Handle failure
+      if: failure()
+      env:
+        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: |
+        ISSUE_NUM="${{ steps.issue.outputs.number }}"
+        gh issue edit "${ISSUE_NUM}" --add-label "processing-failed" --remove-label "processing" 2>/dev/null || true
+        gh issue comment "${ISSUE_NUM}" --body "⚠️ Automated processing failed. Please check the [workflow run](https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}) for details." 2>/dev/null || true

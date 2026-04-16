@@ -39,6 +39,7 @@ Issues = "https://github.com/josix/awesome-claude-md/issues"
 [project.scripts]
 discover-claude-files = "scripts.discover_claude_files:main"
 discover-claude-tools = "scripts.discover_claude_tools:main"
+process-issue = "scripts.process_issue:main"
 
 [tool.hatch.build.targets.wheel]
 packages = ["scripts"]
