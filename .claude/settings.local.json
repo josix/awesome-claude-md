@@ -19,7 +19,25 @@
       "Bash(sed:*)",
       "WebFetch(domain:api.github.com)",
       "Bash(mv:*)",
-      "Bash(git rm:*)"
+      "Bash(git rm:*)",
+      "Bash(bash /Users/wilson.wang/wilson/claude-plugins/agent-flow/scripts/init-deep-dive.sh:*)",
+      "Bash(TASK_ARGS=\"using the information found from deep-dive to reflect if current scoring rules need to be enhanced or not, if so consolidate a plan and make the changes\")",
+      "Bash(bash:*)",
+      "Bash(uv run ruff:*)",
+      "Bash(uv run pytest:*)",
+      "Bash(uv run ty check:*)",
+      "Bash(gh issue view:*)",
+      "Bash(gh api:*)",
+      "Bash(for cat in complex-projects developer-tooling getting-started infrastructure-projects libraries-frameworks project-handoffs)",
+      "Bash(done)",
+      "Bash(test:*)",
+      "Bash(ruff format:*)",
+      "Bash(ruff check:*)",
+      "Bash(python -m pytest:*)",
+      "Bash(gh api *)",
+      "Read(//tmp/**)",
+      "Bash(python3 *)",
+      "Bash(ls /Users/wilson.wang/wilson/awesome-claude-md/scenarios/*/)"
     ],
     "deny": []
   }

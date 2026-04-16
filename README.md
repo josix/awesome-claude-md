@@ -15,6 +15,7 @@ A curated collection of high-quality `CLAUDE.md` files from leading open-source 
 - [🔍 Browse by Technology](#-browse-by-technology) - Find examples by tech stack
 - [🎨 Browse by Use Case](#-browse-by-use-case) - Find examples by purpose
 - [📂 All Categories](#-all-categories) - Complete categorized list
+- [🔧 Tools & Ecosystem](#-tools--ecosystem) - Tools for CLAUDE.md workflows
 - [🏆 Quality Standards](#quality-standards) - Our selection criteria
 - [🤝 Contributing](#contributing) - How to add examples
 - [🔎 Search GitHub](#search-github) - Find more examples
@@ -858,6 +859,17 @@ Documentation focused on project state, blocking issues, and transition planning
   - Revolutionary storytelling with technical depth
   - Workflow orchestration using Tasker Rails engine
   - Chapter-based development with version control standards
+
+## 🔧 Tools & Ecosystem
+
+> Tools that generate, sync, or manage `CLAUDE.md` files.
+
+**Inclusion criteria:** Tools must be directly related to `CLAUDE.md` workflows. License type is shown for reference.
+
+| Tool | Description | License |
+|------|-------------|---------|
+| [claude-brain](https://github.com/toroleapinc/claude-brain) | Sync CLAUDE.md and Claude Code configuration across machines via git hooks | MIT |
+| [sourcebook](https://github.com/maroondlabs/sourcebook) | Generate CLAUDE.md from codebase conventions, constraints, and git forensics | BSL-1.1 |
 
 ## Quality Standards
 

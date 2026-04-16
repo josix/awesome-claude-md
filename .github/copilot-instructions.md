@@ -6,7 +6,7 @@ This file provides guidance to GitHub Copilot when working with code in this rep
 
 ## Project Overview
 
-**awesome-claude-md** is a curated collection of high-quality `CLAUDE.md` files from public GitHub repositories. The goal is to showcase best practices for using `CLAUDE.md` files to onboard AI assistants to codebases.
+**awesome-claude-md** is a curated collection of high-quality `CLAUDE.md` files from public GitHub repositories, plus a curated list of tools that generate, sync, or manage `CLAUDE.md` files. The goal is to showcase best practices for using `CLAUDE.md` files to onboard AI assistants to codebases.
 
 ## Repository Structure
 
@@ -39,6 +39,10 @@ When adding new examples, use these primary categories:
 - `project-handoffs/` - Current state with blocking issues and next steps
 - `getting-started/` - Development environment setup focused
 - `infrastructure-projects/` - Large-scale systems and runtime environments
+
+## Tools & Ecosystem
+
+The repository also maintains a curated table of tools directly related to `CLAUDE.md` workflows (e.g., tools that generate, sync, or manage `CLAUDE.md` files). These are listed in the `README.md` under the "Tools & Ecosystem" section and are NOT counted as examples. Inclusion criteria: must be directly related to `CLAUDE.md` workflows. License type is shown for reference.
 
 ## File Naming Conventions
 
