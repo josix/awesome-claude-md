@@ -41,6 +41,10 @@ Thumbs.db
 # Logs
 *.log
 
+# Claude Code local files
+.claude/settings.local.json
+.claude/*.local.md
+
 # Temporary files
 /tmp/
 discovery-report-*.md
