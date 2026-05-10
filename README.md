@@ -870,6 +870,7 @@ Documentation focused on project state, blocking issues, and transition planning
 |------|-------------|---------|
 | [claude-brain](https://github.com/toroleapinc/claude-brain) | Sync CLAUDE.md and Claude Code configuration across machines via git hooks | MIT |
 | [sourcebook](https://github.com/maroondlabs/sourcebook) | Generate CLAUDE.md from codebase conventions, constraints, and git forensics | BSL-1.1 |
+| [NotFair](https://notfair.co) | Google Ads MCP server for AI agents. Diagnose campaigns, recommend optimizations, execute approved changes via the Google Ads API. |
 
 ## Quality Standards
 
