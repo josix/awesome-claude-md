@@ -870,6 +870,9 @@ Documentation focused on project state, blocking issues, and transition planning
 |------|-------------|---------|
 | [claude-brain](https://github.com/toroleapinc/claude-brain) | Sync CLAUDE.md and Claude Code configuration across machines via git hooks | MIT |
 | [sourcebook](https://github.com/maroondlabs/sourcebook) | Generate CLAUDE.md from codebase conventions, constraints, and git forensics | BSL-1.1 |
+| [claude-code-pro-pack](https://github.com/sisyphusse1-ops/claude-code-pro-pack) | Drop-in 12-rule `CLAUDE.md` + `AGENTS.md` baseline with PRD generator, browser-skill-graduation, and 5 example skills (~700 tokens total) | MIT |
+| [cc-audit](https://github.com/sisyphusse1-ops/cc-audit) | Single-file Python linter that scores any `CLAUDE.md` / `AGENTS.md` against a 12-rule baseline; flags leaked secrets and compliance-cliff length. Zero dependencies, CI-ready | MIT |
+| [gemma-coder](https://github.com/sisyphusse1-ops/gemma-coder) | Single-file agentic coding CLI that loads `CLAUDE.md` / `AGENTS.md` as the rulebook for Gemma 4 / Ollama / OpenRouter — demonstrates `CLAUDE.md` as a cross-model standard | MIT |
 
 ## Quality Standards
 
