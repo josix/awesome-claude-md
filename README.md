@@ -940,3 +940,5 @@ Find more `CLAUDE.md` examples using these search strategies:
 **Total Examples**: 104 | **Last Updated**: February 2026 | **Maintained by**: Community Contributors
 
 > 🤖 This collection is maintained with assistance from Claude Code for quality analysis and curation
+
+- [Context Kit](https://github.com/JDDavenport/context-kit) — 4 PCA templates (wiki, mental-models, voice, protocols) + 5 Claude Code skills. One-command install, MIT licensed.
