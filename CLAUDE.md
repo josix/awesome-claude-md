@@ -50,6 +50,7 @@ The repository includes an automated discovery system for finding new CLAUDE.md 
 - **Discovery Script**: `scripts/discover_claude_files.py` orchestrates the discovery workflow
 - **Modular Architecture**: Discovery system is split into focused modules:
   - `scripts/discovery/loader.py`: Loads existing repositories to avoid duplicates
+  - `scripts/discovery/reviewed_repos.txt`: Candidates already reviewed and not included; the loader skips them so they don't reappear in weekly issues
   - `scripts/discovery/searcher.py`: Searches GitHub for CLAUDE.md files
   - `scripts/discovery/evaluator.py`: Evaluates and scores repository candidates
   - `scripts/discovery/reporter.py`: Creates issues and reports

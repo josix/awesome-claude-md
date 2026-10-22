@@ -93,3 +93,33 @@ class TestRepositoryLoader:
         with patch.object(Path, "exists", return_value=False):
             result = repo_loader._extract_repo_name_from_analysis_file(mock_repo_dir)
             assert result is None
+
+    def test_load_reviewed_repos(self, tmp_path):
+        """Reviewed list skips comments, blanks and invalid names."""
+        reviewed_file = tmp_path / "reviewed_repos.txt"
+        reviewed_file.write_text(
+            "# header comment\n"
+            "\n"
+            "owner/repo  # rejected: boilerplate\n"
+            "other-owner/other.repo\n"
+            "not-a-repo\n",
+            encoding="utf-8",
+        )
+        loader = RepositoryLoader(reviewed_repos_file=reviewed_file)
+        assert loader.load_reviewed_repos() == {"owner/repo", "other-owner/other.repo"}
+
+    def test_load_reviewed_repos_missing_file(self, tmp_path):
+        """A missing reviewed list is treated as empty."""
+        loader = RepositoryLoader(reviewed_repos_file=tmp_path / "missing.txt")
+        assert loader.load_reviewed_repos() == set()
+
+    def test_load_existing_repos_includes_reviewed(self, tmp_path, monkeypatch):
+        """Existing repos combine the scenarios folder and the reviewed list."""
+        repo_dir = tmp_path / "scenarios" / "developer-tooling" / "owner_included"
+        repo_dir.mkdir(parents=True)
+        reviewed_file = tmp_path / "reviewed_repos.txt"
+        reviewed_file.write_text("owner/rejected\n", encoding="utf-8")
+        monkeypatch.chdir(tmp_path)
+
+        loader = RepositoryLoader(reviewed_repos_file=reviewed_file)
+        assert loader.load_existing_repos() == {"owner/included", "owner/rejected"}

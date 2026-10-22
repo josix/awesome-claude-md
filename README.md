@@ -430,6 +430,21 @@ Multi-service applications with sophisticated architectures and enterprise-scale
   - Semi-manual authentication design philosophy for 2FA compliance
   - Service-specific cookie lifecycle management and error severity classification
 
+- **[FHIR Validator Wrapper](scenarios/complex-projects/hapifhir_org.hl7.fhir.validator-wrapper/README.md)** ![Stars](https://img.shields.io/github/stars/hapifhir/org.hl7.fhir.validator-wrapper?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/hapifhir/org.hl7.fhir.validator-wrapper?style=flat-square) ![Activity](https://img.shields.io/github/last-commit/hapifhir/org.hl7.fhir.validator-wrapper?style=flat-square) - Kotlin Multiplatform FHIR validator powering validator.fhir.org
+  - `expect`/`actual` explained through one concrete shared type
+  - Redux-to-Context migration record that keeps agents off legacy patterns
+  - Coupled dependency versions and separate backend/frontend feature checklists
+
+- **[Familiar](scenarios/complex-projects/seethroughlab_familiar/README.md)** ![Stars](https://img.shields.io/github/stars/seethroughlab/familiar?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/seethroughlab/familiar?style=flat-square) ![Activity](https://img.shields.io/github/last-commit/seethroughlab/familiar?style=flat-square) - ADR-governed self-hosted music player
+  - Clear threshold for when an Architecture Decision Record is required
+  - Execution-order tables with a reason for every step
+  - Named production traps the compiler won't catch
+
+- **[HADDOCK3](scenarios/complex-projects/haddocking_haddock3/README.md)** ![Stars](https://img.shields.io/github/stars/haddocking/haddock3?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/haddocking/haddock3?style=flat-square) ![Activity](https://img.shields.io/github/last-commit/haddocking/haddock3?style=flat-square) - Biomolecular docking workflow engine from Utrecht University
+  - Self-protecting instruction file that AI agents may never edit
+  - `io.json` data-flow contract between numbered workflow steps
+  - Four HPC execution backends mapped to the config keys that select them
+
 ### 🛠️ Developer Tooling
 CLI tools, build systems, and development utilities with focus on commands and configuration.
 
@@ -638,6 +653,11 @@ CLI tools, build systems, and development utilities with focus on commands and c
   - zod-mini validation with tree-shakable architecture
   - Semantic indexing guidance for efficient development
 
+- **[hermes-mcp](scenarios/developer-tooling/mlennie_hermes-mcp/README.md)** ![Stars](https://img.shields.io/github/stars/mlennie/hermes-mcp?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/mlennie/hermes-mcp?style=flat-square) ![Activity](https://img.shields.io/github/last-commit/mlennie/hermes-mcp?style=flat-square) - OAuth-gated MCP bridge with security invariants and their reasons
+  - Constraints backed by incident history, including a reverted mistake
+  - Deliberate limitations documented with the path forward
+  - Privacy, logging and systemd-hardening rules protected from casual removal
+
 ### 🚀 Getting Started
 Projects focused on developer onboarding and initial setup experiences.
 
@@ -842,6 +862,26 @@ Core concepts, APIs, usage patterns, and publication-ready development standards
   - TypeScript-based AI agent framework
   - Tool integration and workflow management
 
+- **[buildkit-client](scenarios/libraries-frameworks/arcboxlabs_buildkit-client/README.md)** ![Stars](https://img.shields.io/github/stars/arcboxlabs/buildkit-client?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/arcboxlabs/buildkit-client?style=flat-square) ![Activity](https://img.shields.io/github/last-commit/arcboxlabs/buildkit-client?style=flat-square) - Rust BuildKit client with protocol-level debugging guide
+  - Session and DiffCopy protocol invariants stated as hard rules
+  - A real nested-loop bug shown as annotated code
+  - Troubleshooting indexed by exact error message
+
+- **[go-clean-template](scenarios/libraries-frameworks/evrone_go-clean-template/README.md)** ![Stars](https://img.shields.io/github/stars/evrone/go-clean-template?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/evrone/go-clean-template?style=flat-square) ![Activity](https://img.shields.io/github/last-commit/evrone/go-clean-template?style=flat-square) - Go Clean Architecture template with decision tables
+  - "Use this / not this" command table pairing Makefile targets with reasons
+  - Code placement decided by "what the code knows about"
+  - Six-step handler contract shared across four transports
+
+- **[JavaScript Obfuscator](scenarios/libraries-frameworks/javascript-obfuscator_javascript-obfuscator/README.md)** ![Stars](https://img.shields.io/github/stars/javascript-obfuscator/javascript-obfuscator?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/javascript-obfuscator/javascript-obfuscator?style=flat-square) ![Activity](https://img.shields.io/github/last-commit/javascript-obfuscator/javascript-obfuscator?style=flat-square) - Ten-stage AST obfuscation pipeline mapped for contributors
+  - Transformation stages written down in execution order
+  - InversifyJS v7 migration notes for the DI container
+  - Extension-point checklists and precise single-test commands
+
+- **[mobile-env](scenarios/libraries-frameworks/stefanbschneider_mobile-env/README.md)** ![Stars](https://img.shields.io/github/stars/stefanbschneider/mobile-env?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/stefanbschneider/mobile-env?style=flat-square) ![Activity](https://img.shields.io/github/last-commit/stefanbschneider/mobile-env?style=flat-square) - Gymnasium RL environment for mobile networks
+  - Commands that mirror CI exactly
+  - Import-time registration and `step()` semantics explained
+  - Candid gotchas section listing known bugs
+
 ### 🔄 Project Handoffs
 Documentation focused on project state, blocking issues, and transition planning.
 
@@ -937,6 +977,6 @@ Find more `CLAUDE.md` examples using these search strategies:
 
 ---
 
-**Total Examples**: 104 | **Last Updated**: February 2026 | **Maintained by**: Community Contributors
+**Total Examples**: 116 | **Last Updated**: October 2026 | **Maintained by**: Community Contributors
 
 > 🤖 This collection is maintained with assistance from Claude Code for quality analysis and curation

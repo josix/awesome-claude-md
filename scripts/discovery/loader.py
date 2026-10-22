@@ -6,28 +6,59 @@ from pathlib import Path
 
 logger = logging.getLogger(__name__)
 
+# Candidates a maintainer already reviewed and chose not to include.
+# Listing them here keeps weekly discovery issues from re-surfacing them.
+REVIEWED_REPOS_FILE = Path(__file__).parent / "reviewed_repos.txt"
+
 
 class RepositoryLoader:
     """Handles loading existing repositories from the collection."""
 
-    def __init__(self):
-        pass
+    def __init__(self, reviewed_repos_file: Path = REVIEWED_REPOS_FILE):
+        self.reviewed_repos_file = reviewed_repos_file
 
     def load_existing_repos(self) -> set[str]:
-        """Load list of repositories already included in the collection."""
+        """Load repositories to skip: those in the collection plus reviewed ones."""
         existing = set()
         scenarios_dir = Path("scenarios")
 
-        if not scenarios_dir.exists():
+        if scenarios_dir.exists():
+            for category_dir in scenarios_dir.iterdir():
+                if category_dir.is_dir():
+                    self._process_category_directory(category_dir, existing)
+            logger.info(f"Loaded {len(existing)} existing repositories")
+        else:
             logger.info("No scenarios directory found")
-            return existing
 
-        for category_dir in scenarios_dir.iterdir():
-            if category_dir.is_dir():
-                self._process_category_directory(category_dir, existing)
+        reviewed = self.load_reviewed_repos()
+        logger.info(f"Loaded {len(reviewed)} previously reviewed repositories")
+        return existing | reviewed
 
-        logger.info(f"Loaded {len(existing)} existing repositories")
-        return existing
+    def load_reviewed_repos(self) -> set[str]:
+        """Load repositories already reviewed and not included.
+
+        The file holds one `owner/repo` per line. Blank lines and text after
+        `#` are ignored.
+        """
+        if not self.reviewed_repos_file.exists():
+            return set()
+
+        reviewed = set()
+        try:
+            lines = self.reviewed_repos_file.read_text(encoding="utf-8").splitlines()
+        except (OSError, UnicodeDecodeError) as e:
+            logger.warning(f"Could not read {self.reviewed_repos_file}: {e}")
+            return reviewed
+
+        for line in lines:
+            repo_name = line.split("#", 1)[0].strip()
+            if not repo_name:
+                continue
+            if self._validate_repo_name(repo_name):
+                reviewed.add(repo_name)
+            else:
+                logger.warning(f"Ignoring invalid entry in reviewed list: {repo_name}")
+        return reviewed
 
     def _process_category_directory(
         self, category_dir: Path, existing: set[str]

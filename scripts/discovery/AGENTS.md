@@ -11,7 +11,8 @@ Modular GitHub discovery system. Searches for CLAUDE.md files, evaluates quality
 ```
 discovery/
 ├── orchestrator.py   # Workflow coordinator (49 lines)
-├── loader.py         # Load existing repos, prevent duplicates (114 lines)
+├── loader.py         # Load existing + reviewed repos, prevent duplicates
+├── reviewed_repos.txt # Rejected candidates the loader skips
 ├── searcher.py       # GitHub API integration (206 lines)
 ├── evaluator.py      # Content-first scoring (516 lines) - CORE
 ├── reporter.py       # Issue generation (95 lines)

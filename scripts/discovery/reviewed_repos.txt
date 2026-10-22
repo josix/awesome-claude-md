@@ -1,0 +1,84 @@
+# Discovery candidates already reviewed and not included.
+# The discovery loader skips these so weekly issues stop re-surfacing them.
+# One owner/repo per line; text after '#' is ignored. Remove a line to let a
+# repository be re-evaluated (for example after a license change).
+
+# Read in full and rejected (discovery backlog #82-#124, 2026-10)
+airwaylab-app/airwaylab                       # GPL-3.0 (strong content; revisit if license policy changes)
+arcaDeFAI/arca-contracts                      # GPL-3.0; mostly standard Hardhat commands
+Aurealibe/claude-config                       # config template for a fictional stack, not project onboarding
+BrowserOperator/browser-operator-core         # standard architecture overview
+drewharts/Mesa                                # no license; generic MVVM rules
+engseclabs/graphgrc                           # CLAUDE.md out of date with current code layout
+fedimint/fedimint                             # 23-line pointer file to skills
+kimlimjustin/xplorer                          # AGPL-3.0; conventional conventions file
+OpenSource03/harnss                           # 857-line inventory dump that will go stale
+redpanda-data/connect                         # mixed proprietary license; mostly command reference
+Rojamahorse/voice-vault-api-for-tts           # no license; generic launcher template
+Roznoshchik/Lurnby                            # competent but standard Flask/Preact overview
+rsenn/qjs-modules                             # generic preamble and stale session history
+soimy/openclaw-channel-dingtalk               # solid but conventional
+TheRealSimon42/simon42-dashboard-strategy     # CC BY-NC-SA license (not permissive)
+YixiaJack/skillens                            # reads as a product spec, immature project
+
+# Triaged on the discovery summary (score 60-69, low signal), 2026-10
+adityashirsatrao007/beam-ml
+adityashirsatrao007/Hybrid-VGG16-SVM-Framework-for-Automated-Dust-Detection-on-Solar-Panels-Advancing-Energy-Efficiency
+AgoraIO-Community/convo-ai-engine-dev-advocate-agent
+alxliv/ai_bullet
+anthosx/collaborative-canvas
+BernardUriza/Robo-Poet
+Billkst/grounded-resume
+blackhan-software/xpower-ui
+cgmhc/website
+chetstriker/LLMtary
+dilee/zen-dev-toolkit
+doublegate/SPECTRE
+dzivkovi/MCP-Server-Browser-Auth
+eric-naguras/SolTrader-claude
+estebankt/SpendBearBackEnd
+FigmaAI/KleverDesktop
+fjpedrosa/neptunik
+forzamin521-a11y/sportshub
+garagon/aguara
+georgexzeng/ragchatbot
+hardik121121/wm_help_assistant_final
+hiors-project/hiors
+ildunari/RetroToolbox
+ilyanosovsky/fastmcp-quickstart-20251009-8iit
+jeremysolarz/invoices-with-payment-element
+jim-jimothy/resume-generator
+johanzander/bess-manager
+keychain-io/trustable-ai
+kokabsc/gwkokab
+kossakovsky/article-to-epub
+kristofer/ZipCodeReader
+larsgr/gene-id-mapping
+MakerCorn/coral-photo-de-duper
+martinsantos/um25
+matthewchung74/llm_trader
+mherod/get-cookie
+NativePHP/mobile-api-starter-kit-vue
+noshiro-pf/ts-type-forge
+novasharper/minecraft-server-helper
+odphineguy/usage-dash
+OnerInce/telegram-crypto_bot
+phara0hcom/next-tamerelsayeddotcom
+RaggedR/Russian-transcription
+rolandtritsch/whisper-wayland
+runtimeverification/mir-semantics
+scottlaw1/uigen
+shivakumar-07/GearItUp_Exp_v2
+smallbunnies/Solverz
+SolaceLabs/solace-msg-utility
+studie-tech/TheNinjaRPG
+SujeethJinesh/APEX_Research
+systmms/segnomms
+tdiorio2323/cabanamgmt
+techsenger/shellfx
+tmhntr/migrainelog-deprecated
+wboayue/fusion-ahrs
+wch/anthropic_dashboard
+wizardsofts/wizardsofts-megabuild
+xiguang182/NoXiRe
+xrf-9527/AIHeadline.news
