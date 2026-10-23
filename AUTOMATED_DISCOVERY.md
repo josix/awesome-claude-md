@@ -112,6 +112,7 @@ python scripts/discover_claude_files.py
 - Scans existing `scenarios/` directory structure
 - Extracts repository names from directory naming convention
 - Skips repositories already in the collection
+- Skips repositories listed in `scripts/discovery/reviewed_repos.txt` (candidates a maintainer reviewed and did not include). When you close a discovery issue, add rejected candidates there so they don't come back the next week.
 
 ## 📈 Quality Thresholds
 
