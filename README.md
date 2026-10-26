@@ -913,6 +913,7 @@ Documentation focused on project state, blocking issues, and transition planning
 | [toldya](https://github.com/singhlabsdev/toldya) | Find the corrections you keep repeating in local Claude Code history and add them to CLAUDE.md after per-rule approval; later runs count each rule before vs since | MIT |
 | [NotFair](https://notfair.co) | Google Ads MCP server for AI agents. Diagnose campaigns, recommend optimizations, execute approved changes via the Google Ads API. | MIT |
 | [check-docs](https://github.com/ipaulsmith/check-docs) | Pre-commit check that stops a commit when CLAUDE.md or AGENTS.md names a path that no longer exists or a name listed as deleted | MIT |
+| [agentkit-drawer-cli](https://github.com/eli-alvarado/agentkit-drawer-cli) | Install a CLAUDE.md that imports a shared AGENTS.md (plus optional .claude/ subagents, hooks and commands) with one npx command, and re-sync it with `update` | MIT |
 
 ## Quality Standards
 
