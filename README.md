@@ -913,6 +913,7 @@ Documentation focused on project state, blocking issues, and transition planning
 | [toldya](https://github.com/singhlabsdev/toldya) | Find the corrections you keep repeating in local Claude Code history and add them to CLAUDE.md after per-rule approval; later runs count each rule before vs since | MIT |
 | [NotFair](https://notfair.co) | Google Ads MCP server for AI agents. Diagnose campaigns, recommend optimizations, execute approved changes via the Google Ads API. | MIT |
 | [check-docs](https://github.com/ipaulsmith/check-docs) | Pre-commit check that stops a commit when CLAUDE.md or AGENTS.md names a path that no longer exists or a name listed as deleted | MIT |
+| [agent-rules](https://github.com/fabwaseem/agent-rules) | Write each coding rule once as a Cursor `.mdc` file and render it into CLAUDE.md, AGENTS.md, Copilot instructions, Claude Code skills and Windsurf rules; ships rule sets for TypeScript, Next.js, React, Node.js, NestJS, Prisma, Drizzle and Tailwind | MIT |
 
 ## Quality Standards
 
