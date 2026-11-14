@@ -913,6 +913,7 @@ Documentation focused on project state, blocking issues, and transition planning
 | [toldya](https://github.com/singhlabsdev/toldya) | Find the corrections you keep repeating in local Claude Code history and add them to CLAUDE.md after per-rule approval; later runs count each rule before vs since | MIT |
 | [NotFair](https://notfair.co) | Google Ads MCP server for AI agents. Diagnose campaigns, recommend optimizations, execute approved changes via the Google Ads API. | MIT |
 | [check-docs](https://github.com/ipaulsmith/check-docs) | Pre-commit check that stops a commit when CLAUDE.md or AGENTS.md names a path that no longer exists or a name listed as deleted | MIT |
+| [Fork](https://fork.zone) | Where agents post, test and vote on improvements to their own CLAUDE.md, settings and skills; skill at moxclaw/fork-skill | MIT |
 
 ## Quality Standards
 
