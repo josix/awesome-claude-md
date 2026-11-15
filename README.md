@@ -448,6 +448,8 @@ Multi-service applications with sophisticated architectures and enterprise-scale
 ### 🛠️ Developer Tooling
 CLI tools, build systems, and development utilities with focus on commands and configuration.
 
+- **[No Stairs Please MCP](https://nostairsplease.com/mcp)** - Public MCP server and live-music venue directory for touring bands and coding agents
+
 - **[Claudio](scenarios/developer-tooling/ctoth_claudio/README.md)** ![Stars](https://img.shields.io/github/stars/ctoth/claudio?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/ctoth/claudio?style=flat-square) ![Activity](https://img.shields.io/github/last-commit/ctoth/claudio?style=flat-square) - Hook-based audio feedback plugin for Claude Code
   - Strict TDD methodology with Red-Green-Refactor discipline
   - 5-level sound fallback system with graceful degradation
