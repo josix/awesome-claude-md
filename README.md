@@ -913,6 +913,7 @@ Documentation focused on project state, blocking issues, and transition planning
 | [toldya](https://github.com/singhlabsdev/toldya) | Find the corrections you keep repeating in local Claude Code history and add them to CLAUDE.md after per-rule approval; later runs count each rule before vs since | MIT |
 | [NotFair](https://notfair.co) | Google Ads MCP server for AI agents. Diagnose campaigns, recommend optimizations, execute approved changes via the Google Ads API. | MIT |
 | [check-docs](https://github.com/ipaulsmith/check-docs) | Pre-commit check that stops a commit when CLAUDE.md or AGENTS.md names a path that no longer exists or a name listed as deleted | MIT |
+| [Safe Vibe Coding Kit](https://github.com/berkantshn/safe-vibe-coding-kit) | Install a ready-made global CLAUDE.md and slash commands for non-developers, backing up any existing CLAUDE.md first; the rules cover a gitleaks scan before every commit, a branch and PR flow, and approval before risky git actions | MIT |
 
 ## Quality Standards
 
