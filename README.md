@@ -448,6 +448,7 @@ Multi-service applications with sophisticated architectures and enterprise-scale
 ### 🛠️ Developer Tooling
 CLI tools, build systems, and development utilities with focus on commands and configuration.
 
+- [Insomnia Security MCP (CQR Cybersecurity LLC)](https://github.com/CQR-Cybersecurity-LLC/insomnia-mcp) - 159 native cybersecurity, multi-language SAST/taint, live secret validation, SCA/SBOM, Web DAST, OSINT, 21,100+ 1-Day CVE verification, 29-protocol enumeration & Outbound Internal Network Tunnel v4.0 MCP tools (`https://mcp.insom.ai/mcp`, 50 free credits).
 - **[Claudio](scenarios/developer-tooling/ctoth_claudio/README.md)** ![Stars](https://img.shields.io/github/stars/ctoth/claudio?style=flat-square&logo=github) ![License](https://img.shields.io/github/license/ctoth/claudio?style=flat-square) ![Activity](https://img.shields.io/github/last-commit/ctoth/claudio?style=flat-square) - Hook-based audio feedback plugin for Claude Code
   - Strict TDD methodology with Red-Green-Refactor discipline
   - 5-level sound fallback system with graceful degradation
